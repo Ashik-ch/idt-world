@@ -1,0 +1,160 @@
+<!-- Unique -->
+<div class="pb-10 bg-white">
+    <section class="relative min-h-screen bg-fixed bg-center bg-cover"
+        style="background-image: url('assets/images/travel.jpg');">
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    What Makes
+                    <span
+                        class="bg-gradient-to-r from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent animate-gradient-x">
+                        IDT - India Destination Tours
+                    </span> Unique?
+                </h2>
+                <p class="text-xl text-white max-w-2xl mx-auto">
+                    We provide exceptional travel experiences with personalized service and unbeatable prices.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                <div *ngFor="let f of features"
+                    class="group relative bg-red-500 rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:scale-[1.03]">
+                    <img [src]="f.image" [alt]="f.title"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <div
+                        class="relative z-10 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 group-hover:opacity-0">
+                        <!-- <div class="w-16 h-16 flex items-center justify-center rounded-full mb-4 shadow-md"
+                            [ngClass]="f.iconBg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" [ngClass]="f.iconColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    [attr.d]="f.iconPath" />
+                                <path *ngIf="f.innerIcon" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" [attr.d]="f.innerIcon" />
+                            </svg>
+                        </div> -->
+                        <h3 class="text-lg font-semibold text-white">{{ f.title }}</h3>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                        <p class="text-white text-base leading-relaxed">{{ f.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <!-- Section Heading -->
+        <!-- <div class="mb-12 text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-red-500" data-aos="zoom-in">Our Services</h2>
+            <p class="text-gray-600" data-aos="zoom-in">
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
+                the Semantics, a large language ocean.
+            </p>
+        </div> -->
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <!-- Left Image -->
+            <div class="order-1 h-80 md:h-auto" data-aos="fade-in">
+                <div class="w-full h-full rounded-xl overflow-hidden shadow-xl">
+                    <div class="w-full h-full bg-cover bg-center shadow-2xl"
+                        style="background-image: url('assets/images/service3.png');">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="order-2 md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div *ngFor="let service of services; let i = index" class="p-6 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 shadow-lg text-white cursor-pointer
+                transform hover:scale-110 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    (click)="openModal(service)" data-aos="zoom-in" [attr.data-aos-delay]="i * 150">
+                    <i [class]="service.icon + ' text-5xl mb-4'"></i>
+                    <h3 class="text-xl font-semibold mb-1">{{ service.title }}</h3>
+                    <p class="text-sm opacity-90">{{ service.subtitle }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+@if (selectedService) {
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden animate-fade-in">
+        <!-- Header -->
+        <div class="flex justify-between items-center bg-red-600 px-6 py-4 text-white">
+            <div>
+                <h2 class="text-xl font-semibold">{{ selectedService.title }}</h2>
+                <p class="text-sm opacity-80">{{ selectedService.subtitle }}</p>
+            </div>
+            <button (click)="closeModal()" class="text-white text-2xl leading-none hover:text-gray-200">×</button>
+        </div>
+        <div class="p-6 space-y-4">
+            <p class="text-gray-700 text-sm">{{ selectedService.desc }}</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+                <img *ngFor="let img of selectedService.images" [src]="img" alt="{{ selectedService.title }}"
+                    class="rounded-lg w-full h-28 object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+        </div>
+    </div>
+</div>
+}
+<!-- Testimonials -->
+<section class="bg-gradient-to-b from-gray-50 to-white py-20 relative overflow-hidden ">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-30 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-red-500 mb-14" data-aos="zoom-in-right">
+            What Our Travelers Say
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div *ngFor="let t of testimonials; let i = index" data-aos="zoom-in-right" [attr.data-aos-delay]="i * 150"
+                class="flex flex-col justify-between bg-white rounded-2xl shadow-lg p-6 text-left transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <div class="absolute -bottom-3 left-8 w-6 h-6 bg-white rotate-45 shadow-md"></div>
+                <div>
+                    <p class="text-gray-700 leading-relaxed text-base mb-4 line-clamp-5">
+                        {{ t.message }}
+                    </p>
+
+                    <div class="flex text-yellow-400 text-sm mb-6">
+                        <ng-container *ngFor="let star of [1,2,3,4,5]; let idx = index">
+                            <!-- <i class="pi" [ngClass]="idx < t.rating ? 'pi-star-fill text-yellow-400' : 'pi-star text-gray-300'
+                        "></i> -->
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                    <img [src]="t.avatar" alt="{{ t.name }}"
+                        class="w-12 h-12 rounded-full object-cover border-2 border-red-500" />
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900">{{ t.name }}</h4>
+                        <p class="text-sm text-red-600 font-medium">{{ t.location }}</p>
+                        <div class="flex items-center text-gray-600 text-base mt-1">
+                            <a [href]="'tel:' + t.contact" class="hover:text-red-500 transition" title="Call now">
+                                <i class="pi pi-phone"></i>
+                            </a>
+                            <a [href]="'https://wa.me/' + t.whatsapp.replace('+', '')" target="_blank" rel="noopener"
+                                class="hover:text-green-500 transition mx-3" title="Chat on WhatsApp">
+                                <i class="pi pi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
