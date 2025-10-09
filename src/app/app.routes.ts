@@ -10,5 +10,5 @@ export const routes: Routes = [
     //     ]
     // },
     // { path: 'outbound', loadComponent: () => import('./components/outbound/outbound/outbound').then(m => m.Outbound), },
-    // { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), },
+    { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), },
 ];
