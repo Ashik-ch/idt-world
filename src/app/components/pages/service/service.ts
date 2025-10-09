@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { features, Services, testimonialList } from '../../../data/home.data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-service',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './service.html',
   styleUrl: './service.scss'
 })
