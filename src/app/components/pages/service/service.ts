@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { features, Services, testimonialList } from '../../../data/home.data';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-service',
