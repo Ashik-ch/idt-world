@@ -6,8 +6,10 @@ export const routes: Routes = [
         path: 'inbound',
         children: [
             { path: '', loadComponent: () => import('./components/inbound/inbound').then(m => m.Inbound), },
-            { path: ':state', loadComponent: () => import('./components/inbound/inbound-package/inbound-package').then(m => m.InboundPackage), }
-        ]
+            {
+                path: ':state', loadComponent: () => import('./components/inbound/inbound-package/inbound-package').then(m => m.InboundPackage),
+                data: { renderMode: 'client' }  // 🧩 disables prerender for this route
+            }]
     },
     // { path: 'outbound', loadComponent: () => import('./components/outbound/outbound/outbound').then(m => m.Outbound), },
     { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), },
