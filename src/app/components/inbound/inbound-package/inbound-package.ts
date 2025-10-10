@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Package, travelPackages } from '../../../data/package.data';
 import { statesData } from '../../../data/inbound.data';
+import { InboundItinerary } from "./inbound-itinerary/inbound-itinerary";
+import { InboundHotels } from "./inbound-hotels/inbound-hotels";
+import { InboundSummary } from "./inbound-summary/inbound-summary";
+import { InboundPricing } from "./inbound-pricing/inbound-pricing";
 // import { statesData } from '../../../data/inbound.data'; 
 // import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 // import { InboundItinerary } from '../../package/inbound-itinerary/inbound-itinerary';
@@ -16,14 +20,7 @@ import { statesData } from '../../../data/inbound.data';
 
 @Component({
   selector: 'app-inbound-package',
-  imports: [CommonModule, FormsModule, RouterModule,
-    // InboundItinerary,
-    // NgxShineBorderComponent,
-    // InboundPricing,
-    // InboundHotels,
-    // InboundSummary,
-    // BookingForm,
-  ],
+  imports: [CommonModule, FormsModule, RouterModule, InboundItinerary, InboundHotels, InboundSummary, InboundPricing],
   templateUrl: './inbound-package.html',
   styleUrl: './inbound-package.scss'
 })

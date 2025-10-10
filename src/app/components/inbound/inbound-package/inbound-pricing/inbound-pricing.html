@@ -1,0 +1,75 @@
+<section data-animate="pricing" class="bg-white rounded-2xl shadow-xl p-6">
+    <h2 class="text-xl md:text-2xl font-bold mb-2 text-red-500 pb-4">
+        <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">💰</span> Package Pricing
+    </h2>
+
+    <section class="space-x-8 flex justify-between">
+        <div *ngFor="let season of pricing" class="rounded-xl shadow-lg p-6 border-2"
+            [ngClass]="getSeasonClass(season.season) ? 'bg-white border-red-300' : 'bg-white border-red-300'">
+            <h3 class="text-xl font-bold mb-6 text-center text-gray-900">{{ season.season }}</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full border-collapse text-gray-800">
+                    <thead>
+                        <tr [ngClass]="getSeasonClass(season.season) ? 
+                        'bg-red-500 text-white' :
+                        'bg-red-500 text-white'">
+                            <th class="text-left py-3 px-5 font-semibold rounded-tl-xl">Category</th>
+                            <th class="text-center py-3 px-5 font-semibold">2 Pax</th>
+                            <th class="text-center py-3 px-5 font-semibold rounded-tr-xl">Extra Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let category of season.categories"
+                            class="border-b hover:bg-gray-100 transition-colors">
+                            <td class="py-3 px-5 font-medium">{{ category.category }}</td>
+                            <td class="py-3 px-5 text-center font-bold text-red-600">{{ formatPrice(category.twoPax)
+                                }}</td>
+                            <td class="py-3 px-5 text-center font-bold text-red-600">{{
+                                formatPrice(category.extraPerson) }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!--   PRICING IN CARDS    
+    <div class="min-h-screen bg-red-500 rounded-3xl mt-5">
+        <div *ngFor="let season of pricing"
+            class="relative rounded-3xl p-8 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden group">
+            <h3
+                class="text-2xl font-extrabold text-center text-white mb-10 tracking-wide group-hover:scale-105 transition-transform">
+                {{ season.season }}
+            </h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div *ngFor="let category of season.categories" class="relative rounded-2xl p-6 flex flex-col items-center bg-white/20 backdrop-blur-md border border-white/25
+                        shadow-md hover:shadow-2xl hover:translate-y-1 transition-all duration-500 group">
+                    <div
+                        class="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                    </div>
+                    <h4 class="relative z-10 text-xl font-semibold text-white mb-4"> {{ category.category }} </h4>
+
+                    <div class="relative z-10 w-full space-y-3 text-white text-sm">
+                        <span class="flex justify-between">
+                            <p>👥 2 Pax</p>
+                            <p class="font-bold text-white">{{ formatPrice(category.twoPax) }}</p>
+                        </span>
+                        <!-- <span class="flex justify-between">
+                            <p>👨‍👩‍👦 4-6 Pax</p>
+                            <p class="font-bold text-white">{{ formatPrice(category.fourToSixPax) }}</p>
+                        </span>
+                        <span class="flex justify-between">
+                            <p>🚌 8-10 Pax</p>
+                            <p class="font-bold text-white">{{ formatPrice(category.eightToTenPax) }}</p>
+                        </span> 
+                        <span class="flex justify-between">
+                            <p>➕ Extra Person</p>
+                            <p class="font-bold text-white">{{ formatPrice(category.extraPerson) }}</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</section>
