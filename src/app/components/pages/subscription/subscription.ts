@@ -70,16 +70,16 @@ export class Subscription {
 
 
   private loadRecaptchaScript(): void {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-      console.log('reCAPTCHA script loaded successfully');
-    };
-    script.onerror = (error) => {
-      console.error('Error loading reCAPTCHA script:', error);
-    };
-    document.body.appendChild(script);
+    // const script = document.createElement('script');
+    // script.src = 'https://www.google.com/recaptcha/api.js';
+    // script.async = true;
+    // script.defer = true;
+    // script.onload = () => {
+    //   console.log('reCAPTCHA script loaded successfully');
+    // };
+    // script.onerror = (error) => {
+    //   console.error('Error loading reCAPTCHA script:', error);
+    // };
+    // document.body.appendChild(script);
   }
 } 

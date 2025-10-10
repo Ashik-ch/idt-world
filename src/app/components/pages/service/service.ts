@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 export class Service {
   features = features;
   services = Services;
-  testimonials = testimonialList;
   selectedService: any = null;
 
   openModal(service: any) {
