@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { InboundMap } from './inbound-map/inbound-map';
-// import { inboundPackages } from '../../data/package.data';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +20,20 @@ export class Inbound {
   inboundPackages = inboundPackages;
   quotes = QUOTES[0];
   constructor(private router: Router) { }
+
+  searchTerm = '';
+
+  // 🔍 Computed filtered list
+  get filteredPackages() {
+    const term = this.searchTerm.trim().toLowerCase();
+    if (!term) return this.inboundPackages;
+    return this.inboundPackages.filter(
+      (pkg) =>
+        pkg.name.toLowerCase().includes(term) ||
+        pkg.id.toLowerCase().includes(term)
+    );
+  }
+
 
   navigateToState(state: string) {
     this.router.navigate(['/inbound', state]);
