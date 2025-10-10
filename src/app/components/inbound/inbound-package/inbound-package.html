@@ -1,0 +1,171 @@
+<div class="min-h-screen py-6">
+    <div class="mb-3 ml-6">
+        <a routerLink="/inbound"
+            class="inline-flex items-center text-red-600 hover:text-red-800 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Inbound Packages
+        </a>
+    </div>
+    <div
+        class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 to-pink-600  p-8 mb-12 text-white text-center">
+        <div class="text-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-animate="hero" class="text-center space-y-6">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 transform transition-all duration-1000">
+                    {{ packageData?.title }}
+                </h3>
+                <div class="flex items-center justify-center space-x-4 text-xl">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        📅 {{ packageData?.duration }}
+                    </span>
+
+                </div>
+                <p class="text-xl md:text-xl max-w-4xl mx-auto leading-relaxed opacity-90 text-medium py-3">
+                    {{ packageData?.summary }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apart Section -->
+    <section class="max-w-7xl mx-auto  rounded-2xl bg-white p-4 shadow-xl border-2 border-red-500 mb-6  text-center">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-8 relative inline-block" data-aos="fade-up">
+            <span class="text-red-500"> What Sets Your Tour Apart? </span>
+            <div class="absolute left-1/2 -bottom-2 w-24 h-1 bg-red-500 rounded-full -translate-x-1/2"></div>
+        </h2>
+        <div class="flex flex-wrap justify-start gap-3">
+            <span *ngFor="let item of packageData?.tourHighlights" class="flex items-center gap-2 bg-red-50 text-gray-800 rounded-full px-3 py-1 text-sm font-medium
+                    hover:bg-red-600 hover:text-white transition-colors duration-300 cursor-default">
+                <i class="pi pi-check text-xs"></i> {{ item }} </span>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-gray-800 p-6 rounded-2xl">
+        <!-- Today's Deal Banner -->
+        <!-- <om-shine-border borderRadius="1rem" class="text-white text-center m-4"> -->
+        <div class="flex items-center justify-center mb-4 p-4">
+            <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h2 class="text-3xl font-bold">Today's Deal!</h2>
+        </div>
+        <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
+            <button (click)="scrollToPackages()"
+                class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                View Deals
+            </button>
+        </div>
+        <!-- </om-shine-border> -->
+        <section class="bg-white mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-3xl mt-8">
+            <div class="max-w-7xl space-y-6 ">
+                <!-- Reusable collapsible section -->
+                <div *ngFor="let section of collapsibleSections"
+                    class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <!-- Header -->
+                    <button
+                        class="w-full flex justify-between items-center px-6 py-4 bg-gradient-to-r from-red-600 via-red-500 to-red-700 text-white font-semibold text-lg md:text-xl transition-all hover:opacity-95"
+                        (click)="toggleSection(section.id)">
+                        <span>{{ section.title }}</span>
+                        <i class="pi" [ngClass]="{
+                      'pi-chevron-down': openSection !== section.id,
+                      'pi-chevron-up': openSection === section.id
+                    }"></i>
+                    </button>
+
+                    <!-- Content -->
+                    <div class="transition-all duration-500 ease-in-out overflow-hidden bg-white"
+                        [style.maxHeight]="openSection === section.id ? '3000px' : '0px'">
+                        <div>
+                            <ng-container [ngSwitch]="section.id">
+                                <!-- <app-inbound-overview *ngSwitchCase="'overview'"
+                                    [stateHighlights]="stateHighlights"></app-inbound-overview> -->
+                                <!-- 
+                                <app-inbound-itinerary *ngSwitchCase="'overview'"
+                                    [detailedItinerary]="packageData?.detailedItinerary"></app-inbound-itinerary>
+
+                                <app-inbound-hotels *ngSwitchCase="'hotels'" [hotels]="packageData?.hotels"
+                                    [transport]="packageData?.transport" [childPolicy]="packageData?.childPolicy"
+                                    [meals]="packageData?.meals">
+                                </app-inbound-hotels>
+
+                                <app-inbound-summary *ngSwitchCase="'details'"
+                                    [details]="packageData?.supplementalAttractions"
+                                    [specialOffers]="packageData?.specialOffers" [inclusions]="packageData?.inclusions"
+                                    [exclusions]="packageData?.exclusions" [sightseeing]="packageData?.sightseeing">
+                                </app-inbound-summary>
+
+                                <app-inbound-pricing *ngSwitchCase="'pricing'" [pricing]="packageData?.pricing">
+                                </app-inbound-pricing> -->
+
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <app-booking-form></app-booking-form> -->
+        <!-- Best Time to Visit -->
+        <section class="bg-red-500 rounded-2xl shadow-xl p-4 my-12 text-white">
+            <!-- <h2 class="text-2xl font-bold text-gray-100 mb-6">Best Time to Visit {{ stateName }}</h2> -->
+            <h2 class="text-2xl font-bold text-white mb-2 p-2 flex items-center">
+                <span class="bg-white p-3 rounded-full mr-3">🗓️</span>
+                Best Time to Visit {{ stateName }}
+            </h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div *ngFor="let season of bestTimeToVisit" class="text-center p-4">
+                    <div class="w-24 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                        [ngClass]="season.color">
+                        <span class="text-gray-800 font-bold">{{ season.months }}</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-100 mb-2">{{ season.name }}</h3>
+                    <p class="text-gray-50 text-sm">{{ season.description }}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Gallery -->
+        <section data-animate="gallery" class="bg-white rounded-3xl shadow-xl py-4 mb-4">
+            <h2 class="text-2xl font-bold text-red-500 mb-2 p-3 flex items-center">
+                <span class="bg-purple-100 p-3 pb-4 rounded-full mr-3">📸</span>
+                Gallery
+            </h2>
+
+            <div class="relative overflow-hidden w-full">
+                <!-- <div
+                    class="pointer-events-none absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-black/60 to-transparent z-10">
+                </div>
+                <div
+                    class="pointer-events-none absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-black/60 to-transparent z-10">
+                </div> -->
+                <div class="flex animate-marquee space-x-6">
+                    <!-- First Loop -->
+                    <div *ngFor="let highlight of stateHighlights" class="flex-shrink-0 w-80">
+                        <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                            <img [src]="highlight.img" [alt]="highlight.title"
+                                class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                            <!-- <div
+                                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                    <h3 class="text-white text-lg font-semibold">{{ highlight.title }}</h3>
+                                </div> -->
+                        </div>
+                    </div> >
+                    <div *ngFor="let highlight of stateHighlights" class="flex-shrink-0 w-80">
+                        <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                            <img [src]="highlight.img" [alt]="highlight.title"
+                                class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <h3 class="text-white text-lg font-semibold">{{ highlight.title }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
