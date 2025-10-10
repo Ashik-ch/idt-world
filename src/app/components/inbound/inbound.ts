@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { InboundMap } from './inbound-map/inbound-map';
+import { InboundMap } from './inbound-map/inbound-map';
 // import { inboundPackages } from '../../data/package.data';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -11,8 +11,9 @@ import { inboundPackages } from '../../data/package.data';
 @Component({
   selector: 'app-inbound',
   imports: [
-    // InboundMap, 
-    CommonModule, FormsModule, Quotes, RouterModule],
+    InboundMap, Quotes,
+    CommonModule, FormsModule, RouterModule,
+  ],
   templateUrl: './inbound.html',
   styleUrl: './inbound.scss'
 })
