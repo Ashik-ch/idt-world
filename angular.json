@@ -58,6 +58,9 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "prerender": {
+              "exclude": ["/inbound/:state"]
             }
           },
           "configurations": {
@@ -74,7 +77,10 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "prerender": {
+                "exclude": ["/inbound/:state"]
+              }
             },
             "development": {
               "optimization": false,
