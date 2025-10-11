@@ -37,6 +37,7 @@
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
+    "kursor": "^0.1.6",
     "primeicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
