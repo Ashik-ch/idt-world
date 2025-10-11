@@ -146,6 +146,6 @@ export const testimonialList = [
         rating: 5,
         message:
             'Best travel experience ever! Kerala felt like paradise with such smooth arrangements.',
-        avatar: 'assets/testimonials/sophia.jpg',
+        avatar: 'https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg',
     },
 ];
