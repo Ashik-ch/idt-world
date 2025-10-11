@@ -9,18 +9,16 @@ import { InboundHotels } from "./inbound-hotels/inbound-hotels";
 import { InboundSummary } from "./inbound-summary/inbound-summary";
 import { InboundPricing } from "./inbound-pricing/inbound-pricing";
 // import { statesData } from '../../../data/inbound.data'; 
-// import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
-// import { InboundItinerary } from '../../package/inbound-itinerary/inbound-itinerary';
-// import { InboundPricing } from '../../package/inbound-pricing/inbound-pricing';
-// import { InboundSummary } from '../../package/inbound-summary/inbound-summary';
-// import { InboundHotels } from '../../package/inbound-hotels/inbound-hotels';
+import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 // import * as AOS from 'aos';
 // import 'aos/dist/aos.css';
 // import { BookingForm } from '../../../component/booking-form/booking-form';
 
 @Component({
   selector: 'app-inbound-package',
-  imports: [CommonModule, FormsModule, RouterModule, InboundItinerary, InboundHotels, InboundSummary, InboundPricing],
+  imports: [CommonModule, FormsModule, RouterModule,
+    InboundItinerary, InboundHotels, InboundSummary, InboundPricing,
+    NgxShineBorderComponent],
   templateUrl: './inbound-package.html',
   styleUrl: './inbound-package.scss'
 })

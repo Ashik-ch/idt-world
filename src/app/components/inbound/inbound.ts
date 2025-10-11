@@ -36,6 +36,7 @@ export class Inbound {
 
 
   navigateToState(state: string) {
+    console.log("state", state);
     this.router.navigate(['/inbound', state]);
   }
 

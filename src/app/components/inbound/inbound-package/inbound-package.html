@@ -43,22 +43,22 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-gray-800 p-6 rounded-2xl">
         <!-- Today's Deal Banner -->
-        <!-- <om-shine-border borderRadius="1rem" class="text-white text-center m-4"> -->
-        <div class="flex items-center justify-center mb-4 p-4">
-            <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h2 class="text-3xl font-bold">Today's Deal!</h2>
-        </div>
-        <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
-            <button (click)="scrollToPackages()"
-                class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
-                View Deals
-            </button>
-        </div>
-        <!-- </om-shine-border> -->
+        <om-shine-border borderRadius="1rem" class="text-white text-center m-4">
+            <div class="flex items-center justify-center mb-4 p-4">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2 class="text-3xl font-bold">Today's Deal!</h2>
+            </div>
+            <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
+                <button (click)="scrollToPackages()"
+                    class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                    View Deals
+                </button>
+            </div>
+        </om-shine-border>
         <section class="bg-white mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-3xl mt-8">
             <div class="max-w-7xl space-y-6 ">
                 <!-- Reusable collapsible section -->
