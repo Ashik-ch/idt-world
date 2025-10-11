@@ -57,10 +57,10 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
-              "entry": "src/server.ts"
-            },
-            "prerender": {
-              "exclude": ["/inbound/:state"]
+              "entry": "src/server.ts",
+              "prerender": {
+                "exclude": ["/inbound/:state"]
+              }
             }
           },
           "configurations": {
@@ -78,8 +78,10 @@
                 }
               ],
               "outputHashing": "all",
-              "prerender": {
-                "exclude": ["/inbound/:state"]
+              "ssr": {
+                "prerender": {
+                  "exclude": ["/inbound/:state"]
+                }
               }
             },
             "development": {
