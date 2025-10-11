@@ -10,15 +10,15 @@ import { InboundSummary } from "./inbound-summary/inbound-summary";
 import { InboundPricing } from "./inbound-pricing/inbound-pricing";
 // import { statesData } from '../../../data/inbound.data'; 
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
+import { Booking } from "../../pages/booking/booking";
 // import * as AOS from 'aos';
-// import 'aos/dist/aos.css';
-// import { BookingForm } from '../../../component/booking-form/booking-form';
+// import 'aos/dist/aos.css'; 
 
 @Component({
   selector: 'app-inbound-package',
   imports: [CommonModule, FormsModule, RouterModule,
     InboundItinerary, InboundHotels, InboundSummary, InboundPricing,
-    NgxShineBorderComponent],
+    NgxShineBorderComponent, Booking],
   templateUrl: './inbound-package.html',
   styleUrl: './inbound-package.scss'
 })
