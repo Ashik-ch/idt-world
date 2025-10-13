@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { features, Services, testimonialList } from '../../../data/home.data';
+import { features, Services } from '../../../data/home.data';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
 import { FormsModule } from '@angular/forms';

@@ -5,8 +5,8 @@
             class="flex-1 text-center lg:text-left transform transition-all duration-700 ease-in-out px-4 ms-2 md:ms-12 md:px-12 space-y-8">
             <p class="font-semibold text-lg lg:text-xl md:text-base text-red-500 tracking-wide">
                 <!-- <om-typewriter [words]="[' Simply no better!']"></om-typewriter> -->
-            <h1 class="font-serif text-2xl sm:text-xl md:text-3xl lg:text-4xl px-6 py-3 w-fit md:w-3/4
-                       font-extrabold text-white bg-red-500 leading-tight rounded-lg shadow-lg">
+            <h1 class="font-serif text-xl sm:text-xl md:text-2xl lg:text-3xl px-6 py-3 w-fit md:w-3/4
+                       font-bold text-white bg-red-500 leading-tight rounded-lg shadow-lg">
                 <span class="inline-block animate-float">End of your Tour Search starts from here...</span>
             </h1>
 
@@ -36,7 +36,6 @@
 
 <app-service></app-service>
 <app-subscription></app-subscription>
-<app-testimonial></app-testimonial>
 <div *ngIf="isSubscriptionOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
     <div class="bg-red-500 rounded-xl shadow-lg w-full max-w-md p-6 relative">
         <button (click)="isSubscriptionOpen = false" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700"> ✕
