@@ -18,34 +18,31 @@
                     We provide exceptional travel experiences with personalized service and unbeatable prices.
                 </p>
             </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                <div *ngFor="let f of features"
-                    class="group relative bg-red-500 rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:scale-[1.03]">
-                    <img [src]="f.image" [alt]="f.title"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <swiper-container effect="coverflow" grab-cursor="true" centered-slides="false" slides-per-view="auto"
+                loop="true" autoplay-delay="3500" autoplay-disable-on-interaction="false" pagination="true"
+                coverflow-effect-rotate="40" coverflow-effect-stretch="0" coverflow-effect-depth="120"
+                coverflow-effect-modifier="2.5" coverflow-effect-slide-shadows="true"
+                class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
+                <swiper-slide *ngFor="let f of features">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    </div>
-                    <div
-                        class="relative z-10 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 group-hover:opacity-0">
-                        <div class="w-16 h-16 flex items-center justify-center rounded-full mb-4 shadow-md"
-                            [ngClass]="f.iconBg">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" [ngClass]="f.iconColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    [attr.d]="f.iconPath" />
-                            </svg>
+                        class="relative bg-red-500 rounded-3xl overflow-hidden flex flex-col items-center justify-center text-center min-h-[420px] transition-all duration-700">
+                        <img [src]="f.image" [alt]="f.title"
+                            class="absolute inset-0 w-full h-full object-cover opacity-70" />
+                        <div class="relative z-10 p-10 text-white space-y-5">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4 shadow-md"
+                                [ngClass]="f.iconBg">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" [ngClass]="f.iconColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        [attr.d]="f.iconPath" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold">{{ f.title }}</h3>
+                            <p class="text-base leading-relaxed max-w-md mx-auto">{{ f.description }}</p>
                         </div>
-                        <h3 class="text-lg font-semibold text-white">{{ f.title }}</h3>
                     </div>
-
-                    <div
-                        class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-700">
-                        <p class="text-white text-base leading-relaxed">{{ f.description }}</p>
-                    </div>
-                </div>
-            </div>
+                </swiper-slide>
+            </swiper-container>
         </div>
     </section>
 
