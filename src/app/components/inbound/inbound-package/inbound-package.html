@@ -10,6 +10,8 @@
     </div>
     <div
         class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 to-pink-600  p-8 mb-12 text-white text-center">
+        <!-- <div class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 mb-12 text-red-500 text-center bg-cover bg-center"
+        style="background-image: url('/assets/images/packageheader2.jpeg');"> -->
         <div class="text-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-animate="hero" class="text-center space-y-6">
                 <h3 class="text-3xl md:text-4xl font-bold mb-4 transform transition-all duration-1000">
@@ -42,23 +44,6 @@
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-gray-800 p-6 rounded-2xl">
-        <!-- Today's Deal Banner -->
-        <om-shine-border borderRadius="1rem" class="text-white text-center m-4">
-            <div class="flex items-center justify-center mb-4 p-4">
-                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <h2 class="text-3xl font-bold">Today's Deal!</h2>
-            </div>
-            <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
-                <button (click)="scrollToPackages()"
-                    class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
-                    View Deals
-                </button>
-            </div>
-        </om-shine-border>
         <section class="bg-white mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-3xl mt-8">
             <div class="max-w-7xl space-y-6 ">
                 <!-- Reusable collapsible section -->
@@ -106,6 +91,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- Today's Deal Banner -->
+        <om-shine-border borderRadius="1rem" class="text-white text-center m-4">
+            <div class="flex items-center justify-center mb-4 p-4">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2 class="text-3xl font-bold">Today's Deal!</h2>
+            </div>
+            <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
+                <button (click)="scrollToPackages()"
+                    class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                    View Deals
+                </button>
+            </div>
+        </om-shine-border>
 
         <app-booking></app-booking>
         <!-- Best Time to Visit -->

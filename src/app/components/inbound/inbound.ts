@@ -43,5 +43,17 @@ export class Inbound {
   openPackage(packageId: string) {
     console.log('Selected package:', packageId);
   }
+
+  downloadPDF(fileId: string) {
+    // Google Drive direct download URL format
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'IDT-Package.pdf'; // optional custom name
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.click();
+  }
 }
 

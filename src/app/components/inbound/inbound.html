@@ -49,7 +49,18 @@
                         <div class="relative z-10">
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-bold">{{ state.name }}</h3>
-                                <i class="pi pi-arrow-right text-xl"></i>
+                                <div class="space-x-3">
+                                    <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=drive_link"
+                                        target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"
+                                        title="View PDF">
+                                        <i class="pi pi-file-pdf text-md text-white hover:scale-125"></i>
+                                    </a>
+                                    <button (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
+                                        class="transition" title="Download PDF">
+                                        <i class="pi pi-download text-md text-white hover:scale-125"></i>
+                                    </button>
+                                    <i class="pi pi-arrow-right text-md hover:scale-125"></i>
+                                </div>
                             </div>
                             <p class="mb-2 italic text-sm">{{ state.tagline }}</p>
                             <p class="text-sm opacity-90">{{ state.description }}</p>

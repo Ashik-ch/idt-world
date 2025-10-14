@@ -68,7 +68,7 @@ export const features: Feature[] = [
         title: 'Get the Best for your Budget',
         description:
             'Enjoy exclusive offers, value-for-money packages, and transparent pricing.',
-        image: 'assets/images/feature5.png',
+        image: 'assets/images/feature5.jpg',
     },
 ];
 
