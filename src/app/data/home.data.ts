@@ -18,7 +18,7 @@ export const features: Feature[] = [
         title: 'Tour with Life Elements',
         description:
             'Explore India’s hidden gems and global landmarks curated for memorable experiences.',
-        image: 'assets/images/a.jpg',
+        image: 'assets/images/feature3.jpg',
     },
     {
         iconBg: 'bg-red-100',
@@ -28,7 +28,7 @@ export const features: Feature[] = [
         title: 'Choose your Wheels for Comfort & Ease',
         description:
             'Enjoy comfortable rides with our fleet of premium vehicles and experienced drivers.',
-        image: 'assets/images/a.jpg',
+        image: 'assets/images/feature6.png',
     },
     {
         iconBg: 'bg-red-100',
@@ -38,7 +38,7 @@ export const features: Feature[] = [
         title: 'Delight in our Culinary Offerings',
         description:
             'Delight in authentic local cuisines and curated dining experiences across destinations.',
-        image: 'assets/images/b.jpg',
+        image: 'assets/images/1.png',
     },
     {
         iconBg: 'bg-red-100',
@@ -48,7 +48,7 @@ export const features: Feature[] = [
         title: 'Enjoy Experiential Adventures',
         description:
             'From mountain treks to backwater cruises — your journey will be full of adventures.',
-        image: 'assets/images/c.jpg',
+        image: 'assets/images/2.png',
     },
     {
         iconBg: 'bg-red-100',
@@ -58,7 +58,7 @@ export const features: Feature[] = [
         title: 'Pack your packet with more options ',
         description:
             'Stay in handpicked hotels and resorts blending luxury, comfort, and local culture.',
-        image: 'assets/images/d.jpg',
+        image: 'assets/images/3.png',
     },
     {
         iconBg: 'bg-red-100',
@@ -68,7 +68,7 @@ export const features: Feature[] = [
         title: 'Get the Best for your Budget',
         description:
             'Enjoy exclusive offers, value-for-money packages, and transparent pricing.',
-        image: 'assets/images/e.jpg',
+        image: 'assets/images/feature5.png',
     },
 ];
 
