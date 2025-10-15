@@ -55,13 +55,13 @@
                         (click)="toggleSection(section.id)">
                         <span>{{ section.title }}</span>
                         <i class="pi" [ngClass]="{
-                      'pi-chevron-down': openSection !== section.id,
-                      'pi-chevron-up': openSection === section.id
-                    }"></i>
+                        'pi-chevron-down': !openSection.includes(section.id),
+                        'pi-chevron-up': openSection.includes(section.id)
+                      }"> </i>
                     </button>
                     <!-- Content -->
                     <div class="transition-all duration-500 ease-in-out overflow-hidden bg-white"
-                        [style.maxHeight]="openSection === section.id ? '3000px' : '0px'">
+                        [style.maxHeight]="openSection.includes(section.id) ? '3000px' : '0px'">
                         <div>
                             <ng-container [ngSwitch]="section.id">
                                 <!-- <app-inbound-overview *ngSwitchCase="'overview'"
@@ -102,7 +102,7 @@
             </div>
             <p class="text-xl mb-6">Special discounts on {{ stateName }} packages - Limited time offer!</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center p-4">
-                <button (click)="scrollToPackages()"
+                <button
                     class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
                     View Deals
                 </button>
@@ -133,7 +133,7 @@
         <section data-animate="gallery" class="bg-white rounded-3xl shadow-xl py-4 mb-4">
             <h2 class="text-2xl font-bold text-red-500 mb-2 p-3 flex items-center">
                 <span class="bg-purple-100 p-3 pb-4 rounded-full mr-3">📸</span>
-                Gallery
+                Guest Moments
             </h2>
 
             <div class="relative overflow-hidden w-full">

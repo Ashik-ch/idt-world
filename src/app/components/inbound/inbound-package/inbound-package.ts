@@ -34,10 +34,7 @@ export class InboundPackage {
   packageData: Package | null = null;
   activeTab: string = 'overview';
   activeAccordion: string = '';
-  openSection: string | null = 'overview'; // default open
-
-  constructor(private route: ActivatedRoute, private router: Router, private viewportScroller: ViewportScroller) { }
-
+  // openSection: string | null = 'overview'; // default open
 
   collapsibleSections = [
     { id: 'overview', title: 'Explore daily programme', delay: '0' },
@@ -47,10 +44,7 @@ export class InboundPackage {
     { id: 'pricing', title: 'Pricing', delay: '300' },
   ];
 
-
-  toggleSection(id: string) {
-    this.openSection = this.openSection === id ? null : id;
-  }
+  constructor(private route: ActivatedRoute, private router: Router, private viewportScroller: ViewportScroller) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -86,6 +80,19 @@ export class InboundPackage {
       }
     }
   }
+  openSection: string[] = ['overview'];
+
+  toggleSection(id: string) {
+    console.log(id);
+
+    if (this.openSection.includes(id)) {
+      // already open → close it
+      this.openSection = this.openSection.filter(s => s !== id);
+    } else {
+      // open new section, keep others
+      this.openSection.push(id);
+    }
+  }
 
   setActiveTab(tab: string): void {
     this.activeTab = tab;
@@ -95,11 +102,5 @@ export class InboundPackage {
     this.activeAccordion = this.activeAccordion === section ? '' : section;
   }
 
-  scrollToPackages() {
-    const packagesElement = document.getElementById('packages');
-    if (packagesElement) {
-      packagesElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }
 
