@@ -35,7 +35,8 @@
                 <div *ngFor=" let state of filteredPackages" class="group cursor-pointer"
                     (click)="navigateToState(state.id)">
                     <div class="rounded-xl p-6 text-white hover:shadow-lg transition-all duration-300 ease-in-out relative overflow-hidden"
-                        [ngClass]="state.gradient ? 'bg-gradient-to-br ' + state.gradient : ''" [ngStyle]="
+                        data-aos="zoom-in-right" [ngClass]="state.gradient ? 'bg-gradient-to-br ' + state.gradient : ''"
+                        [ngStyle]="
               state.bgImage
                 ? {
                     'background-image': 'url(' + state.bgImage + ')',
