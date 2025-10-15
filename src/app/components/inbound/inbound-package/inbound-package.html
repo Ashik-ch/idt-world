@@ -8,10 +8,10 @@
             Back to Inbound Packages
         </a>
     </div>
-    <div
-        class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 to-pink-600  p-8 mb-12 text-white text-center">
-        <!-- <div class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 mb-12 text-red-500 text-center bg-cover bg-center"
-        style="background-image: url('/assets/images/packageheader2.jpeg');"> -->
+    <!-- <div
+        class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 to-pink-600  p-8 mb-12 text-white text-center"> -->
+    <div class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 mb-12 text-white text-center bg-cover bg-center border-red-500"
+        style="background-image: url('/assets/images/inboundHeader4.png');">
         <div class="text-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-animate="hero" class="text-center space-y-6">
                 <h3 class="text-3xl md:text-4xl font-bold mb-4 transform transition-all duration-1000">
@@ -31,7 +31,8 @@
     </div>
 
     <!-- Apart Section -->
-    <section class="max-w-7xl mx-auto  rounded-2xl bg-white p-4 shadow-xl border-2 border-red-500 mb-6  text-center">
+    <section
+        class="max-w-7xl mx-auto  rounded-2xl bg-white p-4 shadow-xl border-2 border-red-500 mb-6 text-center bg-[url('assets/images/package-header1.jpeg')] bg-cover bg-center">
         <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-8 relative inline-block" data-aos="fade-up">
             <span class="text-red-500"> What Sets Your Tour Apart? </span>
             <div class="absolute left-1/2 -bottom-2 w-24 h-1 bg-red-500 rounded-full -translate-x-1/2"></div>
@@ -42,7 +43,6 @@
                 <i class="pi pi-check text-xs"></i> {{ item }} </span>
         </div>
     </section>
-
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-gray-800 p-6 rounded-2xl">
         <section class="bg-white mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-3xl mt-8">
             <div class="max-w-7xl space-y-6 ">
@@ -59,7 +59,6 @@
                       'pi-chevron-up': openSection === section.id
                     }"></i>
                     </button>
-
                     <!-- Content -->
                     <div class="transition-all duration-500 ease-in-out overflow-hidden bg-white"
                         [style.maxHeight]="openSection === section.id ? '3000px' : '0px'">

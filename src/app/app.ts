@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './components/pages/header/header';
 import { Footer } from './components/pages/footer/footer';
 import { Chatbot } from "./components/pages/chatbot/chatbot";
-import Kursor from 'kursor';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +15,5 @@ export class App {
   protected readonly title = signal('idt-world');
 
   ngOnInit() {
-    new Kursor({
-      type: 1,
-      removeDefaultCursor: true,
-      color: '#000'
-    });
   }
 }

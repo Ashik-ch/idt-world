@@ -576,7 +576,28 @@ export const inboundPackages = [
     gradient: 'from-purple-400 to-purple-600',
     tagline: 'Land of Kings',
     description: 'Palaces, Forts, Desert Safaris',
-  }
+  },
+  {
+    id: 'kashmir',
+    name: 'Kashmir',
+    gradient: 'from-red-400 to-red-600',
+    tagline: 'Himalayan Paradise',
+    description: 'Mountains, Temples, Heritage Sites',
+  },
+  {
+    id: 'lakshadweeb',
+    name: 'Lakshadweeb',
+    gradient: 'from-purple-400 to-purple-600',
+    tagline: 'Land of Kings',
+    description: 'Palaces, Forts, Desert Safaris',
+  },
+  {
+    id: 'delhi',
+    name: 'Delhi',
+    gradient: 'from-yellow-400 to-yellow-600',
+    tagline: 'Pearl of the Orient',
+    description: 'Beaches, Nightlife, Portuguese Heritage',
+  },
 ];
 
 export const itineraryRoute = [

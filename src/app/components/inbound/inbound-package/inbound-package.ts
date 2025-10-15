@@ -40,7 +40,7 @@ export class InboundPackage {
 
 
   collapsibleSections = [
-    { id: 'overview', title: 'Explore your daily programme', delay: '0' },
+    { id: 'overview', title: 'Explore daily programme', delay: '0' },
     // { id: 'itinerary', title: 'Itinerary', delay: '100' },
     { id: 'hotels', title: 'Components of this Package', delay: '100' },
     { id: 'details', title: 'Details & Policies', delay: '200' },
