@@ -1,29 +1,61 @@
-<!-- Floating Chat Button -->
+<!-- 🌟 Floating Chat Button -->
 <button (click)="openChat()"
-    class="fixed bottom-6 right-6 bg-red-600 text-white rounded-full p-4 shadow-xl hover:bg-red-700">
-    <i class="pi pi-comments text-2xl"></i>
+    class="fixed bottom-6 right-6 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-full p-4 shadow-xl hover:scale-110 transition-all duration-300">
+    <i class="pi pi-comments text-2xl animate-pulse"></i>
 </button>
 <!-- Chat Window -->
 <div *ngIf="isOpen"
     class="fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp">
-    <div class="bg-red-600 text-white p-4 font-semibold flex justify-between items-center">
-        <span>IDT Virtual Assistant</span>
+    <div
+        class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 font-semibold flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/100?img=47" alt="DoraGO" class="w-8 h-8 rounded-full border border-white">
+            <span>DoraGo - Virtual Assistant</span>
+        </div>
         <button (click)="openChat()" class="text-white hover:text-gray-200 transition">
-            <i class="pi pi-times text-xl"></i>
+            <i class="pi pi-times text-lg"></i>
         </button>
     </div>
-    <div class="p-4 space-y-4 max-h-80 overflow-y-auto">
-        <p class="text-gray-800 font-medium">{{ currentStep.question }}</p>
-
-        <div *ngFor="let opt of currentStep.options">
-            <button (click)="selectOption(opt.next)"
-                class="w-full text-left px-4 py-2 my-1 bg-gray-100 rounded-lg hover:bg-red-50 hover:text-red-600 transition">
-                {{ opt.text }}
-            </button>
+    <div class="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50">
+        <div *ngIf="!userName" class="flex flex-col gap-3">
+            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+                Hi 👋 I'm <b>DoraGO</b>, your travel assistant!
+                What’s your <b>name</b>?
+            </div>
+            <input [(ngModel)]="userName" type="text" placeholder="Enter your name"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <button (click)="askContact()"
+                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">Next</button>
         </div>
 
-        <div *ngIf="currentStep.options.length === 0" class="text-sm text-gray-500">
-            Thank you for chatting with us! 👋
+        <!-- Ask Contact -->
+        <div *ngIf="userName && !userContact" class="flex flex-col gap-3">
+            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+                Nice to meet you, {{ userName }} 😊
+                Can I have your <b>contact number</b> so our expert can reach out?
+            </div>
+            <input [(ngModel)]="userContact" type="tel" placeholder="+91 XXXXX XXXXX"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <button (click)="startChatFlow()"
+                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">Start Chat</button>
+        </div>
+
+        <!-- Regular Chat Flow -->
+        <div *ngIf="userContact && currentStep">
+            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+                {{ currentStep.question }}
+            </div>
+
+            <div *ngFor="let opt of currentStep.options">
+                <button (click)="selectOption(opt.next)"
+                    class="w-full text-left px-4 py-2 my-1 bg-white border border-gray-200 rounded-lg hover:bg-red-50 hover:text-red-600 transition">
+                    {{ opt.text }}
+                </button>
+            </div>
+
+            <div *ngIf="currentStep.options.length === 0" class="text-sm text-gray-500">
+                Thank you, {{ userName }}! DoraGO will get back to you soon 🌸
+            </div>
         </div>
     </div>
 </div>

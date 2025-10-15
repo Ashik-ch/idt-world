@@ -5,3 +5,18 @@
 button {
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 90, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 90, 0.5);
+}
+
+button {
+  transition: all 0.3s ease;
+}
