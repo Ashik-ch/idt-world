@@ -102,50 +102,149 @@ export const features: Feature[] = [
     },
 ];
 
-
 export const Services = [
     {
+        id: 'hotels',
         icon: 'pi pi-building',
-        title: 'Relax in Our Choice of Hotels',
+        title: 'Hotels & Resorts',
         subtitle: 'Handpicked Stays for Every Destination',
+        categories: [
+            '3 Star Deluxe',
+            '4 Star Deluxe',
+            '5 Star Deluxe',
+            '5 Star Luxury'
+        ],
         desc: 'Stay in carefully selected hotels across Kerala — combining comfort, style, and authentic local charm for a memorable experience.',
-        images: [
-            'assets/images/a.jpg',
-            'assets/images/b.jpg',
-            'assets/images/c.jpg'
-        ]
+        images: ['assets/images/a.jpg', 'assets/images/b.jpg', 'assets/images/c.jpg']
     },
     {
+        id: 'transportation',
         icon: 'pi pi-car',
-        title: 'Ride in Comfort & Style',
+        title: 'Transportation',
         subtitle: 'Private Chauffeur & Premium Vehicles',
+        categories: [
+            'Sedan Car (Toyota Etios/Swift Dzire)',
+            'Toyota Innova Crysta',
+            '12-Seater Force Traveller',
+            '17-Seater Force Traveller',
+            'Mini Luxury Bus',
+            'Luxury Bus'
+        ],
         desc: 'Travel in modern, air-conditioned vehicles driven by experienced chauffeurs for a smooth and safe journey.',
-        images: [
-            'assets/images/d.jpg',
-            'assets/images/e.jpg'
-        ]
+        images: ['assets/images/bus.jpg', 'assets/images/crysta.jpg', 'assets/images/force.jpg']
     },
     {
+        id: 'activities',
         icon: 'pi pi-sparkles',
-        title: 'Enjoy One-of-a-Kind Experiences',
+        title: 'Activities',
         subtitle: 'Exclusive Kerala Adventures',
-        desc: 'Discover unique attractions and curated add-on adventures — from serene backwater cruises to cultural heritage tours.',
-        images: [
-            'assets/images/g.jpg',
-            'assets/images/f.jpg',
-            'assets/images/h.jpg'
-        ]
+        categories: [
+            'Cookery Demonstration Tour',
+            'Kalarippayattu Programme',
+            'Backwater Cruises',
+            'Cultural Heritage Tours'
+        ],
+        desc: 'Discover unique attractions and curated add-on activities — from serene backwater cruises to cultural heritage tours.',
+        images: ['assets/images/kalari.jpg', 'assets/images/culture.jpg', 'assets/images/h.jpg']
     },
     {
-        icon: 'pi pi-headphones',
-        title: 'Dedicated Assistance',
-        subtitle: '24x7 Guest Support',
-        desc: 'Our expert team is available around the clock to ensure a seamless and stress-free travel experience.',
-        images: [
-            'assets/images/i.jpg'
+        id: 'houseboats',
+        icon: 'pi pi-home',
+        title: 'Houseboats',
+        subtitle: 'Backwater Retreats',
+        categories: [
+            'Backwater Historical Tours',
+            'Luxury Houseboats',
+            'Premium Houseboats',
+            'Standard Houseboats'
+        ],
+        desc: 'Sail across Kerala’s iconic backwaters in comfort with a range of houseboat experiences, from luxury to traditional.',
+        images: ['assets/images/h.jpg', 'assets/images/i.jpg']
+    },
+    {
+        id: 'tours',
+        icon: 'pi pi-globe',
+        title: 'Distinctive Tours',
+        subtitle: 'Adventure & Culture',
+        categories: [
+            'Mountain Trekking',
+            'Bamboo River Rafting',
+            'Jeep Safari',
+            'Elephant Safari',
+            'Village Walks',
+            'Bird Watching',
+            'Heritage Walks',
+            'Cycling Tours'
+        ],
+        desc: 'Curated tours to connect you with nature, culture, and authentic Kerala adventures.',
+        images: ['assets/images/m.jpeg', 'assets/images/k.jpg', 'assets/images/f.jpg']
+    },
+    {
+        id: 'villas',
+        icon: 'pi pi-home',
+        title: 'Villas & Rentals',
+        subtitle: 'Private Stays',
+        categories: ['Coming Soon'],
+        desc: 'Exclusive private villas and rental properties launching soon.',
+        images: ['assets/images/d.jpg', 'assets/images/c.jpg']
+    },
+    // {
+    //     icon: 'pi pi-briefcase',
+    //     title: 'Meeting Venues',
+    //     subtitle: 'Corporate & Events',
+    //     categories: ['Coming Soon'],
+    //     desc: 'Tailored venues for business meetings, conferences, and events — coming soon.',
+    //     images: ['assets/images/i.jpg']
+    // }
+];
+
+export const hotelsResort = {
+    inboundPackages: {
+        '3 Star Deluxe': [
+            'Lotus Residency, Kerala',
+            'Hilltop View Inn, Munnar',
+            'Palm Grove Retreat, Goa'
+        ],
+        '4 Star Deluxe': [
+            'The Riverfront Manor, Karnataka',
+            'Emerald Valley Resort, Coorg',
+            'Sunshine Heritage Hotel, Jaipur'
+        ],
+        '5 Star Deluxe': [
+            'The Grand Orchid Palace, Udaipur',
+            'Azure Bay Resort & Spa, Andaman',
+            'Mountain Crest Hotel, Shimla'
+        ],
+        '5 Star Luxury': [
+            'The Royal Meridian, Delhi',
+            'Ocean Pearl Resort & Spa, Kerala',
+            'The Imperial Heritage Palace, Mumbai'
         ]
     },
-];
+    outboundPackages: {
+        '3 Star Deluxe': [
+            'Skyline City Inn, Dubai',
+            'Maple Crown Hotel, Singapore',
+            'Coastal Breeze Lodge, Sri Lanka'
+        ],
+        '4 Star Deluxe': [
+            'Palm Garden Resort, Thailand',
+            'Golden Dunes Hotel, Qatar',
+            'Silverleaf Suites, Malaysia'
+        ],
+        '5 Star Deluxe': [
+            'The Crescent Bay Hotel, Maldives',
+            'The Horizon Grand, Singapore',
+            'Royal Sands Resort, Mauritius'
+        ],
+        '5 Star Luxury': [
+            'Atlantis Paradise Island, Bahamas',
+            'The Ritz Prestige, London',
+            'Burj Al Arab Jumeirah, Dubai'
+        ]
+    }
+};
+
 
 
 export const testimonialList = [

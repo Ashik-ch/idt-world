@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { features, Services } from '../../../data/home.data';
+import { features, hotelsResort, Services } from '../../../data/home.data';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,10 @@ export class Service {
   features = features;
   services = Services;
   selectedService: any = null;
+
+  inboundCategories = Object.entries(hotelsResort.inboundPackages).map(([name, hotels]) => ({ name, hotels }));
+  outboundCategories = Object.entries(hotelsResort.outboundPackages).map(([name, hotels]) => ({ name, hotels }));
+
 
   ngOnInit() {
     register();
