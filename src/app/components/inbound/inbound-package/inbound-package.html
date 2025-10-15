@@ -11,7 +11,7 @@
     <!-- <div
         class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 to-pink-600  p-8 mb-12 text-white text-center"> -->
     <div class="rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 mb-12 text-white text-center bg-cover bg-center border-red-500"
-        style="background-image: url('/assets/images/inboundHeader4.png');">
+        style="background-image: url('assets/images/inboundHeader4.png');">
         <div class="text-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-animate="hero" class="text-center space-y-6">
                 <h3 class="text-3xl md:text-4xl font-bold mb-4 transform transition-all duration-1000">
@@ -32,7 +32,7 @@
 
     <!-- Apart Section -->
     <section
-        class="max-w-7xl mx-auto  rounded-2xl bg-white p-4 shadow-xl border-2 border-red-500 mb-6 text-center bg-[url('assets/images/package-header1.jpeg')] bg-cover bg-center">
+        class="max-w-7xl mx-auto  rounded-2xl bg-white p-4 shadow-xl border-2 border-red-500 mb-6 text-center bg-[url('assets/images/whitebg.jpg')] bg-cover bg-center">
         <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-8 relative inline-block" data-aos="fade-up">
             <span class="text-red-500"> What Sets Your Tour Apart? </span>
             <div class="absolute left-1/2 -bottom-2 w-24 h-1 bg-red-500 rounded-full -translate-x-1/2"></div>
@@ -43,7 +43,8 @@
                 <i class="pi pi-check text-xs"></i> {{ item }} </span>
         </div>
     </section>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-gray-800 p-6 rounded-2xl">
+    <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 r bg-[url('assets/images/inboundBg.png')] bg-cover bg-center p-6 rounded-2xl">
         <section class="bg-white mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-3xl mt-8">
             <div class="max-w-7xl space-y-6 ">
                 <!-- Reusable collapsible section -->
@@ -92,7 +93,7 @@
         </section>
 
         <!-- Today's Deal Banner -->
-        <om-shine-border borderRadius="1rem" class="text-white text-center m-4">
+        <om-shine-border borderRadius="1rem" class="text-white text-center m-4 ">
             <div class="flex items-center justify-center mb-4 p-4">
                 <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -110,21 +111,36 @@
         </om-shine-border>
 
         <app-booking></app-booking>
-        <!-- Best Time to Visit -->
-        <section class="bg-red-500 rounded-2xl shadow-xl p-4 my-12 text-white">
-            <!-- <h2 class="text-2xl font-bold text-gray-100 mb-6">Best Time to Visit {{ stateName }}</h2> -->
-            <h2 class="text-2xl font-bold text-white mb-2 p-2 flex items-center">
-                <span class="bg-white p-3 rounded-full mr-3">🗓️</span>
-                Best Time to Visit {{ stateName }}
-            </h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div *ngFor="let season of bestTimeToVisit" class="text-center p-4">
-                    <div class="w-24 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-                        [ngClass]="season.color">
-                        <span class="text-gray-800 font-bold">{{ season.months }}</span>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-100 mb-2">{{ season.name }}</h3>
-                    <p class="text-gray-50 text-sm">{{ season.description }}</p>
+        <!-- 🌟 Need Help Section -->
+        <section class="relative my-16 py-10 px-6 md:px-10 rounded-3xl overflow-hidden
+         shadow-2xl text-red-500 text-center bg-[url('assets/images/banner2.jpg')] bg-cover bg-center">
+            <!-- bg-gradient-to-r from-red-600 via-pink-500 to-red-400 -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_70%)]">
+            </div>
+
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 max-w-6xl mx-auto">
+                <!-- Left Text -->
+                <div class="text-left md:text-center md:flex-1">
+                    <h2 class="text-3xl font-bold tracking-wide">
+                        Need Help Before Booking?
+                    </h2>
+                    <p class="mt-3 text-lg text-red-500/90">
+                        Our virtual assistant is here 24/7 to answer your travel questions instantly.
+                    </p>
+                </div>
+
+                <!-- Right Button -->
+                <div class="flex justify-center md:justify-end md:flex-1">
+                    <button (click)="openChatbot()" class="relative flex items-center gap-3 px-8 py-3 rounded-full
+               bg-white text-red-600 font-semibold text-lg shadow-[0_0_15px_rgba(255,255,255,0.5)]
+               transition-all duration-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)]">
+                        <i class="pi pi-comments text-2xl text-red-600 animate-pulse"></i>
+                        <span>Chat with IDT Assistant</span>
+
+                        <!-- inner glow -->
+                        <span class="absolute inset-0 rounded-full bg-gradient-to-r from-red-200 via-pink-200 to-white
+                 opacity-0 hover:opacity-20 blur-md transition-all duration-500"></span>
+                    </button>
                 </div>
             </div>
         </section>

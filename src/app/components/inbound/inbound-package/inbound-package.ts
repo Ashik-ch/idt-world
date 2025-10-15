@@ -8,9 +8,9 @@ import { InboundItinerary } from "./inbound-itinerary/inbound-itinerary";
 import { InboundHotels } from "./inbound-hotels/inbound-hotels";
 import { InboundSummary } from "./inbound-summary/inbound-summary";
 import { InboundPricing } from "./inbound-pricing/inbound-pricing";
-// import { statesData } from '../../../data/inbound.data'; 
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 import { Booking } from "../../pages/booking/booking";
+import { ChatbotService } from '../../../services/chatbot-service';
 // import * as AOS from 'aos';
 // import 'aos/dist/aos.css'; 
 
@@ -44,7 +44,9 @@ export class InboundPackage {
     { id: 'pricing', title: 'Pricing', delay: '300' },
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router, private viewportScroller: ViewportScroller) { }
+  constructor(private route: ActivatedRoute, private router: Router, private viewportScroller: ViewportScroller,
+    private chatbotService: ChatbotService,
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -100,6 +102,10 @@ export class InboundPackage {
 
   toggleAccordion(section: string): void {
     this.activeAccordion = this.activeAccordion === section ? '' : section;
+  }
+
+  openChatbot() {
+    this.chatbotService.triggerChat();
   }
 
 }

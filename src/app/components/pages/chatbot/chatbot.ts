@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { chatFlow } from '../../../data/chatbot.data';
+import { ChatbotService } from '../../../services/chatbot-service';
 
 @Component({
   selector: 'app-chatbot',
@@ -11,6 +12,12 @@ import { chatFlow } from '../../../data/chatbot.data';
 export class Chatbot {
   isOpen = false;
   currentStep = chatFlow[0];
+
+  constructor(private chatbotService: ChatbotService) { }
+
+  ngOnInit() {
+    this.chatbotService.toggleChat$.subscribe(() => this.openChat());
+  }
 
   openChat() {
     this.isOpen = !this.isOpen;

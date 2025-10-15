@@ -1,4 +1,5 @@
-<div class="max-w-5xl mx-auto px-4 py-6 border-2 border-white rounded-2xl mt-10">
+<div
+    class="mx-auto px-4 py-6 border-2 border-white rounded-2xl mt-10 bg-[url('assets/images/whitebg2.jpg')] bg-cover bg-center">
 
     <!-- Toggle Buttons -->
     <div class="flex justify-center gap-4 mb-6">
@@ -11,7 +12,7 @@
     <!-- Tour Request Form -->
     <form *ngIf="showTourForm" #bookingForm="ngForm" (ngSubmit)="submitTourForm(bookingForm)"
         class="max-w-2xl mx-auto space-y-4 text-sm text-gray-700">
-        <h2 class="text-sm md:text-xl font-base text-white text-center mb-8">
+        <h2 class="text-sm md:text-xl font-base text-red-500 text-center mb-8">
             Do you want to confirm the tour without any modifications?
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -144,7 +145,7 @@
     <!-- Change Plan Form -->
     <form *ngIf="!showTourForm" #changePlanForm="ngForm" (ngSubmit)="submitChangeForm(changePlanForm)"
         class="max-w-2xl mx-auto space-y-4 text-sm text-gray-700">
-        <h2 class="text-sm md:text-xl font-base text-white text-center mb-8">
+        <h2 class="text-sm md:text-xl font-base text-red-500 text-center mb-8">
             Want to modify your plan? Fill it out and we’ll get back to you. </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
