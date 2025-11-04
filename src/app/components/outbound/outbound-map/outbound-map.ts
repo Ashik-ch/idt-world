@@ -82,6 +82,7 @@ export class OutboundMap {
     const cities = [
       { id: 'india', title: 'India', geometry: { type: 'Point', coordinates: [77.209, 28.6139] } },
       { id: 'uae', title: 'UAE', geometry: { type: 'Point', coordinates: [55.2708, 25.2048] } },
+      { id: 'andaman-nicobar', title: 'Andaman Nicobar', geometry: { type: 'Point', coordinates: [10.74, 92.50] } },
       { id: 'usa', title: 'USA', geometry: { type: 'Point', coordinates: [-74.006, 40.7128] } },
       { id: 'uk', title: 'UK', geometry: { type: 'Point', coordinates: [-0.1276, 51.5072] } },
       { id: 'singapore', title: 'Singapore', geometry: { type: 'Point', coordinates: [103.8198, 1.3521] } },
@@ -89,7 +90,7 @@ export class OutboundMap {
     pointSeries.data.setAll(cities);
 
 
-    const cityCountryMap: Record<string, string> = { india: "IN", uae: "AE", usa: "US", uk: "GB", singapore: "SG", };
+    const cityCountryMap: Record<string, string> = { india: "IN", andamanNicobar: "AN", uae: "AE", usa: "US", uk: "GB", singapore: "SG", };
 
     polygonSeries.events.on("datavalidated", () => {
       polygonSeries.mapPolygons.each((polygon: any) => {
@@ -120,7 +121,7 @@ export class OutboundMap {
     });
 
     const india = pointSeries.getDataItemById('india');
-    ['uae', 'usa', 'uk', 'singapore'].forEach((id) => {
+    ['uae', 'usa', 'uk', 'singapore', 'andamanNicobar'].forEach((id) => {
       const dest = pointSeries.getDataItemById(id);
       if (!india || !dest) return;
 

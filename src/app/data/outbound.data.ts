@@ -19,6 +19,12 @@ export const highlightedCountries: Record<string, CountryInfo> = {
         image: "assets/images/b.jpg",
         countryCode: "india"
     },
+    "AN": {
+        color: 0xffa500,
+        details: "Andaman Nicobar: Beach and Water adventures",
+        image: "assets/images/c.jpg",
+        countryCode: "andaman-nicobar"
+    },
     "AE": {
         color: 0xffa500,
         details: "UAE: Modern marvels and desert adventures",
@@ -53,6 +59,7 @@ export const highlightedCountries: Record<string, CountryInfo> = {
 
 export const outBoundPackages = [
     { code: 'uae', title: 'UAE', subtitle: 'United Arab Emirates', desc: 'Dubai, Abu Dhabi, Modern Marvels', image: 'assets/images/a.jpg' },
+    { code: 'andaman-nicobar', title: 'Andaman Nicobar', subtitle: 'Beach', desc: 'Water Activities', image: 'assets/images/outbound/andaman.jpg' },
     { code: 'saudi-arabia', title: 'Saudi Arabia', subtitle: 'Kingdom of Saudi Arabia', desc: 'Mecca, Medina, Riyadh', image: 'assets/images/e.jpg' },
     { code: 'qatar', title: 'Qatar', subtitle: 'Pearl of the Gulf', desc: 'Doha, Desert Adventures', image: 'assets/images/c.jpg' },
     { code: 'oman', title: 'Oman', subtitle: 'Sultanate of Oman', desc: 'Muscat, Mountains, Deserts', image: 'assets/images/e.jpg' },

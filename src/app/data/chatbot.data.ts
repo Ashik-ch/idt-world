@@ -71,6 +71,7 @@ export const chatFlow: ChatStep[] = [
         question: '🌏 Asia is full of wonder! Do you have a specific destination in mind?',
         options: [
             { text: 'Dubai / UAE', next: 'end' },
+            { text: 'Andaman Nicobar', next: 'end' },
             { text: 'Singapore', next: 'end' },
             { text: 'Thailand', next: 'end' },
             { text: 'Back', next: 'outbound' },
