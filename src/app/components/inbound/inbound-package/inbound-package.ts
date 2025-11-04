@@ -42,6 +42,15 @@ export class InboundPackage {
     { id: 'hotels', title: 'Components of this Package', delay: '100' },
     { id: 'details', title: 'Details & Policies', delay: '200' },
     { id: 'pricing', title: 'Pricing', delay: '300' },
+
+    // - Explore your itinerary
+    // - Unwind in our partner hotels
+    // - Travel without stress
+    // - Savor delicious meals
+    // - Engage in exclusive experiences
+    // - Note what’s not included
+    // - Enhance your adventure
+    // - Discover exceptional value!
   ];
 
   constructor(private route: ActivatedRoute, private router: Router, private viewportScroller: ViewportScroller,
