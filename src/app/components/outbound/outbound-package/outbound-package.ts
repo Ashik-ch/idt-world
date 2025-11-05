@@ -2,9 +2,9 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { Package, travelPackages } from '../../../data/package.data';
-// import { countrysData } from '../../../data/inbound.data';
-// import { OutboundItinerary } from "./outbound-itinerary/inbound-itinerary";
+import { outBoundTravelPackages, Package } from '../../../data/outbound-package.data';
+// import { countryData } from '../../../data/inbound.data';
+import { OutboundItinerary } from "./outbound-itinerary/outbound-itinerary";
 // import { OutboundHotels } from "./outbound-hotels/outbound-hotels";
 // import { OutboundSummary } from "./outbound-summary/inbound-summary";
 // import { OutboundPricing } from "./outbound-pricing/inbound-pricing";
@@ -17,8 +17,9 @@ import { ChatbotService } from '../../../services/chatbot-service';
 @Component({
   selector: 'app-outbound-package',
   imports: [CommonModule, FormsModule, RouterModule,
-    // OutboundItinerary, OutboundHotels, OutboundSummary, OutboundPricing,
-    NgxShineBorderComponent, Booking],
+    OutboundItinerary,
+    //  OutboundHotels, OutboundSummary, OutboundPricing,
+    NgxShineBorderComponent, Booking,],
   templateUrl: './outbound-package.html',
   styleUrl: './outbound-package.scss'
 })
@@ -34,7 +35,7 @@ export class OutboundPackage {
   packageData: Package | null = null;
   activeTab: string = 'overview';
   activeAccordion: string = '';
-  // openSection: string | null = 'overview'; // default open
+  openSection: string[] = ['overview'];
 
   collapsibleSections = [
     { id: 'overview', title: 'Explore daily programme', delay: '0' },
@@ -60,10 +61,7 @@ export class OutboundPackage {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const country = params['country'];
-      console.log("country", country);
-
-      // this.loadCountryeData(country);
-      // this.loadPackageData(country);
+      this.loadPackageData(country);
       setTimeout(() => this.viewportScroller.scrollToPosition([0, 0]), 0);
 
     });
@@ -71,29 +69,19 @@ export class OutboundPackage {
   }
 
 
-  // loadCountryData(country: string) {
-  //   this.countryData = countrysData
-  //   const data = this.countryData[country] || this.countryData['kerala'];
-  //   this.countryName = data.name;
-  //   this.countryDescription = data.description;
-  //   this.countryHighlights = data.highlights;
-  //   this.availablePackages = data.packages;
-  //   this.popularDestinations = data.destinations;
-  //   this.bestTimeToVisit = data.bestTime;
-  // }
 
   private loadPackageData(countryParam: string): void {
     if (countryParam) {
-      this.packageData = travelPackages.find(pkg =>
+      console.log("countryParam", countryParam);
+      this.packageData = outBoundTravelPackages.find(pkg =>
         pkg.id.toLowerCase() === countryParam.toLowerCase()
       ) || null;
-
       if (!this.packageData) {
         this.router.navigate(['/outbound']);
       }
     }
   }
-  openSection: string[] = ['overview'];
+
 
   toggleSection(id: string) {
     console.log(id);
