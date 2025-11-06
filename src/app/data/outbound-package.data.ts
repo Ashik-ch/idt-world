@@ -32,12 +32,19 @@ export interface Package {
   childPolicy: string[];
   meals: string;
   transport: { pax: string; description: string, icon: string }[];
+  travelDetails: {
+    travelName: string;
+    destination: string;
+    Category: string;
+  }[];
   pricing: {
     season: string;
     categories: {
+      property: string;
+      place: string;
       category: string;
-      twoPax: string;
-      extraPerson: string;
+      cost: string;
+      extraPerson?: string;
     }[];
   }[];
   supplementalAttractions: {
@@ -52,7 +59,7 @@ export interface Package {
     img: string;
   }[];
   specialOffers: string[];
-  gallery: string[];
+  galleries: string[];
 }
 
 export const outBoundTravelPackages: Package[] = [
@@ -60,20 +67,11 @@ export const outBoundTravelPackages: Package[] = [
     slNo: 1,
     id: 'andaman-nicobar',
     name: 'Andaman Nicobar',
-    heading: 'Andaman Beaches Border Beauties',
+    heading: 'Mystique of Andaman & Island Wonders',
     description: "island with .",
-
     duration: '05 Nights / 05 Days',
-    summary: 'Experience Andaman Nicobar scenic beauty with curated tours across Cellular Jail, Carbyns Cove Beach, Sound & Light Show.',
-    tourHighlights: [
-      'All-inclusive package without any hidden cost',
-      'Food on a Breakfast basis',
-      'Carefully selected hotels & resorts based on reviews from guests who have already enjoyed them',
-      'Vehicle at disposal from airport to airport on all days without any Km restrictions or additional cost',
-      'One driver & one vehicle for the entire tour',
-      'Tour can be changed to any other fixed date even before 24 hours without any retention fee',
-      'GST, Toll charges, Bata to the driver, Parking fees, etc., included in the Package'
-    ],
+    summary: 'Unveil the hidden jewels of the Bay of Bengal — where turquoise waters, coral reefs, and untamed beauty invite you to explore nature’s paradise.',
+    tourHighlights: [],
     quickItinerary: [
       'Day 01 – Port Blair',
       'Day 02 – Havelock (Swaraj Dweep) (Radha Nagar Beach & Kalapathar Beach)',
@@ -190,58 +188,49 @@ export const outBoundTravelPackages: Package[] = [
     ],
 
     inclusions: [
-      'Local English-speaking driver',
-      'Twin/double accommodation with daily breakfast + dinner',
-      'Entry fees, taxes, tolls, guides at selected locations',
-      'Meals as per itinerary',
-      'Transport',
+      'Welcome drinks on arrival.',
+      'Assistance at all levels.',
+      'Rooms as mentioned in the itinerary as per availability.',
+      'Meals(Breakfast & Dinner) except for breakfast on the day of arrival.',
+      'AC Cab throughout the tour on point to point basis and not on disposal basis(Port Blair, Havelock & Neil – Ertiga/ Xylo)',
+      'Private Ferry for to & fro from Port Blair to Havelock via Neil Island.',
+      'Entry tickets for museum and shows.',
+      'Boat charges for Elephant Beach.',
+      'Complimentary Snorkeling for each at Elephant Beach.',
+      'Complimentary Photo shoot at Havelock or Neil Island.',
     ],
     exclusions: [
-      'International/domestic flights & airport taxes',
-      'Passport, visa stamping & visa fees',
-      'Personal expenses (laundry, calls, beverages, room service, etc.)',
-      'Single room(quoted separately), Child or adult in a triple sharing room',
-      'Another language may be available on request',
-      'Vegetable meals may be on request',
-      'Bottled/mineral water during any meal.',
-      'Peak tourist season or special event rates.'
+      'Water activity charges.',
+      'Food & Beverages(liquor) not mentioned in the inclusions.',
+      'Camera Charges.',
+      'Expenses of personal nature such as tips, telephone calls, laundry, insurance etc.',
+      'In case of Covid, RTPCR test charges.',
+      'Any other item not specified above.',
     ],
 
-    sightseeing: [
-      'Visit the botanical garden, Rose garden, Avmamore palace, Govt museum and enjoy the toy train',
-      'Munnar Hill Station, Tea Gardens, Tea Museum. Spice Shopping',
-      'Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake and Top Station',
-      'Elephant Ride, Jungle Safari, and enjoy Kalaripayattu',
-      'Full day cruise & Night stay in A/C houseboat',
-      'Entry Fees, Service & other Taxes, Toll Charges, Bata & Night halting Charges, Local Guides at Selected locations',
-    ],
+    sightseeing: [],
 
     hotels: [
       {
-        destination: 'Port Blair (2N)',
-        image: 'assets/images/port-blair.jpg',
+        destination: 'Port Blair',
+        image: 'https://images.unsplash.com/photo-1586053226626-febc8817962f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5kYW1hbiUyMGFuZCUyMG5pY29iYXIlMjBpc2xhbmRzJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000',
         categories: {
           'Standard': ['Sea Shell Coral Cove – Standard Room (02 Nos.)',],
-          'Deluxe': ['Sea Shell Coral Cove – Deluxe Room (02 Nos.)',],
-          'Luxury': ['Sea Shell Coral Cove – Luxury Room (02 Nos.)',],
         },
       },
       {
         destination: 'Havelock (2N)',
-        image: 'assets/images/havelock.jpg',
+        image: 'https://images.unsplash.com/photo-1723203606060-b0390c387a81?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGF2ZWxvY2slMjBpc2xhbmR8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000',
         categories: {
           'Standard': ['Sea Shell Havelock – Andaman Villa (02 Nos.)',],
-          'Deluxe': ['Sea Shell Havelock – Lagoon Room (02 Nos.)',],
-          'Luxury': ['Sea Shell Havelock – Ocean View Villa (02 Nos.)',],
         },
       },
     ],
     childPolicy: [
-      'Below 5 years : Free of cost',
-      'Above 5 years : Extra person charge with extra bed',
+      'Child above 2 years are charged fully for ferry to Havelock and back and boat tickets for Ross & North Bay Island.',
+      'Child below the age of 5 years will receive free services at Hotels/ Resorts.'
     ],
-    meals: '**will be Breakfast + Dinner Basis in all the destinations and three meals (Breakfast +Lunch+ Dinner) in the houseboat.',
-
+    meals: 'Buffet Breakfast & Dinner in the respective hotels  included in the package.',
     transport: [
       { pax: '2 Pax', description: 'A/C Sedan car (Toyota Etios/Swift Dzire)', icon: "🚗" },
       { pax: '4–6 Pax', description: 'A/C Toyota Innova Crysta', icon: "🚙" },
@@ -250,24 +239,40 @@ export const outBoundTravelPackages: Package[] = [
       { pax: '15–25 Pax', description: 'A/C Mini Luxury Bus', icon: "🚇" },
       { pax: '25+ Pax', description: 'A/C Luxury Bus', icon: "🚍" },
     ],
-    pricing: [
+    travelDetails: [
       {
-        season: 'High Season (Oct 1 – Dec 19 & Jan 10 – May 31)',
-        categories: [
-          { category: '3-Star Deluxe Resort', twoPax: '₹37,510', extraPerson: '₹9,370', },
-          { category: '4-Star Deluxe Resort', twoPax: '₹43,840', extraPerson: '₹10,960', },
-          { category: '5-Star Deluxe Resort', twoPax: '₹56,780', extraPerson: '₹14,190', },
-          { category: '5-Star Luxury Resort', twoPax: '₹1,09,390', extraPerson: '₹27,340', },
-        ],
+        travelName: 'Makruzz / Nautika / Green Ocean',
+        destination: 'Port Blair → Havelock',
+        Category: 'Premium'
       },
       {
-        season: 'Off Season (Jun 1 – Sep 30)',
+        travelName: 'Makruzz / Nautika / Green Ocean',
+        destination: 'Havelock → Neil',
+        Category: 'Premium'
+      },
+      {
+        travelName: 'Makruzz / Nautika / Green Ocean',
+        destination: 'Neil → Port Blair',
+        Category: 'Premium'
+      }
+    ],
+    pricing: [
+      {
+        season: 'MAP Plan – Valid for all seasons',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: '₹30,000', extraPerson: '₹7,490', },
-          { category: '4-Star Deluxe Resort', twoPax: '₹35,070', extraPerson: '₹8,760', },
-          { category: '5-Star Deluxe Resort', twoPax: '₹45,420', extraPerson: '₹11,350', },
-          { category: '5-Star Luxury Resort', twoPax: '₹87,510', extraPerson: '₹21,870', },
-        ],
+          {
+            place: 'Port Blair',
+            property: 'Sea Shell Coral Cove',
+            category: 'Standard Room – 02 Nos.',
+            cost: '₹24,900/- per head for 04 pax'
+          },
+          {
+            place: 'Havelock',
+            property: 'Sea Shell Havelock',
+            category: 'Andaman Villa – 02 Nos.',
+            cost: '₹24,900/- per head for 04 pax'
+          }
+        ]
       },
     ],
 
@@ -283,152 +288,6 @@ export const outBoundTravelPackages: Package[] = [
         featured: true,
         img: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Black-Bean-Chicken-with-Rice_EXPS_TOHAS22_47046_GNS_03_23_6b-a.jpg?w=700"
       },
-      {
-        id: '2',
-        name: 'Kalarippayattu Programme',
-        subtitle: 'Half-day martial arts demonstration',
-        location: 'Cochin/Thekkady',
-        people: "5 Min",
-        cost: '1000 pp',
-        rating: 4.2,
-        featured: false,
-        img: "https://storage.karmagroup.com/assets/karmagroup.com/blog/2018/03/KALARIPAYATTU-940x671.jpg"
-      },
-      {
-        id: '3',
-        name: 'Kolukumalai Tea Factory Visit',
-        subtitle: 'Visit the highest hill station tea factory in the world',
-        location: 'Munnar',
-        people: "1",
-        cost: '2000',
-        rating: 4.6,
-        featured: true,
-        img: "https://www.thewindmunnar.com/images/theWind/munnar/activities/tea-factory.jpg"
-      },
-      {
-        id: '4',
-        name: 'Half-Day Tea Trial Tour',
-        subtitle: 'Tea tasting and plantation walk',
-        location: 'Munnar',
-        people: "1",
-        cost: '1500',
-        rating: 4.3,
-        featured: false,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-      },
-      {
-        id: '5',
-        name: 'Full Day Tea Trial Tour',
-        subtitle: 'Extended tea plantation exploration and tasting',
-        location: 'Munnar',
-        people: "1",
-        cost: '2500.00',
-        rating: 4.7,
-        featured: true,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-
-      },
-      {
-        id: '6',
-        name: 'Mountain Trekking with Jeep Safari',
-        subtitle: 'Trek the mountains with a guide and jeep safari',
-        location: 'Munnar',
-        people: "1",
-        cost: '3000',
-        rating: 4.8,
-        featured: true,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-
-      },
-      {
-        id: '7',
-        name: 'Bamboo River Drafting',
-        subtitle: 'Enjoy rafting at Periyar River',
-        location: 'Thekkady',
-        people: "1",
-        cost: '2500',
-        rating: 4.4,
-        featured: false,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-
-      },
-      {
-        id: '8',
-        name: 'Full Day Trip to Gavi',
-        subtitle: 'Nature exploration tour',
-        location: 'Thekkady',
-        people: "1",
-        cost: 'On request',
-        rating: 4.6,
-        featured: false,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-      },
-      {
-        id: '9',
-        name: 'Jeep Safari in Periyar Forests',
-        subtitle: 'Explore wildlife with jeep safari',
-        location: 'Thekkady',
-        people: "1",
-        cost: '2000',
-        rating: 4.7,
-        featured: true,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-      },
-      {
-        id: '10',
-        name: 'Half-Day Elephant Safari',
-        subtitle: 'Elephant ride and forest adventure',
-        location: 'Munnar/Thekkady',
-        people: "1",
-        cost: '1000',
-        rating: 4.5,
-        featured: false,
-        img: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cwp8yqoarblbh6apl06c/Mount%20Batur%20Sunrise%20Trekking%20or%20Jeep%20Private%20Tour%20in%20Kintamani%20Bali.jpg"
-      },
-      {
-        id: '11',
-        name: 'Half Day Elephant Moments',
-        subtitle: 'Bathing, feeding and interacting with elephants',
-        location: 'Thekkady',
-        people: "1",
-        cost: '2000',
-        rating: 4.8,
-        featured: true,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSus7wr4ZSM7S1cVJba9Id-tuWskUdmv7BnBQ&s"
-      },
-      {
-        id: '12',
-        name: 'Backwater Canal Cruise in Country Crafts',
-        subtitle: 'Relaxing houseboat cruise on Kerala backwaters',
-        location: 'Cochin',
-        people: "1",
-        cost: '1500',
-        rating: 4.7,
-        featured: true,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSus7wr4ZSM7S1cVJba9Id-tuWskUdmv7BnBQ&s"
-      },
-      {
-        id: '13',
-        name: 'Backwater Historical Tour',
-        subtitle: 'Guided tour of Cochin’s heritage sites',
-        location: 'Cochin',
-        people: "1",
-        cost: '1500',
-        rating: 4.6,
-        featured: false,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSus7wr4ZSM7S1cVJba9Id-tuWskUdmv7BnBQ&s"
-      },
-      {
-        id: '14',
-        name: 'Extra Night in A/C Houseboat',
-        subtitle: 'Full day cruise from Kumarakom to Alleppey',
-        location: 'Kumarakom - Alleppey',
-        people: "2",
-        cost: '7000',
-        rating: 4.9,
-        featured: true,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSus7wr4ZSM7S1cVJba9Id-tuWskUdmv7BnBQ&s"
-      }
     ],
 
     specialOffers: [
@@ -437,10 +296,13 @@ export const outBoundTravelPackages: Package[] = [
       'Candlelight dinner (with package upgrade)',
       'Valid only for couples within 60 days of marriage (wedding card required)',
     ],
-    gallery: [
-      'assets/images/itinerary/ooty.jpg',
-      'assets/images/itinerary/kerala1.jpg',
-      'assets/images/itinerary/kerala2.jpg',
+    galleries: [
+      'assets/images/gallery1.jpg',
+      'assets/images/gallery2.jpg',
+      'assets/images/gallery3.jpg',
+      'assets/images/gallery4.jpg',
+      'assets/images/gallery5.jpg',
+      'assets/images/gallery6.jpg',
     ],
   },
 

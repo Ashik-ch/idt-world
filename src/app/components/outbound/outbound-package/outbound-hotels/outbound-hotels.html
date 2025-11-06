@@ -1,0 +1,111 @@
+<section class="bg-[url(assets/images/redBg6.jpg)] bg-cover rounded-2xl shadow-xl p-6 space-y-3">
+    <section data-animate="hotels">
+        <div class="py-6">
+            <h2 class="text-xl md:text-2xl font-bold mb-2 text-red-500">
+                <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">🏨</span> Relax in Our Handpicked Hotels
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed">
+                On a double share basis in comfortable rooms at carefully selected hotels and resorts. Base category
+                rooms are provided for all stays.
+            </p>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-between">
+            <div *ngFor="let hotel of hotels; let i = index" class="group flex flex-col w-full sm:w-1/2 md:w-[50%] lg:w-[48%]
+                        bg-white/60 backdrop-blur-lg rounded-2xl border border-gray-200 bg-red-500
+                        shadow-lg hover:shadow-2xl transition-all duration-500 p-0 overflow-hidden
+                        min-h-[520px] hover:scale-105">
+
+                <div class="relative w-full md:h-auto overflow-hidden">
+                    <img [src]="hotel.image || 'assets/images/a.jpg'" alt="{{ hotel.destination }}"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none">
+                    </div>
+                    <div class="absolute left-4 right-4 bottom-4">
+                        <h3 class="text-white text-lg md:text-xl font-semibold drop-shadow"> {{ hotel.destination }}
+                        </h3>
+                    </div>
+                </div>
+                <div class="p-4 flex-1 flex flex-col gap-3">
+                    <div *ngFor="let category of getObjectKeys(hotel.categories)" class="flex-1 bg-white/90 rounded-xl p-3 border border-gray-100 shadow-sm hover:shadow-md transition
+                            min-h-[84px] flex flex-col">
+                        <h4 class="text-sm font-semibold text-gray-800 mb-2 text-center">{{ category }}</h4>
+                        <ul class="space-y-1 overflow-auto">
+                            <li *ngFor="let hotelName of hotel.categories[category]"
+                                class="text-sm text-gray-700 flex items-center">
+                                <span class="text-red-500 mr-2">🏨</span>
+                                <span>{{ hotelName }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Child Policy -->
+    <section data-animate="child-policy"
+        class="bg-white rounded-2xl shadow-xl p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-500 ">
+        <h2 class="text-xl md:text-2xl font-bold text-red-500 py-6">
+            <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">👶</span>
+            Child Policy
+        </h2>
+        <div class="space-x-2 flex">
+            <div *ngFor="let policy of childPolicy" class="p-4 bg-red-50 rounded-lg border border-red-200">
+                <p class="text-gray-900">{{ policy }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meals -->
+    <section data-animate="meals"
+        class="bg-white rounded-2xl shadow-xl p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-500 ">
+        <h2 class="text-xl md:text-2xl font-bold text-red-500 py-6">
+            <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">🍴</span>
+            Savour Delicious meals
+        </h2>
+        <div class="p-4 bg-red-50 rounded-lg border border-red-200">
+            <p class="text-gray-800">{{ meals }}</p>
+        </div>
+    </section>
+
+    <!-- Transport Options -->
+    <section>
+        <h2 class="text-xl md:text-2xl font-bold text-red-500 py-6">
+            <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">🚗</span>
+            <span>Transport Options</span>
+        </h2>
+
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div *ngFor="let transport of travelDetails" class="relative group bg-white border border-red-100 rounded-xl 
+               shadow-sm hover:shadow-md transition-all duration-300 
+               hover:scale-[1.02] overflow-hidden">
+                <!-- subtle hover gradient -->
+                <div class="absolute inset-0 bg-gradient-to-br from-red-50 to-white opacity-0 
+                    group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 p-4 flex flex-col items-center text-center space-y-1">
+                    <span class="text-xs font-medium text-red-600 bg-red-50 border border-red-100 
+                   rounded-full px-2.5 py-0.5 tracking-wide"> {{ transport.Category }}
+                    </span>
+                    <h3 class="text-base font-semibold text-gray-800 group-hover:text-red-600 transition-colors">
+                        {{ transport.travelName }}
+                    </h3>
+
+                    <div class="flex items-center justify-center text-sm text-gray-600 font-medium">
+                        <span>{{ transport.destination.split('→')[0] }}</span>
+                        <span
+                            class="mx-2 text-red-500 font-bold text-lg group-hover:translate-x-1 transition-transform duration-500">→</span>
+                        <span>{{ transport.destination.split('→')[1] }}</span>
+                    </div>
+
+                </div>
+
+                <!-- minimalist red accent line -->
+                <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-red-500 to-pink-400 
+                 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+        </div>
+
+    </section>
+</section>

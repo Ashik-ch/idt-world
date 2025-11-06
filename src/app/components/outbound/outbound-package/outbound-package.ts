@@ -5,7 +5,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { outBoundTravelPackages, Package } from '../../../data/outbound-package.data';
 // import { countryData } from '../../../data/inbound.data';
 import { OutboundItinerary } from "./outbound-itinerary/outbound-itinerary";
-// import { OutboundHotels } from "./outbound-hotels/outbound-hotels";
+import { OutboundHotels } from "./outbound-hotels/outbound-hotels";
 // import { OutboundSummary } from "./outbound-summary/inbound-summary";
 // import { OutboundPricing } from "./outbound-pricing/inbound-pricing";
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
@@ -17,8 +17,8 @@ import { ChatbotService } from '../../../services/chatbot-service';
 @Component({
   selector: 'app-outbound-package',
   imports: [CommonModule, FormsModule, RouterModule,
-    OutboundItinerary,
-    //  OutboundHotels, OutboundSummary, OutboundPricing,
+    OutboundItinerary, OutboundHotels,
+    //OutboundSummary, OutboundPricing,
     NgxShineBorderComponent, Booking,],
   templateUrl: './outbound-package.html',
   styleUrl: './outbound-package.scss'
@@ -27,7 +27,7 @@ export class OutboundPackage {
 
   countryName = '';
   countryDescription = '';
-  countryHighlights: any[] = [];
+  galleries: any[] = [];
   availablePackages: any[] = [];
   popularDestinations: any[] = [];
   bestTimeToVisit: any[] = [];
@@ -41,8 +41,8 @@ export class OutboundPackage {
     { id: 'overview', title: 'Explore daily programme', delay: '0' },
     // { id: 'itinerary', title: 'Itinerary', delay: '100' },
     { id: 'hotels', title: 'Components of this Package', delay: '100' },
-    { id: 'details', title: 'Details & Policies', delay: '200' },
-    { id: 'pricing', title: 'Pricing', delay: '300' },
+    // { id: 'details', title: 'Details & Policies', delay: '200' },
+    // { id: 'pricing', title: 'Pricing', delay: '300' },
 
     // - Explore your itinerary
     // - Unwind in our partner hotels
