@@ -153,10 +153,10 @@ export const Services = [
         title: 'Houseboats',
         subtitle: 'Backwater Retreats',
         categories: [
-            'Backwater Historical Tours',
+            'Standard Houseboats',
             'Luxury Houseboats',
+            'Deluxe Houseboats',
             'Premium Houseboats',
-            'Standard Houseboats'
         ],
         desc: 'Sail across Kerala’s iconic backwaters in comfort with a range of houseboat experiences, from luxury to traditional.',
         images: ['assets/images/h.jpg', 'assets/images/i.jpg']
