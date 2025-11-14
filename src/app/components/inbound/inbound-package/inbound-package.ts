@@ -117,5 +117,13 @@ export class InboundPackage {
     this.chatbotService.triggerChat();
   }
 
+  // Gallery Modal
+  selectedImage: string | null = null;
+  openImage(img: string) {
+    this.selectedImage = img;
+  }
+  closeModal() {
+    this.selectedImage = null;
+  }
 }
 

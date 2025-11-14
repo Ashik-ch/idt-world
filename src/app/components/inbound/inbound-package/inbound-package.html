@@ -153,37 +153,38 @@
             </h2>
 
             <div class="relative overflow-hidden w-full">
-                <!-- <div
-                    class="pointer-events-none absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-black/60 to-transparent z-10">
-                </div>
-                <div
-                    class="pointer-events-none absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-black/60 to-transparent z-10">
-                </div> -->
                 <div class="flex animate-marquee space-x-6">
-                    <!-- First Loop -->
+
                     <div *ngFor="let highlight of stateHighlights" class="flex-shrink-0 w-80">
                         <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                            <img [src]="highlight.img" [alt]="highlight.title"
-                                class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
-                            <!-- <div
-                                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                    <h3 class="text-white text-lg font-semibold">{{ highlight.title }}</h3>
-                                </div> -->
-                        </div>
-                    </div> >
-                    <div *ngFor="let highlight of stateHighlights" class="flex-shrink-0 w-80">
-                        <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                            <img [src]="highlight.img" [alt]="highlight.title"
-                                class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
-                            <div
-                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <h3 class="text-white text-lg font-semibold">{{ highlight.title }}</h3>
-                            </div>
+                            <img (click)="openImage(highlight.img)" [src]="highlight.img" [alt]="highlight.title" class="cursor-pointer w-full h-56 object-cover transform 
+                       group-hover:scale-105 transition duration-500" />
                         </div>
                     </div>
+
+                    <div *ngFor="let highlight of stateHighlights" class="flex-shrink-0 w-80">
+                        <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                            <img (click)="openImage(highlight.img)" [src]="highlight.img" [alt]="highlight.title" class="cursor-pointer w-full h-56 object-cover transform 
+                       group-hover:scale-105 transition duration-500" />
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- ⭐ FUTURISTIC POPUP MODAL -->
+        <div *ngIf="selectedImage" class="fixed inset-0 flex items-center justify-center bg-black/60 
+                    backdrop-blur-xl z-[9999] animate-fadeIn" (click)="closeModal()">
+
+            <div class="relative max-w-3xl max-h-[80vh] animate-zoomIn overflow-hidden"
+                (click)="$event.stopPropagation()">
+                <img [src]="selectedImage" class="rounded-3xl shadow-2xl w-full max-h-[80vh] object-contain" />
+
+                <button (click)="closeModal()" class="absolute top-2 right-2 bg-white text-black p-2 rounded-full shadow-lg
+                           hover:scale-110 transition"> ✖ </button>
+            </div>
+        </div>
 
     </div>
 </div>
