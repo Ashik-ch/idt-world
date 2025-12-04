@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HotelsView } from "../../../pages/hotels-view/hotels-view";
 
 @Component({
   selector: 'app-inbound-hotels',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HotelsView],
   templateUrl: './inbound-hotels.html',
   styleUrl: './inbound-hotels.scss'
 })
 export class InboundHotels {
-  @Input() hotels: any
+  @Input() hotelPackages: any
   @Input() transport: any
   @Input() childPolicy: any
   @Input() meals: any
@@ -25,4 +26,15 @@ export class InboundHotels {
     if (category.includes('5-Star Luxury')) return 'bg-gold-50 border-gold-200';
     return 'bg-gray-50 border-gray-200';
   }
+
+  selectedHotel: any = null;
+
+  openHotelModal(item: any) {
+    this.selectedHotel = item;
+  }
+
+  closeHotelModal() {
+    this.selectedHotel = null;
+  }
+
 }

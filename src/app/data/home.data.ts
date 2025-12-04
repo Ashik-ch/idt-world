@@ -200,26 +200,86 @@ export const Services = [
 
 export const hotelsResort = {
     inboundPackages: {
-        '3 Star Deluxe': [
-            'Lotus Residency, Kerala',
-            'Hilltop View Inn, Munnar',
-            'Palm Grove Retreat, Goa'
+        '3-Star Deluxe': [
+            {
+                name: 'Nahar Nilgiris Resort',
+                image: 'assets/images/nahar.jpg',
+                description: 'A peaceful stay close to major attractions with comfortable rooms.'
+            },
+            {
+                name: 'Treebo Windsor Heights Resort',
+                image: 'assets/images/gallery80.jpg',
+                description: 'Budget-friendly resort with modern amenities and valley views.'
+            },
+            {
+                name: 'Garden Manor Resort',
+                image: 'assets/images/hotels/garden-manor.jpg',
+                description: 'Calm environment with excellent service and beautiful gardens.'
+            },
         ],
-        '4 Star Deluxe': [
-            'The Riverfront Manor, Karnataka',
-            'Emerald Valley Resort, Coorg',
-            'Sunshine Heritage Hotel, Jaipur'
+        '4-Star Deluxe': [
+            {
+                name: 'Garden Manor Resort',
+                image: 'assets/images/hotels/garden-manor.jpg',
+                description: 'Spacious rooms with premium facilities and scenic surroundings.'
+            },
+            {
+                name: 'Fortune Retreats',
+                image: 'assets/images/hotels/fortune.jpg',
+                description: 'A premium retreat offering luxury comfort and mountain views.'
+            },
+            {
+                name: 'The Monarch',
+                image: 'assets/images/hotels/monarch.jpg',
+                description: 'Modern interiors, fine dining, and a peaceful ambience.'
+            },
         ],
-        '5 Star Deluxe': [
-            'The Grand Orchid Palace, Udaipur',
-            'Azure Bay Resort & Spa, Andaman',
-            'Mountain Crest Hotel, Shimla'
+
+        '5-Star Deluxe': [
+            {
+                name: 'Sterling Fern Hill, Ooty',
+                image: 'assets/images/hotels/sterling-fern.jpg',
+                description: 'Luxury hillside resort with panoramic views and top-tier hospitality.'
+            },
+            {
+                name: 'Accord Highland',
+                image: 'assets/images/hotels/accord.jpg',
+                description: 'Premium stay with luxurious rooms and breathtaking nature views.'
+            },
+            {
+                name: 'Mango Hill Shola Resort',
+                image: 'assets/images/hotels/mango-hill.jpg',
+                description: 'Surrounded by forests and hills, perfect for nature lovers.'
+            },
+            {
+                name: 'Fortune Sullivan Court',
+                image: 'assets/images/hotels/sullivan.jpg',
+                description: 'Elegant property offering high-end comfort and excellent service.'
+            },
+            {
+                name: 'Gem Park Ooty',
+                image: 'assets/images/hotels/gem-park.jpg',
+                description: 'A premium mountain-view hotel with indoor pool and fine dining.'
+            },
         ],
-        '5 Star Luxury': [
-            'The Royal Meridian, Delhi',
-            'Ocean Pearl Resort & Spa, Kerala',
-            'The Imperial Heritage Palace, Mumbai'
-        ]
+
+        '5-Star Luxury': [
+            {
+                name: 'Ayatana Ooty',
+                image: 'assets/images/hotels/ayatana.jpg',
+                description: 'Ultra-luxury property with world-class hospitality in Ooty.'
+            },
+            {
+                name: 'Taj Savoy Hotel',
+                image: 'assets/images/hotels/taj-savoy.jpg',
+                description: 'Heritage Taj experience with royal-style cottages & gardens.'
+            },
+            {
+                name: 'Taj Gateway Coonoor',
+                image: 'assets/images/hotels/taj-gateway.jpg',
+                description: 'Iconic Taj luxury surrounded by tea gardens and hill views.'
+            },
+        ],
     },
     outboundPackages: {
         '3 Star Deluxe': [

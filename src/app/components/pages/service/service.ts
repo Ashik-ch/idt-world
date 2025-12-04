@@ -32,4 +32,15 @@ export class Service {
   closeModal() {
     this.selectedService = null;
   }
+
+  //recheck
+  selectedHotel: any = null;
+  openHotelModal(item: any) {
+    this.selectedHotel = item;
+  }
+  closeHotelModal() {
+    this.selectedHotel = null;
+  }
+
+
 }

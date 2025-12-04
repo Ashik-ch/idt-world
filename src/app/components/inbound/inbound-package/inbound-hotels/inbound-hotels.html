@@ -2,38 +2,38 @@
     <section data-animate="hotels">
         <div class="py-6">
             <h2 class="text-xl md:text-2xl font-bold mb-2 text-red-500">
-                <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">🏨</span> Relax in Our Handpicked Hotels
+                <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">🏨</span>
+                Relax in Our Handpicked Hotels
             </h2>
             <p class="text-base md:text-lg leading-relaxed">
-                On a double share basis in comfortable rooms at carefully selected hotels and resorts. Base category
-                rooms are provided for all stays.
+                On a double share basis in comfortable rooms at carefully selected hotels and resorts.
+                Base category rooms are provided for all stays.
             </p>
         </div>
         <div class="flex flex-wrap gap-2 justify-between">
-            <div *ngFor="let hotel of hotels; let i = index" class="group flex flex-col w-full sm:w-1/2 md:w-[22%] lg:w-[24%]
-                        bg-white/60 backdrop-blur-lg rounded-2xl border border-gray-200 bg-red-500
-                        shadow-lg hover:shadow-2xl transition-all duration-500 p-0 overflow-hidden
-                        min-h-[520px] hover:scale-105">
+            <div *ngFor="let pack of hotelPackages" class="group flex flex-col w-full sm:w-1/2 md:w-[22%] lg:w-[24%]
+             bg-white/60 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-lg
+             hover:shadow-2xl transition-all duration-500 p-0 overflow-hidden
+             min-h-[520px] hover:scale-105">
 
                 <div class="relative w-full h-44 md:h-40 lg:h-48 overflow-hidden">
-                    <img [src]="hotel.image || 'assets/images/a.jpg'" alt="{{ hotel.destination }}"
-                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none">
-                    </div>
-                    <div class="absolute left-4 right-4 bottom-4">
-                        <h3 class="text-white text-lg md:text-xl font-semibold drop-shadow"> {{ hotel.destination }}
-                        </h3>
-                    </div>
+                    <img [src]="pack.image"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40"></div>
+                    <h3 class="absolute bottom-4 left-4 text-white text-lg md:text-xl font-semibold drop-shadow">
+                        {{ pack.destination }}
+                    </h3>
                 </div>
                 <div class="p-4 flex-1 flex flex-col gap-3">
-                    <div *ngFor="let category of getObjectKeys(hotel.categories)" class="flex-1 bg-white/90 rounded-xl p-3 border border-gray-100 shadow-sm hover:shadow-md transition
+                    <div *ngFor="let category of getObjectKeys(pack.categories)" class="flex-1 bg-white/90 rounded-xl p-3 border border-gray-100 shadow-sm hover:shadow-md transition
                             min-h-[84px] flex flex-col">
-                        <h4 class="text-sm font-semibold text-gray-800 mb-2 text-center">{{ category }}</h4>
+                        <h4 class="text-sm font-semibold text-center text-gray-800 mb-2">{{ category }}</h4>
                         <ul class="flex-1 space-y-1 overflow-auto">
-                            <li *ngFor="let hotelName of hotel.categories[category]"
-                                class="text-sm text-gray-700 flex items-center">
-                                <span class="text-red-500 mr-2">🏨</span>
-                                <span [ngClass]="category === 'Standard' ? 'text-wrap' : 'truncate'">{{ hotelName
+                            <li *ngFor="let hotel of pack.categories[category]"
+                                class="text-sm text-gray-700 flex items-center cursor-pointer hover:bg-gray-100 p-1 rounded transition"
+                                (click)="openHotelModal(hotel)">
+                                <span class="text-red-500">🏨</span>
+                                <span [ngClass]="category === 'Standard' ? 'text-wrap' : 'truncate'">{{ hotel.name
                                     }}</span>
                             </li>
                         </ul>
@@ -42,6 +42,7 @@
             </div>
         </div>
     </section>
+    <app-hotels-view [hotel]="selectedHotel" (close)="closeHotelModal()"></app-hotels-view>
 
     <!-- Child Policy -->
     <section data-animate="child-policy"

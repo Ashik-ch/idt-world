@@ -86,8 +86,7 @@
 
 
             @if (selectedService && selectedService.id == 'villas') {
-            <div
-                class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md flex items-center justify-center z-50 px-4">
+            <div class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 px-4">
                 <div class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black 
                 rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden animate-fade-in 
                 border border-white/10">
@@ -124,7 +123,7 @@
             }
 
             @if (selectedService && selectedService.id !== 'hotels' && selectedService.id !== 'villas') {
-            <div class="fixed inset-0 bg-opacity-60 flex items-center justify-center z-50 px-4">
+            <div class="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-50 px-4">
                 <div
                     class="bg-[url('assets/images/redBg3.jpg')]  bg-cover bg-center rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden animate-fade-in">
                     <div class="flex justify-between items-center bg-red-600 px-6 py-4 text-white">
@@ -157,7 +156,7 @@
 
             <!-- Hotels & Resorts Modal -->
             @if (selectedService && selectedService.id === 'hotels') {
-            <div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
+            <div class="fixed inset-0 bg-black/60 backdrop-blur-lg flex items-center justify-center z-50 px-4">
                 <div
                     class="rounded-2xl max-w-6xl w-full shadow-2xl overflow-hidden animate-fade-in bg-[url('assets/images/redBg3.jpg')] bg-cover bg-center">
                     <div class=" flex justify-between items-center px-6 py-4 bg-black/30 text-white bg-red-600">
@@ -173,16 +172,19 @@
                             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                                 <div *ngFor="let category of inboundCategories"
                                     class="bg-red-500 rounded-2xl p-3 shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all">
-                                    <h4 class="text-lg font-semibold mb-4 text-yellow-300">{{ category.name }}</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-yellow-300"> {{ category.name }} </h4>
                                     <ul class="space-y-2">
-                                        <li *ngFor="let hotel of category.hotels" class="flex items-center gap-2">
+                                        <li *ngFor="let hotel of category.hotels" class="flex items-center gap-2"
+                                            (click)="openHotelModal(hotel)">
                                             <i class="pi pi-map-marker text-yellow-400"></i>
-                                            {{ hotel }}
+                                            {{ hotel.name }}
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+                        <app-hotels-view [hotel]="selectedHotel" (close)="closeHotelModal()"></app-hotels-view>
 
                         <!-- Outbound Packages -->
                         <div>

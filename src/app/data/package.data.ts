@@ -38,10 +38,16 @@ export interface Package {
   inclusions: string[];
   exclusions: string[];
   sightseeing: string[];
-  hotels: {
+  hotelPackages: {
     destination: string;
     image: string;
-    categories: { [key: string]: string[] };
+    categories: {
+      [categoryName: string]: {
+        name: string;
+        image: string;
+        description: string;
+      }[];
+    };
   }[];
   childPolicy: string[];
   meals: string;
@@ -281,45 +287,318 @@ export const travelPackages: Package[] = [
       'Entry Fees, Service & other Taxes, Toll Charges, Bata & Night halting Charges, Local Guides at Selected locations',
     ],
 
-    hotels: [
+    hotelPackages: [
       {
         destination: 'Ooty (2N)',
         image: 'assets/images/a.jpg',
+
         categories: {
-          '3-Star Deluxe': ['Nahar Nilgiris Resort', 'Treebo Windsor Heights Resort', 'Garden Manor Resort',],
-          '4-Star Deluxe': ['Garden Manor Resort', 'Fortune Retreats', 'The Monarch'],
-          '5-Star Deluxe': ['Sterling Fern Hill, Ooty', 'Accord Highland', 'Mango Hill Shola Resort', 'Fortune Sullivan Court', 'Gem Park Ooty'],
-          '5-Star Luxury': ['Ayatana Ooty', 'Taj Savoy Hotel', 'Taj Gateway Coonoor'],
+          '3-Star Deluxe': [
+            {
+              name: 'Nahar Nilgiris Resort',
+              image: 'assets/images/nahar.jpg',
+              description: 'A peaceful stay close to major attractions with comfortable rooms.'
+            },
+            {
+              name: 'Treebo Windsor Heights Resort',
+              image: 'assets/images/gallery80.jpg',
+              description: 'Budget-friendly resort with modern amenities and valley views.'
+            },
+            {
+              name: 'Garden Manor Resort',
+              image: 'assets/images/hotels/garden-manor.jpg',
+              description: 'Calm environment with excellent service and beautiful gardens.'
+            },
+          ],
+
+          '4-Star Deluxe': [
+            {
+              name: 'Garden Manor Resort',
+              image: 'assets/images/hotels/garden-manor.jpg',
+              description: 'Spacious rooms with premium facilities and scenic surroundings.'
+            },
+            {
+              name: 'Fortune Retreats',
+              image: 'assets/images/hotels/fortune.jpg',
+              description: 'A premium retreat offering luxury comfort and mountain views.'
+            },
+            {
+              name: 'The Monarch',
+              image: 'assets/images/hotels/monarch.jpg',
+              description: 'Modern interiors, fine dining, and a peaceful ambience.'
+            },
+          ],
+
+          '5-Star Deluxe': [
+            {
+              name: 'Sterling Fern Hill, Ooty',
+              image: 'assets/images/hotels/sterling-fern.jpg',
+              description: 'Luxury hillside resort with panoramic views and top-tier hospitality.'
+            },
+            {
+              name: 'Accord Highland',
+              image: 'assets/images/hotels/accord.jpg',
+              description: 'Premium stay with luxurious rooms and breathtaking nature views.'
+            },
+            {
+              name: 'Mango Hill Shola Resort',
+              image: 'assets/images/hotels/mango-hill.jpg',
+              description: 'Surrounded by forests and hills, perfect for nature lovers.'
+            },
+            {
+              name: 'Fortune Sullivan Court',
+              image: 'assets/images/hotels/sullivan.jpg',
+              description: 'Elegant property offering high-end comfort and excellent service.'
+            },
+            {
+              name: 'Gem Park Ooty',
+              image: 'assets/images/hotels/gem-park.jpg',
+              description: 'A premium mountain-view hotel with indoor pool and fine dining.'
+            },
+          ],
+
+          '5-Star Luxury': [
+            {
+              name: 'Ayatana Ooty',
+              image: 'assets/images/hotels/ayatana.jpg',
+              description: 'Ultra-luxury property with world-class hospitality in Ooty.'
+            },
+            {
+              name: 'Taj Savoy Hotel',
+              image: 'assets/images/hotels/taj-savoy.jpg',
+              description: 'Heritage Taj experience with royal-style cottages & gardens.'
+            },
+            {
+              name: 'Taj Gateway Coonoor',
+              image: 'assets/images/hotels/taj-gateway.jpg',
+              description: 'Iconic Taj luxury surrounded by tea gardens and hill views.'
+            },
+          ],
         },
       },
+
+      // ===== MUNNAR =====
       {
         destination: 'Munnar (2N)',
         image: 'assets/images/b.jpg',
+
         categories: {
-          '3-Star Deluxe': ['West Wood Resort', 'Eastend Hotel', 'Trivers Resort', 'Tea Castle'],
-          '4-Star Deluxe': ['Rivulet Resort', 'Elephant Passage Resort', 'Fog Resort', 'Tall Trees Resort'],
-          '5-Star Deluxe': ['Blanket Hotel', 'The Valle Resort', 'Fragrant Nature Resort'],
-          '5-Star Luxury': ['Chandys Windy Woods', 'Chandys Drizzle Drops', 'Spice Tree Resort', 'Grand Cliff Resort'],
+          '3-Star Deluxe': [
+            {
+              name: 'West Wood Resort',
+              image: 'assets/images/hotels/westwood.jpg',
+              description: 'Cozy rooms with scenic river views and warm hospitality.'
+            },
+            {
+              name: 'Eastend Hotel',
+              image: 'assets/images/hotels/eastend.jpg',
+              description: 'Popular hotel near Munnar town with garden spaces.'
+            },
+            {
+              name: 'Trivers Resort',
+              image: 'assets/images/hotels/trivers.jpg',
+              description: 'Modern resort with valley views and spacious rooms.'
+            },
+            {
+              name: 'Tea Castle',
+              image: 'assets/images/hotels/tea-castle.jpg',
+              description: 'A beautiful hillside property surrounded by tea plantations.'
+            },
+          ],
+
+          '4-Star Deluxe': [
+            {
+              name: 'Rivulet Resort',
+              image: 'assets/images/hotels/rivulet.jpg',
+              description: 'Premium riverside resort with luxury cottages and nature views.'
+            },
+            {
+              name: 'Elephant Passage Resort',
+              image: 'assets/images/hotels/elephant-passage.jpg',
+              description: 'Eco-friendly luxury resort surrounded by wildlife and greenery.'
+            },
+            {
+              name: 'Fog Resort',
+              image: 'assets/images/hotels/fog.jpg',
+              description: 'Known for stunning foggy landscapes and 5-star service.'
+            },
+            {
+              name: 'Tall Trees Resort',
+              image: 'assets/images/hotels/tall-trees.jpg',
+              description: 'Stay inside a lush cardamom forest with premium cottages.'
+            },
+          ],
+
+          '5-Star Deluxe': [
+            {
+              name: 'Blanket Hotel',
+              image: 'assets/images/hotels/blanket.jpg',
+              description: 'Ultra-luxury waterfall-view property near Attukad Waterfalls.'
+            },
+            {
+              name: 'The Valle Resort',
+              image: 'assets/images/hotels/valle.jpg',
+              description: 'A calm luxury property facing breathtaking valley views.'
+            },
+            {
+              name: 'Fragrant Nature Resort',
+              image: 'assets/images/hotels/fragrant-nature.jpg',
+              description: 'Luxury boutique resort known for its peaceful ambience.'
+            },
+          ],
+
+          '5-Star Luxury': [
+            {
+              name: 'Chandys Windy Woods',
+              image: 'assets/images/hotels/windy-woods.jpg',
+              description: 'Top-tier luxury in Munnar with misty valley views.'
+            },
+            {
+              name: 'Chandys Drizzle Drops',
+              image: 'assets/images/hotels/drizzle-drops.jpg',
+              description: 'Premium forest-side resort surrounded by lush green hills.'
+            },
+            {
+              name: 'Spice Tree Resort',
+              image: 'assets/images/hotels/spice-tree.jpg',
+              description: 'Exclusive luxury suites offering total privacy and comfort.'
+            },
+            {
+              name: 'Grand Cliff Resort',
+              image: 'assets/images/hotels/grand-cliff.jpg',
+              description: 'Hilltop luxury property with panoramic mountain views.'
+            },
+          ],
         },
       },
+
+      // ===== THEKKADY =====
       {
         destination: 'Thekkady (1N)',
         image: 'assets/images/c.jpg',
+
         categories: {
-          '3-Star Deluxe': ['Abad Green Forest', 'Pepper Vine Resort', 'Spice Tree Resort'],
-          '4-Star Deluxe': ['Mountain Courtyard Resort', 'Forest Canopy Resort', 'Reen Resorts'],
-          '5-Star Deluxe': ['Poetree Resort', 'Elephant Court', 'Green Woods Resort'],
-          '5-Star Luxury': ['Spice Village Resort', 'Lake Palace Resort', 'Hills & Hues Resort', 'Lake Palace Resort KTDC', 'Blanket Resort'],
+          '3-Star Deluxe': [
+            {
+              name: 'Abad Green Forest',
+              image: 'assets/images/hotels/abad.jpg',
+              description: 'Eco-themed resort in the heart of Thekkady’s greenery.'
+            },
+            {
+              name: 'Pepper Vine Resort',
+              image: 'assets/images/hotels/pepper-vine.jpg',
+              description: 'Peaceful stay with traditional Kerala architecture.'
+            },
+            {
+              name: 'Spice Tree Resort',
+              image: 'assets/images/hotels/spice-tree.jpg',
+              description: 'Comfortable rooms surrounded by spice plantations.'
+            },
+          ],
+
+          '4-Star Deluxe': [
+            {
+              name: 'Mountain Courtyard Resort',
+              image: 'assets/images/hotels/mountain-courtyard.jpg',
+              description: 'Hill-view resort offering a luxurious and quiet retreat.'
+            },
+            {
+              name: 'Forest Canopy Resort',
+              image: 'assets/images/hotels/forest-canopy.jpg',
+              description: 'Premium tree-top style cottages with stunning valley views.'
+            },
+            {
+              name: 'Reen Resorts',
+              image: 'assets/images/hotels/reen.jpg',
+              description: 'Modern rooms with nature-friendly resort ambience.'
+            },
+          ],
+
+          '5-Star Deluxe': [
+            {
+              name: 'Poetree Resort',
+              image: 'assets/images/hotels/poetree.jpg',
+              description: 'High-end luxury property overlooking the mountains.'
+            },
+            {
+              name: 'Elephant Court',
+              image: 'assets/images/hotels/elephant-court.jpg',
+              description: 'Premium resort with large pool and Ayurveda facilities.'
+            },
+            {
+              name: 'Green Woods Resort',
+              image: 'assets/images/hotels/green-woods.jpg',
+              description: 'Luxury eco-resort surrounded by dense forests.'
+            },
+          ],
+
+          '5-Star Luxury': [
+            {
+              name: 'Spice Village Resort',
+              image: 'assets/images/hotels/spice-village.jpg',
+              description: 'Upscale village-themed resort with Kerala heritage charm.'
+            },
+            {
+              name: 'Lake Palace Resort',
+              image: 'assets/images/hotels/lake-palace.jpg',
+              description: 'Exclusive lakeside luxury available via boat access.'
+            },
+            {
+              name: 'Hills & Hues Resort',
+              image: 'assets/images/hotels/hills-hues.jpg',
+              description: 'Ultra-luxurious property with breathtaking cliff-side views.'
+            },
+            {
+              name: 'Lake Palace Resort KTDC',
+              image: 'assets/images/hotels/ktdc-lake-palace.jpg',
+              description: 'Heritage-style lakeside accommodation inside the sanctuary.'
+            },
+            {
+              name: 'Blanket Resort',
+              image: 'assets/images/hotels/blanket.jpg',
+              description: 'Premium stay known for serene hill views and tranquility.'
+            },
+          ],
         },
       },
+
+      // ===== HOUSEBOAT =====
       {
         destination: 'Kumarakom Houseboat (1N)',
         image: 'assets/images/d.jpg',
+
         categories: {
-          'Standard': ['A/C Standard Houseboat'],
-          'Deluxe': ['A/C Deluxe Houseboat with Silver Flag Category'],
-          'Premium': ['AC Premium Houseboat with Golden flag category'],
-          'Luxury': ['Full-time AC Luxury boat with Platinum category'],
+          'Standard': [
+            {
+              name: 'A/C Standard Houseboat',
+              image: 'assets/images/hotels/standard-boat.jpg',
+              description: 'Comfortable standard boat ideal for budget travellers.'
+            }
+          ],
+
+          'Deluxe': [
+            {
+              name: 'A/C Deluxe Houseboat with Silver Flag Category',
+              image: 'assets/images/hotels/deluxe-boat.jpg',
+              description: 'Upgraded interiors with comfortable bedrooms & dining area.'
+            }
+          ],
+
+          'Premium': [
+            {
+              name: 'AC Premium Houseboat with Golden flag category',
+              image: 'assets/images/hotels/premium-boat.jpg',
+              description: 'Premium rooms with glass windows & continuous AC.'
+            }
+          ],
+
+          'Luxury': [
+            {
+              name: 'Full-time AC Luxury boat with Platinum category',
+              image: 'assets/images/hotels/luxury-boat.jpg',
+              description: 'Ultra-luxury boat with private chef and exclusive cabins.'
+            }
+          ],
         },
       },
     ],

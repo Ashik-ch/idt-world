@@ -71,9 +71,9 @@
                                 <app-inbound-itinerary *ngSwitchCase="'overview'"
                                     [detailedItinerary]="packageData?.detailedItinerary"></app-inbound-itinerary>
 
-                                <app-inbound-hotels *ngSwitchCase="'hotels'" [hotels]="packageData?.hotels"
-                                    [transport]="packageData?.transport" [childPolicy]="packageData?.childPolicy"
-                                    [meals]="packageData?.meals">
+                                <app-inbound-hotels *ngSwitchCase="'hotels'"
+                                    [hotelPackages]="packageData?.hotelPackages" [transport]="packageData?.transport"
+                                    [childPolicy]="packageData?.childPolicy" [meals]="packageData?.meals">
                                 </app-inbound-hotels>
 
                                 <app-inbound-summary *ngSwitchCase="'details'"
