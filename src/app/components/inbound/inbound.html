@@ -3,8 +3,7 @@
     <div class="relative text-center">
         <div class="bg-white p-8 lg:px-[9rem] md:px-[6rem] rounded-xl shadow-sm bg-center mb-4 bg-cover"
             style="background-image: url('assets/images/redBg13.jpg'); ">
-            <h1
-                class="text-2xl md:text-4xl font-bold font-serif my-4 rounded-2xl py-3 border border-red-500 inline-block">
+            <h1 class="text-xl md:text-4xl font-bold font-serif rounded-2xl py-3 border border-red-500 inline-block">
                 <span class="text-white bg-red-500 p-3 rounded-l-2xl">Inbound</span>
                 <span class="text-red-500 ms-2 p-3">Travel Packages</span>
             </h1>
@@ -15,12 +14,12 @@
                 explore diverse landscapes and cultures.
             </p>
 
-            <div class="grid grid-cols-3 items-center mb-8">
-                <div></div>
-                <h2 class="text-2xl font-bold font-serif text-red-500 text-center col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-3 items-center mb-8 gap-4">
+                <div class="hidden md:block"></div>
+                <h2 class="text-xl sm:text-2xl md:text-2xl font-bold font-serif text-red-500 text-center">
                     Popular Inbound Packages
                 </h2>
-                <div class="flex justify-end">
+                <div class="flex justify-center md:justify-end">
                     <div
                         class="relative w-full max-w-[220px] md:max-w-[260px] text-gray-700 focus-within:text-gray-900 transition-all">
                         <input type="text" placeholder="Search..." [(ngModel)]="searchTerm"
