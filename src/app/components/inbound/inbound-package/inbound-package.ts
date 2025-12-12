@@ -2,7 +2,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { Package, travelPackages } from '../../../data/package.data';
+import { inboundKeralaPackages, Package, travelPackages } from '../../../data/package.data';
 import { statesData } from '../../../data/inbound.data';
 import { InboundItinerary } from "./inbound-itinerary/inbound-itinerary";
 import { InboundHotels } from "./inbound-hotels/inbound-hotels";
@@ -35,6 +35,7 @@ export class InboundPackage {
   activeTab: string = 'overview';
   activeAccordion: string = '';
   // openSection: string | null = 'overview'; // default open
+  inboundKeralaPackage = inboundKeralaPackages;
 
   collapsibleSections = [
     { id: 'overview', title: 'Explore daily programme', delay: '0' },
@@ -125,5 +126,11 @@ export class InboundPackage {
   closeModal() {
     this.selectedImage = null;
   }
+
+  navigateToState(state: string) {
+    console.log("state", state);
+    this.router.navigate(['/inbound', state]);
+  }
+
 }
 

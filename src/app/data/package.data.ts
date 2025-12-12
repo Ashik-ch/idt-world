@@ -77,10 +77,7 @@ export interface Package {
 
 export const travelPackages: Package[] = [
   {
-    id: 'kerala',
-    title: 'Charm of Kerala and Border Beauties',
-    duration: '06 Nights / 07 Days',
-    summary: 'Experience Kerala’s scenic beauty with curated tours across Munnar, Thekkady, Kumarakom & Cochin.',
+    id: 'kerala', title: 'Charm of Kerala and Border Beauties', duration: '06 Nights / 07 Days', summary: 'Experience Kerala’s scenic beauty with curated tours across Munnar, Thekkady, Kumarakom & Cochin.',
     tourHighlights: [
       'All-inclusive package without any hidden cost',
       'Food on a Breakfast basis',
@@ -100,6 +97,7 @@ export const travelPackages: Package[] = [
       'Day 07 – Departure from Cochin',
     ],
     itineraryOverview: [
+
       { day: '01', title: "Arrival at Coimbatore", details: ['Arrival at Coimbatore Airport', 'Drive to Ooty (3h10m)', 'Hotel check-in & relax', 'Evening visit Botanical Garden & Boating',], image: 'https://img1.wsimg.com/isteam/ip/dd7bf207-c00c-4b95-a0a3-ff510508d271/houseboat.jpeg' },
       { day: '02', title: "Explore Ooty", details: ['Breakfast at hotel', 'Ooty sightseeing: Rose Garden, Avvamore Palace, Govt. Museum', 'Toy train ride to Coonoor', 'Return & overnight stay at hotel',], image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6krGBzaTpFvGKQfz9MpuOef1sSRMcQzCrOQ&s" },
       { day: '03', title: "Proceed to Munnar", details: ['Drive to Munnar hill station', 'Visit Tea Gardens & Tea Museum en route', 'Check into hotel, relax & spice shopping',], image: "https://munnartourism.co.in/images/places-to-visit/headers/eravikulam-national-park-munnar-tourism-entry-fee-timings-holidays-reviews-header.jpg" },
@@ -329,6 +327,7 @@ export const travelPackages: Package[] = [
       'Valid only for couples within 60 days of marriage (wedding card required)',
     ],
   },
+
   {
     id: 'kerala-1', title: 'Charm of Kerala', duration: '02 Nights / 03 Days', summary: 'Experience Kerala’s scenic beauty in Munnar with curated sightseeing and comfort stay.',
 
@@ -618,6 +617,7 @@ export const travelPackages: Package[] = [
       'Valid for couples within 60 days of marriage (wedding card required)'
     ]
   },
+
   {
     id: 'kerala-3', title: 'Charm of Kerala', duration: '04 Nights / 05 Days', summary: 'Explore Kerala covering Munnar, Thekkady & Kumarakom houseboat, offering ethnic charm, natural beauty, wildlife experiences and serene backwaters.',
 
@@ -791,11 +791,9 @@ export const travelPackages: Package[] = [
       'Candlelight dinner (upgrade applicable)'
     ]
   },
+
   {
-    id: 'kerala-4',
-    title: 'Charm of Kerala',
-    duration: '05 Nights / 06 Days',
-    summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
+    id: 'kerala-4', title: 'Charm of Kerala', duration: '05 Nights / 06 Days', summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
     tourHighlights: [
       'All-inclusive package without any hidden costs',
       'Food on a Breakfast + Dinner basis and 03 meals in the houseboat',
@@ -956,11 +954,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-6',
-    title: 'Charm of Kerala',
-    duration: '07 Nights / 08 Days',
-    summary:
-      'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-6', title: 'Charm of Kerala', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1181,11 +1175,9 @@ export const travelPackages: Package[] = [
       'Candlelight dinner (upgrade applicable)'
     ]
   },
+
   {
-    id: 'kerala-7',
-    title: 'Charm of Kerala',
-    duration: '07 Nights / 08 Days',
-    summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-7', title: 'Charm of Kerala', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1398,10 +1390,9 @@ export const travelPackages: Package[] = [
       'Candlelight dinner (upgrade applicable)'
     ]
   },
+
   {
-    id: 'kerala-08',
-    title: 'Charm of Kerala and Border Beauties',
-    duration: '08 Nights / 09 Days',
+    id: 'kerala-08', title: 'Charm of Kerala and Border Beauties', duration: '08 Nights / 09 Days',
     summary: 'Experience Madurai, Kodaikanal, Thekkady, Munnar, and Kumarakom with scenic landscapes, cultural heritage, wildlife experiences, backwaters, and luxury accommodations.',
 
     tourHighlights: [
@@ -1427,106 +1418,15 @@ export const travelPackages: Package[] = [
     ],
 
     itineraryOverview: [
-      {
-        day: '01',
-        title: 'Arrival at Madurai (B+D)',
-        details: [
-          'Arrive at Madurai International Airport and meet IDT representative.',
-          'Check in at hotel and relax.',
-          'Evening visit to Madurai Meenakshi Temple.',
-          'Overnight stay at the hotel.'
-        ],
-        image: ''
-      },
-      {
-        day: '02',
-        title: 'Explore Madurai (B+D)',
-        details: [
-          'Breakfast at hotel.',
-          'Morning visit to Meenakshi Temple for Arathi.',
-          'Visit Thirumalai Nayakar Mahal.',
-          'Return to hotel and relax.',
-          'Overnight stay at the hotel.'
-        ],
-        image: ''
-      },
-      {
-        day: '03',
-        title: 'Madurai to Kodaikanal (B+D)',
-        details: [
-          'Breakfast and check out.',
-          'Drive to Kodaikanal (approx. 3 hrs 10 mins, 120 km).',
-          'Check in at hotel and relax.',
-          'Afternoon visit: Kodaikanal Lake, Coaker’s Walk, Pillar Rocks, Bryant Park.',
-          'Overnight stay at hotel.'
-        ],
-        image: ''
-      },
-      {
-        day: '04',
-        title: 'Explore Kodaikanal (B+D)',
-        details: [
-          'Breakfast at hotel.',
-          'Visit Dolphin’s Nose, Guna Cave, Pine Forest, Silver Cascade Falls.',
-          'Return to hotel for overnight stay.'
-        ],
-        image: ''
-      },
-      {
-        day: '05',
-        title: 'Proceed to Thekkady (B+D)',
-        details: [
-          'Check out from hotel and drive to Thekkady (4 hrs, 150 km).',
-          'Elephant ride and moments.',
-          'Jungle safari with guide.',
-          'Kalarippayattu martial arts experience.',
-          'Return to hotel for overnight stay.'
-        ],
-        image: ''
-      },
-      {
-        day: '06',
-        title: 'On to Munnar (B+D)',
-        details: [
-          'Early morning Periyar Lake boating at 6:30 AM.',
-          'Return to hotel, have breakfast, check out.',
-          'Drive to Munnar (approx. 4 hrs 30 mins).',
-          'En route visit Tea Gardens & Tea Museum.',
-          'Check in at hotel and relax, overnight stay.'
-        ],
-        image: ''
-      },
-      {
-        day: '07',
-        title: 'Explore Munnar (B+D)',
-        details: [
-          'Breakfast at hotel.',
-          'Visit Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake.',
-          'Proceed to Top Station for panoramic views.',
-          'Overnight stay at hotel.'
-        ],
-        image: ''
-      },
-      {
-        day: '08',
-        title: 'Enjoy Kumarakom Houseboat (B+D)',
-        details: [
-          'Breakfast and check out from hotel.',
-          'Board A/C luxury houseboat by 11:30 AM.',
-          'Cruise along backwaters, enjoy traditional lunch and dinner onboard.',
-          'Overnight stay in houseboat.'
-        ],
-        image: ''
-      },
-      {
-        day: '09',
-        title: 'Departure from Cochin (B+D)',
-        details: [
-          'Breakfast and check out from houseboat by 9:30 AM.',
-          'Drive to Cochin International Airport for return flight.'
-        ],
-        image: ''
-      }
+      { day: '01', title: 'Arrival at Madurai (B+D)', details: ['Arrive at Madurai International Airport and meet IDT representative.', 'Check in at hotel and relax.', 'Evening visit to Madurai Meenakshi Temple.', 'Overnight stay at the hotel.'], image: '' },
+      { day: '02', title: 'Explore Madurai (B+D)', details: ['Breakfast at hotel.', 'Morning visit to Meenakshi Temple for Arathi.', 'Visit Thirumalai Nayakar Mahal.', 'Return to hotel and relax.', 'Overnight stay at the hotel.'], image: '' },
+      { day: '03', title: 'Madurai to Kodaikanal (B+D)', details: ['Breakfast and check out.', 'Drive to Kodaikanal (approx. 3 hrs 10 mins, 120 km).', 'Check in at hotel and relax.', 'Afternoon visit: Kodaikanal Lake, Coaker’s Walk, Pillar Rocks, Bryant Park.', 'Overnight stay at hotel.'], image: '' },
+      { day: '04', title: 'Explore Kodaikanal (B+D)', details: ['Breakfast at hotel.', 'Visit Dolphin’s Nose, Guna Cave, Pine Forest, Silver Cascade Falls.', 'Return to hotel for overnight stay.'], image: '' },
+      { day: '05', title: 'Proceed to Thekkady (B+D)', details: ['Check out from hotel and drive to Thekkady (4 hrs, 150 km).', 'Elephant ride and moments.', 'Jungle safari with guide.', 'Kalarippayattu martial arts experience.', 'Return to hotel for overnight stay.'], image: '' },
+      { day: '06', title: 'On to Munnar (B+D)', details: ['Early morning Periyar Lake boating at 6:30 AM.', 'Return to hotel, have breakfast, check out.', 'Drive to Munnar (approx. 4 hrs 30 mins).', 'En route visit Tea Gardens & Tea Museum.', 'Check in at hotel and relax, overnight stay.'], image: '' },
+      { day: '07', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake.', 'Proceed to Top Station for panoramic views.', 'Overnight stay at hotel.'], image: '' },
+      { day: '08', title: 'Enjoy Kumarakom Houseboat (B+D)', details: ['Breakfast and check out from hotel.', 'Board A/C luxury houseboat by 11:30 AM.', 'Cruise along backwaters, enjoy traditional lunch and dinner onboard.', 'Overnight stay in houseboat.'], image: '' },
+      { day: '09', title: 'Departure from Cochin (B+D)', details: ['Breakfast and check out from houseboat by 9:30 AM.', 'Drive to Cochin International Airport for return flight.'], image: '' }
     ],
     detailedItinerary: [],
 
@@ -1535,117 +1435,46 @@ export const travelPackages: Package[] = [
         destination: 'Madurai (2N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [
-            { name: 'The Madurai Residency', image: '', description: '' },
-            { name: 'Hotel Germanus Madurai', image: '', description: '' }
-          ],
-          '4-Star Deluxe': [
-            { name: 'Mount Retreats Resort', image: '', description: '' },
-            { name: 'The Heritage Madurai', image: '', description: '' }
-          ],
-          '5-Star Deluxe': [
-            { name: 'Sterling V Grand Madurai', image: '', description: '' },
-            { name: 'Grand Madurai by GRT', image: '', description: '' }
-          ],
-          '5-Star Luxury': [
-            { name: 'Royal Court', image: '', description: '' },
-            { name: 'Courtyard by Marriott', image: '', description: '' },
-            { name: 'Regency Madurai by GRT', image: '', description: '' },
-            { name: 'Fortune Pandiyan Hotel', image: '', description: '' },
-            { name: 'Taj Gateway Hotel, Madurai', image: '', description: '' }
-          ]
+          '3-Star Deluxe': [{ name: 'The Madurai Residency', image: '', description: '' }, { name: 'Hotel Germanus Madurai', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Mount Retreats Resort', image: '', description: '' }, { name: 'The Heritage Madurai', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Sterling V Grand Madurai', image: '', description: '' }, { name: 'Grand Madurai by GRT', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Royal Court', image: '', description: '' }, { name: 'Courtyard by Marriott', image: '', description: '' }, { name: 'Regency Madurai by GRT', image: '', description: '' }, { name: 'Fortune Pandiyan Hotel', image: '', description: '' }, { name: 'Taj Gateway Hotel, Madurai', image: '', description: '' }]
         }
       },
       {
         destination: 'Kodaikanal (2N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [
-            { name: 'Avadale Resort', image: '', description: '' },
-            { name: 'Craigmore by Kodai Resort', image: '', description: '' }
-          ],
-          '4-Star Deluxe': [
-            { name: 'Kodai Heaven', image: '', description: '' },
-            { name: 'Country Club Valley', image: '', description: '' }
-          ],
-          '5-Star Deluxe': [
-            { name: 'Kodai Resort', image: '', description: '' },
-            { name: 'Dolphin Nose Retreat', image: '', description: '' },
-            { name: 'Sterling Kodai Lake', image: '', description: '' },
-            { name: 'Sterling Kodai Valley', image: '', description: '' },
-            { name: 'Mountain Retreat', image: '', description: '' }
-          ],
-          '5-Star Luxury': [
-            { name: 'The Tamara Hotel', image: '', description: '' },
-            { name: 'The Carlton', image: '', description: '' }
-          ]
+          '3-Star Deluxe': [{ name: 'Avadale Resort', image: '', description: '' }, { name: 'Craigmore by Kodai Resort', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Kodai Heaven', image: '', description: '' }, { name: 'Country Club Valley', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Kodai Resort', image: '', description: '' }, { name: 'Dolphin Nose Retreat', image: '', description: '' }, { name: 'Sterling Kodai Lake', image: '', description: '' }, { name: 'Sterling Kodai Valley', image: '', description: '' }, { name: 'Mountain Retreat', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'The Tamara Hotel', image: '', description: '' }, { name: 'The Carlton', image: '', description: '' }]
         }
       },
       {
         destination: 'Thekkady (1N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [
-            { name: 'Abad Green Forest', image: '', description: '' },
-            { name: 'Pepper Vine Resort', image: '', description: '' },
-            { name: 'Hotel Lincoln Square', image: '', description: '' }
-          ],
-          '4-Star Deluxe': [
-            { name: 'Mountain Courtyard Resort', image: '', description: '' },
-            { name: 'Forest Canopy Resort', image: '', description: '' },
-            { name: 'Aranya Nivas KTDC', image: '', description: '' }
-          ],
-          '5-Star Deluxe': [
-            { name: 'Poetree Resort', image: '', description: '' },
-            { name: 'Elephant Court', image: '', description: '' },
-            { name: 'Green Woods Resort', image: '', description: '' }
-          ],
-          '5-Star Luxury': [
-            { name: 'Spice Village Resort', image: '', description: '' },
-            { name: 'Hills & Hues Resort', image: '', description: '' },
-            { name: 'Lake Palace Resort KTDC', image: '', description: '' },
-            { name: 'Blanket Resort', image: '', description: '' }
-          ]
+          '3-Star Deluxe': [{ name: 'Abad Green Forest', image: '', description: '' }, { name: 'Pepper Vine Resort', image: '', description: '' }, { name: 'Hotel Lincoln Square', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Mountain Courtyard Resort', image: '', description: '' }, { name: 'Forest Canopy Resort', image: '', description: '' }, { name: 'Aranya Nivas KTDC', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Poetree Resort', image: '', description: '' }, { name: 'Elephant Court', image: '', description: '' }, { name: 'Green Woods Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Spice Village Resort', image: '', description: '' }, { name: 'Hills & Hues Resort', image: '', description: '' }, { name: 'Lake Palace Resort KTDC', image: '', description: '' }, { name: 'Blanket Resort', image: '', description: '' }]
         }
       },
       {
         destination: 'Munnar (2N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [
-            { name: 'West Wood Resort', image: '', description: '' },
-            { name: 'Eastend Hotel', image: '', description: '' },
-            { name: 'Trivers Resort', image: '', description: '' },
-            { name: 'Tea Castle', image: '', description: '' }
-          ],
-          '4-Star Deluxe': [
-            { name: 'Rivulet Resort', image: '', description: '' },
-            { name: 'Elephant Passage Resort', image: '', description: '' },
-            { name: 'Fog Resort', image: '', description: '' },
-            { name: 'Tall Trees Resort', image: '', description: '' }
-          ],
-          '5-Star Deluxe': [
-            { name: 'Blanket Hotel', image: '', description: '' },
-            { name: 'The Valle Resort', image: '', description: '' },
-            { name: 'Fragrant Nature Resort', image: '', description: '' }
-          ],
-          '5-Star Luxury': [
-            { name: 'Chandy’s Windy Woods', image: '', description: '' },
-            { name: 'Chandy’s Drizzle Drops', image: '', description: '' },
-            { name: 'Spice Tree Resort', image: '', description: '' },
-            { name: 'Grand Cliff Resort', image: '', description: '' }
-          ]
+          '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Trivers Resort', image: '', description: '' }, { name: 'Tea Castle', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Fog Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Blanket Hotel', image: '', description: '' }, { name: 'The Valle Resort', image: '', description: '' }, { name: 'Fragrant Nature Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Chandy’s Windy Woods', image: '', description: '' }, { name: 'Chandy’s Drizzle Drops', image: '', description: '' }, { name: 'Spice Tree Resort', image: '', description: '' }, { name: 'Grand Cliff Resort', image: '', description: '' }]
         }
       },
       {
         destination: 'Kumarakom Houseboat (1N)',
         image: '',
-        categories: {
-          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }],
-          '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: '', description: '' }],
-          '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden flag category', image: '', description: '' }],
-          '5-Star Luxury': [{ name: 'Full-time AC Luxury boat with Platinum category', image: '', description: '' }]
-        }
+        categories: { '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }], '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: '', description: '' }], '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden flag category', image: '', description: '' }], '5-Star Luxury': [{ name: 'Full-time AC Luxury boat with Platinum category', image: '', description: '' }] }
       }
     ],
 
@@ -1674,6 +1503,7 @@ export const travelPackages: Package[] = [
       'Full day cruise & overnight stay in A/C houseboat.',
       'Entry Fees, Service & other Taxes, Toll Charges, Bata & Night halting Charges, Local Guides at Selected locations.'
     ],
+    inclusions: [],
 
     exclusions: [
       'International/domestic air tickets & airport taxes',
@@ -1722,12 +1552,332 @@ export const travelPackages: Package[] = [
       { id: '13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: '' },
       { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: '' }
     ],
-    inclusions: [],
     specialOffers: []
   },
 
+  {
+    id: 'kerala-9', title: 'Charm of Kerala', duration: '7 Nights / 8 Days', summary: 'Experience the enchanting beauty of Kerala with misty hills, serene backwaters, wildlife, and pristine beaches. Includes meals, premium hotels, and private transportation.',
 
+    tourHighlights: [
+      'Munnar Tea Gardens & Eravikulam National Park',
+      'Thekkady Periyar Wildlife Sanctuary',
+      'Kumarakom Backwaters & Bird Sanctuary',
+      'Alleppey Houseboat Premium Cruise',
+      'Fort Kochi & Marine Drive Sightseeing'
+    ],
 
+    quickItinerary: [
+      'Day 1 – Kochi Arrival',
+      'Day 2 – Kochi → Munnar',
+      'Day 3 – Munnar Sightseeing',
+      'Day 4 – Munnar → Thekkady',
+      'Day 5 – Thekkady → Kumarakom',
+      'Day 6 – Kumarakom → Alleppey (Houseboat)',
+      'Day 7 – Alleppey → Kochi',
+      'Day 8 – Departure'
+    ],
+
+    itineraryOverview: [
+      { day: 'Day 1', title: 'Arrival in Kochi', details: ['Meet & greet at Kochi Airport', 'Hotel check-in and relaxation', 'Evening visit to Marine Drive and Lulu Mall'], image: 'assets/images/itinerary/kochi.jpg' },
+      { day: 'Day 2', title: 'Kochi to Munnar', details: ['Scenic drive through waterfalls and valleys', 'Visit Cheeyappara and Valara Falls', 'Check-in at Munnar hotel'], image: 'assets/images/itinerary/munnar-road.jpg' },
+      { day: 'Day 3', title: 'Munnar Sightseeing', details: ['Eravikulam National Park', 'Tea Museum & Tea Plantations', 'Photo Point, Mattupetty Dam & Echo Point'], image: 'assets/images/itinerary/munnar.jpg' },
+      { day: 'Day 4', title: 'Munnar to Thekkady', details: ['Drive to Thekkady', 'Periyar Wildlife Sanctuary', 'Optional: Spice Plantation Visit / Kalaripayattu Show'], image: 'assets/images/itinerary/thekkady.jpg' },
+      { day: 'Day 5', title: 'Thekkady to Kumarakom', details: ['Drive to Kumarakom', 'Visit Kumarakom Bird Sanctuary', 'Relax by the backwaters resort'], image: 'assets/images/itinerary/kumarakom.jpg' },
+      { day: 'Day 6', title: 'Kumarakom to Alleppey Houseboat', details: ['Check-in to Premium Houseboat', 'Cruise through canals and lagoons', 'Enjoy lunch, tea snacks, and dinner onboard'], image: 'assets/images/itinerary/houseboat.jpg' },
+      { day: 'Day 7', title: 'Alleppey to Kochi', details: ['Morning cruise and breakfast', 'Drive back to Kochi', 'Fort Kochi sightseeing (Chinese Fishing Nets, Beach)'], image: 'assets/images/itinerary/kochi-fort.jpg' },
+      { day: 'Day 8', title: 'Departure', details: ['Transfer to Kochi Airport', 'Tour Ends'], image: 'assets/images/itinerary/departure.jpg' }],
+    detailedItinerary: [
+      { day: 'Day 1', title: 'Arrival – Kochi', details: ['Pickup from Cochin International Airport', 'Transfer to hotel and relax', 'Evening visit to Marine Drive & local markets'] },
+      { day: 'Day 2', title: 'Kochi → Munnar', details: ['Drive to Munnar (4 hrs)', 'Stop at Valara & Cheeyappara Waterfalls', 'Hotel check-in and leisure evening'] },
+      { day: 'Day 3', title: 'Munnar Sightseeing', details: ['Visit Eravikulam National Park', 'Explore Tea Museum', 'Mattupetty Dam, Echo Point, Photo Point'] },
+      { day: 'Day 4', title: 'Munnar → Thekkady', details: ['Drive to Thekkady (3 hrs)', 'Visit Periyar Wildlife Sanctuary', 'Optional Bamboo Rafting / Spice Village Show'] },
+      { day: 'Day 5', title: 'Thekkady → Kumarakom', details: ['Drive to Kumarakom (3 hrs)', 'Visit Bird Sanctuary', 'Relax at Backwaters Resort'] },
+      { day: 'Day 6', title: 'Kumarakom → Alleppey Houseboat', details: ['Check-in to Premium Houseboat', 'Backwater cruise with meals', 'Sunset view from houseboat deck'] },
+      { day: 'Day 7', title: 'Alleppey → Kochi', details: ['Morning cruise', 'Drive back to Kochi', 'Fort Kochi sightseeing'] },
+      { day: 'Day 8', title: 'Departure', details: ['Airport drop'] }],
+
+    inclusions: [
+      'Breakfast & Dinner at Hotels',
+      '03 Meals in Houseboat (Lunch, Dinner, Breakfast)',
+      'Private AC vehicle for all transfers',
+      'Airport Pickup & Drop',
+      'Toll, Parking, Driver Bata'
+    ],
+
+    exclusions: [
+      'Any flights or train tickets',
+      'Entry tickets at sightseeing places',
+      'Personal expenses, tips, laundry',
+      'Optional activities'
+    ],
+
+    sightseeing: [
+      'Marine Drive Kochi',
+      'Munnar Tea Plantations',
+      'Eravikulam National Park',
+      'Periyar Wildlife Sanctuary',
+      'Kumarakom Backwaters',
+      'Alleppey Houseboat Cruise'
+    ],
+
+    hotelPackages: [
+      {
+        destination: 'Kochi',
+        image: 'assets/images/hotels/kochi.jpg',
+        categories: {
+          Deluxe: [{ name: 'Westwood Riverside', image: 'assets/images/hotels/westwood.jpg', description: 'Comfortable rooms with riverside ambience.' }]
+        }
+      },
+      {
+        destination: 'Munnar',
+        image: 'assets/images/hotels/munnar.jpg',
+        categories: {
+          Deluxe: [{ name: 'Tea Valley Resort', image: 'assets/images/hotels/tea-valley.jpg', description: 'Scenic views overlooking tea plantations.' }]
+        }
+      },
+      {
+        destination: 'Thekkady',
+        image: 'assets/images/hotels/thekkady.jpg',
+        categories: {
+          Deluxe: [{ name: 'Greenwoods Resort', image: 'assets/images/hotels/greenwoods.jpg', description: 'Eco-friendly cottages surrounded by greenery.' }]
+        }
+      },
+      {
+        destination: 'Kumarakom',
+        image: 'assets/images/hotels/kumarakom.jpg',
+        categories: {
+          Deluxe: [{ name: 'Lakesong Resort', image: 'assets/images/hotels/lakesong.jpg', description: 'Traditional Kerala architecture by the lake.' }]
+        }
+      }
+    ],
+
+    childPolicy: [
+      'Child below 5 years complimentary',
+      'Child 5–11 years with extra bed chargeable'
+    ],
+
+    meals: 'Breakfast & Dinner daily + All meals in Houseboat',
+
+    transport: [
+      { pax: '2–3 Pax', description: 'Sedan AC' },
+      { pax: '4–6 Pax', description: 'Innova / Ertiga AC' },
+      { pax: '7+ Pax', description: 'Tempo Traveller AC' }
+    ],
+
+    pricing: [
+      {
+        season: 'Season Rate',
+        categories: [
+          {
+            category: 'Deluxe',
+            twoPax: '₹35,999',
+            single: '₹48,999',
+            extraPerson: '₹12,999'
+          }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+      { id: 'sup-1', name: 'Jeep Safari', subtitle: 'Munnar', location: 'Munnar', people: '2–6', cost: '₹2,000', rating: 4.6, featured: true, img: 'assets/images/activities/jeep.jpg' },
+      { id: 'sup-2', name: 'Kathakali Show', subtitle: 'Cultural Show', location: 'Thekkady', people: '1–20', cost: '₹500', rating: 4.4, featured: false, img: 'assets/images/activities/kathakali.jpg' }
+    ],
+
+    specialOffers: ['Early Bird Offer – Save 10%']
+  },
+  {
+    id: 'kerala-10',
+    title: 'Charm of Kerala and Border Beauties',
+    duration: '06 Nights / 07 Days',
+    summary:
+      'A scenic Kerala escape visiting Ooty, Munnar, Thekkady and a relaxing houseboat stay in Kumarakom — tea gardens, wildlife, backwaters and coastal sights included. Meals on B+D at hotels and full board on the houseboat.',
+    tourHighlights: [
+      'All-inclusive package without any hidden costs',
+      'Breakfast + Dinner basis at hotels; 03 meals on houseboat',
+      'Carefully selected hotels & resorts based on guest reviews',
+      'Vehicle at disposal from airport to airport on all days (no km restrictions)',
+      'One English-speaking driver & one vehicle for the entire tour',
+      'Date-change available up to 24 hours before (no retention fee)',
+      'GST, Toll charges, Driver Bata, Parking fees included'
+    ],
+
+    quickItinerary: [
+      'Day 01 – Arrival at Coimbatore → Ooty (B+D)',
+      'Day 02 – Explore Ooty (B+D)',
+      'Day 03 – Ooty → Munnar (B+D)',
+      'Day 04 – Explore Munnar (B+D)',
+      'Day 05 – Munnar → Thekkady (B+D)',
+      'Day 06 – Thekkady → Kumarakom Houseboat (B+L+D)',
+      'Day 07 – Kumarakom → Cochin Departure (B)'
+    ],
+
+    itineraryOverview: [
+      { day: '01', title: 'Arrival at Coimbatore – Transfer to Ooty (B+D)', details: ['Arrive at Coimbatore Airport and meet IDT representative.', 'Drive to Ooty (approx. 3 hours 10 minutes).', 'Check-in and relax at hotel.', 'Evening visit to Botanical Garden and boating.', 'Overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-arrival.jpg' },
+      { day: '02', title: 'Explore Ooty (B+D)', details: ['Breakfast at hotel.', 'Sightseeing around Ooty: Rose Garden, Government Museum, Avalanche (as applicable).', 'Toy train ride towards Coonoor (subject to timing & ticket availability).', 'Return to hotel; overnight at Ooty.'], image: 'assets/images/itinerary/ooty-sightseeing.jpg' },
+      { day: '03', title: 'Ooty → Munnar (B+D)', details: ['Breakfast and check-out.', 'Drive to Munnar (scenic route).', 'En-route visit Tea Museum & tea gardens.', 'Check-in at Munnar hotel; spice shopping and relax.', 'Overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-drive.jpg' },
+      { day: '04', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Full-day Munnar sightseeing: Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake, Top Station.', 'Evening at leisure; overnight at Munnar.'], image: 'assets/images/itinerary/munnar-sightseeing.jpg' },
+      { day: '05', title: 'Munnar → Thekkady (B+D)', details: ['Breakfast and check-out; drive to Thekkady (approx. 3 hours / 150 km).', 'Check-in at hotel and relax.', 'Afternoon elephant ride and jungle safari (subject to availability).', 'Evening Kalarippayattu show (where available).', 'Overnight stay at Thekkady.'], image: 'assets/images/itinerary/thekkady-arrival.jpg' },
+      { day: '06', title: 'Thekkady → Kumarakom Houseboat (B+L+D)', details: ['Breakfast at hotel; drive to Kumarakom (approx. 4 hours).', 'Board A/C houseboat by noon and begin backwater cruise.', 'Enjoy traditional lunch on board; cruise through canals and lagoons.', 'Houseboat anchors by 5:30 PM; dinner & overnight onboard.'], image: 'assets/images/itinerary/houseboat-cruise.jpg' },
+      { day: '07', title: 'Kumarakom → Cochin Departure (B)', details: ['Disembark after breakfast and transfer to Cochin Airport or railway station for onward journey.', 'Tour ends with lovely memories of Kerala.'], image: 'assets/images/itinerary/departure-cochin.jpg' }
+    ],
+
+    detailedItinerary: [
+      { day: 'Day 1', title: 'Arrival at Coimbatore & transfer to Ooty', details: ['Arrival at Coimbatore airport and meet & greet.', 'Drive to Ooty (3h10m).', 'Check-in & afternoon Botanical Garden visit and boating.', 'Relax at hotel & overnight.'] },
+      { day: 'Day 2', title: 'Ooty sightseeing', details: ['Breakfast at hotel.', 'Visit Rose Garden, Government Museum, and other local attractions.', 'Toy train ride to Coonoor if available.', 'Evening at leisure; overnight at Ooty.'] },
+      { day: 'Day 3', title: 'Transfer to Munnar', details: ['Early breakfast and drive to Munnar.', 'Stop at tea gardens and the Tea Museum en route.', 'Arrive Munnar by afternoon, check-in, spice shopping and overnight.'] },
+      { day: 'Day 4', title: 'Full-day Munnar sightseeing', details: ['Visit Eravikulam National Park (subject to park timings).', 'Mattupetty Dam, Echo Point, Kundala Lake and Top Station.', 'Evening free & overnight at Munnar.'] },
+      { day: 'Day 5', title: 'Munnar to Thekkady', details: ['Drive to Thekkady after breakfast.', 'Check-in and enjoy an elephant ride & jungle safari.', 'Attend Kalarippayattu performance in the evening.'] },
+      { day: 'Day 6', title: 'Thekkady to Kumarakom houseboat', details: ['Drive to Kumarakom; board houseboat around noon.', 'Cruise the backwaters with lunch & dinner on board; anchored overnight.'] },
+      { day: 'Day 7', title: 'Disembark & departure from Cochin', details: ['Disembark after breakfast and transfer to Cochin airport/rail station.', 'Assistance for onward journey.'] }
+    ],
+
+    inclusions: [
+      'Local English-speaking driver and private A/C vehicle for transfers',
+      'Twin/double accommodation on B+D basis (houseboat B+L+D)',
+      'Three meals on houseboat (Lunch + Dinner + Breakfast)',
+      'Airport pickup & drop (as per itinerary)',
+      'Toll, parking charges, driver bata, GST'
+    ],
+
+    exclusions: [
+      'International & domestic air / train tickets and airport taxes',
+      'Entry fees (unless specified), optional activities & personal expenses',
+      'Laundry, telephone calls, room service, alcoholic & non-alcoholic beverages',
+      'Single room supplement (quoted separately)',
+      'Peak season or festival surcharges (if any)'
+    ],
+
+    sightseeing: [
+      'Ooty Botanical Garden & Rose Garden',
+      'Toy Train ride (subject to availability)',
+      'Munnar – Tea Museum, Eravikulam NP, Mattupetty Dam, Top Station',
+      'Periyar Lake boating & Jungle Safari (Thekkady)',
+      'Kumarakom backwaters & bird sanctuary',
+      'Alleppey (houseboat cruise) and Kochi transfer'
+    ],
+
+    hotelPackages: [
+      {
+        destination: 'Ooty (2N)',
+        image: 'assets/images/hotels/ooty.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'Nahar Nilgiris Resort', image: 'assets/images/hotels/nahar-nilgiris.jpg', description: '' }, { name: 'Treebo Windsor Heights Resort', image: 'assets/images/hotels/treebo-windsor.jpg', description: '' }, { name: 'Garden Manor Resort', image: 'assets/images/hotels/garden-manor.jpg', description: '' }],
+          '4-Star Deluxe': [{ name: 'Sinclair’s Retreats', image: 'assets/images/hotels/sinclair.jpg', description: '' }, { name: 'The Monarch', image: 'assets/images/hotels/monarch.jpg', description: '' }, { name: 'Fortune Retreats', image: 'assets/images/hotels/fortune-retreats.jpg', description: '' }],
+          '5-Star Deluxe': [{ name: 'Sterling Fern Hill, Ooty', image: 'assets/images/hotels/sterling-fern.jpg', description: '' }, { name: 'Accord Highland', image: 'assets/images/hotels/accord-highland.jpg', description: '' }, { name: 'Mango Hill Shola Resort', image: 'assets/images/hotels/mango-hill.jpg', description: '' }],
+          '5-Star Luxury': [{ name: 'Taj Savoy Hotel', image: 'assets/images/hotels/taj-savoy.jpg', description: '' }, { name: 'Taj Gateway Coonoor', image: 'assets/images/hotels/taj-gateway-coonoor.jpg', description: '' }]
+        }
+      },
+      {
+        destination: 'Munnar (2N)',
+        image: 'assets/images/hotels/munnar.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'West Wood Resort', image: 'assets/images/hotels/westwood.jpg', description: '' }, { name: 'Eastend Hotel', image: 'assets/images/hotels/eastend.jpg', description: '' }, { name: 'Trivers Resort', image: 'assets/images/hotels/trivers.jpg', description: '' }, { name: 'Tea Castle', image: 'assets/images/hotels/tea-castle.jpg', description: '' }],
+          '4-Star Deluxe': [{ name: 'Rivulet Resort', image: 'assets/images/hotels/rivulet.jpg', description: '' }, { name: 'Elephant Passage Resort', image: 'assets/images/hotels/elephant-passage.jpg', description: '' }, { name: 'Fog Resort', image: 'assets/images/hotels/fog.jpg', description: '' }, { name: 'Tall Trees Resort', image: 'assets/images/hotels/tall-trees.jpg', description: '' }],
+          '5-Star Deluxe': [{ name: 'Blanket Hotel', image: 'assets/images/hotels/blanket.jpg', description: '' }, { name: 'The Valle Resort', image: 'assets/images/hotels/the-valle.jpg', description: '' }, { name: 'Fragrant Nature Resort', image: 'assets/images/hotels/fragrant-nature.jpg', description: '' }],
+          '5-Star Luxury': [{ name: 'Chandy’s Windy Woods', image: 'assets/images/hotels/chandys-windy.jpg', description: '' }, { name: 'Chandy’s Drizzle Drops', image: 'assets/images/hotels/chandys-drizzle.jpg', description: '' }, { name: 'Spice Tree Resort', image: 'assets/images/hotels/spice-tree.jpg', description: '' }, { name: 'Grand Cliff Resort', image: 'assets/images/hotels/grand-cliff.jpg', description: '' }]
+        }
+      },
+      {
+        destination: 'Thekkady (1N)',
+        image: 'assets/images/hotels/thekkady.jpg',
+        categories: {
+          '3-Star Deluxe': [
+            { name: 'Abad Green Forest', image: 'assets/images/hotels/abad-green.jpg', description: '' },
+            { name: 'Pepper Vine Resort', image: 'assets/images/hotels/peppervine.jpg', description: '' },
+            { name: 'Hotel Lincoln Square', image: 'assets/images/hotels/lincoln-square.jpg', description: '' }
+          ],
+          '4-Star Deluxe': [
+            { name: 'Mountain Courtyard Resort', image: 'assets/images/hotels/mountain-courtyard.jpg', description: '' },
+            { name: 'Forest Canopy Resort', image: 'assets/images/hotels/forest-canopy.jpg', description: '' },
+            { name: 'Reen Resorts', image: 'assets/images/hotels/reen-resorts.jpg', description: '' }
+          ],
+          '5-Star Deluxe': [
+            { name: 'Poetree Resort', image: 'assets/images/hotels/poetree.jpg', description: '' },
+            { name: 'Elephant Court', image: 'assets/images/hotels/elephant-court.jpg', description: '' },
+            { name: 'Green Woods Resort', image: 'assets/images/hotels/green-woods.jpg', description: '' }
+          ],
+          '5-Star Luxury': [
+            { name: 'Spice Village Resort', image: 'assets/images/hotels/spice-village.jpg', description: '' },
+            { name: 'Hills & Hues Resort', image: 'assets/images/hotels/hills-hues.jpg', description: '' },
+            { name: 'Lake Palace Resort KTDC', image: 'assets/images/hotels/lake-palace-ktdc.jpg', description: '' },
+            { name: 'Blanket Resort', image: 'assets/images/hotels/blanket-resort.jpg', description: '' }
+          ]
+        }
+      },
+      {
+        destination: 'Kumarakom Houseboat (1N)',
+        image: 'assets/images/hotels/houseboat.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: 'assets/images/houseboats/standard.jpg', description: '' }],
+          '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: 'assets/images/houseboats/deluxe.jpg', description: '' }],
+          '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden flag category', image: 'assets/images/houseboats/premium.jpg', description: '' }],
+          '5-Star Luxury': [{ name: 'Full-time AC Luxury boat with Platinum category', image: 'assets/images/houseboats/platinum.jpg', description: '' }]
+        }
+      }
+    ],
+
+    childPolicy: [
+      'Child below 5 Years: Free of cost (without extra bed)',
+      'Child 5–12 Years: 25% of adult price on double share',
+      'Extra Adult with extra bed: 30% of adult price on double share'
+    ],
+
+    meals: 'Breakfast + Dinner at hotels; Breakfast + Lunch + Dinner on houseboat',
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan car (mostly Toyota Etios/Swift Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Toyota Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Force Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 17-Seater Force Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C 25-Seater Traveller / Mini Luxury Bus', icon: '🚐' },
+      { pax: '25+ Pax', description: 'A/C Luxury Bus', icon: '🚍' }
+    ],
+
+    pricing: [
+      {
+        season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 80,020/-', single: 'Rs 64,010/-', extraPerson: 'Rs 24,006/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 95,680/-', single: 'Rs 76,540/-', extraPerson: 'Rs 28,704/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,26,060/-', single: 'Rs 1,00,850/-', extraPerson: 'Rs 37,818/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 2,36,280/-', single: 'Rs 1,89,020/-', extraPerson: 'Rs 70,884/-' }
+        ]
+      },
+      {
+        season: '1st June 2026 - 30th Sept 2026 (Off Season)',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 65,000/-', single: 'Rs 52,000/-', extraPerson: 'Rs 19,500/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 78,140/-', single: 'Rs 62,510/-', extraPerson: 'Rs 23,442/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,03,340/-', single: 'Rs 82,670/-', extraPerson: 'Rs 31,002/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 1,92,520/-', single: 'Rs 1,54,020/-', extraPerson: 'Rs 57,756/-' }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+
+      { id: 'sup-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/attractions/cookery-demo.jpg' },
+      { id: 'sup-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/kalarippayattu.jpg' },
+      { id: 'sup-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/attractions/kolukkumalai.jpg' },
+      { id: 'sup-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-half.jpg' },
+      { id: 'sup-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-full.jpg' },
+      { id: 'sup-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/attractions/trekking-jeep.jpg' },
+      { id: 'sup-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/bamboo-rafting.jpg' },
+      { id: 'sup-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
+      { id: 'sup-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/jeep-periyar.jpg' },
+      { id: 'sup-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-safari.jpg' },
+      { id: 'sup-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-moments.jpg' },
+      { id: 'sup-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/attractions/canal-cruise.jpg' },
+      { id: 'sup-13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/historical-tour-cochin.jpg' },
+      { id: 'sup-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/attractions/houseboat-extra.jpg' }
+    ],
+
+    specialOffers: [
+      'Complimentary honeymoon cake for couple packages (on request)',
+      'Flower bed decoration (couple packages) - on request',
+      'Candlelight dinner (upgrade applicable)'
+    ]
+  },
 
 ];
 
@@ -1740,6 +1890,12 @@ export const inboundPackages = [
   { id: 'kerala-3', name: 'Kerala 03', gradient: 'from-green-400 to-green-600', tagline: 'Land of Timeless Tranquility', description: 'Ayurveda Retreats, Beaches, Lagoons', bgImage: 'https://cdn.yourholiday.me/static/dynimg/itinerary/34/1200x900/2191395-2191394_munnar-1.jpg' },
   { id: 'kerala-4', name: 'Kerala 04', gradient: 'from-green-400 to-green-600', tagline: 'A Symphony of Green', description: 'Rice Fields, Forest Trails, Spice Gardens', bgImage: 'https://irisholidays.com/keralatourism/wp-content/uploads/2017/02/kerala-images-photos.jpg' },
   { id: 'kerala-5', name: 'Kerala 05', gradient: 'from-green-400 to-green-600', tagline: 'A Journey Through Serenity', description: 'Houseboats, Coconut Groves, Healing Traditions', bgImage: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgE9FFhu4vGhBkizussZetQOW0Sli2r-bNHQNPbJqaKJrk9EstPU5n34aAOGZNLX0Y4qxbcYwfpt8GuJOiwMxigSkDwtFYQIUX0OZJ7xp-oZeNAlk43mCWyVwcWVTE7Fmkap7mwztwmhx_l_bq82CfTHShguEfsP5lAcZ1NrtD0UB7fATct5Jr7AAbaFA/s1055/chirakkal%20kaali%202.jpg' },
+  { id: 'kerala-6', name: 'Kerala 06', gradient: 'from-green-400 to-green-600', tagline: 'Whispers of the Western Ghats', description: 'Cardamom Hills, Tribal Villages, Bamboo Forests', bgImage: 'https://keralatourism.mobi/images/kerala_tourism.jpg' },
+  { id: 'kerala-7', name: 'Kerala 07', gradient: 'from-green-400 to-green-600', tagline: 'Beyond the Backwaters', description: 'Heritage Forts, Cultural Trails, River Cruises', bgImage: 'https://images.unsplash.com/photo-1562007908-61b040f0ea1e' },
+  { id: 'kerala-8', name: 'Kerala 08', gradient: 'from-green-400 to-green-600', tagline: 'Nature’s Hidden Canvas', description: 'Hill Valleys, Water Streams, Cloud Paths', bgImage: 'https://images.unsplash.com/photo-1586864387784-6d5d79ca7a51' },
+  { id: 'kerala-9', name: 'Kerala 09', gradient: 'from-green-400 to-green-600', tagline: 'Mystic Hills & Blue Horizons', description: 'Scenic Drives, Lakeside Views, Hilltop Breezes', bgImage: 'https://cdn.pixabay.com/photo/2020/02/28/05/20/munnar-4887474_1280.jpg' },
+  { id: 'kerala-10', name: 'Kerala 10', gradient: 'from-green-400 to-green-600', tagline: 'Charm of Kerala & Border Beauties', description: 'Ooty, Munnar, Thekkady, Kumarakom Backwaters', bgImage: 'https://cdn.pixabay.com/photo/2016/11/29/02/06/india-1869441_1280.jpg' },
+  { id: 'kerala-11', name: 'Kerala 11', gradient: 'from-green-400 to-green-600', tagline: 'The Soul of God’s Own Country', description: 'Ayurveda, Nature Escapes, Island Getaways', bgImage: 'https://images.unsplash.com/photo-1544986581-efac024faf62' },
   { id: 'karnataka', name: 'Karnataka', gradient: 'from-blue-400 to-blue-600', tagline: 'One State Many Worlds', description: 'Ancient Temples, Coffee Estates, Beaches', bgImage: 'assets/images/m.jpeg' },
   { id: 'tamil-nadu', name: 'Tamil Nadu', gradient: 'from-orange-400 to-orange-600', tagline: 'Land of Temples', description: 'Dravidian Architecture, Hill Stations', bgImage: 'assets/images/k.jpg' },
   { id: 'goa', name: 'Goa', gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage' },
@@ -1750,6 +1906,20 @@ export const inboundPackages = [
   { id: 'delhi', name: 'Delhi', gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage' }
 ];
 
+export const inboundKeralaPackages = [
+  { id: 'kerala', name: 'Kerala', gradient: 'from-green-400 to-green-600', tagline: "God's Own Country", description: 'Backwaters, Tea Gardens, Ayurveda', bgImage: 'assets/images/l.jpeg' },
+  { id: 'kerala-1', name: 'Kerala 01', gradient: 'from-green-400 to-green-600', tagline: 'Where Nature Finds Peace', description: 'Backwaters, Silent Shores, Misty Hills', bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZBMq-oGqD2DoMs2PTwX9O4IJRxVNp2T9GVg&s' },
+  { id: 'kerala-2', name: 'Kerala 02', gradient: 'from-green-400 to-green-600', tagline: "The Emerald Escape", description: "Tea Plantations, Waterfalls, Wildlife", bgImage: 'https://d2qa7a8q0vuocm.cloudfront.net/images/4566720240912074442.png' },
+  { id: 'kerala-3', name: 'Kerala 03', gradient: 'from-green-400 to-green-600', tagline: 'Land of Timeless Tranquility', description: 'Ayurveda Retreats, Beaches, Lagoons', bgImage: 'https://cdn.yourholiday.me/static/dynimg/itinerary/34/1200x900/2191395-2191394_munnar-1.jpg' },
+  { id: 'kerala-4', name: 'Kerala 04', gradient: 'from-green-400 to-green-600', tagline: 'A Symphony of Green', description: 'Rice Fields, Forest Trails, Spice Gardens', bgImage: 'https://irisholidays.com/keralatourism/wp-content/uploads/2017/02/kerala-images-photos.jpg' },
+  { id: 'kerala-5', name: 'Kerala 05', gradient: 'from-green-400 to-green-600', tagline: 'A Journey Through Serenity', description: 'Houseboats, Coconut Groves, Healing Traditions', bgImage: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgE9FFhu4vGhBkizussZetQOW0Sli2r-bNHQNPbJqaKJrk9EstPU5n34aAOGZNLX0Y4qxbcYwfpt8GuJOiwMxigSkDwtFYQIUX0OZJ7xp-oZeNAlk43mCWyVwcWVTE7Fmkap7mwztwmhx_l_bq82CfTHShguEfsP5lAcZ1NrtD0UB7fATct5Jr7AAbaFA/s1055/chirakkal%20kaali%202.jpg' },
+  { id: 'kerala-6', name: 'Kerala 06', gradient: 'from-green-400 to-green-600', tagline: 'Whispers of the Western Ghats', description: 'Cardamom Hills, Tribal Villages, Bamboo Forests', bgImage: 'https://keralatourism.mobi/images/kerala_tourism.jpg' },
+  { id: 'kerala-7', name: 'Kerala 07', gradient: 'from-green-400 to-green-600', tagline: 'Beyond the Backwaters', description: 'Heritage Forts, Cultural Trails, River Cruises', bgImage: 'https://images.unsplash.com/photo-1562007908-61b040f0ea1e' },
+  { id: 'kerala-8', name: 'Kerala 08', gradient: 'from-green-400 to-green-600', tagline: 'Nature’s Hidden Canvas', description: 'Hill Valleys, Water Streams, Cloud Paths', bgImage: 'https://images.unsplash.com/photo-1586864387784-6d5d79ca7a51' },
+  { id: 'kerala-9', name: 'Kerala 09', gradient: 'from-green-400 to-green-600', tagline: 'Mystic Hills & Blue Horizons', description: 'Scenic Drives, Lakeside Views, Hilltop Breezes', bgImage: 'https://cdn.pixabay.com/photo/2020/02/28/05/20/munnar-4887474_1280.jpg' },
+  { id: 'kerala-10', name: 'Kerala 10', gradient: 'from-green-400 to-green-600', tagline: 'Charm of Kerala & Border Beauties', description: 'Ooty, Munnar, Thekkady, Kumarakom Backwaters', bgImage: 'https://cdn.pixabay.com/photo/2016/11/29/02/06/india-1869441_1280.jpg' },
+  { id: 'kerala-11', name: 'Kerala 11', gradient: 'from-green-400 to-green-600', tagline: 'The Soul of God’s Own Country', description: 'Ayurveda, Nature Escapes, Island Getaways', bgImage: 'https://images.unsplash.com/photo-1544986581-efac024faf62' },
+]
 
 export const itineraryRoute = [
   { distance: 0, category: 'city', name: 'Coimbatore', altitude: 411, date: new Date('2025-05-01').getTime(), population: 2, geometry: { type: 'Point', coordinates: [76.956, 11.0168] } },
