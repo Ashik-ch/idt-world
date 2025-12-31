@@ -54,9 +54,9 @@
               }
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/swiper/swiper-bundle.css",
               "src/styles.scss"
             ],
             "server": "src/main.server.ts",
