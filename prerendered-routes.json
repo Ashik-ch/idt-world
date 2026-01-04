@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/Program%20Files/Git/idt-world": {},
+    "/Program%20Files/Git/idt-world/contact": {},
+    "/Program%20Files/Git/idt-world/inbound": {},
+    "/Program%20Files/Git/idt-world/inbound/delhi": {},
+    "/Program%20Files/Git/idt-world/inbound/karnataka": {},
+    "/Program%20Files/Git/idt-world/inbound/kerala": {},
+    "/Program%20Files/Git/idt-world/outbound": {}
+  }
+}
