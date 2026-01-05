@@ -13,7 +13,7 @@
                     IDT WORLD
                 </span>
                 <span class="text-xs md:text-sm text-gray-700 italic">
-                    Authentically Crafted, Passionately Curated!
+                    Authentically Crafted, Passionately Curated!!
                 </span>
             </div>
         </a>
@@ -55,8 +55,8 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <nav *ngIf="isMenuOpen"
-        class="md:hidden bg-white border-t border-gray-200 px-5 py-3 space-y-2 text-sm shadow-inner">
+    <nav *ngIf="isMenuOpen" class="md:hidden bg-white border-t border-gray-200 px-5 py-3 space-y-2 text-sm shadow-inner"
+        aria-label="Mobile Navigation">
         <a routerLink="/" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Home</a>
         <a routerLink="/inbound" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Inbound</a>
         <a routerLink="/outbound" (click)="isMenuOpen=false"
