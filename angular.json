@@ -46,7 +46,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets/"
+                "output": "assets"
               },
               {
                 "glob": "**/*",
@@ -68,6 +68,7 @@
           "configurations": {
             "production": {
               "baseHref": "/",
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -79,8 +80,7 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
@@ -114,7 +114,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets/"
+                "output": "assets"
               },
               {
                 "glob": "**/*",
