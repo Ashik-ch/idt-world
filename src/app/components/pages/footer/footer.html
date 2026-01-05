@@ -91,9 +91,17 @@
 
     <!-- 🔻 Bottom Bar -->
     <div
-        class="relative text-center text-xs text-gray-400 py-4 border-t border-gray-700 bg-gradient-to-r from-black via-gray-900 to-black">
-        <span class="opacity-80">© {{ currentYear }} <a href="https://bytrixhub.com"
-                class="hover:text-red-400 transition">Bytrix Hub</a>.
-            All rights reserved.</span>
+        class="relative bg-gradient-to-r from-black via-gray-900 to-black border-t border-gray-700 py-4 text-center text-xs text-gray-400">
+
+        <p class="opacity-80">
+            © {{ currentYear }}
+            <a href="https://bytrixhub.com" target="_blank" rel="noopener noreferrer"
+                class="transition hover:text-red-400">
+                Bytrix Hub
+            </a>.
+            All rights reserved.
+            <span class="mx-2 opacity-50">| Version: {{ appVersion }}</span>
+        </p>
+
     </div>
 </footer>
