@@ -14,41 +14,47 @@
                 explore diverse landscapes and cultures.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 items-center mb-8 gap-4">
-                <div class="hidden md:block"></div>
-                <h2 class="text-xl sm:text-2xl md:text-2xl font-bold font-serif text-red-500 text-center">
-                    Popular Inbound Packages
-                </h2>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+
+                <!-- FILTER TABS -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                    <button *ngFor="let tab of filterTabs" (click)="setFilter(tab.id)" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap
+                     border transition-all duration-300 shadow-sm" [ngClass]="activeFilter === tab.id
+                ? 'bg-red-500 text-white border-red-500 shadow-md'
+                : 'bg-white text-red-500 border-red-300 hover:bg-red-50'">
+                        {{ tab.label }}
+                    </button>
+                </div>
+
+                <!-- SEARCH -->
                 <div class="flex justify-center md:justify-end">
-                    <div
-                        class="relative w-full max-w-[220px] md:max-w-[260px] text-gray-700 focus-within:text-gray-900 transition-all">
-                        <input type="text" placeholder="Search..." [(ngModel)]="searchTerm"
-                            class="w-full py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition" />
-                        <i class="pi pi-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <div class="relative w-full max-w-full md:max-w-[260px]">
+                        <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" class="w-full py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-full shadow-sm
+                       focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition" />
+                        <i class="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
                     </div>
                 </div>
             </div>
 
             <!-- 🧳 Filtered List -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl">
-                <div *ngFor=" let state of filteredPackages" class="group cursor-pointer"
-                    (click)="navigateToState(state.id)">
+                <div *ngFor="let pkg of visiblePackages" class="group cursor-pointer" (click)="navigateToState(pkg.id)">
                     <div class="rounded-xl p-6 text-white hover:shadow-lg transition-all duration-300 ease-in-out relative overflow-hidden"
-                        data-aos="zoom-in-right" [ngClass]="state.gradient ? 'bg-gradient-to-br ' + state.gradient : ''"
+                        data-aos="zoom-in-right" [ngClass]="pkg.gradient ? 'bg-gradient-to-br ' + pkg.gradient : ''"
                         [ngStyle]="
-              state.bgImage
+              pkg.bgImage
                 ? {
-                    'background-image': 'url(' + state.bgImage + ')',
+                    'background-image': 'url(' + pkg.bgImage + ')',
                     'background-size': 'cover',
                     'background-position': 'center'
                   }
                 : {}
             ">
-                        <div *ngIf="state.bgImage"
+                        <div *ngIf="pkg.bgImage"
                             class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all"></div>
                         <div class="relative z-10">
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-xl font-bold">{{ state.name }}</h3>
+                                <h3 class="text-xl font-bold">{{ pkg.name }}</h3>
                                 <div class="space-x-3">
                                     <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
                                         target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"
@@ -62,14 +68,14 @@
                                     <i class="pi pi-arrow-right text-md hover:scale-125"></i>
                                 </div>
                             </div>
-                            <p class="mb-2 italic text-sm">{{ state.tagline }}</p>
-                            <p class="text-sm opacity-90">{{ state.description }}</p>
+                            <p class="mb-2 italic text-sm">{{ pkg.tagline }}</p>
+                            <p class="text-sm opacity-90">{{ pkg.description }}</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- No Results Message -->
-                <div *ngIf="filteredPackages.length === 0" class="col-span-full text-gray-500 italic py-8">
+                <div *ngIf="visiblePackages.length === 0" class="col-span-full text-gray-500 italic py-8">
                     No matching packages found.
                 </div>
             </div>

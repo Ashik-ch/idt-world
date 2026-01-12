@@ -22,16 +22,25 @@ export class Inbound {
   constructor(private router: Router) { }
 
   searchTerm = '';
+  activeFilter = 'all';
 
-  // 🔍 Computed filtered list
-  get filteredPackages() {
+  get visiblePackages() {
     const term = this.searchTerm.trim().toLowerCase();
-    if (!term) return this.inboundPackages;
-    return this.inboundPackages.filter(
-      (pkg) =>
+    return this.inboundPackages.filter(pkg => {
+
+      // 1️⃣ FILTER by category
+      const matchesFilter =
+        this.activeFilter === 'all' ||
+        pkg.category === this.activeFilter;
+
+      // 2️⃣ FILTER by search term
+      const matchesSearch = !term ||
         pkg.name.toLowerCase().includes(term) ||
-        pkg.id.toLowerCase().includes(term)
-    );
+        pkg.id.toLowerCase().includes(term);
+
+      // 3️⃣ RETURN ONLY MUTUAL DATA
+      return matchesFilter && matchesSearch;
+    });
   }
 
 
@@ -54,6 +63,24 @@ export class Inbound {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.click();
+  }
+
+  // Package filters
+  filterTabs = [
+    { id: 'all', label: 'All Packages' },
+    { id: 'kerala-domestic', label: 'KL: packages(Domestic Guests)' },
+    { id: 'kerala-foreign', label: 'KL: Packages (Foreign Guests)' },
+    { id: 'kerala-border', label: 'KL Packages with Border Destinations' },
+    { id: 'kerala-divinity', label: 'KL Divinity Tour Packages' },
+    { id: 'kerala-resort', label: 'KL Resort Packages' },
+    { id: 'kerala-wellness', label: 'KL Wellness Tours' },
+    { id: 'south-india', label: 'South India Tour Packages' },
+    { id: 'north-india', label: 'North India Tour Packages' },
+  ];
+
+
+  setFilter(filterId: string) {
+    this.activeFilter = filterId;
   }
 }
 
