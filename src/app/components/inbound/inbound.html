@@ -54,7 +54,7 @@
                             class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all"></div>
                         <div class="relative z-10">
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-xl font-bold">{{ pkg.name }}</h3>
+                                <h3 class="text-lg font-semibold">{{ pkg.name | titlecase }}</h3>
                                 <div class="space-x-3">
                                     <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
                                         target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <p class="mb-2 italic text-sm">{{ pkg.tagline }}</p>
-                            <p class="text-sm opacity-90">{{ pkg.description }}</p>
+                            <p class="text-sm opacity-90">{{ pkg.description | titlecase }}</p>
                         </div>
                     </div>
                 </div>
