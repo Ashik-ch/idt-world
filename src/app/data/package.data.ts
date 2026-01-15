@@ -1625,17 +1625,17 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-08', title: 'Charm of Kerala and Border Destinations', duration: '08 Nights / 09 Days',
-    summary: 'Experience Madurai, Kodaikanal, Thekkady, Munnar, and Kumarakom with scenic landscapes, cultural heritage, wildlife experiences, backwaters, and luxury accommodations.',
+    id: 'kerala-8', title: 'Charm of Kerala and Border Destinations - 1', duration: '08 Nights / 09 Days',
+    summary: 'Discover Madurai, Kodaikanal, Thekkady, Munnar, and Kumarakom with cultural heritage, misty hill stations, wildlife, serene backwaters, and premium handpicked stays.',
 
     tourHighlights: [
-      'All-inclusive package without any hidden costs',
-      'Food on a Breakfast plus Dinner basis and 03 times meals in the Houseboat',
-      'Carefully selected hotels & resorts based on reviews from guests who have already enjoyed them',
-      'Vehicle at disposal from airport to airport on all days without any km restrictions & additional cost',
-      'One driver (English-speaking) & one Vehicle for the entire tour',
-      'Tour can be changed to any other fixed date even before 24 hours without retention fee',
-      'GST, Toll charges, Bata to the driver, Parking fees, etc, included in the Package'
+      'All-inclusive package with no hidden costs',
+      'Breakfast + Dinner at hotels and all meals on the houseboat',
+      'Carefully selected hotels and resorts based on guest reviews',
+      'Vehicle at disposal from airport to airport without km restrictions',
+      'One English-speaking driver and one vehicle for the entire tour',
+      'Flexible tour dates with no retention fee up to 24 hours prior',
+      'GST, tolls, parking, driver bata and all applicable taxes included'
     ],
 
     quickItinerary: [
@@ -1644,9 +1644,9 @@ export const travelPackages: Package[] = [
       'Day 03 – Madurai to Kodaikanal (B+D)',
       'Day 04 – Explore Kodaikanal (B+D)',
       'Day 05 – Proceed to Thekkady (B+D)',
-      'Day 06 – On to Munnar (B+D)',
+      'Day 06 – Thekkady to Munnar (B+D)',
       'Day 07 – Explore Munnar (B+D)',
-      'Day 08 – Enjoy Kumarakom Houseboat (B+D)',
+      'Day 08 – Kumarakom Houseboat (B+D)',
       'Day 09 – Departure from Cochin (B+D)'
     ],
 
@@ -1661,26 +1661,36 @@ export const travelPackages: Package[] = [
       { day: '08', title: 'Enjoy Kumarakom Houseboat (B+D)', details: ['Breakfast and check out from hotel.', 'Board A/C luxury houseboat by 11:30 AM.', 'Cruise along backwaters, enjoy traditional lunch and dinner onboard.', 'Overnight stay in houseboat.'], image: '' },
       { day: '09', title: 'Departure from Cochin (B+D)', details: ['Breakfast and check out from houseboat by 9:30 AM.', 'Drive to Cochin International Airport for return flight.'], image: '' }
     ],
-    detailedItinerary: [],
+    detailedItinerary: [
+      { day: '01', title: 'Arrival at Madurai', details: ['Meet & greet at Madurai International Airport', 'Hotel check-in and leisure time', 'Evening visit to Madurai Meenakshi Temple'], },
+      { day: '02', title: 'Explore Madurai', details: ['Morning Arathi at Meenakshi Temple', 'Visit Thirumalai Nayakar Mahal', 'Evening leisure'], },
+      { day: '03', title: 'Madurai to Kodaikanal', details: ['Drive to Kodaikanal (120 km / 3h 10m)', 'Check-in and relaxation', 'Visit Kodaikanal Lake, Coaker’s Walk, Pillar Rocks, Bryant Park'], },
+      { day: '04', title: 'Explore Kodaikanal', details: ['Visit Dolphin’s Nose', 'Explore Guna Cave & Pine Forest', 'Silver Cascade Falls visit'], },
+      { day: '05', title: 'Kodaikanal to Thekkady', details: ['Drive to Thekkady (150 km / 4 hrs)', 'Elephant ride & elephant moments', 'Jungle safari & Kalarippayattu show'], },
+      { day: '06', title: 'Thekkady to Munnar', details: ['Early morning Periyar Lake boating', 'Drive to Munnar', 'Tea gardens & Tea Museum visit'], },
+      { day: '07', title: 'Explore Munnar', details: ['Eravikulam National Park', 'Mattupetty Dam & Echo Point', 'Kundala Lake & Top Station'], },
+      { day: '08', title: 'Kumarakom Houseboat', details: ['Board luxury A/C houseboat', 'Backwater cruise with all meals', 'Overnight stay on houseboat'], },
+      { day: '09', title: 'Departure from Cochin', details: ['Houseboat checkout', 'Transfer to Cochin International Airport'], }
+    ],
 
     hotelPackages: [
       {
         destination: 'Madurai (2N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [{ name: 'The Madurai Residency', image: '', description: '' }, { name: 'Hotel Germanus Madurai', image: '', description: '' }],
-          '4-Star Deluxe': [{ name: 'Mount Retreats Resort', image: '', description: '' }, { name: 'The Heritage Madurai', image: '', description: '' }],
-          '5-Star Deluxe': [{ name: 'Sterling V Grand Madurai', image: '', description: '' }, { name: 'Grand Madurai by GRT', image: '', description: '' }],
-          '5-Star Luxury': [{ name: 'Royal Court', image: '', description: '' }, { name: 'Courtyard by Marriott', image: '', description: '' }, { name: 'Regency Madurai by GRT', image: '', description: '' }, { name: 'Fortune Pandiyan Hotel', image: '', description: '' }, { name: 'Taj Gateway Hotel, Madurai', image: '', description: '' }]
+          '3-Star Deluxe': [{ name: 'Madurai Residency', image: '', description: '' },],
+          '4-Star Deluxe': [{ name: 'Mount Retreats Resort', image: '', description: '' }, { name: 'Sterling V Grand Madurai', image: '', description: '' }, { name: 'Royal Court', image: '', description: '' }, { name: 'Hotel Germanus Madurai', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'The Heritage Madurai', image: '', description: '' }, { name: 'Grand Madurai by GRT', image: '', description: '' }, { name: 'Courtyard by Marriott', image: '', description: '' }, { name: 'Regency Madurai by GRT', image: '', description: '' }, { name: 'Fortune Pandiyan Hotel', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Taj Gateway Hotel, Madurai', image: '', description: '' }]
         }
       },
       {
         destination: 'Kodaikanal (2N)',
         image: '',
         categories: {
-          '3-Star Deluxe': [{ name: 'Avadale Resort', image: '', description: '' }, { name: 'Craigmore by Kodai Resort', image: '', description: '' }],
-          '4-Star Deluxe': [{ name: 'Kodai Heaven', image: '', description: '' }, { name: 'Country Club Valley', image: '', description: '' }],
-          '5-Star Deluxe': [{ name: 'Kodai Resort', image: '', description: '' }, { name: 'Dolphin Nose Retreat', image: '', description: '' }, { name: 'Sterling Kodai Lake', image: '', description: '' }, { name: 'Sterling Kodai Valley', image: '', description: '' }, { name: 'Mountain Retreat', image: '', description: '' }],
+          '3-Star Deluxe': [{ name: 'Avadale Resort', image: '', description: '' }, { name: 'Kodai Heaven', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Kodai Resort', image: '', description: '' }, { name: 'Kodai International', image: '', description: '' }, { name: 'Craigmore by Kodai Resort', image: '', description: '' }, { name: 'Country Club Valley', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'GRT Great Trails', image: '', description: '' }, { name: 'Dolphin Nose Retreat', image: '', description: '' }, { name: 'Sterling Kodai Lake', image: '', description: '' }, { name: 'Sterling Kodai Valley', image: '', description: '' }, { name: 'Mountain Retreat', image: '', description: '' }],
           '5-Star Luxury': [{ name: 'The Tamara Hotel', image: '', description: '' }, { name: 'The Carlton', image: '', description: '' }]
         }
       },
@@ -1707,7 +1717,11 @@ export const travelPackages: Package[] = [
       {
         destination: 'Kumarakom Houseboat (1N)',
         image: '',
-        categories: { '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }], '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: '', description: '' }], '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden flag category', image: '', description: '' }], '5-Star Luxury': [{ name: 'Full-time AC Luxury boat with Platinum category', image: '', description: '' }] }
+        categories: {
+          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }], '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden Flag Category', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Full-time AC Luxury boat with Platinum Category', image: '', description: '' }]
+        }
       }
     ],
 
@@ -1717,8 +1731,7 @@ export const travelPackages: Package[] = [
       'Extra adult with extra bed: 30% of adult price'
     ],
 
-    meals: 'Breakfast + Dinner at hotels; Breakfast + Lunch + Dinner on houseboat',
-
+    meals: 'Breakfast + Dinner at hotels | Breakfast + Lunch + Dinner on houseboat',
     transport: [
       { pax: '2 Pax', description: 'A/C Sedan car (mostly Toyota Etios/Swift Dezire)' },
       { pax: '4–6 Pax', description: 'A/C Toyota Innova Crysta' },
@@ -1770,64 +1783,73 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: '' },
-      { id: '2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin/Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1000', rating: 4, featured: false, img: '' },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest hill tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: '' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: '' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: '' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: '' },
-      { id: '7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: '' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: '', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: '' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: '' },
-      { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: '' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: '' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: '' },
-      { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: '' }
+      { id: '8-1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: '' },
+      { id: '8-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin/Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1000', rating: 4, featured: false, img: '' },
+      { id: '8-3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest hill tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: '' },
+      { id: '8-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: '' },
+      { id: '8-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: '' },
+      { id: '8-6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: '' },
+      { id: '8-7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: '' },
+      { id: '8-8', name: 'Full Day Trip to Gavi', subtitle: '', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
+      { id: '8-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: '' },
+      { id: '8-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: '' },
+      { id: '8-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: '' },
+      { id: '8-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: '' },
+      { id: '8-13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: '' },
+      { id: '8-14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: '' }
     ],
     specialOffers: []
   },
 
+
   {
-    id: 'kerala-9', title: 'Charm of Kerala', duration: '7 Nights / 8 Days', summary: 'Experience the enchanting beauty of Kerala with misty hills, serene backwaters, wildlife, and pristine beaches. Includes meals, premium hotels, and private transportation.',
+    id: 'kerala-9', title: 'Charm of Kerala with border destinations - 2', duration: '8 Nights / 9 Days', summary: 'Experience the enchanting beauty of Kerala with misty hills, serene backwaters, wildlife, and pristine beaches. Includes meals, premium hotels, and private transportation.',
 
     tourHighlights: [
-      'Munnar Tea Gardens & Eravikulam National Park',
-      'Thekkady Periyar Wildlife Sanctuary',
-      'Kumarakom Backwaters & Bird Sanctuary',
-      'Alleppey Houseboat Premium Cruise',
-      'Fort Kochi & Marine Drive Sightseeing'
+      'All-inclusive package with no hidden costs',
+      'Breakfast + Dinner at hotels and all meals on the houseboat',
+      'Carefully selected hotels and resorts based on guest reviews',
+      'Vehicle at disposal from airport to airport without km restrictions',
+      'One English-speaking driver and one vehicle for the entire tour',
+      'Flexible tour dates with no retention fee up to 24 hours prior',
+      'GST, tolls, parking, driver bata and all applicable taxes included'
     ],
 
     quickItinerary: [
-      'Day 1 – Kochi Arrival',
-      'Day 2 – Kochi → Munnar',
-      'Day 3 – Munnar Sightseeing',
-      'Day 4 – Munnar → Thekkady',
-      'Day 5 – Thekkady → Kumarakom',
-      'Day 6 – Kumarakom → Alleppey (Houseboat)',
-      'Day 7 – Alleppey → Kochi',
-      'Day 8 – Departure'
+      'Day 01 – Arrival at Madurai (B+D)',
+      'Day 02 – Explore Madurai (B+D)',
+      'Day 03 – Proceed to Rameswaram (B+D)',
+      'Day 04 – Explore Rameswaram (B+D)',
+      'Day 05 – On to Kanyakumari (B+D)',
+      'Day 06 – Proceed to Kovalam (B+D)',
+      'Day 07 – Explore Kovalam (B+D)',
+      'Day 08 – Kumarakom Houseboat (B+D)',
+      'Day 09 – Departure from Cochin (B)'
     ],
 
     itineraryOverview: [
-      { day: 'Day 1', title: 'Arrival in Kochi', details: ['Meet & greet at Kochi Airport', 'Hotel check-in and relaxation', 'Evening visit to Marine Drive and Lulu Mall'], image: 'assets/images/itinerary/kochi.jpg' },
-      { day: 'Day 2', title: 'Kochi to Munnar', details: ['Scenic drive through waterfalls and valleys', 'Visit Cheeyappara and Valara Falls', 'Check-in at Munnar hotel'], image: 'assets/images/itinerary/munnar-road.jpg' },
-      { day: 'Day 3', title: 'Munnar Sightseeing', details: ['Eravikulam National Park', 'Tea Museum & Tea Plantations', 'Photo Point, Mattupetty Dam & Echo Point'], image: 'assets/images/itinerary/munnar.jpg' },
-      { day: 'Day 4', title: 'Munnar to Thekkady', details: ['Drive to Thekkady', 'Periyar Wildlife Sanctuary', 'Optional: Spice Plantation Visit / Kalaripayattu Show'], image: 'assets/images/itinerary/thekkady.jpg' },
-      { day: 'Day 5', title: 'Thekkady to Kumarakom', details: ['Drive to Kumarakom', 'Visit Kumarakom Bird Sanctuary', 'Relax by the backwaters resort'], image: 'assets/images/itinerary/kumarakom.jpg' },
-      { day: 'Day 6', title: 'Kumarakom to Alleppey Houseboat', details: ['Check-in to Premium Houseboat', 'Cruise through canals and lagoons', 'Enjoy lunch, tea snacks, and dinner onboard'], image: 'assets/images/itinerary/houseboat.jpg' },
-      { day: 'Day 7', title: 'Alleppey to Kochi', details: ['Morning cruise and breakfast', 'Drive back to Kochi', 'Fort Kochi sightseeing (Chinese Fishing Nets, Beach)'], image: 'assets/images/itinerary/kochi-fort.jpg' },
-      { day: 'Day 8', title: 'Departure', details: ['Transfer to Kochi Airport', 'Tour Ends'], image: 'assets/images/itinerary/departure.jpg' }],
+      { day: 'Day 01', title: 'Arrival at Madurai (B+D)', details: ['Arrive at Madurai International Airport and meet IDT representative', 'Check into the hotel & relax', 'Evening visit to Madurai Meenakshi Temple', 'Overnight stay at the hotel'], image: '' },
+      { day: 'Day 02', title: 'Explore Madurai (B+D)', details: ['Breakfast at hotel', 'Visit Meenakshi Temple for Arathi ceremony', 'Visit Thirumalai Nayakar Mahal', 'Return to hotel & relax', 'Overnight stay at the hotel'], image: '' },
+      { day: 'Day 03', title: 'Proceed to Rameswaram (B+D)', details: ['Check out from hotel and drive to Rameswaram (3 hrs, 180 km)', 'Reach Rameswaram by afternoon', 'Check into hotel & relax'], image: '' },
+      { day: 'Day 04', title: 'Explore Rameswaram (B+D)', details: ['Morning sightseeing by driver', 'Visit Agni Theertham, Five-faced Hanuman Temple, Ramanatha Swamy Temple, Jada Theertham', 'Overnight stay at the hotel'], image: '' },
+      { day: 'Day 05', title: 'On to Kanyakumari (B+D)', details: ['Early morning depart from Rameswaram', 'Small break at Dhanushkodi Island', 'Drive to Kanyakumari (approx. 7 hrs)', 'Check into resort & relax', 'Boat visit to Vivekananda Memorial & Glass Bridge, see Thiruvalluvar statue', 'Watch sunset', 'Return to hotel', 'Overnight stay'], image: '' },
+      { day: 'Day 06', title: 'Proceed to Kovalam (B+D)', details: ['Sunrise and breakfast at hotel', 'Visit Suchindram Temple and Padmanabhapuram Palace en route', 'Reach Kovalam hotel by noon & relax', 'Overnight stay at hotel'], image: '' },
+      { day: 'Day 07', title: 'Explore Kovalam (B+D)', details: ['Early morning visit to Padmanabhaswamy Temple & Kuthiramalika Museum', 'Return to hotel for breakfast', 'Afternoon leisure at beach (sun, surf, sand)'], image: '' },
+      { day: 'Day 08', title: 'Kumarakom Houseboat (B+D)', details: ['Breakfast at hotel', 'Drive to Kumarakom (5 hrs)', 'Board traditional houseboat by noon', 'Cruise through backwaters', 'Enjoy lunch onboard', 'Houseboat anchored from 5:30 PM till next day 6 AM', 'Dinner onboard', 'Overnight stay in houseboat'], image: '' },
+      { day: 'Day 09', title: 'Departure from Cochin (B)', details: ['Breakfast and check-out from houseboat', 'Transfer to Cochin Airport for return flight'], image: '' }
+    ],
+
     detailedItinerary: [
-      { day: 'Day 1', title: 'Arrival – Kochi', details: ['Pickup from Cochin International Airport', 'Transfer to hotel and relax', 'Evening visit to Marine Drive & local markets'] },
-      { day: 'Day 2', title: 'Kochi → Munnar', details: ['Drive to Munnar (4 hrs)', 'Stop at Valara & Cheeyappara Waterfalls', 'Hotel check-in and leisure evening'] },
-      { day: 'Day 3', title: 'Munnar Sightseeing', details: ['Visit Eravikulam National Park', 'Explore Tea Museum', 'Mattupetty Dam, Echo Point, Photo Point'] },
-      { day: 'Day 4', title: 'Munnar → Thekkady', details: ['Drive to Thekkady (3 hrs)', 'Visit Periyar Wildlife Sanctuary', 'Optional Bamboo Rafting / Spice Village Show'] },
-      { day: 'Day 5', title: 'Thekkady → Kumarakom', details: ['Drive to Kumarakom (3 hrs)', 'Visit Bird Sanctuary', 'Relax at Backwaters Resort'] },
-      { day: 'Day 6', title: 'Kumarakom → Alleppey Houseboat', details: ['Check-in to Premium Houseboat', 'Backwater cruise with meals', 'Sunset view from houseboat deck'] },
-      { day: 'Day 7', title: 'Alleppey → Kochi', details: ['Morning cruise', 'Drive back to Kochi', 'Fort Kochi sightseeing'] },
-      { day: 'Day 8', title: 'Departure', details: ['Airport drop'] }],
+      { day: 'Day 01', title: 'Arrival at Madurai', details: ['Pickup at Madurai International Airport by IDT representative', 'Transfer to hotel & relax', 'Evening visit to Meenakshi Temple', 'Overnight stay at hotel'] },
+      { day: 'Day 02', title: 'Explore Madurai', details: ['Breakfast at hotel', 'Visit Meenakshi Temple for Arathi', 'Visit Thirumalai Nayakar Mahal', 'Return to hotel for relaxation', 'Overnight stay at hotel'] },
+      { day: 'Day 03', title: 'Proceed to Rameswaram', details: ['Check out from hotel', 'Drive to Rameswaram (3 hrs, 180 km)', 'Reach Rameswaram & check-in hotel', 'Relax at hotel'] },
+      { day: 'Day 04', title: 'Explore Rameswaram', details: ['Morning sightseeing', 'Visit Agni Theertham, Five-faced Hanuman Temple, Ramanatha Swamy Temple, Jada Theertham', 'Return to hotel', 'Overnight stay'] },
+      { day: 'Day 05', title: 'On to Kanyakumari', details: ['Early morning depart from Rameswaram', 'Break at Dhanushkodi Island', 'Drive to Kanyakumari (7 hrs)', 'Check-in resort & relax', 'Boat visit to Vivekananda Memorial & Glass Bridge', 'Watch sunset', 'Return to hotel', 'Overnight stay'] },
+      { day: 'Day 06', title: 'Proceed to Kovalam', details: ['Sunrise at hotel', 'Breakfast', 'Visit Suchindram Temple & Padmanabhapuram Palace', 'Check-in hotel at Kovalam & relax', 'Overnight stay'] },
+      { day: 'Day 07', title: 'Explore Kovalam', details: ['Early morning visit to Padmanabhaswamy Temple & Kuthiramalika Museum', 'Return to hotel for breakfast', 'Afternoon leisure at beach (sun, surf, sand)'] },
+      { day: 'Day 08', title: 'Kumarakom Houseboat', details: ['Breakfast at hotel', 'Drive to Kumarakom (5 hrs)', 'Board traditional houseboat', 'Backwater cruise with lunch & dinner', 'Houseboat anchored from 5:30 PM till next day 6 AM', 'Overnight stay in houseboat'] },
+      { day: 'Day 09', title: 'Departure from Cochin', details: ['Breakfast', 'Check-out from houseboat', 'Transfer to Cochin Airport for return flight'] }
+    ],
 
     inclusions: [
       'Breakfast & Dinner at Hotels',
@@ -1845,41 +1867,63 @@ export const travelPackages: Package[] = [
     ],
 
     sightseeing: [
-      'Marine Drive Kochi',
-      'Munnar Tea Plantations',
-      'Eravikulam National Park',
-      'Periyar Wildlife Sanctuary',
-      'Kumarakom Backwaters',
-      'Alleppey Houseboat Cruise'
+      'Visit Madurai Meenakshi Temple, Thirumala Nayakar Mahal',
+      'Agni Theertham, Five - faced Hanuman Temple, Ramanathan Swamy Temple, Jada Theertham.',
+      'Dhanushkodi Island, Vivekananda Memorial, Sunset in the Arabian Sea. ',
+      'Suchindram Palace, Padmanabhapuram Palace.',
+      'Padmanabhaswamy Temple, Kuthiramalika Museum.',
+      'Full day cruise & Night stay in A / C houseboat',
     ],
 
     hotelPackages: [
       {
-        destination: 'Kochi',
-        image: 'assets/images/hotels/kochi.jpg',
+        destination: 'Madurai (02 N)',
+        image: '',
         categories: {
-          Deluxe: [{ name: 'Westwood Riverside', image: 'assets/images/hotels/westwood.jpg', description: 'Comfortable rooms with riverside ambience.' }]
+          '3-Star Deluxe': [{ name: 'The Madurai Residency', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Mount Retreats Resort', image: '', description: '' }, { name: 'Sterling V Grand Madurai', image: '', description: '' }, { name: 'Royal Court', image: '', description: '' }, { name: 'Hotel Germanus Madurai', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'The Heritage Madurai', image: '', description: '' }, { name: 'Grand Madurai by GRT', image: '', description: '' }, { name: 'Courtyard by Marriott', image: '', description: '' }, { name: 'Regency Madurai by GRT', image: '', description: '' }, { name: 'Fortune Pandiyan Hotel', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Taj Gateway Hotel, Madurai', image: '', description: '' }]
         }
       },
       {
-        destination: 'Munnar',
-        image: 'assets/images/hotels/munnar.jpg',
+        destination: 'Rameswaram (02 N)',
+        image: '',
         categories: {
-          Deluxe: [{ name: 'Tea Valley Resort', image: 'assets/images/hotels/tea-valley.jpg', description: 'Scenic views overlooking tea plantations.' }]
+          '3-Star Deluxe': [{ name: 'Hotel Rameswaram Grand', image: '', description: '' }, { name: 'Hotel Arya Grand', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Daiwick Hotels', image: '', description: '' }, { name: 'Vinayaga by Poppy’s', image: '', description: '' }, { name: 'Hotel Arjuna', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'The Residency Towers', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'The Residency Towers', image: '', description: '' }]
         }
       },
       {
-        destination: 'Thekkady',
-        image: 'assets/images/hotels/thekkady.jpg',
+        destination: 'Kanyakumari (01 N)',
+        image: '',
         categories: {
-          Deluxe: [{ name: 'Greenwoods Resort', image: 'assets/images/hotels/greenwoods.jpg', description: 'Eco-friendly cottages surrounded by greenery.' }]
+          '3-Star Deluxe': [{ name: 'Singar International', image: '', description: '' }, { name: 'Sea View Hotel', image: '', description: '' }, { name: 'Sealand Hotel', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Annai Celestial Resort by Sparsa', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Annai Resorts & Spa', image: '', description: '' }, { name: 'Anantya by the Lake', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Annai Resorts & Spa', image: '', description: '' }, { name: 'Anantya by the Lake', image: '', description: '' }]
         }
       },
       {
-        destination: 'Kumarakom',
-        image: 'assets/images/hotels/kumarakom.jpg',
+        destination: 'Kovalam (02 N)',
+        image: '',
         categories: {
-          Deluxe: [{ name: 'Lakesong Resort', image: 'assets/images/hotels/lakesong.jpg', description: 'Traditional Kerala architecture by the lake.' }]
+          '3-Star Deluxe': [{ name: 'Soma Palm Shore', image: '', description: '' }, { name: 'Jasmine Palace', image: '', description: '' }, { name: 'Hotel Neelakanta', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'KTDC Samudra Resort', image: '', description: '' }, { name: 'Travancore Beach Resort', image: '', description: '' }, { name: 'Sagara Beach Resort', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Udaya Samudra Beach Resort', image: '', description: '' }, { name: 'Gokulam Grand Turtle on the Beach', image: '', description: '' }, { name: 'Rock Holm at the Lighthouse Beach', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'The Leela Kovalam', image: '', description: '' }, { name: 'Taj Green Coves', image: '', description: '' }, { name: 'Niramaya Surya Samudra Resort', image: '', description: '' }]
+        }
+      },
+      {
+        destination: 'Kumarakom Houseboat (01 N)',
+        image: '',
+        categories: {
+          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat with Silver Flag Category', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'AC Premium Houseboat with Golden Flag Category', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Full-time AC Luxury Boat with Platinum Category', image: '', description: '' }]
         }
       }
     ],
@@ -1918,9 +1962,10 @@ export const travelPackages: Package[] = [
 
     specialOffers: ['Early Bird Offer – Save 10%']
   },
+
   {
     id: 'kerala-10',
-    title: 'Charm of Kerala and Border Beauties',
+    title: 'Charm of Kerala and Border Destiantions - 3',
     duration: '06 Nights / 07 Days',
     summary:
       'A scenic Kerala escape visiting Ooty, Munnar, Thekkady and a relaxing houseboat stay in Kumarakom — tea gardens, wildlife, backwaters and coastal sights included. Meals on B+D at hotels and full board on the houseboat.',
@@ -1945,23 +1990,23 @@ export const travelPackages: Package[] = [
     ],
 
     itineraryOverview: [
-      { day: '01', title: 'Arrival at Coimbatore – Transfer to Ooty (B+D)', details: ['Arrive at Coimbatore Airport and meet IDT representative.', 'Drive to Ooty (approx. 3 hours 10 minutes).', 'Check-in and relax at hotel.', 'Evening visit to Botanical Garden and boating.', 'Overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-arrival.jpg' },
-      { day: '02', title: 'Explore Ooty (B+D)', details: ['Breakfast at hotel.', 'Sightseeing around Ooty: Rose Garden, Government Museum, Avalanche (as applicable).', 'Toy train ride towards Coonoor (subject to timing & ticket availability).', 'Return to hotel; overnight at Ooty.'], image: 'assets/images/itinerary/ooty-sightseeing.jpg' },
-      { day: '03', title: 'Ooty → Munnar (B+D)', details: ['Breakfast and check-out.', 'Drive to Munnar (scenic route).', 'En-route visit Tea Museum & tea gardens.', 'Check-in at Munnar hotel; spice shopping and relax.', 'Overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-drive.jpg' },
-      { day: '04', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Full-day Munnar sightseeing: Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake, Top Station.', 'Evening at leisure; overnight at Munnar.'], image: 'assets/images/itinerary/munnar-sightseeing.jpg' },
-      { day: '05', title: 'Munnar → Thekkady (B+D)', details: ['Breakfast and check-out; drive to Thekkady (approx. 3 hours / 150 km).', 'Check-in at hotel and relax.', 'Afternoon elephant ride and jungle safari (subject to availability).', 'Evening Kalarippayattu show (where available).', 'Overnight stay at Thekkady.'], image: 'assets/images/itinerary/thekkady-arrival.jpg' },
-      { day: '06', title: 'Thekkady → Kumarakom Houseboat (B+L+D)', details: ['Breakfast at hotel; drive to Kumarakom (approx. 4 hours).', 'Board A/C houseboat by noon and begin backwater cruise.', 'Enjoy traditional lunch on board; cruise through canals and lagoons.', 'Houseboat anchors by 5:30 PM; dinner & overnight onboard.'], image: 'assets/images/itinerary/houseboat-cruise.jpg' },
-      { day: '07', title: 'Kumarakom → Cochin Departure (B)', details: ['Disembark after breakfast and transfer to Cochin Airport or railway station for onward journey.', 'Tour ends with lovely memories of Kerala.'], image: 'assets/images/itinerary/departure-cochin.jpg' }
+      { day: '01', title: 'Arrival at Coimbatore(B+D)', details: ['Arrive at Coimbatore Airport and meet IDT representative.', 'Proceed to Ooty (approx. 3 hours 10 minutes drive).', 'Reach Ooty by noon; check-in and relax at hotel.', 'Evening visit to Botanical Garden and enjoy boating.', 'Overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-arrival.jpg' },
+      { day: '02', title: 'Explore Ooty (B+D)', details: ['Breakfast at hotel.', 'Full-day Ooty sightseeing tour.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Toy train journey to Coonoor (subject to availability).', 'Return to hotel; overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-sightseeing.jpg' },
+      { day: '03', title: 'Ooty → Munnar (B+D)', details: ['Breakfast and check-out from hotel.', 'Drive to Munnar hill station.', 'En-route visit tea gardens and Tea Museum.', 'Reach Munnar by afternoon; check-in and relax.', 'Spice shopping and overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-drive.jpg' },
+      { day: '04', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park.', 'Explore Mattupetty Dam, Echo Point and Kundala Lake.', 'Proceed to Top Station to enjoy panoramic views.', 'Evening at leisure; overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-sightseeing.jpg' },
+      { day: '05', title: 'Munnar → Thekkady (B+D)', details: ['Check-out and drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon and check-in.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu – ancient martial art of Kerala.', 'Overnight stay at Thekkady.'], image: 'assets/images/itinerary/thekkady-arrival.jpg' },
+      { day: '06', title: 'Thekkady → Kumarakom Houseboat (B+L+D)', details: ['Breakfast and drive to Kumarakom (approx. 4 hours).', 'Board traditional A/C houseboat by noon.', 'Cruise through lush backwaters and canals.', 'Lunch and dinner served onboard.', 'Houseboat anchored from 5:30 PM; overnight stay.'], image: 'assets/images/itinerary/houseboat-cruise.jpg' },
+      { day: '07', title: 'Kumarakom → Cochin Departure (B)', details: ['Breakfast on houseboat.', 'Check-out and transfer to Cochin Airport.', 'Return journey with beautiful memories of Kerala.'], image: 'assets/images/itinerary/departure-cochin.jpg' }
     ],
 
     detailedItinerary: [
-      { day: 'Day 1', title: 'Arrival at Coimbatore & transfer to Ooty', details: ['Arrival at Coimbatore airport and meet & greet.', 'Drive to Ooty (3h10m).', 'Check-in & afternoon Botanical Garden visit and boating.', 'Relax at hotel & overnight.'] },
-      { day: 'Day 2', title: 'Ooty sightseeing', details: ['Breakfast at hotel.', 'Visit Rose Garden, Government Museum, and other local attractions.', 'Toy train ride to Coonoor if available.', 'Evening at leisure; overnight at Ooty.'] },
-      { day: 'Day 3', title: 'Transfer to Munnar', details: ['Early breakfast and drive to Munnar.', 'Stop at tea gardens and the Tea Museum en route.', 'Arrive Munnar by afternoon, check-in, spice shopping and overnight.'] },
-      { day: 'Day 4', title: 'Full-day Munnar sightseeing', details: ['Visit Eravikulam National Park (subject to park timings).', 'Mattupetty Dam, Echo Point, Kundala Lake and Top Station.', 'Evening free & overnight at Munnar.'] },
-      { day: 'Day 5', title: 'Munnar to Thekkady', details: ['Drive to Thekkady after breakfast.', 'Check-in and enjoy an elephant ride & jungle safari.', 'Attend Kalarippayattu performance in the evening.'] },
-      { day: 'Day 6', title: 'Thekkady to Kumarakom houseboat', details: ['Drive to Kumarakom; board houseboat around noon.', 'Cruise the backwaters with lunch & dinner on board; anchored overnight.'] },
-      { day: 'Day 7', title: 'Disembark & departure from Cochin', details: ['Disembark after breakfast and transfer to Cochin airport/rail station.', 'Assistance for onward journey.'] }
+      { day: 'Day 01', title: 'Arrival at Coimbatore', details: ['Arrive at Coimbatore Airport and meet our representative.', 'Drive to Ooty (approx. 3 hours 10 minutes).', 'Reach by noon; check-in and relax.', 'Evening visit to Botanical Garden and boating.', 'Overnight stay at hotel.'] },
+      { day: 'Day 02', title: 'Explore Ooty', details: ['Breakfast at hotel.', 'Ooty sightseeing tour.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Toy train ride to Coonoor (subject to availability).', 'Return to hotel; overnight stay.'] },
+      { day: 'Day 03', title: 'Ooty to Munnar', details: ['Check-out after breakfast.', 'Drive to Munnar hill station.', 'Visit tea gardens and Tea Museum en route.', 'Arrive by afternoon; check-in and relax.', 'Spice shopping and overnight stay.'] },
+      { day: 'Day 04', title: 'Full-day Munnar sightseeing', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park.', 'Explore Mattupetty Dam, Echo Point and Kundala Lake.', 'Proceed to Top Station.', 'Evening at leisure; overnight stay.'] },
+      { day: 'Day 05', title: 'Munnar to Thekkady', details: ['Check-out and drive to Thekkady.', 'Reach before noon; check-in and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu performance.', 'Overnight stay at hotel.'] },
+      { day: 'Day 06', title: 'Enjoy House Boat at Kumarakom (B+D)', details: ['Breakfast and drive to Kumarakom.', 'Board traditional houseboat by noon.', 'Backwater cruise with lunch and dinner onboard.', 'Houseboat anchored in the evening.', 'Overnight stay on houseboat.'] },
+      { day: 'Day 07', title: 'Departure from Cochin', details: ['Breakfast on houseboat.', 'Check-out and transfer to Cochin Airport.', 'Tour concludes with unforgettable memories.'] }
     ],
 
     inclusions: [
@@ -1996,8 +2041,8 @@ export const travelPackages: Package[] = [
         categories: {
           '3-Star Deluxe': [{ name: 'Nahar Nilgiris Resort', image: 'assets/images/hotels/nahar-nilgiris.jpg', description: '' }, { name: 'Treebo Windsor Heights Resort', image: 'assets/images/hotels/treebo-windsor.jpg', description: '' }, { name: 'Garden Manor Resort', image: 'assets/images/hotels/garden-manor.jpg', description: '' }],
           '4-Star Deluxe': [{ name: 'Sinclair’s Retreats', image: 'assets/images/hotels/sinclair.jpg', description: '' }, { name: 'The Monarch', image: 'assets/images/hotels/monarch.jpg', description: '' }, { name: 'Fortune Retreats', image: 'assets/images/hotels/fortune-retreats.jpg', description: '' }],
-          '5-Star Deluxe': [{ name: 'Sterling Fern Hill, Ooty', image: 'assets/images/hotels/sterling-fern.jpg', description: '' }, { name: 'Accord Highland', image: 'assets/images/hotels/accord-highland.jpg', description: '' }, { name: 'Mango Hill Shola Resort', image: 'assets/images/hotels/mango-hill.jpg', description: '' }],
-          '5-Star Luxury': [{ name: 'Taj Savoy Hotel', image: 'assets/images/hotels/taj-savoy.jpg', description: '' }, { name: 'Taj Gateway Coonoor', image: 'assets/images/hotels/taj-gateway-coonoor.jpg', description: '' }]
+          '5-Star Deluxe': [{ name: 'Sterling Fern Hill, Ooty', image: 'assets/images/hotels/sterling-fern.jpg', description: '' }, { name: 'Accord Highland', image: 'assets/images/hotels/accord-highland.jpg', description: '' }, { name: 'Mango Hill Shola Resort', image: 'assets/images/hotels/mango-hill.jpg', description: '' }, { name: 'Fortune Sullivan Court', image: 'assets/images/hotels/fortune-.jpg', description: '' }, { name: 'Gem park Ooty', image: 'assets/images/hotels/ooty-.jpg', description: '' }],
+          '5-Star Luxury': [{ name: 'Ayatana Ooty', image: 'assets/images/hotels/ayatana-Ooty.jpg', description: '' }, { name: 'Taj Savoy Hotel', image: 'assets/images/hotels/taj-savoy.jpg', description: '' }, { name: 'Taj Gateway Coonoor', image: 'assets/images/hotels/taj-gateway-coonoor.jpg', description: '' }]
         }
       },
       {
@@ -2111,6 +2156,545 @@ export const travelPackages: Package[] = [
       'Candlelight dinner (upgrade applicable)'
     ]
   },
+
+  {
+    id: 'kerala-colours-1',
+    title: 'Colours of Kerala - 1',
+    duration: '05 NIGHTS / 06 DAYS',
+    summary:
+      'A classic Kerala journey covering Cochin, Periyar, Munnar and a memorable houseboat cruise from Kumarakom to Alleppey. Experience culture, wildlife, hill stations and serene backwaters with carefully selected hotels and seamless transportation.',
+
+    tourHighlights: [
+      'All-inclusive package without any hidden costs',
+      'Breakfast at hotels and all meals on the houseboat',
+      'Handpicked hotels & resorts based on guest reviews',
+      'Vehicle at disposal from airport to airport without km restrictions',
+      'One English-speaking driver and one vehicle throughout the tour',
+      'Date change allowed up to 24 hours before arrival without retention',
+      'GST, tolls, parking fees and driver bata included'
+    ],
+
+    quickItinerary: [
+      'Day 01 – Arrival at Cochin & Sightseeing',
+      'Day 02 – Cochin → Periyar (Thekkady)',
+      'Day 03 – Periyar → Munnar',
+      'Day 04 – Munnar Sightseeing',
+      'Day 05 – Munnar → Kumarakom Houseboat → Alleppey',
+      'Day 06 – Alleppey → Cochin Departure'
+    ],
+
+    itineraryOverview: [
+      { day: '01', title: 'Arrival at Cochin', details: ['Meet & greet at Cochin Airport by our representative', 'Hotel check-in and refresh', 'Guided sightseeing tour of Cochin', 'Visit Dutch Palace and Jewish Synagogue at Mattancherry', 'Evening Kathakali dance performance', 'Dinner and overnight stay at Cochin'], image: 'assets/images/itinerary/cochin.jpg' },
+      { day: '02', title: 'Cochin → Periyar', details: ['Breakfast at hotel', 'Drive to Periyar Wildlife Sanctuary', 'Check-in at jungle resort', 'Boat safari on Periyar Lake', 'Spot elephants, bison and wildlife', 'Dinner and overnight stay at Periyar'], image: 'assets/images/itinerary/periyar.jpg' },
+      { day: '03', title: 'Periyar → Munnar', details: ['Morning spice plantation tour', 'Scenic drive to Munnar (approx. 3.5 hrs)', 'Check-in at hill resort', 'Tea garden visit and shopping', 'Dinner and overnight stay at Munnar'], image: 'assets/images/itinerary/munnar-arrival.jpg' },
+      { day: '04', title: 'Munnar Sightseeing', details: ['Breakfast at hotel', 'Visit Eravikulam National Park', 'View Nilgiri Tahr and scenic valleys', 'Proceed to Top Station', 'Dinner and overnight stay at Munnar'], image: 'assets/images/itinerary/munnar-sightseeing.jpg' },
+      { day: '05', title: 'Munnar → Kumarakom Houseboat', details: ['Breakfast and drive to Kumarakom', 'Board houseboat by noon', 'Backwater cruise towards Alleppey', 'Lunch and dinner onboard', 'Houseboat anchored for night stay'], image: 'assets/images/itinerary/houseboat.jpg' },
+      { day: '06', title: 'Alleppey → Cochin Departure', details: ['Breakfast on houseboat', 'Disembark at Alleppey', 'Drive to Cochin Airport', 'Tour ends with memorable experiences'], image: 'assets/images/itinerary/departure.jpg' }
+    ],
+
+
+    detailedItinerary: [
+      { day: 'Day 01', title: 'Arrival at Coimbatore – Proceed to Ooty', details: ['Arrive at Coimbatore Airport by flight and meet our representative.', 'Proceed to Ooty by road (approx. 3 hours 10 minutes drive).', 'Reach Ooty by noon.', 'Check into the hotel and relax.', 'Evening visit to Botanical Garden followed by boating.', 'Overnight stay at the hotel in Ooty.'] },
+      { day: 'Day 02', title: 'Explore Ooty', details: ['Breakfast at the hotel.', 'Proceed for full-day sightseeing in and around Ooty.', 'Enjoy picture-postcard scenic views.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Enjoy the Toy Train journey to Coonoor (subject to availability).', 'Return to the hotel by evening and relax.', 'Overnight stay at the hotel in Ooty.'] },
+      { day: 'Day 03', title: 'Proceed to Munnar', details: ['Breakfast at the hotel and check-out.', 'Proceed to Munnar hill station.', 'Enjoy scenic views of tea gardens en route.', 'Visit the Tea Museum on the way.', 'Reach Munnar by afternoon.', 'Check into the hotel and relax.', 'Spice shopping.', 'Overnight stay at the hotel in Munnar.'] },
+      { day: 'Day 04', title: 'Explore Munnar', details: ['Breakfast at the hotel.', 'Our driver will pick you up for sightseeing.', 'Visit Eravikulam National Park.', 'Proceed to Mattupetty Dam and Echo Point.', 'Visit Kundala Lake by noon.', 'Proceed to Top Station to enjoy breathtaking views.', 'Free time at leisure.', 'Overnight stay at the resort in Munnar.'] },
+      { day: 'Day 05', title: 'Proceed to Thekkady', details: ['Breakfast at the hotel and check-out.', 'Drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon.', 'Check into the hotel and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
+      { day: 'Day 06', title: 'Enjoy Houseboat at Kumarakom', details: ['Breakfast at the hotel.', 'Proceed to Kumarakom (approx. 4-hour drive).', 'Board the traditional houseboat by noon.', 'Cruise through the serene backwaters.', 'Enjoy traditional lunch onboard.', 'Houseboat anchored from 5:30 PM till 6:00 AM.', 'Dinner onboard.', 'Overnight stay in the houseboat.'] },
+      { day: 'Day 07', title: 'Departure from Cochin', details: ['Breakfast on the houseboat.', 'Check-out from the houseboat.', 'Transfer to Cochin Airport for return flight.', 'Tour ends with beautiful memories of Kerala.'] }
+    ],
+
+    inclusions: [
+      'Private A/C vehicle with English-speaking driver',
+      'Accommodation on double share basis',
+      'Breakfast at hotels',
+      'All meals on houseboat (B+L+D)',
+      'All sightseeing as per itinerary',
+      'GST, tolls, parking and driver bata'
+    ],
+
+    exclusions: [
+      'Air/train tickets and airport taxes',
+      'Visa and passport charges',
+      'Personal expenses and beverages',
+      'Single room supplement',
+      'Peak season surcharges if applicable'
+    ],
+
+    sightseeing: [
+      'Cochin guided city tour & Kathakali show',
+      'Periyar Lake boat safari & spice plantation visit',
+      'Full-day Munnar sightseeing',
+      'Backwater cruise with overnight houseboat stay'
+    ],
+
+    hotelPackages: [
+      {
+        destination: 'Cochin (1N)',
+        image: 'assets/images/hotels/cochin.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'Abad Atrium', image: '', description: '' }, { name: 'Napier Heritage', image: '', description: '' }, { name: 'Hotel Killian', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Gokulam Park', image: '', description: '' }, { name: 'Abad Plaza', image: '', description: '' }, { name: 'Bolgatty Hotel', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Hotel Marriott', image: '', description: '' }, { name: 'Taj Gateway', image: '', description: '' }, { name: 'Le Meridian', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Taj Malabar', image: '', description: '' }, { name: 'Grand Hyatt', image: '', description: '' }, { name: 'Old Harbour Hotel', image: '', description: '' }]
+        }
+      },
+      {
+        destination: 'Periyar (1N)',
+        image: 'assets/images/hotels/thekkady.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'Abad Green Forest', image: '', description: '' }, { name: 'Pepper Vine Resort', image: '', description: '', }, { name: 'Hotel Lincoln Square', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Mountain Courtyard Resort', image: '', description: '' }, { name: 'Forest Canopy Resort', image: '', description: '' }, { name: 'Reen Resorts', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Poetree Resort', image: '', description: '' }, { name: 'Elephant Court', image: '', description: '' }, { name: 'Green Woods Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Spice Village Resort', image: '', description: '' }, { name: 'Lake Palace Resort KTDC', image: '', description: '' }]
+        }
+      },
+      {
+        destination: 'Munnar (2N)',
+        image: 'assets/images/hotels/munnar.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Tea Castle', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Blanket Hotel', image: '', description: '' }, { name: 'Fragrant Nature Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Chandys Windy Woods', image: '', description: '' }, { name: 'Spice Tree Resort', image: '', description: '' }]
+        }
+      },
+      {
+        destination: 'Houseboat (1N)',
+        image: 'assets/images/hotels/houseboat.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat (Silver Flag)', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'A/C Premium Houseboat (Golden Flag)', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Luxury Houseboat (Platinum Category)', image: '', description: '' }]
+        }
+      }
+    ],
+
+    childPolicy: [
+      'Child below 5 years: Free without extra bed',
+      'Child 5–12 years: 25% of adult price on double share',
+      'Extra adult with bed: 30% of adult price'
+    ],
+
+    meals:
+      'Breakfast at hotels; Breakfast, Lunch and Dinner on houseboat',
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Swift Dzire)' },
+      { pax: '4–6 Pax', description: 'A/C Toyota Innova Crysta' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Force Traveller' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller' },
+      { pax: '15–25 Pax', description: 'A/C 25-Seater Traveller' },
+      { pax: '25+ Pax', description: 'A/C Luxury Mini Bus' }
+    ],
+
+    pricing: [
+      {
+        season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 31,550/-', single: 'Euro 315/-', extraPerson: 'USD 371/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 38,300/-', single: 'Euro 383/-', extraPerson: 'USD 450/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 47880/-', single: 'Euro 478/-', extraPerson: 'USD 563/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 64990/-', single: 'Euro 649/-', extraPerson: 'USD 764/-' }
+        ]
+      },
+      {
+        season: '1st June 2026 - 30th Sept 2026 (Off Season)',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 25,240/-', single: 'Euro 252/-', extraPerson: 'USD 296/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 30,640/-', single: 'Euro 306/-', extraPerson: 'USD 360/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 38,300/-', single: 'Euro 383/-', extraPerson: 'USD 450/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 51990/-', single: 'Euro 519/-', extraPerson: 'USD 611/-' }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+
+      { id: 'sup-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/attractions/cookery-demo.jpg' },
+      { id: 'sup-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/kalarippayattu.jpg' },
+      { id: 'sup-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/attractions/kolukkumalai.jpg' },
+      { id: 'sup-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-half.jpg' },
+      { id: 'sup-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-full.jpg' },
+      { id: 'sup-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/attractions/trekking-jeep.jpg' },
+      { id: 'sup-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/bamboo-rafting.jpg' },
+      { id: 'sup-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
+      { id: 'sup-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/jeep-periyar.jpg' },
+      { id: 'sup-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-safari.jpg' },
+      { id: 'sup-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-moments.jpg' },
+      { id: 'sup-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/attractions/canal-cruise.jpg' },
+      { id: 'sup-13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/historical-tour-cochin.jpg' },
+      { id: 'sup-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/attractions/houseboat-extra.jpg' }
+    ],
+
+    specialOffers: [
+      'Flexible date change up to 24 hours before arrival',
+      'Customisation available on request'
+    ]
+  },
+
+  {
+    id: 'kerala-colours-2',
+    title: 'Colours of Kerala Tour - 2',
+    duration: '06 NIGHTS / 07 DAYS',
+    summary:
+      'A complete Kerala journey covering Cochin, Ooty and Vythiri — blending culture, hill stations, wildlife, backwaters and heritage experiences with carefully selected hotels and seamless transportation.',
+
+    tourHighlights: [
+      'All-inclusive package without any hidden costs',
+      'Breakfast basis at all hotels & resorts',
+      'Carefully selected hotels based on guest reviews',
+      'Vehicle at disposal from airport to airport (no km restriction)',
+      'One English-speaking driver & one vehicle for entire tour',
+      'Tour date change allowed up to 24 hours before without retention',
+      'GST, tolls, parking fees and driver bata included'
+    ],
+
+    quickItinerary: [
+      'Day 01 – Arrival at Cochin',
+      'Day 02 – Explore Cochin',
+      'Day 03 – Cochin → Ooty',
+      'Day 04 – Explore Ooty',
+      'Day 05 – Ooty → Vythiri',
+      'Day 06 – Explore Vythiri',
+      'Day 07 – Departure from Calicut'
+    ],
+
+    itineraryOverview: [
+      { day: '01', title: 'Arrival at Cochin', details: ['Arrive at Cochin International Airport and meet IDT representative.', 'Transfer to hotel by private vehicle.', 'Evening Kathakali dance performance.', 'Overnight stay at hotel.'], image: 'assets/images/itinerary/cochin-arrival.jpg' },
+      { day: '02', title: 'Explore Cochin', details: ['Breakfast at hotel.', 'Guided historical tour of Dutch Palace & Jewish Synagogue.', 'Country craft canal cruise showcasing rural Kerala life.', 'Evening free for leisure.', 'Overnight stay at hotel.'], image: 'assets/images/itinerary/cochin-sightseeing.jpg' },
+      { day: '03', title: 'Cochin to Ooty', details: ['Breakfast and drive to Ooty.', 'Toy Train journey between Coonoor and Ooty (subject to availability).', 'Check-in and relax.', 'Overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-arrival.jpg' },
+      { day: '04', title: 'Explore Ooty', details: ['Breakfast at hotel.', 'Visit Botanical Garden, Rose Garden, Mamore Palace & Government Museum.', 'Boating at Ooty Lake.', 'Evening return to hotel.', 'Overnight stay.'], image: 'assets/images/itinerary/ooty-sightseeing.jpg' },
+      { day: '05', title: 'Ooty to Vythiri', details: ['Breakfast and drive to Vythiri.', 'Arrive by evening.', 'Check-in at forest resort.', 'Overnight stay.'], image: 'assets/images/itinerary/vythiri-arrival.jpg' },
+      { day: '06', title: 'Explore Vythiri', details: ['Breakfast at resort.', 'Visit Pookode Lake.', 'Spice plantation visit.', 'Optional visit to Soochipara Waterfalls.', 'Overnight stay.'], image: 'assets/images/itinerary/vythiri-sightseeing.jpg' },
+      { day: '07', title: 'Departure from Calicut', details: ['Breakfast at resort.', 'Drive to Calicut Airport (approx. 2 hours).', 'Tour ends with memorable experiences.'], image: 'assets/images/itinerary/departure.jpg' }
+    ],
+
+    detailedItinerary: [
+      { day: 'Day 01', title: 'Arrival – Cochin', details: ['Meet & greet at Cochin International Airport.', 'Transfer to hotel and relax.', 'Evening Kathakali cultural performance.', 'Overnight stay.'] },
+      { day: 'Day 02', title: 'Cochin sightseeing', details: ['Guided historical city tour.', 'Dutch Palace & Jewish Synagogue visit.', 'Country boat canal cruise.', 'Leisure evening.'] },
+      { day: 'Day 03', title: 'Cochin to Ooty', details: ['Drive to Ooty.', 'Toy Train experience (subject to availability).', 'Check-in and overnight stay.'] },
+      { day: 'Day 04', title: 'Ooty sightseeing', details: ['Botanical Garden & Rose Garden.', 'Mamore Palace & Govt Museum.', 'Boating at Ooty Lake.'] },
+      { day: 'Day 05', title: 'Ooty to Vythiri', details: ['Drive to Wayanad – Vythiri.', 'Check-in at resort.', 'Leisure evening.'] },
+      { day: 'Day 06', title: 'Explore Vythiri', details: ['Pookode Lake boating.', 'Spice shopping.', 'Visit Soochipara waterfalls.'] },
+      { day: 'Day 07', title: 'Departure', details: ['Transfer to Calicut Airport.', 'Return journey.'] }
+    ],
+
+    inclusions: [
+      'Private A/C vehicle with English-speaking driver',
+      'Accommodation on double sharing basis',
+      'Daily breakfast',
+      'Kathakali show & canal cruise at Cochin',
+      'All tolls, parking, driver bata & GST'
+    ],
+
+    exclusions: [
+      'Airfare / train tickets',
+      'Personal expenses & beverages',
+      'Entry fees not mentioned',
+      'Peak season surcharge',
+      'Travel insurance'
+    ],
+
+    sightseeing: [
+      'Cochin guided city tour & Kathakali show',
+      'Periyar Lake boat safari & spice plantation visit',
+      'Full-day Munnar sightseeing',
+      'Backwater cruise with overnight houseboat stay'
+    ],
+
+    hotelPackages: [
+      {
+        destination: 'Cochin (1N)',
+        image: 'assets/images/hotels/cochin.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'Hotel Killian’s', image: '', description: '' }, { name: 'Abad Plaza', image: '', description: '' }, { name: 'Napier Heritage Hotel', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Napier Heritage Hotel', image: '', description: '' }, { name: 'Marine Inn', image: '', description: '' }, { name: 'Bolgatty Palace & Island Resort', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Kochi Marriott Hotel', image: '', description: '' }, { name: 'Taj Gateway Kochi', image: '', description: '' }, { name: 'Le Meridien Kochi', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Taj Malabar Resort & Spa', image: '', description: '' }, { name: 'Grand Hyatt Kochi Bolgatty', image: '', description: '' }, { name: 'Old Harbour Hotel', image: '', description: '' }]
+        }
+      },
+
+      {
+        destination: 'Periyar / Thekkady (1N)',
+        image: 'assets/images/hotels/thekkady.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'Abad Green Forest', image: '', description: '' }, { name: 'Pepper Vine Resort', image: '', description: '' }, { name: 'Hotel Lincoln Square', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Mountain Courtyard Resort', image: '', description: '' }, { name: 'Forest Canopy Resort', image: '', description: '' }, { name: 'Reen Resorts', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Poetree Resort', image: '', description: '' }, { name: 'Elephant Court', image: '', description: '' }, { name: 'Green Woods Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Spice Village – CGH Earth', image: '', description: '' }, { name: 'Lake Palace Resort KTDC', image: '', description: '' }]
+        }
+      },
+
+      {
+        destination: 'Munnar (2N)',
+        image: 'assets/images/hotels/munnar.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Tea Castle Resort', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'Blanket Hotel & Spa', image: '', description: '' }, { name: 'Fragrant Nature Resort', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Chandy’s Windy Woods', image: '', description: '' }, { name: 'Spice Tree Resort', image: '', description: '' }]
+        }
+      },
+
+      {
+        destination: 'Kumarakom Houseboat (1N)',
+        image: 'assets/images/hotels/houseboat.jpg',
+        categories: {
+          '3-Star Deluxe': [{ name: 'A/C Standard Houseboat', image: '', description: '' }],
+          '4-Star Deluxe': [{ name: 'A/C Deluxe Houseboat – Silver Flag Category', image: '', description: '' }],
+          '5-Star Deluxe': [{ name: 'A/C Premium Houseboat – Golden Flag Category', image: '', description: '' }],
+          '5-Star Luxury': [{ name: 'Full-Time A/C Luxury Houseboat – Platinum Category', image: '', description: '' }]
+        }
+      }
+    ],
+
+
+    childPolicy: [
+      'Child below 5 years: Free (without extra bed)',
+      'Child 5–12 years: 25% of adult price',
+      'Extra adult: 30% of adult price'
+    ],
+    meals: 'Breakfast at all hotels',
+
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
+    ],
+
+    pricing: [
+      {
+        season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 34,470/-', single: 'Euro 344/-', extraPerson: 'USD 405/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 41,260/-', single: 'Euro 412/-', extraPerson: 'USD 485/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 53,100/-', single: 'Euro 531/-', extraPerson: 'USD 624/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 92,890/-', single: 'Euro 928/-', extraPerson: 'USD 1092/-' }
+        ]
+      },
+      {
+        season: '1st June 2026 - 30th Sept 2026 (Off Season)',
+        categories: [
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 27,570 /-', single: 'Euro 324/-', extraPerson: 'USD 259/-' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 33,080/-', single: 'Euro 389/-', extraPerson: 'USD 311/-' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 42,480/-', single: 'Euro 499/-', extraPerson: 'USD 399/-' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 74,310/-', single: 'Euro 874/-', extraPerson: 'USD 699/-' }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+
+      { id: 'sup-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/attractions/cookery-demo.jpg' },
+      { id: 'sup-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/kalarippayattu.jpg' },
+      { id: 'sup-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/attractions/kolukkumalai.jpg' },
+      { id: 'sup-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-half.jpg' },
+      { id: 'sup-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-full.jpg' },
+      { id: 'sup-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/attractions/trekking-jeep.jpg' },
+      { id: 'sup-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/bamboo-rafting.jpg' },
+      { id: 'sup-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
+      { id: 'sup-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/jeep-periyar.jpg' },
+      { id: 'sup-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-safari.jpg' },
+      { id: 'sup-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-moments.jpg' },
+      { id: 'sup-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/attractions/canal-cruise.jpg' },
+      { id: 'sup-13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/historical-tour-cochin.jpg' },
+      { id: 'sup-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/attractions/houseboat-extra.jpg' },
+      { id: 'sup-15', name: 'Toy Train', subtitle: ' Toy train', location: 'Ooty to Conoor', people: 'For Two Persons', cost: 'Rs. 150', rating: 5, featured: false, img: 'assets/images/attractions/houseboat-extra.jpg' }
+    ],
+
+    specialOffers: [
+      'Free date change before 24 hours',
+      'Custom itinerary on request',
+      'Best price guarantee'
+    ]
+  },
+
+  {
+    id: "kerala-colours-3",
+    "title": "Colours of Kerala Tour - 3",
+    "duration": "07 Nights / 08 Days",
+
+    summary:
+      'A complete Kerala journey covering Cochin, Ooty and Vythiri — blending culture, hill stations, wildlife, backwaters and heritage experiences with carefully selected hotels and seamless transportation.',
+
+    tourHighlights: [
+      'All-inclusive package without any hidden costs',
+      'Breakfast basis at all hotels & resorts',
+      'Carefully selected hotels based on guest reviews',
+      'Vehicle at disposal from airport to airport (no km restriction)',
+      'One English-speaking driver & one vehicle for entire tour',
+      'Tour date change allowed up to 24 hours before without retention',
+      'GST, tolls, parking fees and driver bata included'
+    ],
+
+    quickItinerary: [
+      'Day 01 – Arrival at Cochin',
+      'Day 02 – Explore Cochin',
+      'Day 03 – Cochin → Munnar',
+      'Day 04 – In & Around Munnar',
+      'Day 05 – Munnar → Periyar',
+      'Day 06 – Explore Periyar',
+      'Day 07 – Periyar → Kumarakom Houseboat',
+      'Day 08 – Departure from Cochin'
+    ],
+
+    itineraryOverview: [
+      { day: '01', title: 'Arrival at Cochin', details: ['Arrive at Cochin International Airport.', 'Meet our representative cum driver after immigration and customs.', 'Transfer to hotel in a private vehicle.', 'Evening witness the colourful Kathakali dance performance.', 'Photo session with Kathakali artists.', 'Overnight stay at hotel.'], image: '' },
+      { day: '02', title: 'Explore Cochin', details: ['Breakfast at hotel.', 'Guided sightseeing tour of Cochin.', 'Visit Dutch Palace (Mattancherry Palace).', 'Visit the historic Jewish Synagogue at Mattancherry.', 'Return to mainland Cochin by noon.', 'Country craft canal cruise through suburban Cochin backwaters.', 'Experience rural Kerala life closely.', 'Return to hotel by evening.', 'Free time to explore downtown Cochin.', 'Overnight stay at hotel.'], image: '' },
+      { day: '03', title: 'Cochin to Munnar', details: ['Breakfast at hotel and check-out.', 'Scenic drive to Munnar – Kerala’s tea garden hill station.', 'Travel time approximately 3.5 hours.', 'Reach Munnar by noon.', 'Check-in at resort.', 'Rest of the day for shopping and tea garden visit.', 'Dinner and overnight stay at resort.'], image: '' },
+      { day: '04', title: 'In and Around Munnar', details: ['Breakfast at resort.', 'Proceed for full-day sightseeing of Munnar.', 'Visit Eravikulam National Park – home of the Nilgiri Tahr.', 'Enjoy panoramic valley views and photography.', 'Visit Top Station, the highest point in Munnar.', 'See Nilakurinji plant region (blooms once in 12 years).', 'Overnight stay at resort.'], image: '' },
+      { day: '05', title: 'Munnar to Periyar', details: ['Breakfast and check-out from resort.', 'Drive to Periyar via scenic Munnar–Thekkady route.', 'Enjoy spectacular natural landscapes en route.', 'Arrive at Thekkady and check-in at jungle resort.', 'Time to relax.', 'Boat ride on Periyar Lake.', 'Chance to spot elephants, bison and other wildlife.', 'Dinner and overnight stay at resort.'], image: '' },
+      { day: '06', title: 'Explore Periyar', details: ['Morning trekking through forest trails with guide.', 'Experience the natural beauty of Periyar.', 'Visit spice plantation to learn about spice cultivation.', 'Optional elephant safari if time permits.', 'Overnight stay at resort.'], image: '' },
+      { day: '07', title: 'Periyar to Kumarakom Houseboat', details: ['Breakfast at resort.', 'Drive to Kumarakom.', 'Board traditional houseboat by noon.', 'Begin backwater cruise towards Alleppey.', 'Enjoy scenic waterways and village life.', 'Houseboat anchors at night in the backwaters.', 'Dinner and overnight stay on houseboat.'], image: '' },
+      { day: '08', title: 'Departure from Cochin', details: ['Reach Alleppey by morning.', 'Breakfast on houseboat at 09:00 AM.', 'Disembark from houseboat.', 'Transfer to Cochin Airport.', 'End of tour with wonderful memories.'], image: '' }
+    ],
+
+    detailedItinerary: [
+      { day: 'Day 01', title: 'Arrival at Cochin', details: ['Arrive at Cochin International Airport.', 'Meet our representative cum driver after immigration and customs.', 'Transfer to hotel in a private vehicle.', 'Evening witness the colourful Kathakali dance performance.', 'Photo session with Kathakali artists.', 'Overnight stay at hotel.'] },
+      { day: 'Day 02', title: 'Explore Cochin', details: ['Breakfast at hotel.', 'Guided sightseeing tour of Cochin.', 'Visit Dutch Palace (Mattancherry Palace).', 'Visit the historic Jewish Synagogue at Mattancherry.', 'Return to mainland Cochin by noon.', 'Country craft canal cruise through suburban Cochin backwaters.', 'Experience rural Kerala life closely.', 'Return to hotel by evening.', 'Free time to explore downtown Cochin.', 'Overnight stay at hotel.'] },
+      { day: 'Day 03', title: 'Cochin to Munnar', details: ['Breakfast at hotel and check-out.', 'Scenic drive to Munnar – Kerala’s tea garden hill station.', 'Travel time approximately 3.5 hours.', 'Reach Munnar by noon.', 'Check-in at resort.', 'Rest of the day for shopping and tea garden visit.', 'Dinner and overnight stay at resort.'] },
+      { day: 'Day 04', title: 'In and Around Munnar', details: ['Breakfast at resort.', 'Proceed for full-day sightseeing of Munnar.', 'Visit Eravikulam National Park – home of the Nilgiri Tahr.', 'Enjoy panoramic valley views and photography.', 'Visit Top Station, the highest point in Munnar.', 'See Nilakurinji plant region (blooms once in 12 years).', 'Overnight stay at resort.'] },
+      { day: 'Day 05', title: 'Munnar to Periyar', details: ['Breakfast and check-out from resort.', 'Drive to Periyar via scenic Munnar–Thekkady route.', 'Enjoy spectacular natural landscapes en route.', 'Arrive at Thekkady and check-in at jungle resort.', 'Time to relax.', 'Boat ride on Periyar Lake.', 'Chance to spot elephants, bison and other wildlife.', 'Dinner and overnight stay at resort.'] },
+      { day: 'Day 06', title: 'Explore Periyar', details: ['Morning trekking through forest trails with guide.', 'Experience the natural beauty of Periyar.', 'Visit spice plantation to learn about spice cultivation.', 'Optional elephant safari if time permits.', 'Overnight stay at resort.'] },
+      { day: 'Day 07', title: 'Periyar to Kumarakom Houseboat', details: ['Breakfast at resort.', 'Drive to Kumarakom.', 'Board traditional houseboat by noon.', 'Begin backwater cruise towards Alleppey.', 'Enjoy scenic waterways and village life.', 'Houseboat anchors at night in the backwaters.', 'Dinner and overnight stay on houseboat.'] },
+      { day: 'Day 08', title: 'Departure from Cochin', details: ['Reach Alleppey by morning.', 'Breakfast on houseboat at 09:00 AM.', 'Disembark from houseboat.', 'Transfer to Cochin Airport.', 'End of tour with wonderful memories.'] }
+    ],
+
+    inclusions: [
+      'Private A/C vehicle with English-speaking driver',
+      'Accommodation on double sharing basis',
+      'Daily breakfast',
+      'Kathakali show & canal cruise at Cochin',
+      'All tolls, parking, driver bata & GST'
+    ],
+
+    exclusions: [
+      'Airfare / train tickets',
+      'Personal expenses & beverages',
+      'Entry fees not mentioned',
+      'Peak season surcharge',
+      'Travel insurance'
+    ],
+
+    sightseeing: [
+      'Cochin guided city tour & Kathakali show',
+      'Periyar Lake boat safari & spice plantation visit',
+      'Full-day Munnar sightseeing',
+      'Backwater cruise with overnight houseboat stay'
+    ],
+
+    hotelPackages: [
+      {
+        "destination": "Cochin (2N)",
+        image: 'assets/images/hotels/cochin.jpg',
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Hotel Killian’s", image: '', description: '' }, { "name": "Abad Plaza", image: '', description: '' }, { "name": "Napier Heritage Hotel", image: '', description: '' }],
+          "4-Star Deluxe": [{ "name": "Monsoon Empress", image: '', description: '' }, { "name": "Marine Inn", image: '', description: '' }, { "name": "Tribute Royale", image: '', description: '' }, { "name": "Olive Downtown", image: '', description: '' }],
+          "5-Star Deluxe": [{ "name": "Le Meridian", image: '', description: '' }, { "name": "Crowne Plaza", image: '', description: '' }, { "name": "Hotel Marriott", image: '', description: '' }],
+          "5-Star Luxury": [{ "name": "Brunton Boatyard Hotel", image: '', description: '' }, { "name": "Taj Malabar", image: '', description: '' }, { "name": "Grand Hyatt", image: '', description: '' }]
+        }
+      },
+      {
+        "destination": "Munnar (2N)",
+        image: 'assets/images/hotels/thekkady.jpg',
+        "categories": {
+          "3-Star Deluxe": [{ "name": "West Wood Resort", image: '', description: '' }, { "name": "Eastend Hotel", image: '', description: '' }, { "name": "Trivers Resort", image: '', description: '' }, { "name": "Tea Castle", image: '', description: '' }],
+          "4-Star Deluxe": [{ "name": "Rivulet Resort", image: '', description: '' }, { "name": "Elephant Passage Resort", image: '', description: '' }, { "name": "Fog Resort", image: '', description: '' }, { "name": "Tall Trees Resort", image: '', description: '' }],
+          "5-Star Deluxe": [{ "name": "Blanket Hotel", image: '', description: '' }, { "name": "The Valle Resort", image: '', description: '' }, { "name": "Fragrant Nature Resort", image: '', description: '' }],
+          "5-Star Luxury": [{ "name": "Chandys Windy Woods", image: '', description: '' }, { "name": "Chandys Drizzle Drops", image: '', description: '' }, { "name": "Spice Tree Resort", image: '', description: '' }, { "name": "Grand Cliff Resort", image: '', description: '' }]
+        }
+      },
+      {
+        "destination": "Periyar (2N)",
+        image: 'assets/images/hotels/munnar.jpg',
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Abad Green Forest", image: '', description: '' }, { "name": "Pepper Vine Resort", image: '', description: '' }, { "name": "Hotel Lincoln Square", image: '', description: '' }],
+          "4-Star Deluxe": [{ "name": "Mountain Courtyard Resort", image: '', description: '' }, { "name": "Forest Canopy Resort", image: '', description: '' }, { "name": "Reen Resorts", image: '', description: '' }],
+          "5-Star Deluxe": [{ "name": "Poetree Resort", image: '', description: '' }, { "name": "Elephant Court", image: '', description: '' }, { "name": "Green Woods Resort", image: '', description: '' }],
+          "5-Star Luxury": [{ "name": "Spice Village Resort", image: '', description: '' }, { "name": "Hills & Hues Resort", image: '', description: '' }, { "name": "Lake Palace Resort KTDC", image: '', description: '' }, { "name": "Blanket Resort", image: '', description: '' }]
+        }
+      },
+      {
+        "destination": "Houseboat – Kumarakom (1N)",
+        image: 'assets/images/hotels/houseboat.jpg',
+        "categories": {
+          "3-Star Deluxe": [{ "name": "A/C Standard Houseboat", image: '', description: '' }],
+          "4-Star Deluxe": [{ "name": "A/C Deluxe Houseboat (Silver Flag)", image: '', description: '' }],
+          "5-Star Deluxe": [{ "name": "A/C Premium Houseboat (Golden Flag)", image: '', description: '' }],
+          "5-Star Luxury": [{ "name": "Full-time A/C Luxury Houseboat (Platinum)", image: '', description: '' }]
+        }
+      }
+    ],
+
+    childPolicy: [
+      'Child below 5 years: Free (without extra bed)',
+      'Child 5–12 years: 25% of adult price',
+      'Extra adult: 30% of adult price'
+    ],
+    meals: 'Breakfast at all hotels',
+
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
+    ],
+
+
+    "pricing": [
+      {
+        "season": "01 Oct 2025 – 19 Dec 2025 & 10 Jan 2026 – 31 May 2026",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 43,150", single: "Euro 431", "extraPerson": "USD 507" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 52,610", single: "Euro 526", "extraPerson": "USD 618" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 65,450", single: "Euro 654", "extraPerson": "USD 770" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 89,320", single: "Euro 893", "extraPerson": "USD 1050" }
+        ]
+      },
+      {
+        "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 34,520", single: "Euro 345", "extraPerson": "406" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 42,090", single: "Euro 420", "extraPerson": "495" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 52,360", single: "Euro 523", "extraPerson": "616" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 71,450", single: "Euro 714", "extraPerson": "840" }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+
+      { id: 'sup-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/attractions/cookery-demo.jpg' },
+      { id: 'sup-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/kalarippayattu.jpg' },
+      { id: 'sup-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/attractions/kolukkumalai.jpg' },
+      { id: 'sup-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-half.jpg' },
+      { id: 'sup-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/tea-trial-full.jpg' },
+      { id: 'sup-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/attractions/trekking-jeep.jpg' },
+      { id: 'sup-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/attractions/bamboo-rafting.jpg' },
+      { id: 'sup-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: '' },
+      { id: 'sup-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/jeep-periyar.jpg' },
+      { id: 'sup-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-safari.jpg' },
+      { id: 'sup-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/attractions/elephant-moments.jpg' },
+      { id: 'sup-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/attractions/canal-cruise.jpg' },
+      { id: 'sup-13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/attractions/historical-tour-cochin.jpg' },
+      { id: 'sup-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/attractions/houseboat-extra.jpg' },
+    ],
+
+    specialOffers: [
+      'Free date change before 24 hours',
+      'Custom itinerary on request',
+      'Best price guarantee'
+    ]
+  }
+
+
+
 
 ];
 
