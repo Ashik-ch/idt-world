@@ -19,8 +19,9 @@
     <!-- Modal -->
     <div *ngIf="activeDestination" class="fixed inset-0 z-50 flex items-center justify-center px-3">
         <div class="relative w-full max-w-3xl max-h-[80vh] overflow-y-auto
-                   rounded-2xl bg-[#ff0000]/95 border border-red-500/20 shadow-[0_0_40px_rgba(255,0,80,0.15)]
-                   backdrop-blur-xl p-5 animate-scaleIn" (click)="$event.stopPropagation()">
+             rounded-2xl border border-red-500/20 shadow-[0_0_40px_rgba(255,0,80,0.15)]
+             backdrop-blur-xl p-5 animate-scaleIn bg-cover bg-center bg-no-repeat"
+            [ngStyle]="{'background-image': 'url(assets/images/redBg12.jpg)'}" (click)="$event.stopPropagation()">
             <div class="flex items-center justify-between mb-4">
                 <h3 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-red-50
                bg-clip-text text-transparent"> {{ activeDestination.name }} </h3>
@@ -32,7 +33,7 @@
             <!-- Categories -->
             <div class="grid md:grid-cols-4 gap-2">
                 <div *ngFor="let cat of categoryKeys(activeDestination.categories)"
-                    class="border border-red-500/20 rounded-xl p-4">
+                    class="border border-red-500/50 rounded-xl p-4">
 
                     <h4 class=" font-semibold mb-2 text-white tracking-wide">{{ cat }}</h4>
 

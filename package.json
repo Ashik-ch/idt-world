@@ -1,6 +1,6 @@
 {
   "name": "idt-world",
-  "version": "1.0.01",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

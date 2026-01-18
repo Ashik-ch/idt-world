@@ -1,8 +1,28 @@
-<!-- 🌟 Floating Chat Button -->
-<button (click)="openChat()"
-    class="fixed bottom-6 right-6 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-full p-4 shadow-xl hover:scale-110 transition-all duration-300">
-    <i class="pi pi-comments text-2xl animate-pulse"></i>
-</button>
+<!-- Floating Chat Button with Tooltip -->
+<div class="fixed bottom-6 right-6 flex items-center z-50">
+
+    <!-- Tooltip / Bubble -->
+    <div class="mr-3 px-4 py-2 rounded-full bg-red-600/90 text-white text-sm font-semibold
+           opacity-0 translate-x-2 pointer-events-none
+           group-hover:opacity-100 group-hover:translate-x-0
+           transition-all duration-300 shadow-lg">
+        We’re online! Chat now
+    </div>
+
+    <!-- Chat Button -->
+    <button (click)="openChat()" class="group flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-500
+           text-white font-semibold rounded-full px-5 py-3 shadow-xl
+           hover:scale-110 transition-all duration-300 animate-bounce">
+        <i class="pi pi-comments text-2xl relative">
+        </i>
+        <!-- <span class="text-sm md:text-base">Chat With Us</span> -->
+        <span class="absolute -inset-1 rounded-full border-2 border-red-500 animate-ping"></span>
+    </button>
+
+
+</div>
+
+
 <!-- Chat Window -->
 <div *ngIf="isOpen"
     class="fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp">
