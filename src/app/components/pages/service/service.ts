@@ -14,7 +14,6 @@ import { HomeHotels } from '../../home/home-hotels/home-hotels';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Service {
-  features = features;
   services = Services;
   selectedService: any = null;
 

@@ -1,0 +1,43 @@
+<section class="relative min-h-screen bg-fixed bg-center bg-cover"
+    style="background-image: url('assets/images/travel.jpg');">
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16" data-aos="fade-in">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                What Sets
+                <span
+                    class="bg-gradient-to-r from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent animate-gradient-x">
+                    IDT - India Destination Tours
+                </span> Apart?
+            </h2>
+            <p class="text-xl text-white max-w-2xl mx-auto">
+                We provide exceptional travel experiences with personalized service and unbeatable prices.
+            </p>
+        </div>
+        <swiper-container effect="coverflow" grab-cursor="true" centered-slides="false" slides-per-view="auto"
+            loop="true" autoplay-delay="3500" speed="1200" autoplay-disable-on-interaction="false" pagination="true"
+            coverflow-effect-rotate="40" coverflow-effect-stretch="0" coverflow-effect-depth="120"
+            coverflow-effect-modifier="2.5" coverflow-effect-slide-shadows="true"
+            class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
+            <swiper-slide *ngFor="let f of features">
+                <div
+                    class="relative  rounded-3xl overflow-hidden flex flex-col items-center justify-center text-center min-h-[420px] transition-all duration-700">
+                    <img [src]="f.image" [alt]="f.title" class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="relative z-10 p-10 text-white space-y-5">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4 shadow-md"
+                            [ngClass]="f.iconBg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" [ngClass]="f.iconColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    [attr.d]="f.iconPath" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold">{{ f.title }}</h3>
+                        <p class="text-base leading-relaxed max-w-md mx-auto">{{ f.description }}</p>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+</section>

@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Service } from '../pages/service/service';
 import { Subscription } from '../pages/subscription/subscription';
+import { HomeFeatures } from "./home-features/home-features";
 // import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 
 @Component({
   selector: 'app-home',
   imports: [CommonModule, FormsModule, RouterModule,
-    Service, Subscription,
-    // NgxTypewriterComponent
-  ],
+    Service, Subscription, HomeFeatures],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
