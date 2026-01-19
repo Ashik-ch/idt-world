@@ -3145,7 +3145,6 @@ export const inboundPackages = [
   { id: 'karnataka', name: 'Karnataka', category: "south-india", gradient: 'from-blue-400 to-blue-600', tagline: 'One State Many Worlds', description: 'Ancient Temples, Coffee Estates, Beaches', bgImage: 'assets/images/m.jpeg' },
   { id: 'tamil-nadu', name: 'Tamil Nadu', category: "south-india", gradient: 'from-orange-400 to-orange-600', tagline: 'Land of Temples', description: 'Dravidian Architecture, Hill Stations', bgImage: 'assets/images/k.jpg' },
   { id: 'goa', name: 'Goa', category: "south-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage' },
-  { id: 'north-india', name: 'North India', category: "north-india", gradient: 'from-red-400 to-red-600', tagline: 'Himalayan Paradise', description: 'Mountains, Temples, Heritage Sites' },
   { id: 'rajasthan', name: 'Rajasthan', category: "north-india", gradient: 'from-purple-400 to-purple-600', tagline: 'Land of Kings', description: 'Palaces, Forts, Desert Safaris' },
   { id: 'kashmir', name: 'Kashmir', category: "north-india", gradient: 'from-red-400 to-red-600', tagline: 'Himalayan Paradise', description: 'Mountains, Temples, Heritage Sites' },
   { id: 'delhi', name: 'Delhi', category: "north-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage' }

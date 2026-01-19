@@ -75,7 +75,6 @@ export class Inbound {
     { id: 'kerala-resort', label: 'KL Resort Packages' },
     { id: 'kerala-wellness', label: 'KL Wellness Tours' },
     { id: 'south-india', label: 'South India Tour Packages' },
-    { id: 'north-india', label: 'North India Tour Packages' },
   ];
 
 

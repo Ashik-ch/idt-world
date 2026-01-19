@@ -1,43 +1,77 @@
 <app-home-features></app-home-features>
 
-<div class="bg-white flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20  bg-[url('assets/images/bg2.jpg')]"> </div>
-    <div class=" container mx-auto flex flex-col lg:flex-row items-center transition-all duration-700 ease-in-out">
-        <div
-            class="flex-1 text-center lg:text-left transform transition-all duration-700 ease-in-out px-4 ms-2 md:ms-12 md:px-12 space-y-8">
-            <!-- <div class="font-semibold text-lg lg:text-xl md:text-base tracking-wide text-red-500" data-aos="fade-right"
-                data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
-                <om-typewriter [words]="[' Simply not better!']"></om-typewriter>
-            </div> -->
-            <h1 class="font-serif text-xl sm:text-xl md:text-2xl lg:text-3xl px-6 py-3 w-fit md:w-3/4
-                       font-bold text-white bg-red-500 leading-tight rounded-lg shadow-lg" data-aos="fade-right"
-                data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
-                <span class="inline-block animate-float">With IDT, every destination is a fresh story!</span>
+<div class="relative bg-white overflow-hidden min-h-[90vh] flex items-center">
+
+    <!-- Soft Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-15
+              bg-[url('assets/images/bg2.jpg')]">
+    </div>
+
+    <!-- Red Gradient Wash -->
+    <div class="absolute inset-0 bg-gradient-to-br
+              from-white via-white to-red-100">
+    </div>
+
+    <div class="relative container mx-auto flex flex-col lg:flex-row items-center
+           px-6 md:px-12 transition-all duration-700">
+        <div class="flex-1 text-center lg:text-left space-y-8">
+
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold
+                     bg-gradient-to-r from-red-500 via-pink-500 to-red-600
+                     bg-clip-text text-transparent animate-gradientPulse">
+                With IDT,
             </h1>
 
-            <p
-                class="text-sm sm:text-base md:text-lg text-gray-500  max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl leading-relaxed">
-                Find the best inbound and outbound tour packages, crafted to make your travel
-                memorable and seamless.
+            <om-typewriter class="text-xl md:text-2xl font-bold text-red-600"
+                [words]="['Every destination is a fresh story']">
+            </om-typewriter>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg md:text-xl text-gray-600
+               max-w-xl mx-auto lg:mx-0 leading-relaxed" data-aos="fade-right" data-aos-delay="200">
+
+                Discover premium inbound and outbound tour packages,
+                thoughtfully designed for memorable journeys.
             </p>
 
-            <div class="flex flex-row  gap-3 sm:gap-4 pt-4 w-full sm:w-auto justify-center md:justify-start">
-                <a routerLink="/inbound" class="px-3 py-3 rounded-full bg-red-500 text-white font-semibold shadow-lg hover:shadow-xl 
-                     transition-transform transform hover:scale-105 text-center">
-                    Inbound Packages to India
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4" data-aos="fade-up"
+                data-aos-delay="350">
+
+                <!-- Primary -->
+                <a routerLink="/inbound" class="px-6 py-3 rounded-full
+                 bg-gradient-to-r from-red-500 to-pink-500
+                 text-white font-semibold tracking-wide
+                 shadow-[0_10px_30px_rgba(255,0,80,0.25)]
+                 hover:scale-105 transition-all">
+
+                    Inbound Packages
                 </a>
-                <a routerLink="/outbound" class="px-3 py-3 rounded-full border-2 border-red-500 text-red-500 font-semibold 
-                     hover:bg-white hover:text-red-500 transition-transform transform hover:scale-105 text-center">
-                    Outbound Tours to International
+
+                <!-- Secondary -->
+                <a routerLink="/outbound" class="px-6 py-3 rounded-full
+                 border border-red-400/40
+                 text-red-500 font-semibold tracking-wide
+                 bg-white/70 backdrop-blur-md
+                 hover:bg-red-50 hover:border-red-500
+                 transition-all">
+
+                    Outbound Tours
                 </a>
             </div>
         </div>
-        <div class="flex-1 flex justify-center lg:justify-end transform transition-all duration-700 ease-in-out">
-            <img src="assets/images/banner1.png" alt="Travel Banner" class="w-full max-w-md lg:max-w-lg object-contain">
-        </div>
 
+        <!-- RIGHT IMAGE -->
+        <div class="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0" data-aos="fade-left" data-aos-delay="300">
+
+            <img src="assets/images/bg23.png" alt="Travel Banner" class="w-full max-w-md lg:max-w-lg
+               drop-shadow-[0_20px_40px_rgba(255,0,80,0.25)]
+                mt-[120px]">
+        </div>
     </div>
 </div>
+
+
 
 <app-service></app-service>
 <app-subscription></app-subscription>
