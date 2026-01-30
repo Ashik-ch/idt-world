@@ -3119,6 +3119,7 @@ export const travelPackages: Package[] = [
       'Best price guarantee'
     ]
   },
+
   {
     id: "south-india-1",
     "title": "VISUALS OF SOUTH INDIA - 01",
@@ -3371,6 +3372,251 @@ export const travelPackages: Package[] = [
       'Best price guarantee'
     ]
   },
+  {
+    id: "south-india-2",
+    "title": "VISUALS OF SOUTH INDIA - 02",
+    "duration": "15 Nights / 16 Days",
+    "summary": "Taking you to explore the rich culture of Southern India spread in three south Indian States, viz.  Tamil Nadu, Karnataka & Kerala.  This tour covers the history of South India & the natural beauty of Coastal India at a glance….",
+    "tourHighlights": [
+      "All-inclusive package without any hidden costs",
+      "Food on a Breakfast basis and 03 times meals in the Houseboat",
+      "Carefully selected hotels & resorts based on reviews from guests who have already enjoyed them",
+      "Vehicle at disposal from airport to airport on all days without any km restrictions & additional cost",
+      "One driver (English-speaking) & one Vehicle for the entire tour",
+      "Tour can be changed to any other fixed date even before 24 hours without any retention fee",
+      "GST, Toll charges, Bata to the driver, Parking fees, etc, included in the Package"
+    ],
+
+    quickItinerary: [
+      "Day 01 – ARRIVAL AT CHENNAI (B)",
+      "Day 02 – ON TO MAHABALIPURAM, ENROUTE VISIT KANCHIPURAM (B)",
+      "Day 03 – IN AND AROUND MAHABALIPURAM AND BACK TO CHENNAI (B)",
+      "Day 04 – OFF TO BANGALORE BY TRAIN (B)",
+      "Day 05 – ON TO MYSORE (B)",
+      "Day 06 – AT MYSORE - FULL DAY EXCURSION (B)",
+      "Day 07 – ON TO OOTY (B)",
+      "Day 08 – IN AND AROUND OOTY - FULL DAY TOUR (B)",
+      "Day 09 – ON TO COCHIN - KATHAKALI SHOW (B)",
+      "Day 10 – IN AND AROUND COCHIN - CITY TOUR & CRAFT CRUISE (B)",
+      "Day 11 – ON TO PERIYAR - PLEASURE BOATING (B)",
+      "Day 12 – SIGHTSEEING AT PERIYAR - SPICE TOUR & SAFARI (B)",
+      "Day 13 – OFF TO KUMARAKOM - HOUSEBOAT CRUISE (B)",
+      "Day 14 – ON TO KOVALAM - BEACH HOLIDAYS (B)",
+      "Day 15 – KOVALAM - EXCURSION TO KANYAKUMARI (B)",
+      "Day 16 – ON TO TRIVANDRUM - END OF TOUR (B)"
+    ],
+
+    itineraryOverview: [
+      { "day": "01", "title": "Arrival at Chennai", "details": ["Namaste welcome at Airport.", "City tour including Marina Beach, St. George Fort, and Kapaleeswarar Temple.", "Overnight stay in Chennai."], "image": "" },
+      { "day": "02", "title": "Kanchipuram & Mahabalipuram", "details": ["Drive to Mahabalipuram via Kanchipuram.", "Visit Kailasanatha and Ekambareswarar temples.", "Overnight stay at Mahabalipuram."], "image": "" },
+      { "day": "03", "title": "Mahabalipuram Sightseeing", "details": ["Full-day historical tour: Arjuna’s Penance, Rathas, and Shore Temple.", "Leisure time at the beach.", "Return to Chennai for overnight stay."], "image": "" },
+      { "day": "04", "title": "Train to Bangalore", "details": ["Early morning Shatabdi Express to Bangalore.", "Afternoon tour of Cubbon Park, Tipu’s Palace, and Bull Temple.", "Overnight stay in Bangalore."], "image": "" },
+      { "day": "05", "title": "On to Mysore", "details": ["Proceed to Mysore with en route visit to Srirangapatnam.", "Explore Tipu’s Fort and Daria Daulat Baug.", "Overnight stay in Mysore."], "image": "" },
+      { "day": "06", "title": "Mysore Excursion", "details": ["Visit Mysore Palace, Chamundi Hill, and Jagan Mohan Palace.", "Evening visit to Brindavan Gardens.", "Overnight stay in Mysore."], "image": "" },
+      { "day": "07", "title": "On to Ooty", "details": ["Drive to Ooty through Bandipur National Park.", "Overnight stay in Ooty."], "image": "" },
+      { "day": "08", "title": "Ooty Sightseeing", "details": ["Visit Botanical Gardens, Rose Garden, and Ooty Lake.", "Excursion to Doddabetta Peak and optional toy train journey.", "Overnight stay in Ooty."], "image": "" },
+      { "day": "09", "title": "On to Cochin", "details": ["Drive to Cochin, the Queen of the Arabian Sea.", "Evening Kathakali dance performance.", "Overnight stay in Cochin."], "image": "" },
+      { "day": "10", "title": "Cochin Culture & Cruise", "details": ["Visit Dutch Palace, Jewish Synagogue, and St. Francis Church.", "Afternoon country craft canal cruise.", "Overnight stay in Cochin."], "image": "" },
+      { "day": "11", "title": "On to Periyar", "details": ["Drive to Periyar Wildlife Sanctuary.", "Boat safari on Periyar Lake.", "Overnight stay at a Jungle Resort."], "image": "" },
+      { "day": "12", "title": "Periyar Activities", "details": ["Morning forest trekking and Spice Plantation tour.", "Optional Elephant Safari.", "Overnight stay in Periyar."], "image": "" },
+      { "day": "13", "title": "Kumarakom Houseboat", "details": ["Board houseboat at Kumarakom for backwater cruise.", "Experience overnight stay on the water."], "image": "" },
+      { "day": "14", "title": "On to Kovalam", "details": ["Proceed to Kovalam, the beach paradise.", "Overnight stay at Kovalam resort."], "image": "" },
+      { "day": "15", "title": "Kanyakumari Excursion", "details": ["Full-day trip to Kanyakumari.", "Visit Padmanabhapuram Palace and Vivekananda Memorial.", "Overnight stay in Kovalam."], "image": "" },
+      { "day": "16", "title": "Return via Trivandrum", "details": ["Visit Padmanabhaswamy Temple and Napier Museum in Trivandrum.", "Airport transfer for return flight."], "image": "" }
+    ],
+
+    "detailedItinerary": [
+      { "day": "Day 01", "title": "ARRIVAL AT CHENNAI - ENJOY CITY TOUR", "details": ["Meet representative at the airport for transfer to the hotel.", "Explore Chennai's landmarks: Marina Beach (13km long), St. George Fort, and St Mary's Church.", "Visit Kapaleeswarar Temple, San Thome Cathedral, Birla Planetarium, and the National Art gallery.", "Overnight stay at the hotel."] },
+      { "day": "Day 02", "title": "CHENNAI - KANCHIPURAM - MAHABALIPURAM", "details": ["Morning drive to Mahabalipuram with a stop at Kancheepuram, the 'Golden City'.", "Visit historical Pallava temples: Kailasanatha Temple and the 57m high Ekambareswarar Temple.", "Explore Kanchipuram's world-famous hand-woven silk fabrics.", "Arrive at Mahabalipuram and check into the hotel.", "Overnight stay at the hotel."] },
+      { "day": "Day 03", "title": "IN AND AROUND MAHABALIPURAM AND BACK TO CHENNAI", "details": ["Full-day tour of Mahabalipuram's rock-cut art and Shore temples.", "Key sites: Arjuna's Penance (27m x 9m bas-relief), Pancha Pandavas Rathas, and Shore Temple.", "Visit Krishna Mandapam and man-made caves.", "Evening transfer back to Chennai.", "Overnight stay in Chennai."] },
+      { "day": "Day 04", "title": "OFF TO BANGALORE BY TRAIN - SHOPPING AND CITY TOUR", "details": ["Morning Shatabdi Express train journey to Bangalore (6 AM).", "Explore Bangalore, the 'Silicon Valley' and 'City of Gardens'.", "Visit Cubbon Park, Government Museum, Tipu’s Palace, the Fort, and Bull temples.", "Discover Lal Bagh Botanical Gardens and Ulsoor Lake.", "Overnight stay in Bangalore."] },
+      { "day": "Day 05", "title": "ON TO MYSORE VIA SRIRANGAPATTANAM", "details": ["Drive to Mysore, the princely city of South India.", "En route break at Srirangapattanam, former capital of Tipu Sultan.", "Tour Tipu's Fort, Daria Daulat Baug (Wooden Summer Palace), and the Gumbaz.", "Check into Mysore hotel.", "Overnight stay at the hotel."] },
+      { "day": "Day 06", "title": "MYSORE FULL DAY EXCURSION", "details": ["City tour of Mysore, the cultural heart of Karnataka.", "Visit Mysore Palace (illuminated Sat/Sun), Chamundi Hill temple, and Jagan Mohan Palace.", "See the 4.8m Nandi monolith and St. Philomena’s Cathedral.", "Visit Brindavan Gardens and musical fountains at the KRS dam.", "Overnight stay in Mysore."] },
+      { "day": "Day 07", "title": "MYSORE - OOTY VIA BANDIPUR", "details": ["Drive to Ooty, the 'Queen of Hill Stations'.", "Journey through Bandipur National Park (Nilgiri Biosphere Reserve).", "Arrive in Ooty by evening and check-in.", "Overnight stay at the hotel."] },
+      { "day": "Day 08", "title": "IN AND AROUND OOTY FULL DAY TOUR", "details": ["Visit Government Botanical Gardens (1847) and Rose Garden.", "Boating at Ooty Lake.", "Trek up to Doddabetta Peak, the highest in the Blue Mountains (8,606 ft).", "Optional Mountain Train journey from Ooty to Coonoor.", "Overnight stay at the hotel."] },
+      { "day": "Day 09", "title": "OOTY - COCHIN - KATHAKALI SHOW", "details": ["Drive to Cochin, reaching by late afternoon.", "Check-in and evening visit to a Kathakali show.", "Experience the Mudras and elaborate makeup of this ancient dance form.", "Overnight stay at the hotel."] },
+      { "day": "Day 10", "title": "COCHIN CITY TOUR & CRAFT CRUISE", "details": ["Guided tour of Dutch Palace (Mattancherry), Jewish Synagogue, and St. Francis Church.", "Observe Chinese fishing nets at Fort Cochin.", "Afternoon country craft canal cruise through rural Kerala.", "Peek at coir processing, duck farming, and enjoy toddy or tender coconut water.", "Overnight stay at the hotel."] },
+      { "day": "Day 11", "title": "COCHIN - PERIYAR PLEASURE BOATING", "details": ["Drive to Periyar Wildlife Sanctuary (Thekkady) via a scenic route.", "Boat safari on Periyar Lake to spot elephants, bison, and other wildlife.", "Check into a Jungle Resort.", "Overnight stay at the resort."] },
+      { "day": "Day 12", "title": "PERIYAR SIGHTSEEING - SPICE TOUR & TREKKING", "details": ["Morning trekking trails with a local guide to observe wildlife.", "Guided tour of Spice Plantation Garden (cardamom, pepper, tea, etc.).", "Optional Elephant Safari.", "Overnight stay at the resort."] },
+      { "day": "Day 13", "title": "OFF TO KUMARAKOM - NIGHT IN THE BACKWATERS", "details": ["Proceed to Kumarakom and board a traditional Kettuvallom (houseboat).", "Cruise through Vembanad Lake backwaters flanked by palms.", "Anchor in the backwaters for an overnight stay.", "Dinner and stay on board."] },
+      { "day": "Day 14", "title": "ALLEPPEY - KOVALAM BEACH HOLIDAYS", "details": ["Houseboat reaches Alleppey; transfer to Kovalam beach paradise.", "Relax at one of the safest white sand beaches in the world.", "Enjoy the coconut-tree lined coast and sea breeze.", "Overnight stay at the resort."] },
+      { "day": "Day 15", "title": "KOVALAM - KANYAKUMARI EXCURSION", "details": ["Full-day trip to Kanyakumari, the southernmost tip of India.", "En route visit the wooden Padmanabhapuram Palace.", "Board ferry to Vivekananda Rock Memorial at the confluence of three seas.", "Watch the sunset at the seashore.", "Return to Kovalam for an overnight stay."] },
+      { "day": "Day 16", "title": "KOVALAM – TRIVANDRUM DEPARTURE", "details": ["Visit Sree Padmanabhaswamy Temple (Dravidian style).", "Tour Puthan Malika Palace Museum and Napier Museum.", "Transfer to Trivandrum Airport for your onward journey.", "End of South India tour."] }
+    ],
+
+    inclusions: [
+      'The Vehicle will be with the guests throughout the Tour.They can make it work around the Clock if needed.',
+      'Well - experienced English - speaking Driver cum Guide will be appointed for the Tour.Who can also act as an Escort.',
+      'One Driver, One Vehicle for the entire Tour.If there is no Land journey break in the Tour, the same Driver & Vehicle will be with the guests for the entire journey.'
+    ],
+
+    exclusions: [
+      'International air tickets / Domestic air tickets & airport taxes.',
+      'Passport & visa fees, visa stamping.',
+      'Items of a personal nature, such as laundry, telephone calls, room service, alcoholic & non - alcoholic beverages, etc.',
+      'Single room(quoted separately), Child or adult in a triple sharing room.',
+      'Another language may be on request.Vegetable meals may be on request.',
+      'Bottled / mineral water during any meal.',
+      'Peak tourist season or special event rates.',
+      'Airport tax, airfares, Food cost other than specified, Phone call charges & other personnel expenses of the Guests.'
+    ],
+
+    sightseeing: [
+      'Shopping & sightseeing Tour in Chennai',
+      'Temple Tour at Kancheepuram',
+      'Historical Tour at Mahabalipuram',
+      'Bangalore City Tour',
+      'Full - day sightseeing tour in Mysore',
+      'Full - day nature tour at Ooty Hill Station, including Toy train journey',
+      'Backwater Historical Tour, Country Craft Cruise & Kathakali show at Cochin.',
+      'Boating, Spice plantation Tour & Forest Trekking at Periyar Sanctuary',
+      'Full Day - Houseboat Cruise & night stay in a Houseboat from Kumarakom to Alleppey.',
+      'Full - day excursion to Kanyakumari(Cape).',
+      'Enjoy City Tour in Trivandrum'
+    ],
+
+    hotelPackages: [
+      {
+        "destination": "Chennai (01 N)",
+        "image": "assets/images/hotels/mahabalipuram.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Gokulam Park", "image": "", "description": "" }, { "name": "Sabari", "image": "", "description": "" }, { "name": "Regenta Central", "image": "", "description": "" }, { "name": "OMR Hotel", "image": "", "description": "" }, { "name": "Quality Inn Sabari", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "IBIS Chennai", "image": "", "description": "" }, { "name": "Four Points by Sheraton", "image": "", "description": "" }, { "name": "The Pride Hotel", "image": "", "description": "" }, { "name": "The Savera Hotel", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "The Park", "image": "", "description": "" }, { "name": "Hyatt Regency", "image": "", "description": "" }, { "name": "The Residency Towers", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "ITC Chola", "image": "", "description": "" }, { "name": "Taj Coromandel", "image": "", "description": "" }, { "name": "Hilton Chennai", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Mahabalipuram (02 N)",
+        "image": "assets/images/hotels/mahabalipuram.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Golden Sun Beach", "image": "", "description": "" }, { "name": "Mamalla Heritage", "image": "", "description": "" }, { "name": "Bodhi Woods Resort", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Ideal Beach Resort", "image": "", "description": "" }, { "name": "Chariot Beach Resort", "image": "", "description": "" }, { "name": "GRT Grand Bay", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Four Points by Sheraton", "image": "", "description": "" }, { "name": "Grand Continent, Mahabalipuram – (A Sarovar Premiere Affiliate Hotel)", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj Fisherman’s Cove", "image": "", "description": "" }, { "name": "Sheraton Grand", "image": "", "description": "" }, { "name": "Kaldan Samudra Palace Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Bangalore (01 N)",
+        "image": "assets/images/hotels/bangalore.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Tulip Hotel", "image": "", "description": "" }, { "name": "ibis Bengaluru", "image": "", "description": "" }, { "name": "Richmond Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "St.Mark’s Hotel", "image": "", "description": "" }, { "name": "Capitol Hotel", "image": "", "description": "" }, { "name": "Gokulam Grand Hotel & Spa", "image": "", "description": "" }, { "name": "Fairfield by Marriott Bengaluru", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Méridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Méridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }],
+        }
+      },
+      {
+        "destination": "Mysore (02 N)",
+        "image": "assets/images/hotels/mysore.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Regalia Inn & Suites", "image": "", "description": "" }, { "name": "Emerald Clark Inn", "image": "", "description": "" }, { "name": "The Atrium Boutique Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Sandesh The Prince", "image": "", "description": "" }, { "name": "Fortune JP Palace", "image": "", "description": "" }, { "name": "Regenta Central Herald", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Royal Orchid Metropole", "image": "", "description": "" }, { "name": "Royal Orchid Brindavan Gardens", "image": "", "description": "" }, { "name": "Grand Mercure Hotel", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Radisson Blu Plaza Hotel Mysore", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Ooty (02 N)",
+        "image": "assets/images/hotels/ooty.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Nahar Nilgiris", "image": "", "description": "" }, { "name": "Garden Manor", "image": "", "description": "" },],
+          "4-Star Deluxe": [{ "name": "Fortune Hotel", "image": "", "description": "" }, { "name": "Kluney Manor Ooty,", "image": "", "description": "" }, { "name": "Mountain Retreat", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Gem Park,", "image": "", "description": "" }, { "name": "Sterling Fern Hill,", "image": "", "description": "" }, { "name": "Sterling Elk Hill,", "image": "", "description": "" }, { "name": "Accord Highland", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj Savoy Hotel", "image": "", "description": "" }, { "name": "Taj Gateway Coonoor, Ayatana", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Cochin (02 N)",
+        "image": "assets/images/hotels/cochin.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Hotel Killian’s", "image": "", "description": "" }, { "name": "Abad Plaza", "image": "", "description": "" }, { "name": "Napier Heritage Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Monsoon Empress", "image": "", "description": "" }, { "name": "Marine Inn", "image": "", "description": "" }, { "name": "Tribute Royale", "image": "", "description": "" }, { "name": "Olive Downtown", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Forte Kochi hotel", "image": "", "description": "" }, { "name": "Le Meridian", "image": "", "description": "" }, { "name": "Crowne Plaza", "image": "", "description": "" }, { "name": "Hotel Marriot", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Brunton Boatyard hotel", "image": "", "description": "" }, { "name": "Taj Malabar", "image": "", "description": "" }, { "name": "Grand Hyatt", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Periyar (02 N)",
+        "image": "assets/images/hotels/periyar.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Abad Green Forest", "image": "", "description": "" }, { "name": "Peppervine Resort", "image": "", "description": "" }, { "name": "Hotel Lincoln Square", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Mountain Courtyard Resort", "image": "", "description": "" }, { "name": "Forest Canopy Resort", "image": "", "description": "" }, { "name": "Aranya Nivas KTDC", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Poetree Resort", "image": "", "description": "" }, { "name": "Elephant Court", "image": "", "description": "" }, { "name": "Green Woods Resort", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Spice Village Resort", "image": "", "description": "" }, { "name": "Hills & Hues Resort", "image": "", "description": "" }, { "name": "Lake Palace Resort KTDC", "image": "", "description": "" }, { "name": "Blanket Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Houseboat (01 N)",
+        "image": "assets/images/hotels/houseboat.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "A/C Standard Houseboat", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "A/C Deluxe Houseboat with Silver Flag Category", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "A/C Premium Houseboat with Golden flag category", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Full-time A/C Luxury boat with Platinum category", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Kovalam (03 N)",
+        "image": "assets/images/hotels/kovalam.jpg",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Soma Palm Shore", "image": "", "description": "" }, { "name": "Jasmine Palace", "image": "", "description": "" }, { "name": "Hotel Neelakanta", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "KTDC Samudra Resort", "image": "", "description": "" }, { "name": "Tranvancore Beach Resort", "image": "", "description": "" }, { "name": "Sagara Beach Resort", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Udaya Samudra Beach Resort", "image": "", "description": "" }, { "name": "Gokulam Grand Turtle on the Beach", "image": "", "description": "" }, { "name": "Rock Holm at the Lighthouse Beach", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "The Leela Kovalam", "image": "", "description": "" }, { "name": "Taj Green Coves", "image": "", "description": "" }, { "name": "Niramaya Surya Samudra Resort", "image": "", "description": "" }
+          ]
+        }
+      }
+    ],
+
+    childPolicy: [
+      'Child below 5 years: Free (without extra bed)',
+      'Child 5–12 years: 25% of adult price',
+      'Extra adult: 30% of adult price'
+    ],
+    meals: '“SAVOUR DELICIOUS MEALS” will be Breakfast Basis in all the destinations and three meals (Breakfast +Lunch+ Dinner) in the houseboat.',
+
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
+    ],
+
+
+    "pricing": [
+      {
+        "season": "01 Oct 2025 – 19 Dec 2025 & 10 Jan 2026 – 31 May 2026",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 86,490", single: "", "extraPerson": "Rs 69,190" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 1,09,200", single: "", "extraPerson": "Rs 87,360" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 1,33,260", single: "", "extraPerson": "Rs 1,06,600" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 2,32,180", single: "", "extraPerson": "Rs 1,85,740" }
+        ]
+      },
+      {
+        "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 69,190", single: "", "extraPerson": "Rs 55,350" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 87,360", single: "", "extraPerson": "Rs 69,880" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 1,06,600", single: "", "extraPerson": "Rs 85,280" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 1,85,740", single: "", "extraPerson": "Rs 1,48,600" }
+        ]
+      }
+    ],
+
+    supplementalAttractions: [
+    ],
+
+    specialOffers: [
+      'Free date change before 24 hours',
+      'Custom itinerary on request',
+      'Best price guarantee'
+    ]
+  },
+
 
 ];
 
@@ -3393,6 +3639,8 @@ export const inboundPackages = [
   { id: 'kerala-colours-3', name: 'COLOURS OF KERALA TOUR - 3', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '07 NIGHTS / 08 DAYS', description: 'COCHIN - MUNNAR - PERIYAR - KUMARAKOM (HOUSEBOAT) - COCHIN', bgImage: 'assets/images/kerala14.jpg' },
   { id: 'kerala-colours-4', name: 'COLOURS OF KERALA TOUR - 4', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '12 NIGHTS / 13 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - MADURAI - PERIYAR - KUMARAKOM - ALLEPPEY - COCHIN', bgImage: 'assets/images/kerala12.jpg' },
   { id: 'kerala-colours-5', name: 'COLOURS OF KERALA TOUR - 5', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - KUMARAKOM - THEKKADY - MUNNAR - COCHIN', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-1', name: 'VISUALS OF SOUTH INDIA - 01', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-2', name: 'VISUALS OF SOUTH INDIA - 02', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
   { id: 'karnataka', name: 'Karnataka', category: "south-india", gradient: 'from-blue-400 to-blue-600', tagline: 'One State Many Worlds', description: 'Ancient Temples, Coffee Estates, Beaches', bgImage: 'assets/images/bangolore.jpg' },
   { id: 'tamil-nadu', name: 'Tamil Nadu', category: "south-india", gradient: 'from-orange-400 to-orange-600', tagline: 'Land of Temples', description: 'Dravidian Architecture, Hill Stations', bgImage: 'assets/images/goa.jpg' },
   { id: 'delhi', name: 'Delhi', category: "north-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage', bgImage: 'assets/images/delhi.jpg' },
