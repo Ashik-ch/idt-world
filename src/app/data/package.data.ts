@@ -5145,9 +5145,6 @@ export const inboundPackages = [
   { id: 'south-india-6', name: 'VISUALS OF SOUTH INDIA - 06', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'An ideal tour for wildlife and hill station enthusiasts, covering popular sanctuaries and cultural hubs like Mysore and Hassan.', bgImage: 'assets/images/southindia6.jpg' },
   { id: 'south-india-7', name: 'VISUALS OF SOUTH INDIA - 07', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '17 NIGHTS / 18 DAYS', description: 'A comprehensive exploration starting from Bangalore, covering the royal city of Mysore and the scenic hill stations of the south', bgImage: 'assets/images/southindia7.jpg' },
   { id: 'south-india-8', name: 'VISUALS OF SOUTH INDIA - 08', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'A cultural and heritage tour highlighting the Hoysala architecture of Belur and Halebid, alongside Mysore and the Nilgiri hills.', bgImage: 'assets/images/southindia8.jpg' },
-  { id: 'delhi', name: 'Delhi', category: "north-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage', bgImage: 'assets/images/delhi.jpg' },
-  { id: 'rajasthan', name: 'Rajasthan', category: "north-india", gradient: 'from-purple-400 to-purple-600', tagline: 'Land of Kings', description: 'Palaces, Forts, Desert Safaris' },
-  { id: 'kashmir', name: 'Kashmir', category: "north-india", gradient: 'from-red-400 to-red-600', tagline: 'Himalayan Paradise', description: 'Mountains, Temples, Heritage Sites' },
 ];
 
 export const inboundKeralaPackages = [
@@ -5162,7 +5159,6 @@ export const inboundKeralaPackages = [
   { id: 'kerala-8', name: 'CHARM OF KERALA AND BORDER DESTINATIONS - 1', category: "kerala-border", gradient: 'from-green-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: "COCHIN-MUNNAR-THEKKADY- KUMARAKOM HOUSE BOAT- OOTY- MADURAI", bgImage: 'https://images.unsplash.com/photo-1586864387784-6d5d79ca7a51' },
   { id: 'kerala-9', name: 'CHARM OF KERALA AND BORDER DESTINATIONS - 2', category: "kerala-border", gradient: 'from-green-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: 'MADURAI-RAMESWARAM-KANYAKUMARI-KOVALAM- KUMARAKOM HOUSEBOAT - COCHIN', bgImage: 'https://cdn.pixabay.com/photo/2020/02/28/05/20/munnar-4887474_1280.jpg' },
   { id: 'kerala-10', name: 'CHARM OF KERALA AND BORDER DESTINATIONS - 3', category: "kerala-border", gradient: 'from-green-400 to-green-600', tagline: '06 NIGHTS / 07 DAYS', description: 'COIMBATORE-OOTY-MUNNAR-THEKKADY-KUMARAKOM HOUSE BOAT-COCHIN', bgImage: 'https://cdn.pixabay.com/photo/2016/11/29/02/06/india-1869441_1280.jpg' },
-
 ]
 
 export const itineraryRoute = [
