@@ -4648,6 +4648,235 @@ export const travelPackages: Package[] = [
     ]
   },
 
+  {
+    id: "south-india-7",
+    "title": "VISUALS OF SOUTH INDIA - 07",
+    "duration": "17 Nights / 18 Days",
+    "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",
+    "tourHighlights": [
+      "All-inclusive package without any hidden costs",
+      "Food on a Breakfast basis and 03 times meals in the Houseboat",
+      "Carefully selected hotels & resorts based on reviews from guests who have already enjoyed them",
+      "Vehicle at disposal from airport to airport on all days without any km restrictions & additional cost",
+      "One driver (English-speaking) & one Vehicle for the entire tour",
+      "Tour can be changed to any other fixed date even before 24 hours without any retention fee",
+      "GST, Toll charges, Bata to the driver, Parking fees, etc, included in the Package"
+    ],
+
+    quickItinerary: [
+      "Day 01 - Reach Bangalore",
+      "Day 02 - In and Around Bangalore",
+      "Day 03 - Bangalore - Mysore",
+      "Day 04 - In and Around Mysore",
+      "Day 05 - Mysore - Ooty",
+      "Day 06 - In and Around Ooty",
+      "Day 07 - Ooty - Vythiri",
+      "Day 08 - Vythiri - Cochin",
+      "Day 09 - In and Around Cochin",
+      "Day 10 - Cochin - Munnar",
+      "Day 11 - In and Around Munnar",
+      "Day 12 - Munnar - Periyar",
+      "Day 13 - In and Around Periyar",
+      "Day 14 - Periyar - Alleppey (Houseboat)",
+      "Day 15 - Alleppey - Kovalam",
+      "Day 16 - In and Around Kovalam (Kanyakumari Excursion)",
+      "Day 17 - Leisure at Kovalam",
+      "Day 18 - Return Journey"
+    ],
+
+    itineraryOverview: [
+      { "day": "01-02", "title": "Garden City Exploration", "details": ["Welcome at Bangalore Airport and transfer to the resort.", "Full day sightseeing including Cubbon Park, Tipu's Palace, and Bull Temple.", "Evening at leisure for shopping."], image: "" },
+      { "day": "03-04", "title": "Royal Heritage of Mysore", "details": ["Visit Srirangapatna, the historical seat of Tipu Sultan.", "Explore the Maharaja's Palace, Mysore Zoo, and Chamundi Hills.", "Enjoy the musical fountains at Brindavan Gardens."], image: "" },
+      { "day": "05-07", "title": "Hills and Rainforests", "details": ["Drive to Ooty and enjoy the Toy Train journey to Coonoor.", "Visit the Botanical Garden and Doddabetta Peak.", "Experience the virgin environment of the Vythiri jungle resort in Wayanad."], image: "" },
+      { "day": "08-09", "title": "Culture and Backwaters of Cochin", "details": ["Witness a traditional Kathakali performance with a makeup demonstration.", "Experience a village tour in Kumbalangi to see authentic Kerala life.", "Visit the Jewish Synagogue, Dutch Palace, and Chinese Fishing Nets."], image: "" },
+      { "day": "10-11", "title": "Munnar Tea Estates", "details": ["Tour the tea gardens and the Tea Museum.", "Visit Eravikulam National Park to spot the Nilgiri Tahr.", "See Mattupetty Dam and Top Station for panoramic views."], image: "" },
+      { "day": "12-14", "title": "Wildlife and Houseboat", "details": ["Boat ride on Periyar Lake to view wild elephants and a guided jungle safari.", "Overnight stay on a traditional houseboat in Alleppey.", "Cruise through the backwater villages to see local life."], image: "" },
+      { "day": "15-18", "title": "Beach Paradise and Lands End", "details": ["Relax at the golden beaches of Kovalam.", "Excursion to Kanyakumari to view the sunset and Vivekananda Memorial.", "Transfer to Trivandrum Airport for the return journey."], image: "" }
+    ],
+
+    "detailedItinerary": [
+      { "day": "Day 01", "title": "REACH BANGALORE", "details": ["Receive at Bangalore Airport by our representative.", "Check into the resort and relax.", "Rest of the day for relaxation and shopping.", "Overnight stay at the hotel."] },
+      { "day": "Day 02", "title": "IN AND AROUND BANGALORE", "details": ["Morning sightseeing tour of Bangalore.", "Visit Cubbon Park, Government Museum, and Tipu's Palace.", "See the Fort, Bull Temples, and Venkatappa Art Gallery.", "Overnight stay at the hotel."] },
+      { "day": "Day 03", "title": "ON TO MYSORE", "details": ["Proceed to the Royal City of Mysore in the morning.", "En route visit Srirangapatna, a historical town from the Tipu Sultan regime.", "Afternoon local sightseeing tour in Mysore.", "Overnight stay at the hotel."] },
+      { "day": "Day 04", "title": "IN AND AROUND MYSORE", "details": ["Full day sightseeing tour of the royal city.", "Visit Chamarajendra Art Gallery and Mysore Zoo.", "Tour the Maharaja's Palace and Chamundi Hills.", "Evening visit to Brindavan Gardens.", "Overnight stay at the hotel."] },
+      { "day": "Day 05", "title": "ON TO OOTY", "details": ["Depart for Ooty, the Queen of Hill Stations.", "Reach Ooty by forenoon and check into the resort.", "Afternoon local sightseeing and relaxation.", "Overnight stay at the resort."] },
+      { "day": "Day 06", "title": "IN AND AROUND OOTY", "details": ["Visit Ooty Lake, Botanical Garden, and Doddabetta Peak.", "Excursion to Coonoor including Sims Park and Dolphins Nose.", "Enjoy the Toy Train journey from Ooty to Coonoor.", "Overnight stay at the hotel."] },
+      { "day": "Day 07", "title": "ON TO VYTHIRI", "details": ["Depart for Vythiri, a jungle resort in the Wayanad district.", "Check into the resort and enjoy the virgin environment.", "Relaxation amidst the greenery of Kerala.", "Overnight stay at the resort."] },
+      { "day": "Day 08", "title": "ON TO COCHIN", "details": ["Proceed to Cochin, the Queen of the Arabian Sea.", "Afternoon at leisure or for shopping.", "Evening Kathakali show with Mudras and makeup demonstration.", "Overnight stay at the hotel."] },
+      { "day": "Day 09", "title": "IN AND AROUND COCHIN", "details": ["Morning village tour in Kumbalangi through the backwaters.", "Afternoon sightseeing: Dutch Palace and Jewish Synagogue.", "Visit St. Francis Church, Santa Cruz Basilica, and Chinese Fishing Nets.", "Overnight stay at the hotel."] },
+      { "day": "Day 10", "title": "ON TO MUNNAR", "details": ["Drive to Munnar, the tea garden hill station.", "Visit the Tea Gardens and Tea Museum in the afternoon.", "Explore Eravikulam National Park to see the Nilgiri Tahr.", "Overnight stay at the hotel."] },
+      { "day": "Day 11", "title": "IN AND AROUND MUNNAR", "details": ["Morning visit to Mattupetty Dam and Kundala Lake.", "Visit Top Station, the highest point in the Anamudi ranges.", "Overnight stay at the hotel."] },
+      { "day": "Day 12", "title": "ON TO PERIYAR", "details": ["Proceed to Thekkady/Periyar Wildlife Sanctuary.", "Afternoon boat ride on Periyar Lake to view wild animals.", "Overnight stay at the hotel."] },
+      { "day": "Day 13", "title": "IN AND AROUND PERIYAR", "details": ["Morning spice tour through various plantations.", "Afternoon guided jungle safari in the thick forests of Periyar.", "Overnight stay at the hotel."] },
+      { "day": "Day 14", "title": "HOUSEBOAT CRUISE - ALLEPPEY", "details": ["Transfer to Alleppey and board the traditional houseboat.", "Cruise through backwater villages and observe local life.", "Evening anchor in the water; dinner served on board.", "Overnight stay on the houseboat."] },
+      { "day": "Day 15", "title": "PROCEED TO KOVALAM", "details": ["Disembark at Alleppey and proceed to Kovalam beach.", "Check into the resort and relax.", "Evening spent by the blue waters.", "Overnight stay at the hotel."] },
+      { "day": "Day 16", "title": "KANYAKUMARI EXCURSION", "details": ["Proceed to Kanyakumari (Cape Comorin).", "En route visit Sree Padmanabhapuram Palace.", "Visit Vivekananda Memorial and Thiruvalluvar Statue.", "View the sunset at the Land's End.", "Overnight stay at Kovalam."] },
+      { "day": "Day 17", "title": "LEISURE AT KOVALAM", "details": ["Full day of beach relaxation and leisure.", "Overnight stay at the hotel."] },
+      { "day": "Day 18", "title": "RETURN JOURNEY", "details": ["Time for departure.", "Transfer to Trivandrum Airport for the return flight."] }],
+
+    inclusions: [
+      'The Vehicle will be with the guests throughout the Tour.They can make it work around the Clock if needed.',
+      'Well - experienced English - speaking Driver cum Guide will be appointed for the Tour.Who can also act as an Escort.',
+      'One Driver, One Vehicle for the entire Tour.If there is no Land journey break in the Tour, the same Driver & Vehicle will be with the guests for the entire journey.'
+    ],
+
+    exclusions: [
+      'International air tickets / Domestic air tickets & airport taxes.',
+      'Passport & visa fees, visa stamping.',
+      'Items of a personal nature, such as laundry, telephone calls, room service, alcoholic & non - alcoholic beverages, etc.',
+      'Single room(quoted separately), Child or adult in a triple sharing room.',
+      'Another language may be on request.Vegetable meals may be on request.',
+      'Bottled / mineral water during any meal.',
+      'Peak tourist season or special event rates.',
+      'Airport tax, airfares, Food cost other than specified, Phone call charges & other personnel expenses of the Guests.'
+    ],
+
+    sightseeing: [
+      "Visit Cubbon Park, Government Museum, Tipu’s Palace, The Fort, Bull Temple, Venkatappa Art Gallery.",
+      "Visit  Srirangapatna historical sites.",
+      "Visit Chamarajendra Art Gallery, Mysore Zoo, Maharaja’s Palace, Chamundi Hills, Brindavan Garden.",
+      "Visit Ooty local sights.",
+      "Visit Ooty Lake, Botanical Garden, Doddabetta Peak, Valley View, Sim’s Park, Lamb’s Rock, Dolphin’s Nose, Coonoor; enjoy toy train journey.",
+      "Enjoy the Kathakali show.",
+      "Visit Kumbalangi village, Dutch Palace, Jewish Synagogue, St.Francis Church, Santa Cruz Basilica, and Chinese Fishing Nets.",
+      "Visit Tea Gardens, Tea Museum, Eravikulam National Park.",
+      "Visit Mattupetty Dam, Kundala Lake, and Top Station.",
+      "Enjoy the Periyar Lake boat ride.",
+      "Visit spice plantations; enjoy a guided jungle safari.",
+      "Enjoy a houseboat backwater cruise.",
+      "Visit Padmanabhapuram Palace, Kanyakumari Land’s End, Vivekananda Memorial, Thiruvalluvar Statue.",
+      "Enjoy Sun, Sand and Surf at the beach.",
+      "Leisure and relaxation at the beach.",
+    ],
+
+    "hotelPackages": [
+      {
+        "destination": "Bangalore (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Tulip Hotel", "image": "", "description": "" }, { "name": "ibis Bengaluru", "image": "", "description": "" }, { "name": "Richmond Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "St. Marks Hotel", "image": "", "description": "" }, { "name": "Capitol Hotel", "image": "", "description": "" }, { "name": "Gokulam Grand Hotel & Spa", "image": "", "description": "" }, { "name": "Fairfield by Marriott Bengaluru", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Mridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Mridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Mysore (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Regalia Inn & Suites", "image": "", "description": "" }, { "name": "Emerald Clark Inn", "image": "", "description": "" }, { "name": "The Atrium Boutique Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Sandesh The Prince", "image": "", "description": "" }, { "name": "Fortune JP Palace", "image": "", "description": "" }, { "name": "Regenta Central Herald", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Royal Orchid Metropole", "image": "", "description": "" }, { "name": "Royal Orchid", "image": "", "description": "" }, { "name": "Brindavan Gardens", "image": "", "description": "" }, { "name": "Grand Mercure Hotel", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Radisson Blu Plaza Hotel Mysore", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Ooty (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Nahar Nilgiris", "image": "", "description": "" }, { "name": "Garden Manor", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Sinclair Resort", "image": "", "description": "" }, { "name": "Fortune Retreat Hotel", "image": "", "description": "" }, { "name": "kluney manor ooty", "image": "", "description": "" }, { "name": "Mountain Retreat", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Gem Park", "image": "", "description": "" }, { "name": "Sterling Fern Hill", "image": "", "description": "" }, { "name": "Elk Hill", "image": "", "description": "" }, { "name": "Accord Highland", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj Savoy", "image": "", "description": "" }, { "name": "Taj Gateway Coonoor", "image": "", "description": "" }, { "name": "Ayatana", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Vythiri (01 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Le Coffee Resort", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Vythiri Mist Resort", "image": "", "description": "" }, { "name": "Vythiri Village", "image": "", "description": "" }, { "name": "Love Dale Resort", "image": "", "description": "" }, { "name": "Serene Valley Resort", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Flora Vythiri Resort", "image": "", "description": "" }, { "name": "Pepper Trail Resort", "image": "", "description": "" }, { "name": "GRT Great Trails", "image": "", "description": "" }, { "name": "Wayanad Wild Resort CGH", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj Wayanad Mountain Shadows Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Cochin (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Hotel Killians", "image": "", "description": "" }, { "name": "Abad Plaza", "image": "", "description": "" }, { "name": "Napier Heritage Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Monsoon Empress", "image": "", "description": "" }, { "name": "Marine Inn", "image": "", "description": "" }, { "name": "Tribute Royale", "image": "", "description": "" }, { "name": "Olive Downtown", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Forte Kochi hotel", "image": "", "description": "" }, { "name": "Le Meridian", "image": "", "description": "" }, { "name": "Crowne Plaza", "image": "", "description": "" }, { "name": "Hotel Marriot", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Brunton Boatyard hotel", "image": "", "description": "" }, { "name": "Taj Malabar", "image": "", "description": "" }, { "name": "Grand Hyatt", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Munnar (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "West Wood Resort", "image": "", "description": "" }, { "name": "Eastend Hotel", "image": "", "description": "" }, { "name": "Trivers Resort", "image": "", "description": "" }, { "name": "Tea Castle", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Rivulet Resort", "image": "", "description": "" }, { "name": "Elephant Passage Resort", "image": "", "description": "" }, { "name": "Fog Resort", "image": "", "description": "" }, { "name": "Tall Trees Resort", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Blanket Hotel", "image": "", "description": "" }, { "name": "The Valle Resort", "image": "", "description": "" }, { "name": "Fragrant Nature Resort", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Chandys Windy Woods", "image": "", "description": "" }, { "name": "Chandys Drizzle Drops", "image": "", "description": "" }, { "name": "Spice Tree Resort", "image": "", "description": "" }, { "name": "Grand Cliff Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Periyar (02 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Abad Green Forest", "image": "", "description": "" }, { "name": "Pepper Vine Resort", "image": "", "description": "" }, { "name": "Hotel Lincoln Square", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Mountain Courtyard Resort", "image": "", "description": "" }, { "name": "Forest Canopy Resort", "image": "", "description": "" }, { "name": "Reen Resorts", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Poetree Resort", "image": "", "description": "" }, { "name": "Elephant Court", "image": "", "description": "" }, { "name": "Green Woods Resort", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Spice Village Resort", "image": "", "description": "" }, { "name": "Hills & Hues Resort", "image": "", "description": "" }, { "name": "Lake Palace Resort KTDC", "image": "", "description": "" }, { "name": "Blanket Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Houseboat (01 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "A/C Standard Houseboat", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "A/C Deluxe Houseboat with Silver Flag Category", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "A/C Premium Houseboat with Golden flag category", "image": "", "description": "" }], "5-Star Luxury": [{ "name": "Full-time A/C Luxury boat with Platinum category", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Kovalam (03 N)", "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Soma Palm Shore", "image": "", "description": "" }, { "name": "Jasmine Palace", "image": "", "description": "" }, { "name": "Hotel Neelakanta", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "KTDC Samudra Resort", "image": "", "description": "" }, { "name": "Travancore Beach Resort", "image": "", "description": "" }, { "name": "Sagara Beach Resort", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Udaya Samudra Beach Resort", "image": "", "description": "" }, { "name": "Gokulam Grand Turtle on the Beach", "image": "", "description": "" }, { "name": "Rock Holm at the Lighthouse Beach", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "The Leela Kovalam", "image": "", "description": "" }, { "name": "Taj Green Coves", "image": "", "description": "" }, { "name": "Niramaya Surya Samudra Resort", "image": "", "description": "" }]
+        }
+      }],
+
+    childPolicy: [
+      'Child below 5 years: Free (without extra bed)',
+      'Child 5–12 years: 25% of adult price',
+      'Extra adult: 30% of adult price'
+    ],
+    meals: '“SAVOUR DELICIOUS MEALS” will be Breakfast Basis in all the destinations and three meals (Breakfast +Lunch+ Dinner) in the houseboat.',
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
+    ],
+
+    "pricing": [
+      {
+        "season": "01 Oct 2025 – 19 Dec 2025 & 10 Jan 2026 – 31 May 2026",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 93,230", single: "", "extraPerson": "Rs 74,580" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 1,25,840", single: "", "extraPerson": "Rs 1,00,670" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 1,53,710", single: "", "extraPerson": "Rs 1,22,970" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 2,76,950", single: "", "extraPerson": "Rs 2,21,560" }
+        ]
+      },
+      {
+        "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
+        "categories": [
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 74,580 /-", "single": "Rs 59,660 /-", "extraPerson": "" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,00,670 /-", "single": "Rs 80,540 /-", "extraPerson": "" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,22,970 /-", "single": "Rs 98,380 /-", "extraPerson": "" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,21,560 /-", "single": "Rs 1,77,250 /-", "extraPerson": "" }
+        ]
+      },
+    ],
+
+    supplementalAttractions: [
+    ],
+
+    specialOffers: [
+      'Free date change before 24 hours',
+      'Custom itinerary on request',
+      'Best price guarantee'
+    ]
+  },
+
 ];
 
 
