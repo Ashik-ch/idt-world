@@ -2898,7 +2898,6 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-
       { id: 'sup-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/attractions/cookery-demo.jpg' },
       { id: 'sup-2', name: 'Half-day Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/attractions/kalarippayattu.jpg' },
       { id: 'sup-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/attractions/kolukkumalai.jpg' },
@@ -4121,7 +4120,6 @@ export const travelPackages: Package[] = [
     ],
     meals: '“SAVOUR DELICIOUS MEALS” will be Breakfast Basis in all the destinations and three meals (Breakfast +Lunch+ Dinner) in the houseboat.',
 
-
     transport: [
       { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
       { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
@@ -4129,7 +4127,6 @@ export const travelPackages: Package[] = [
       { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
       { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
     ],
-
 
     "pricing": [
       {
@@ -4148,6 +4145,262 @@ export const travelPackages: Package[] = [
           { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,10,750 /-", "single": "Rs 88,600 /-", "extraPerson": "" },
           { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,45,260 /-", "single": "Rs 1,16,210 /-", "extraPerson": "" },
           { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,27,950 /-", "single": "Rs 1,82,360 /-", "extraPerson": "" }
+        ]
+      },
+    ],
+
+    supplementalAttractions: [
+    ],
+
+    specialOffers: [
+      'Free date change before 24 hours',
+      'Custom itinerary on request',
+      'Best price guarantee'
+    ]
+  },
+
+
+  {
+    id: "south-india-5",
+    "title": "VISUALS OF SOUTH INDIA - 05",
+    "duration": "17 Nights / 18 Days",
+    "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",
+    "tourHighlights": [
+      "All-inclusive package without any hidden costs",
+      "Food on a Breakfast basis and 03 times meals in the Houseboat",
+      "Carefully selected hotels & resorts based on reviews from guests who have already enjoyed them",
+      "Vehicle at disposal from airport to airport on all days without any km restrictions & additional cost",
+      "One driver (English-speaking) & one Vehicle for the entire tour",
+      "Tour can be changed to any other fixed date even before 24 hours without any retention fee",
+      "GST, Toll charges, Bata to the driver, Parking fees, etc, included in the Package"
+    ],
+
+    quickItinerary: [
+      "Day 01- ARRIVAL AT GOA (B)",
+      "Day 02- EXPLORING GOA (B)",
+      "Day 03- LEISURE AT GOA (B)",
+      "Day 04- ON TO BADAMI (B)",
+      "Day 05- AT BADAMI (B) VISIT AIHOLE",
+      "Day 06- ON TO HOSPET (B) EN ROUTE VISIT PATTADAKAL",
+      "Day 07- AT HAMPI (B)",
+      "Day 08- ON TO HASSAN (B)",
+      "Day 09- OFF TO BANGALORE (B) VISIT BELUR & HALEBID",
+      "Day 10- ON TO MYSORE (B) VISIT SRIRANGAPATANAM",
+      "Day 11- AT MYSORE (B)",
+      "Day 12- ON TO OOTY (B) VIA BANDIPUR FORESTS",
+      "Day 13- IN AND AROUND OOTY (B)",
+      "Day 14- ON TO COCHIN (B) KATHAKALI SHOW",
+      "Day 15- IN AND AROUND COCHIN (B) CITY TOUR & CRAFT CRUISE",
+      "Day 16- ON TO THEKKADY (B) SPICE TOUR & TREKKING",
+      "Day 17- ON TO KUMARAKOM (B) HOUSEBOAT",
+      "Day 18- REACH ALLEPPEY (B) RETURN JOURNEY"
+    ],
+
+    itineraryOverview: [
+      { "day": "01", "title": "Arrival at Goa", "details": ["Welcome at the Airport or Railway station by a local representative.", "Transfer to the resort in the world-renowned beach paradise.", "Relaxation at the 'Queen of Arabian Beaches' with a chance to try exotic Goan cuisine.", "Overnight stay at the resort."], "image": "" },
+      { "day": "02", "title": "Exploring Goa", "details": ["Full-day tour of Old Goa: Visit the Basilica of Bom Jesus and Se Cathedral.", "Visit the Wax World Museum and Museum of Christian Art.", "Evening sunset cruise on the River Mandovi aboard the Santa Monica.", "Sail past the historic Adil Shah Palace with live folk dances and music."], "image": "" },
+      { "day": "03", "title": "Leisure at Goa", "details": ["Full day at leisure to enjoy the sun and surf of the Arabian Sea.", "Relax on the golden sands or enjoy resort facilities.", "Overnight stay at the resort."], "image": "" },
+      { "day": "04", "title": "Goa to Badami", "details": ["Scenic long-distance drive (approx. 9 hours) to the historical town of Badami.", "Travel through changing landscapes from the coast to the heart of Karnataka.", "Arrive and check into the hotel for an overnight stay."], "image": "" },
+      { "day": "05", "title": "Badami & Aihole", "details": ["Visit the four majestic cave temples carved into the sandstone cliffs.", "Explore the Bhutanatha temples and the sacred Agastya Tirtha lake.", "Excursion to Aihole, the 'Cradle of Indian Architecture,' to see over 125 ancient temples.", "Tour the Durga Temple and the Ravalphadi cave temples."], "image": "" },
+      { "day": "06", "title": "Pattadakal & Hospet", "details": ["Visit the UNESCO World Heritage Site of Pattadakal.", "Marvel at the Virupaksha and Jain temples representing the pinnacle of Chalukyan art.", "Continue the drive to Hospet, the gateway to the ruins of Hampi.", "Overnight stay at the resort."], "image": "" },
+      { "day": "07", "title": "Hampi Exploration", "details": ["Full-day exploration of the ruins of the Vijayanagar Empire.", "Visit the Virupaksha Temple, Vithala Temple (musical pillars), and the Stone Chariot.", "Experience a unique coracle ride on the Tungabhadra River.", "See the Lotus Mahal and the Royal Enclosures."], "image": "" },
+      { "day": "08", "title": "Hospet to Hassan", "details": ["Drive to Hassan (approx. 8 hours), a base for exploring Hoysala architecture.", "Check into the hotel and relax after the journey.", "Overnight stay at Hassan."], "image": "" },
+      { "day": "09", "title": "Belur, Halebid & Bangalore", "details": ["Visit the Chennakeshava Temple at Belur and the Hoysaleswara Temple at Halebid.", "Admire the intricate carvings and star-shaped architectural layouts.", "Drive to Bangalore, the 'Garden City' of India.", "Overnight stay in Bangalore."], "image": "" },
+      { "day": "10", "title": "Bangalore to Mysore via Srirangapatnam", "details": ["Visit Srirangapatnam, the island fortress and capital of Tipu Sultan.", "Tour the Daria Daulat Baug (Summer Palace) and the Gumbaz.", "Arrive in Mysore and check into the hotel for an overnight stay."], "image": "" },
+      { "day": "11", "title": "Mysore Sightseeing", "details": ["Visit the magnificent Mysore Palace and Jagan Mohan Palace Art Gallery.", "Drive to Chamundi Hill to see the huge Nandi monolith and the temple.", "Evening visit to the illuminated musical fountains at Brindavan Gardens.", "Overnight stay at Mysore."], "image": "" },
+      { "day": "12", "title": "Mysore to Ooty via Bandipur", "details": ["Drive through the Bandipur National Park forest ranges.", "Spot wildlife en route to the 'Queen of Hill Stations,' Ooty.", "Check into the resort and enjoy the cool mountain air."], "image": "" },
+      { "day": "13", "title": "Ooty Sightseeing", "details": ["Visit the Botanical Gardens, the Rose Garden, and Ooty Lake.", "Climb up to Doddabetta Peak for a panoramic view of the Nilgiri Mountains.", "Optional ride on the historic Mountain Railway (Toy Train).", "Overnight stay at Ooty."], "image": "" },
+      { "day": "14", "title": "Ooty to Cochin", "details": ["Drive down the hills to the port city of Cochin.", "Evening attendance at a Kathakali dance performance.", "Watch the elaborate make-up demonstration and stylized dance drama.", "Overnight stay in Cochin."], "image": "" },
+      { "day": "15", "title": "Cochin City Tour & Canal Cruise", "details": ["Visit the Dutch Palace, Jewish Synagogue, and St. Francis Church.", "View the iconic Chinese Fishing Nets at the harbor.", "Afternoon country craft canal cruise through the rural backwaters.", "Observe traditional coir processing and village life."], "image": "" },
+      { "day": "16", "title": "Cochin to Periyar (Thekkady)", "details": ["Scenic drive through tea and spice plantations to Periyar.", "Guided spice plantation tour (Cardamom, Pepper, Vanilla).", "Guided jungle trekking to explore the wildlife sanctuary's flora and fauna.", "Overnight stay at the Jungle Resort."], "image": "" },
+      { "day": "17", "title": "Periyar to Kumarakom (Houseboat)", "details": ["Morning boat safari on Periyar Lake to watch wild elephants.", "Board a traditional Kettuvallom (Houseboat) at Kumarakom.", "Full-day cruise through the scenic Kerala backwaters to Alleppey.", "Dinner and overnight stay on board the houseboat."], "image": "" },
+      { "day": "18", "title": "Alleppey to Cochin Departure", "details": ["Final morning cruise through the backwaters.", "Disembark at Alleppey and transfer to Cochin Airport.", "Return journey home with cherished memories."], "image": "" }],
+
+    detailedItinerary: [
+      { "day": "Day 01", "title": "ARRIVAL AT GOA", "details": ["Arrive at Goa Airport/Railway station and meet the local representative.", "Transfer to a resort in Goa, famous for its golden beaches.", "Afternoon relaxation at the beach followed by exotic Goan dinner.", "Overnight stay at the resort."] },
+      { "day": "Day 02", "title": "EXPLORING GOA - SIGHTSEEING & CRUISE", "details": ["Full-day tour of Old Goa, visiting the Basilica of Bom Jesus and Se Cathedral.", "Visit the Wax World Museum and the Museum of Christian Art.", "Evening sunset cruise on the River Mandovi aboard the Santa Monica.", "Sail past the historic Adil Shah Palace.", "Overnight stay at the hotel."] },
+      { "day": "Day 03", "title": "LEISURE AT GOA", "details": ["The entire day is at your disposal to relax at the beach.", "Merge with the sun and surf of the Arabian Sea.", "Overnight stay at the hotel."] },
+      { "day": "Day 04", "title": "GOA - BADAMI", "details": ["A long journey (350 km, approx. 9 hours) to the historical destination of Badami.", "Reach by late afternoon and check into the hotel.", "Overnight stay in Badami."] },
+      { "day": "Day 05", "title": "BADAMI & AIHOLE", "details": ["Explore Badami, the centre of ancient Chalukyan glory.", "Visit the four cave temples (three Brahmanical and one Jain) carved into the hill.", "See the Bhutanatha temples and the lake believed to have healing properties.", "Visit the oldest temple in the region, Malegitti Shivalaya.", "Excursion to Aihole, the 'Cradle of Indian Architecture' with over 125 temples.", "Tour the Durga Temple, Lad Khan Temple, and Ravalphadi Caves.", "Overnight stay at the resort."] },
+      { "day": "Day 06", "title": "BADAMI - PATTADAKAL - HOSPET", "details": ["Drive to Hospet with an en route stop at Pattadakal (UNESCO World Heritage Site).", "Pattadakal was the site for the coronation of Chalukyan kings.", "Visit the Virupaksha and Jain temples.", "Arrive in Hospet (the base for Hampi) in the afternoon.", "Optional evening visit to Hampi for an overview.", "Overnight stay at the resort."] },
+      { "day": "Day 07", "title": "AT HAMPI", "details": ["Full-day exploration of the ruins of the Vijayanagar Empire.", "Visit the functional Virupaksha Temple dedicated to Shiva.", "See the Vithala Temple featuring 56 musical pillars and a stone chariot.", "Explore the Hazara Rama Temple with its Ramayana carvings.", "Visit the Lotus Mahal and the royal platform (Mahanavami Dibba).", "Enjoy a unique coracle ride on the Tungabhadra River.", "Overnight stay at the resort."] },
+      { "day": "Day 08", "title": "HOSPET - HASSAN", "details": ["Depart after breakfast for Hassan (320 km, approx. 8 hours).", "Check into the hotel and relax after the long drive.", "Hassan serves as the gateway to Belur and Halebid."] },
+      { "day": "Day 09", "title": "HASSAN - BELUR - HALEBID - BANGALORE", "details": ["Visit the Chennakeshava Temple in Belur (built in 1117 A.D.).", "Drive to Halebid to see the Hoysaleswara Temple.", "Marvel at the star-shaped pillars and carved ceilings.", "Continue to the 'Garden City' of Bangalore.", "Optional shopping at Commercial Street or excursion to Cubbon Park and Lal Bagh.", "Overnight stay at the hotel."] },
+      { "day": "Day 10", "title": "BANGALORE - SRIRANGAPATNAM - MYSORE", "details": ["Proceed to Mysore, with a break at Srirangapatnam island.", "Tour Tipu Sultan's Fort and the Gumbaz.", "Visit the wooden Daria Daulat Baug summer palace.", "Check into the Mysore hotel and stay overnight."] },
+      { "day": "Day 11", "title": "AT MYSORE", "details": ["City tour of Mysore, the cultural heart of Karnataka.", "Visit Mysore Palace (Indo-Saracenic style) and Jagan Mohan Palace art gallery.", "Drive to Chamundi Hill to see the 4.8-meter-tall Nandi monolith.", "Visit the Gothic-style St. Philomena's Cathedral.", "Evening visit to the musical fountains at Brindavan Gardens.", "Overnight stay at the resort."] },
+      { "day": "Day 12", "title": "MYSORE - BANDIPUR - OOTY", "details": ["Drive through the Bandipur National Park (Nilgiri Biosphere Reserve).", "Arrive in Ooty, the 'Queen of Hill Stations', by evening.", "Overnight stay at the hotel."] },
+      { "day": "Day 13", "title": "IN AND AROUND OOTY", "details": ["Sightseeing tour of Ooty: Visit the Botanical Gardens and Rose Garden.", "Enjoy boating at Ooty Lake.", "Climb up to Doddabetta, the highest peak in the Blue Mountains.", "Option for a Mountain Train journey to Coonoor.", "Overnight stay at the hotel."] },
+      { "day": "Day 14", "title": "OOTY - COCHIN", "details": ["Proceed to Cochin, the 'Queen of the Arabian Sea'.", "Evening attendance at a Kathakali show with Mudras and make-up demonstration.", "Learn about the themes based on Hindu mythologies like the Ramayana.", "Overnight stay at the hotel."] },
+      { "day": "Day 15", "title": "COCHIN - CITY TOUR & CANAL CRUISE", "details": ["Guided tour including the Dutch Palace (Mattancherry) and Jewish Synagogue.", "Visit St. Francis Church, where Vasco da Gama was buried.", "View the unique Chinese fishing nets at Fort Cochin.", "Country craft canal cruise into the suburban interiors.", "Observe rural life: coir processing, duck farming, and toddy tapping.", "Overnight stay at the hotel."] },
+      { "day": "Day 16", "title": "COCHIN - THEKKADY (PERIYAR)", "details": ["Drive to Periyar Wildlife Sanctuary via a scenic route.", "Check into the Jungle Resort.", "Enjoy jungle trekking with a local guide.", "Guided plantation tour to see cardamom, pepper, and other spices.", "Overnight stay at the resort."] },
+      { "day": "Day 17", "title": "PERIYAR - KUMARAKOM (HOUSEBOAT)", "details": ["Morning boat safari on Periyar Lake to spot elephant herds and bison.", "Proceed to Kumarakom and board a houseboat for Alleppey.", "Full-day cruise through backwaters and narrow canals.", "Overnight stay on board the houseboat."] }, { "day": "Day 18", "title": "ALLEPPEY - COCHIN DEPARTURE", "details": ["Final morning cruise through Alleppey backwaters.", "Disembark and transfer to Cochin Airport for the return journey."] }
+    ],
+
+    inclusions: [
+      'The Vehicle will be with the guests throughout the Tour.They can make it work around the Clock if needed.',
+      'Well - experienced English - speaking Driver cum Guide will be appointed for the Tour.Who can also act as an Escort.',
+      'One Driver, One Vehicle for the entire Tour.If there is no Land journey break in the Tour, the same Driver & Vehicle will be with the guests for the entire journey.'
+    ],
+
+    exclusions: [
+      'International air tickets / Domestic air tickets & airport taxes.',
+      'Passport & visa fees, visa stamping.',
+      'Items of a personal nature, such as laundry, telephone calls, room service, alcoholic & non - alcoholic beverages, etc.',
+      'Single room(quoted separately), Child or adult in a triple sharing room.',
+      'Another language may be on request.Vegetable meals may be on request.',
+      'Bottled / mineral water during any meal.',
+      'Peak tourist season or special event rates.',
+      'Airport tax, airfares, Food cost other than specified, Phone call charges & other personnel expenses of the Guests.'
+    ],
+
+    sightseeing: [
+      'Explore Goa’s beautiful Beaches: Calangute, Baga, Anjuna golden sands, Basilica Bom Jesus: St.Francis Xavier tomb, Se Cathedral, Golden Bell masterpiece and Mandovi Cruise: Sunset River sail.',
+      'In Badami, visit Cave Temples: 6th - century rock carvings and Aihole: 125 + ancient temples.',
+      'At Hampi visit Virupaksa - Tallest functioning temple, Vithala: Musical pillars, stone chariot and Hazara Rama: Ramayana carvings.',
+      'Visit Chennakeshava Temple - 1, 200 + Hoysala sculptures and Hoysaleswara: Star - shaped twin temples.',
+      'Visit Mysore Palace: Illuminated Indo - Saracenic grandeur, Chamundi Hills: Nandi statue views, Brindavan: Musical fountains.',
+      'At Ooty, visit Botanical Garden: Fossil tree display, Ooty Lake: Pedal boating, Doddabetta: 360° peak views.',
+      'At Cochin, enjoy Day Sightseeing, Enjoy Kathakali(Ancient Dance form of Kerala), enjoy Canal cruise and village life.',
+      'At Periyar, enjoy boating on Periyar Lake, and enjoy the Spice Plantation tour and lastly enjoyJungle Trek: Wildlife trails.',
+      'Enjoy Full Day Houseboat cruise cum night stay from Kumarakom to Alleppey through the backwaters.'
+    ],
+
+    hotelPackages: [
+      {
+        "destination": "Goa (03 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Ocean palms", "image": "", "description": "" }, { "name": "Ambadi Beach Resort", "image": "", "description": "" }, { "name": "Ibis Styles", "image": "", "description": "" }, { "name": "Regenta Inn", "image": "", "description": "" }, { "name": "Meritas Grand", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Aristo Resort", "image": "", "description": "" }, { "name": "Goan Heritage", "image": "", "description": "" }, { "name": "La Cabana Beach Resort", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "The 'O' Hotel", "image": "", "description": "" }, { "name": "The Park Hotel", "image": "", "description": "" }, { "name": "The Marquis Beach Resort", "image": "", "description": "" }, { "name": "Amara Resort", "image": "", "description": "" }, { "name": "Radisson Blu Candolim Beach Resort", "image": "", "description": "" }, { "name": "Suri White Sands Resort", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Grand Hyatt", "image": "", "description": "" }, { "name": "The Lalit", "image": "", "description": "" }, { "name": "Hyatt Central", "image": "", "description": "" }, { "name": "Taj Exotica", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Badami (02 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Clarks Inn", "image": "", "description": "" }, { "name": "Krishna Heritage, Badami", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Badami Court", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Badami Court", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Badami Court", "image": "", "description": "" }
+          ]
+        }
+      },
+      {
+        "destination": "Hospet (02 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Krishna palace/Malligai", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Krishna palace/Malligai", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Krishna Palace/Malligai", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Krishna Palace/Malligai", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Hassan (01 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Hassan Ashok/Southern Star", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Taj Chikka Mangalore", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Taj, Chikamangalur", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj, Chikamangalur", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Bangalore (01 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Tulip Hotel", "image": "", "description": "" }, { "name": "ibis Bengaluru", "image": "", "description": "" }, { "name": "Richmond Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "St. Marks Hotel", "image": "", "description": "" }, { "name": "Capitol Hotel", "image": "", "description": "" }, { "name": "Gokulam Grand Hotel & Spa", "image": "", "description": "" }, { "name": "Fairfield by Marriott Bengaluru", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Meridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Meridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Mysore (02 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Regalia Inn & Suites", "image": "", "description": "" }, { "name": "Emerald Clark Inn", "image": "", "description": "" }, { "name": "The Atrium Boutique Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Sandesh The Prince", "image": "", "description": "" }, { "name": "Fortune JP Palace", "image": "", "description": "" }, { "name": "Regenta Central Herald", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Royal Orchid Metropole", "image": "", "description": "" }, { "name": "Royal Orchid", "image": "", "description": "" }, { "name": "Brindavan Gardens", "image": "", "description": "" }, { "name": "Grand Mercure Hotel", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Radisson Blu Plaza Hotel Mysore", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Ooty (02 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Nahar Nilgiris", "image": "", "description": "" }, { "name": "Garden Manor", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Fortune Hotel", "image": "", "description": "" }, { "name": "Kluney Manor Ooty", "image": "", "description": "" }, { "name": "Mountain Retreat", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Gem Park", "image": "", "description": "" }, { "name": "Sterling Fern Hill", "image": "", "description": "" }, { "name": "Sterling Elk Hill", "image": "", "description": "" }, { "name": "Accord Highland", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Taj Savoy", "image": "", "description": "" }, { "name": "Taj Gateway Coonoor", "image": "", "description": "" }, { "name": "Ayatana Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Cochin (02 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Hotel Killians", "image": "", "description": "" }, { "name": "Abad Plaza", "image": "", "description": "" }, { "name": "Napier Heritage Hotel", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Monsoon Empress", "image": "", "description": "" }, { "name": "Marine Inn", "image": "", "description": "" }, { "name": "Tribute Royale", "image": "", "description": "" }, { "name": "Olive Downtown", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Forte Kochi hotel", "image": "", "description": "" }, { "name": "Le Meridian", "image": "", "description": "" }, { "name": "Crowne Plaza", "image": "", "description": "" }, { "name": "Hotel Marriot", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Brunton Boatyard hotel", "image": "", "description": "" }, { "name": "Taj Malabar", "image": "", "description": "" }, { "name": "Grand Hyatt", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Periyar (01 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "Abad Green Forest", "image": "", "description": "" }, { "name": "Peppervine Resort", "image": "", "description": "" }, { "name": "Hotel Lincoln Square", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "Mountain Courtyard Resort", "image": "", "description": "" }, { "name": "Forest Canopy Resort", "image": "", "description": "" }, { "name": "Aranya Nivas KTDC", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "Poetree Resort", "image": "", "description": "" }, { "name": "Elephant Court", "image": "", "description": "" }, { "name": "Green Woods Resort", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Spice Village Resort", "image": "", "description": "" }, { "name": "Hills & Hues Resort", "image": "", "description": "" }, { "name": "Lake Palace Resort KTDC", "image": "", "description": "" }, { "name": "Blanket Resort", "image": "", "description": "" }]
+        }
+      },
+      {
+        "destination": "Houseboat (01 N)",
+        "image": "",
+        "categories": {
+          "3-Star Deluxe": [{ "name": "A/C Standard Houseboat", "image": "", "description": "" }],
+          "4-Star Deluxe": [{ "name": "A/C Deluxe Houseboat with Silver Flag Category", "image": "", "description": "" }],
+          "5-Star Deluxe": [{ "name": "A/C Premium Houseboat with Golden flag category", "image": "", "description": "" }],
+          "5-Star Luxury": [{ "name": "Full-time A/C Luxury boat with Platinum category", "image": "", "description": "" }]
+        }
+      },
+    ],
+
+    childPolicy: [
+      'Child below 5 years: Free (without extra bed)',
+      'Child 5–12 years: 25% of adult price',
+      'Extra adult: 30% of adult price'
+    ],
+    meals: '“SAVOUR DELICIOUS MEALS” will be Breakfast Basis in all the destinations and three meals (Breakfast +Lunch+ Dinner) in the houseboat.',
+
+    transport: [
+      { pax: '2 Pax', description: 'A/C Sedan (Etios / Dzire)', icon: '🚗' },
+      { pax: '4–6 Pax', description: 'A/C Innova Crysta', icon: '🚙' },
+      { pax: '6–10 Pax', description: 'A/C 12-Seater Traveller', icon: '🚎' },
+      { pax: '10–14 Pax', description: 'A/C 14-Seater Traveller', icon: '🚌' },
+      { pax: '15–25 Pax', description: 'A/C Mini Bus', icon: '🚐' }
+    ],
+
+    "pricing": [
+      {
+        "season": "01 Oct 2025 – 19 Dec 2025 & 10 Jan 2026 – 31 May 2026",
+        "categories": [
+          { "category": "3 STAR DELUXE", "twoPax": "Rs 90,160", single: "", "extraPerson": "Rs 72,130" },
+          { "category": "4 STAR DELUXE", "twoPax": "Rs 1,12,020", single: "", "extraPerson": "Rs 89,620" },
+          { "category": "5 STAR DELUXE", "twoPax": "Rs 1,42,220", single: "", "extraPerson": "Rs 1,13,780" },
+          { "category": "5 STAR LUXURY", "twoPax": "Rs 2,77,670", single: "", "extraPerson": "Rs 2,22,140" }
+        ]
+      },
+      {
+        "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
+        "categories": [
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 72,130 /-", "single": "Rs 57,700 /-", "extraPerson": "" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 89,620 /-", "single": "Rs 71,700 /-", "extraPerson": "" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,13,780 /-", "single": "Rs 91,020 /-", "extraPerson": "" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,22,140 /-", "single": "Rs 1,77,710 /-", "extraPerson": "" }
         ]
       },
     ],
@@ -4186,11 +4439,12 @@ export const inboundPackages = [
   { id: 'south-india-1', name: 'VISUALS OF SOUTH INDIA - 01', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
   { id: 'south-india-2', name: 'VISUALS OF SOUTH INDIA - 02', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
   { id: 'south-india-3', name: 'VISUALS OF SOUTH INDIA - 03', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '13 NIGHTS / 14 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
-  { id: 'south-india-1', name: 'VISUALS OF SOUTH INDIA - 04', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
-  { id: 'karnataka', name: 'Karnataka', category: "south-india", gradient: 'from-blue-400 to-blue-600', tagline: 'One State Many Worlds', description: 'Ancient Temples, Coffee Estates, Beaches', bgImage: 'assets/images/bangolore.jpg' },
-  { id: 'tamil-nadu', name: 'Tamil Nadu', category: "south-india", gradient: 'from-orange-400 to-orange-600', tagline: 'Land of Temples', description: 'Dravidian Architecture, Hill Stations', bgImage: 'assets/images/goa.jpg' },
+  { id: 'south-india-4', name: 'VISUALS OF SOUTH INDIA - 04', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-5', name: 'VISUALS OF SOUTH INDIA - 05', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-6', name: 'VISUALS OF SOUTH INDIA - 06', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-7', name: 'VISUALS OF SOUTH INDIA - 07', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
+  { id: 'south-india-8', name: 'VISUALS OF SOUTH INDIA - 08', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/kerala15.jpg' },
   { id: 'delhi', name: 'Delhi', category: "north-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage', bgImage: 'assets/images/delhi.jpg' },
-  { id: 'goa', name: 'Goa', category: "south-india", gradient: 'from-yellow-400 to-yellow-600', tagline: 'Pearl of the Orient', description: 'Beaches, Nightlife, Portuguese Heritage' },
   { id: 'rajasthan', name: 'Rajasthan', category: "north-india", gradient: 'from-purple-400 to-purple-600', tagline: 'Land of Kings', description: 'Palaces, Forts, Desert Safaris' },
   { id: 'kashmir', name: 'Kashmir', category: "north-india", gradient: 'from-red-400 to-red-600', tagline: 'Himalayan Paradise', description: 'Mountains, Temples, Heritage Sites' },
 ];
