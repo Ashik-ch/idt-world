@@ -4520,7 +4520,8 @@ export const travelPackages: Package[] = [
 
     hotelPackages: [
       {
-        "destination": "Cochin (01 N)", "image": "", "categories":
+        "destination": "Cochin (01 N)", "image": "",
+        "categories":
         {
           "3-Star Deluxe": [{ "name": "Hotel Killians", "image": "", "description": "" }, { "name": "Abad Plaza", "image": "", "description": "" }, { "name": "Napier Heritage Hotel", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Monsoon Empress", "image": "", "description": "" }, { "name": "Marine Inn", "image": "", "description": "" }, { "name": "Tribute Royale", "image": "", "description": "" }, { "name": "Olive Downtown", "image": "", "description": "" }],
@@ -4529,7 +4530,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Houseboat (01 N)", "image": "", "categories": {
+        "destination": "Houseboat (01 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "A/C Standard Houseboat", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "A/C Deluxe Houseboat with Silver Flag Category", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "A/C Premium Houseboat with Golden flag category", "image": "", "description": "" }],
@@ -4537,7 +4539,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Calicut (01 N)", "image": "", "categories": {
+        "destination": "Calicut (01 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Demora Hotel", "image": "", "description": "" }, { "name": "Royal Plaza Inn", "image": "", "description": "" }, { "name": "Copper Folio", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Gokulam Grand", "image": "", "description": "" }, { "name": "Tiara by MPS", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Raviz Kadavu Resort", "image": "", "description": "" }, { "name": "Raviz Calicut Hotel", "image": "", "description": "" }],
@@ -4545,7 +4548,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Vythiri (02 N)", "image": "", "categories": {
+        "destination": "Vythiri (02 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Le Coffee Resort", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Vythiri Mist Resort", "image": "", "description": "" }, { "name": "Vythiri Village", "image": "", "description": "" }, { "name": "Love Dale Resort", "image": "", "description": "" }, { "name": "Serene Valley Resort", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Flora Vythiri Resort", "image": "", "description": "" }, { "name": "Pepper Trail Resort", "image": "", "description": "" }, { "name": "GRT Great Trails", "image": "", "description": "" }, { "name": "Wayanad Wild Resort CGH", "image": "", "description": "" }],
@@ -4553,7 +4557,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Ooty (02 N)", "image": "", "categories": {
+        "destination": "Ooty (02 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Nahar Nilgiris", "image": "", "description": "" }, { "name": "Garden Manor", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Sinclair Resort", "image": "", "description": "" }, { "name": "Fortune Retreat Hotel", "image": "", "description": "" }, { "name": "kluney manor Ooty", "image": "", "description": "" }, { "name": "Mountain Retreat", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Gem Park", "image": "", "description": "" }, { "name": "Sterling Fern Hill", "image": "", "description": "" }, { "name": "Elk Hill", "image": "", "description": "" }, { "name": "Accord Highland", "image": "", "description": "" }],
@@ -4561,7 +4566,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Kabani (Nagarhole) (02 N)", "image": "", "categories": {
+        "destination": "Kabani (Nagarhole) (02 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Jungle Beats Resorts", "image": "", "description": "" }, { "name": "Kabini Mystery maze", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Sandesh Water Edge", "image": "", "description": "" }, { "name": "Fireflies, Kabini", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Water Woods Lodge", "image": "", "description": "" }, { "name": "Regenta Jungle resort", "image": "", "description": "" }, { "name": "Kabini River Lodge", "image": "", "description": "" }],
@@ -4569,7 +4575,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Mysore (02 N)", "image": "", "categories": {
+        "destination": "Mysore (02 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Regalia Inn & Suites", "image": "", "description": "" }, { "name": "Emerald Clark Inn", "image": "", "description": "" }, { "name": "The Atrium Boutique Hotel", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Sandesh The Prince", "image": "", "description": "" }, { "name": "Fortune JP Palace", "image": "", "description": "" }, { "name": "Regenta Central Herald", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Royal Orchid Metropole", "image": "", "description": "" }, { "name": "Royal Orchid", "image": "", "description": "" }, { "name": "Brindavan Gardens", "image": "", "description": "" }, { "name": "Grand Mercure Hotel", "image": "", "description": "" }],
@@ -4577,7 +4584,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Coorg (Madikeri) (02 N)", "image": "", "categories": {
+        "destination": "Coorg (Madikeri) (02 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Coorg International", "image": "", "description": "" }, { "name": "Avadale Resort", "image": "", "description": "" }, { "name": "Ayatana Coorg", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "Porcupine Castle Resort", "image": "", "description": "" }, { "name": "Woodstock Resort", "image": "", "description": "" }, { "name": "The Birchwood Retreat", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Club Mahindra Viraj pet", "image": "", "description": "" }, { "name": "Montrose Golf Resort", "image": "", "description": "" }, { "name": "Purple Palm Resort", "image": "", "description": "" }, { "name": "Gokulam Grand Resort & Spa", "image": "", "description": "" }],
@@ -4585,7 +4593,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Hassan (01 N)", "image": "", "categories": {
+        "destination": "Hassan (01 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Machaan Plantation Resort", "image": "", "description": "" }, { "name": "Commune18, Chikamangalur", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "The Ashhok Hassan", "image": "", "description": "" }, { "name": "Coffee Grove resort", "image": "", "description": "" }, { "name": "Vismita County, Chikamangalur", "image": "", "description": "" }, { "name": "Bindiga Peak resort, Chikamangalur", "image": "", "description": "" }, { "name": "The Spectrum Resort", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "IBC HoneyDrew Exotica Resort, Chikamangalur", "image": "", "description": "" }, { "name": "The Grand Retreat", "image": "", "description": "" }, { "name": "Sila Secret Mirage, Chikamangalur", "image": "", "description": "" }],
@@ -4593,7 +4602,8 @@ export const travelPackages: Package[] = [
         }
       },
       {
-        "destination": "Bangalore (01 N)", "image": "", "categories": {
+        "destination": "Bangalore (01 N)", "image": "",
+        "categories": {
           "3-Star Deluxe": [{ "name": "Tulip Hotel", "image": "", "description": "" }, { "name": "ibis Bengaluru", "image": "", "description": "" }, { "name": "Richmond Hotel", "image": "", "description": "" }],
           "4-Star Deluxe": [{ "name": "St. Marks Hotel", "image": "", "description": "" }, { "name": "Capitol Hotel", "image": "", "description": "" }, { "name": "Gokulam Grand Hotel & Spa", "image": "", "description": "" }, { "name": "Fairfield by Marriott Bengaluru", "image": "", "description": "" }],
           "5-Star Deluxe": [{ "name": "Taj West End", "image": "", "description": "" }, { "name": "Le Mridien Bengaluru", "image": "", "description": "" }, { "name": "The Park Bengaluru", "image": "", "description": "" }],
@@ -4647,6 +4657,7 @@ export const travelPackages: Package[] = [
       'Best price guarantee'
     ]
   },
+
 
   {
     id: "south-india-7",
@@ -4749,7 +4760,7 @@ export const travelPackages: Package[] = [
       "Leisure and relaxation at the beach.",
     ],
 
-    "hotelPackages": [
+    hotelPackages: [
       {
         "destination": "Bangalore (02 N)", "image": "",
         "categories": {
