@@ -920,19 +920,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 34,210/-', single: 'Rs 27,370/-', extraPerson: 'Rs 10,263/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 45,690/-', single: 'Rs 36,550/-', extraPerson: 'Rs 13,707/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 50,080/-', single: 'Rs 40,060/-', extraPerson: 'Rs 15,024/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 61,475/-', single: 'Rs 49,180/-', extraPerson: 'Rs 18,443/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 34,210', single: 'Rs 27,370', extraPerson: 'Rs 10,263' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 45,690', single: 'Rs 36,550', extraPerson: 'Rs 13,707' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 50,080', single: 'Rs 40,060', extraPerson: 'Rs 15,024' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 61,475', single: 'Rs 49,180', extraPerson: 'Rs 18,443' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 27,360/-', single: 'Rs 21,890/-', extraPerson: 'Rs 8,208/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 36,550/-', single: 'Rs 29,240/-', extraPerson: 'Rs 10,965/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 40,065/-', single: 'Rs 32,050/-', extraPerson: 'Rs 12,020/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 49,180/-', single: 'Rs 39,350/-', extraPerson: 'Rs 14,754/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 27,360', single: 'Rs 21,890', extraPerson: 'Rs 8,208' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 36,550', single: 'Rs 29,240', extraPerson: 'Rs 10,965' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 40,065', single: 'Rs 32,050', extraPerson: 'Rs 12,020' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 49,180', single: 'Rs 39,350', extraPerson: 'Rs 14,754' }
         ]
       }
     ],
@@ -1144,19 +1144,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 91,300/-', single: 'Rs 73,040/-', extraPerson: 'Rs 27,390/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,22,200/-', single: 'Rs 97,760/-', extraPerson: 'Rs 36,660/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,43,800/-', single: 'Rs 1,15,040/-', extraPerson: 'Rs 43,140/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,99,800/-', single: 'Rs 1,59,840/-', extraPerson: 'Rs 59,940/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 91,300', single: 'Rs 73,040', extraPerson: 'Rs 27,390' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,22,200', single: 'Rs 97,760', extraPerson: 'Rs 36,660' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,43,800', single: 'Rs 1,15,040', extraPerson: 'Rs 43,140' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,99,800', single: 'Rs 1,59,840', extraPerson: 'Rs 59,940' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 74,200/-', single: 'Rs 59,360/-', extraPerson: 'Rs 22,260/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 99,600/-', single: 'Rs 79,680/-', extraPerson: 'Rs 29,880/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,18,000/-', single: 'Rs 94,400/-', extraPerson: 'Rs 35,400/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,64,000/-', single: 'Rs 1,31,200/-', extraPerson: 'Rs 49,200/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 74,200', single: 'Rs 59,360', extraPerson: 'Rs 22,260' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 99,600', single: 'Rs 79,680', extraPerson: 'Rs 29,880' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,18,000', single: 'Rs 94,400', extraPerson: 'Rs 35,400' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,64,000', single: 'Rs 1,31,200', extraPerson: 'Rs 49,200' }
         ]
       }
     ],
@@ -1367,19 +1367,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 91,300/-', single: 'Rs 73,040/-', extraPerson: 'Rs 27,390/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,22,200/-', single: 'Rs 97,760/-', extraPerson: 'Rs 36,660/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,43,800/-', single: 'Rs 1,15,040/-', extraPerson: 'Rs 43,140/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,99,800/-', single: 'Rs 1,59,840/-', extraPerson: 'Rs 59,940/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 91,300', single: 'Rs 73,040', extraPerson: 'Rs 27,390' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,22,200', single: 'Rs 97,760', extraPerson: 'Rs 36,660' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,43,800', single: 'Rs 1,15,040', extraPerson: 'Rs 43,140' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,99,800', single: 'Rs 1,59,840', extraPerson: 'Rs 59,940' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 74,200/-', single: 'Rs 59,360/-', extraPerson: 'Rs 22,260/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 99,600/-', single: 'Rs 79,680/-', extraPerson: 'Rs 29,880/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,18,000/-', single: 'Rs 94,400/-', extraPerson: 'Rs 35,400/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,64,000/-', single: 'Rs 1,31,200/-', extraPerson: 'Rs 49,200/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 74,200', single: 'Rs 59,360', extraPerson: 'Rs 22,260' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 99,600', single: 'Rs 79,680', extraPerson: 'Rs 29,880' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,18,000', single: 'Rs 94,400', extraPerson: 'Rs 35,400' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,64,000', single: 'Rs 1,31,200', extraPerson: 'Rs 49,200' }
         ]
       }
     ],
@@ -1581,19 +1581,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 86,900/-', single: 'Rs 69,520/-', extraPerson: 'Rs 26,070/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,18,600/-', single: 'Rs 94,880/-', extraPerson: 'Rs 35,580/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,47,700/-', single: 'Rs 1,18,160/-', extraPerson: 'Rs 44,310/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,92,300/-', single: 'Rs 1,53,840/-', extraPerson: 'Rs 57,690/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 86,900', single: 'Rs 69,520', extraPerson: 'Rs 26,070' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,18,600', single: 'Rs 94,880', extraPerson: 'Rs 35,580' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,47,700', single: 'Rs 1,18,160', extraPerson: 'Rs 44,310' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,92,300', single: 'Rs 1,53,840', extraPerson: 'Rs 57,690' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 70,700/-', single: 'Rs 56,560/-', extraPerson: 'Rs 21,210/-' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 96,800/-', single: 'Rs 77,440/-', extraPerson: 'Rs 28,920/-' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,21,100/-', single: 'Rs 96,880/-', extraPerson: 'Rs 36,330/-' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,58,000/-', single: 'Rs 1,26,400/-', extraPerson: 'Rs 47,400/-' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 70,700', single: 'Rs 56,560', extraPerson: 'Rs 21,210' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 96,800', single: 'Rs 77,440', extraPerson: 'Rs 28,920' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,21,100', single: 'Rs 96,880', extraPerson: 'Rs 36,330' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 1,58,000', single: 'Rs 1,26,400', extraPerson: 'Rs 47,400' }
         ]
       }
     ],
@@ -1763,19 +1763,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 101,380/-', single: 'Rs 81,100/-', extraPerson: '25% of adult price' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,33,040/-', single: 'Rs 1,06,430/-', extraPerson: '25% of adult price' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,66,260/-', single: 'Rs 1,33,000/-', extraPerson: '30% of adult price' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 2,70,620/-', single: 'Rs 2,16,490/-', extraPerson: '30% of adult price' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 101,380', single: 'Rs 81,100', extraPerson: '25% of adult price' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,33,040', single: 'Rs 1,06,430', extraPerson: '25% of adult price' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,66,260', single: 'Rs 1,33,000', extraPerson: '30% of adult price' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 2,70,620', single: 'Rs 2,16,490', extraPerson: '30% of adult price' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3-Star Deluxe Resort', twoPax: 'Rs 82,500/-', single: 'Rs 66,000/-', extraPerson: '25% of adult price' },
-          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,08,660/-', single: 'Rs 86,930/-', extraPerson: '25% of adult price' },
-          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,36,500/-', single: 'Rs 1,09,200/-', extraPerson: '30% of adult price' },
-          { category: '5-Star Luxury Resort', twoPax: 'Rs 2,21,380/-', single: 'Rs 1,77,100/-', extraPerson: '30% of adult price' }
+          { category: '3-Star Deluxe Resort', twoPax: 'Rs 82,500', single: 'Rs 66,000', extraPerson: '25% of adult price' },
+          { category: '4-Star Deluxe Resort', twoPax: 'Rs 1,08,660', single: 'Rs 86,930', extraPerson: '25% of adult price' },
+          { category: '5-Star Deluxe Resort', twoPax: 'Rs 1,36,500', single: 'Rs 1,09,200', extraPerson: '30% of adult price' },
+          { category: '5-Star Luxury Resort', twoPax: 'Rs 2,21,380', single: 'Rs 1,77,100', extraPerson: '30% of adult price' }
         ]
       }
     ],
@@ -2113,19 +2113,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 80,020/-', single: 'Rs 64,010/-', extraPerson: 'Rs 24,006/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 95,680/-', single: 'Rs 76,540/-', extraPerson: 'Rs 28,704/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,26,060/-', single: 'Rs 1,00,850/-', extraPerson: 'Rs 37,818/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 2,36,280/-', single: 'Rs 1,89,020/-', extraPerson: 'Rs 70,884/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 80,020', single: 'Rs 64,010', extraPerson: 'Rs 24,006' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 95,680', single: 'Rs 76,540', extraPerson: 'Rs 28,704' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,26,060', single: 'Rs 1,00,850', extraPerson: 'Rs 37,818' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 2,36,280', single: 'Rs 1,89,020', extraPerson: 'Rs 70,884' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 65,000/-', single: 'Rs 52,000/-', extraPerson: 'Rs 19,500/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 78,140/-', single: 'Rs 62,510/-', extraPerson: 'Rs 23,442/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,03,340/-', single: 'Rs 82,670/-', extraPerson: 'Rs 31,002/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 1,92,520/-', single: 'Rs 1,54,020/-', extraPerson: 'Rs 57,756/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 65,000', single: 'Rs 52,000', extraPerson: 'Rs 19,500' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 78,140', single: 'Rs 62,510', extraPerson: 'Rs 23,442' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 1,03,340', single: 'Rs 82,670', extraPerson: 'Rs 31,002' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 1,92,520', single: 'Rs 1,54,020', extraPerson: 'Rs 57,756' }
         ]
       }
     ],
@@ -2290,19 +2290,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 31,550/-', single: 'Euro 315/-', extraPerson: 'USD 371/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 38,300/-', single: 'Euro 383/-', extraPerson: 'USD 450/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 47880/-', single: 'Euro 478/-', extraPerson: 'USD 563/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 64990/-', single: 'Euro 649/-', extraPerson: 'USD 764/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 31,550', single: 'Euro 315', extraPerson: 'USD 371' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 38,300', single: 'Euro 383', extraPerson: 'USD 450' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 47880', single: 'Euro 478', extraPerson: 'USD 563' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 64990', single: 'Euro 649', extraPerson: 'USD 764' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 25,240/-', single: 'Euro 252/-', extraPerson: 'USD 296/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 30,640/-', single: 'Euro 306/-', extraPerson: 'USD 360/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 38,300/-', single: 'Euro 383/-', extraPerson: 'USD 450/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 51990/-', single: 'Euro 519/-', extraPerson: 'USD 611/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 25,240', single: 'Euro 252', extraPerson: 'USD 296' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 30,640', single: 'Euro 306', extraPerson: 'USD 360' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 38,300', single: 'Euro 383', extraPerson: 'USD 450' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 51990', single: 'Euro 519', extraPerson: 'USD 611' }
         ]
       }
     ],
@@ -2468,19 +2468,19 @@ export const travelPackages: Package[] = [
       {
         season: '1st Oct 2025 - 19th Dec 2025 & 10th Jan 2026 - 31st May 2026',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 34,470/-', single: 'Euro 344/-', extraPerson: 'USD 405/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 41,260/-', single: 'Euro 412/-', extraPerson: 'USD 485/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 53,100/-', single: 'Euro 531/-', extraPerson: 'USD 624/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 92,890/-', single: 'Euro 928/-', extraPerson: 'USD 1092/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 34,470', single: 'Euro 344', extraPerson: 'USD 405' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 41,260', single: 'Euro 412', extraPerson: 'USD 485' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 53,100', single: 'Euro 531', extraPerson: 'USD 624' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 92,890', single: 'Euro 928', extraPerson: 'USD 1092' }
         ]
       },
       {
         season: '1st June 2026 - 30th Sept 2026 (Off Season)',
         categories: [
-          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 27,570 /-', single: 'Euro 324/-', extraPerson: 'USD 259/-' },
-          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 33,080/-', single: 'Euro 389/-', extraPerson: 'USD 311/-' },
-          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 42,480/-', single: 'Euro 499/-', extraPerson: 'USD 399/-' },
-          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 74,310/-', single: 'Euro 874/-', extraPerson: 'USD 699/-' }
+          { category: '3 STAR DELUXE RESORT', twoPax: 'Rs 27,570 ', single: 'Euro 324', extraPerson: 'USD 259' },
+          { category: '4 STAR DELUXE RESORT', twoPax: 'Rs 33,080', single: 'Euro 389', extraPerson: 'USD 311' },
+          { category: '5-STAR DELUXE RESORT', twoPax: 'Rs 42,480', single: 'Euro 499', extraPerson: 'USD 399' },
+          { category: '5-STAR LUXURY RESORT', twoPax: 'Rs 74,310', single: 'Euro 874', extraPerson: 'USD 699' }
         ]
       }
     ],
@@ -4141,10 +4141,10 @@ export const travelPackages: Package[] = [
       {
         "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
         "categories": [
-          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 85,220 /-", "single": "Rs 68,180 /-", "extraPerson": "" },
-          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,10,750 /-", "single": "Rs 88,600 /-", "extraPerson": "" },
-          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,45,260 /-", "single": "Rs 1,16,210 /-", "extraPerson": "" },
-          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,27,950 /-", "single": "Rs 1,82,360 /-", "extraPerson": "" }
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 85,220 ", "single": "", "extraPerson": "Rs 68,180" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,10,750 ", "single": "", "extraPerson": "Rs 88,600" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,45,260 ", "single": "", "extraPerson": "Rs 1,16,210" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,27,950 ", "single": "", "extraPerson": "Rs 1,82,360" }
         ]
       },
     ],
@@ -4407,10 +4407,10 @@ export const travelPackages: Package[] = [
       {
         "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
         "categories": [
-          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 72,080 /-", "single": "Rs 57,660 /-", "extraPerson": "" },
-          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 97,820 /-", "single": "Rs 78,260 /-", "extraPerson": "" },
-          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,24,630 /-", "single": "Rs 99,700 /-", "extraPerson": "" },
-          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,14,520 /-", "single": "Rs 1,71,620 /-", "extraPerson": "" }
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 72,080 ", "single": "", "extraPerson": "Rs 57,660" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 97,820 ", "single": "", "extraPerson": "Rs 78,260" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,24,630 ", "single": "", "extraPerson": "Rs 99,700" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,14,520 ", "single": "", "extraPerson": "Rs 1,71,620:" }
         ]
       },
     ],
@@ -4640,10 +4640,10 @@ export const travelPackages: Package[] = [
       {
         "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
         "categories": [
-          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 72,130 /-", "single": "Rs 57,700 /-", "extraPerson": "" },
-          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 89,620 /-", "single": "Rs 71,700 /-", "extraPerson": "" },
-          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,13,780 /-", "single": "Rs 91,020 /-", "extraPerson": "" },
-          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,22,140 /-", "single": "Rs 1,77,710 /-", "extraPerson": "" }
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 72,130 ", "single": " ", "extraPerson": "Rs 57,700" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 89,620 ", "single": " ", "extraPerson": "Rs 71,700" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,13,780 ", "single": " ", "extraPerson": "Rs 91,020" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,22,140 ", "single": " ", "extraPerson": "Rs 1,77,710" }
         ]
       },
     ],
@@ -4870,10 +4870,10 @@ export const travelPackages: Package[] = [
       {
         "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
         "categories": [
-          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 74,580 /-", "single": "Rs 59,660 /-", "extraPerson": "" },
-          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,00,670 /-", "single": "Rs 80,540 /-", "extraPerson": "" },
-          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,22,970 /-", "single": "Rs 98,380 /-", "extraPerson": "" },
-          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,21,560 /-", "single": "Rs 1,77,250 /-", "extraPerson": "" }
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 74,580 ", "single": "", "extraPerson": "Rs 59,660" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 1,00,670 ", "single": "", "extraPerson": "Rs 80,540" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,22,970 ", "single": "", "extraPerson": "Rs 98,380" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 2,21,560 ", "single": "", "extraPerson": "Rs 1,77,250" }
         ]
       },
     ],
@@ -5098,10 +5098,10 @@ export const travelPackages: Package[] = [
       {
         "season": "01 Jun 2026 – 30 Sep 2026 (Off Season)",
         "categories": [
-          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 64,150 /-", "single": "Rs 51,320 /-", "extraPerson": "" },
-          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 87,240 /-", "single": "Rs 69,800 /-", "extraPerson": "" },
-          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,07,520 /-", "single": "Rs 86,020 /-", "extraPerson": "" },
-          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 1,68,940 /-", "single": "Rs 1,35,150 /-", "extraPerson": "" }
+          { "category": "3 STAR DELUXE RESORT", "twoPax": "Rs 64,150 ", "single": "", "extraPerson": "Rs 51,320" },
+          { "category": "4 STAR DELUXE RESORT", "twoPax": "Rs 87,240 ", "single": "", "extraPerson": "Rs 69,800" },
+          { "category": "5-STAR DELUXE RESORT", "twoPax": "Rs 1,07,520 ", "single": "", "extraPerson": "Rs 86,020" },
+          { "category": "5-STAR LUXURY RESORT", "twoPax": "Rs 1,68,940 ", "single": "", "extraPerson": "Rs 1,35,150" }
         ]
       },
     ],
