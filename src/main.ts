@@ -4,11 +4,12 @@ import { App } from './app/app';
 import * as AOS from 'aos';
 
 bootstrapApplication(App, appConfig)
+  .then(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  })
   .catch((err) => console.error(err));
-
-AOS.init({
-  duration: 1000,
-  easing: 'ease-in-out',
-  once: true,
-  mirror: false
-});

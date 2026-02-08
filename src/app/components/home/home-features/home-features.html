@@ -22,9 +22,9 @@
             class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
             <swiper-slide *ngFor="let f of features">
                 <div
-                    class="relative  rounded-3xl overflow-hidden flex flex-col items-center justify-center text-center min-h-[420px] transition-all duration-700">
+                    class="relative rounded-3xl overflow-hidden flex flex-col items-center text-center min-h-[420px] transition-all duration-700">
                     <img [src]="f.image" [alt]="f.title" class="absolute inset-0 w-full h-full object-cover" />
-                    <div class="relative z-10 p-10 text-white space-y-5">
+                    <div class="relative z-10 md:p-10 p-5 text-white space-y-5">
                         <div class="w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4 shadow-md"
                             [ngClass]="f.iconBg">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" [ngClass]="f.iconColor"
