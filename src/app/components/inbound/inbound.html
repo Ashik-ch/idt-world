@@ -37,48 +37,124 @@
             </div>
 
             <!-- 🧳 Filtered List -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl">
-                <div *ngFor="let pkg of visiblePackages" class="group cursor-pointer" (click)="navigateToState(pkg.id)">
-                    <div class="rounded-xl p-6 text-white hover:shadow-lg transition-all duration-300 ease-in-out relative overflow-hidden"
-                        data-aos="zoom-in-right" [ngClass]="pkg.gradient ? 'bg-gradient-to-br ' + pkg.gradient : ''"
-                        [ngStyle]="
-              pkg.bgImage
-                ? {
-                    'background-image': 'url(' + pkg.bgImage + ')',
-                    'background-size': 'cover',
-                    'background-position': 'center'
-                  }
-                : {}
-            ">
-                        <div *ngIf="pkg.bgImage"
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all"></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-semibold">{{ pkg.name | titlecase }}</h3>
-                                <div class="space-x-3">
-                                    <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
-                                        target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"
-                                        title="View PDF">
-                                        <i class="pi pi-file-pdf text-md text-white hover:scale-125"></i>
-                                    </a>
-                                    <button (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
-                                        class="transition" title="Download PDF">
-                                        <i class="pi pi-download text-md text-white hover:scale-125"></i>
-                                    </button>
-                                    <i class="pi pi-arrow-right text-md hover:scale-125"></i>
-                                </div>
-                            </div>
-                            <p class="mb-2 italic text-sm">{{ pkg.tagline }}</p>
-                            <p class="text-sm opacity-90">{{ pkg.description | titlecase }}</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl">
 
-                <!-- No Results Message -->
-                <div *ngIf="visiblePackages.length === 0" class="col-span-full text-gray-500 italic py-8">
-                    No matching packages found.
-                </div>
-            </div>
+  <div
+    *ngFor="let pkg of visiblePackages"
+    class="group cursor-pointer"
+    (click)="navigateToState(pkg.id)"
+  >
+
+    <div
+      class="
+        relative overflow-hidden rounded-2xl p-6 text-white
+        transition-transform transition-shadow duration-300 ease-out
+        will-change-transform
+        group-hover:-translate-y-2
+        group-hover:scale-[1.02]
+        group-hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.45)]
+      "
+      data-aos="zoom-in-right"
+      [ngClass]="pkg.gradient ? 'bg-gradient-to-br ' + pkg.gradient : ''"
+      [ngStyle]="
+        pkg.bgImage
+          ? {
+              'background-image': 'url(' + pkg.bgImage + ')',
+              'background-size': 'cover',
+              'background-position': 'center'
+            }
+          : {}
+      "
+    >
+
+      <!-- background darken on hover -->
+      <div
+        *ngIf="pkg.bgImage"
+        class="
+          absolute inset-0 bg-black/40
+          transition-colors duration-300
+          group-hover:bg-black/30
+        ">
+      </div>
+
+      <!-- soft glow overlay -->
+      <div
+        class="
+          pointer-events-none absolute inset-0
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-300
+          bg-gradient-to-br from-white/15 via-transparent to-transparent
+        ">
+      </div>
+
+      <!-- content -->
+      <div class="relative z-10">
+
+        <div class="flex items-center justify-between mb-4">
+
+          <h3
+            class="
+              text-lg font-semibold
+              transition-colors transition-transform duration-300
+               group-hover:translate-x-0.5
+            ">
+            {{ pkg.name | titlecase }}
+          </h3>
+
+          <div class="flex items-center space-x-3">
+
+            <a
+              href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-transform duration-300 hover:scale-125"
+              title="View PDF"
+            >
+              <i class="pi pi-file-pdf text-md"></i>
+            </a>
+
+            <button
+              (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
+              class="transition-transform duration-300 hover:scale-125"
+              title="Download PDF"
+            >
+              <i class="pi pi-download text-md"></i>
+            </button>
+
+            <i
+              class="
+                pi pi-arrow-right text-md
+                transition-transform duration-300
+                group-hover:translate-x-1.5
+              ">
+            </i>
+
+          </div>
+        </div>
+
+        <p
+          class="
+            mb-2 italic text-sm opacity-80
+            transition-opacity duration-300
+            group-hover:opacity-100
+          ">
+          {{ pkg.tagline }}
+        </p>
+
+        <p
+          class="
+            text-sm opacity-80
+            transition-opacity duration-300
+            group-hover:opacity-100
+          ">
+          {{ pkg.description | titlecase }}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
 
         <app-inbound-map></app-inbound-map>
