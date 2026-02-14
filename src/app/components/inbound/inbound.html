@@ -1,62 +1,53 @@
 <app-quotes [quote]="quotes"></app-quotes>
 <div class="min-h-screen bg-gray-50/30">
-    <div class="relative text-center">
-        <div class="bg-white p-8 lg:px-[9rem] md:px-[6rem]  shadow-sm bg-center mb-4 bg-cover"
-            style="background-image: url('assets/images/redBg13.jpg'); ">
-            <h1 class="text-xl md:text-4xl font-bold font-serif rounded-2xl py-3 border border-red-500 inline-block">
-                <span class="text-white bg-red-500 p-3 rounded-l-2xl">Inbound</span>
-                <span class="text-red-500 ms-2 p-3">Travel Packages</span>
-            </h1>
-            <p
-                class="text-lg md:text-lg text-gray-700 max-w-5xl mx-auto leading-relaxed text-justify py-10 md:p-0 mb-5">
-                Discover the beauty of India with our carefully curated domestic travel packages.
-                From the snow-capped Himalayas to the pristine beaches of the south,
-                explore diverse landscapes and cultures.
-            </p>
+  <div class="relative text-center">
+    <div class="bg-white p-8 lg:px-[9rem] md:px-[6rem]  shadow-sm bg-center mb-4 bg-cover"
+      style="background-image: url('assets/images/redBg13.jpg'); ">
+      <h1 class="text-xl md:text-4xl font-bold font-serif rounded-2xl py-3 border border-red-500 inline-block">
+        <span class="text-white bg-red-500 p-1 md:p-3 py-4 rounded-l-2xl">Inbound</span>
+        <span class="text-red-500 ms-2 p-1 md:p-3">Travel Packages</span>
+      </h1>
+      <p class="text-lg md:text-lg text-gray-700 max-w-5xl mx-auto leading-relaxed text-justify py-10 md:p-0 mb-5">
+        Discover the beauty of India with our carefully curated domestic travel packages.
+        From the snow-capped Himalayas to the pristine beaches of the south,
+        explore diverse landscapes and cultures.
+      </p>
 
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
 
-                <!-- FILTER TABS -->
-                <div class="flex flex-wrap justify-center md:justify-start gap-2">
-                    <button *ngFor="let tab of filterTabs" (click)="setFilter(tab.id)" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap
+        <!-- FILTER TABS -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-2">
+          <button *ngFor="let tab of filterTabs" (click)="setFilter(tab.id)" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap
                      border transition-all duration-300 shadow-sm" [ngClass]="activeFilter === tab.id
                 ? 'bg-white text-red-500 border-red-300 shadow-md'
                 : 'bg-red-500 text-white border-red-300 hover:bg-red-50 hover:text-red-600 hover:border-red-400'">
-                        {{ tab.label }}
-                    </button>
-                </div>
+            {{ tab.label }}
+          </button>
+        </div>
 
-                <!-- SEARCH -->
-                <div class="flex justify-center md:justify-end">
-                    <div class="relative w-full max-w-full md:max-w-[260px]">
-                        <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" class="w-full py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-full shadow-sm
+        <!-- SEARCH -->
+        <div class="flex justify-center md:justify-end">
+          <div class="relative w-full max-w-full md:max-w-[260px]">
+            <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" class="w-full py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-full shadow-sm
                        focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition" />
-                        <i class="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                    </div>
-                </div>
-            </div>
+            <i class="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          </div>
+        </div>
+      </div>
 
-            <!-- 🧳 Filtered List -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl">
+      <!-- 🧳 Filtered List -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl">
 
-  <div
-    *ngFor="let pkg of visiblePackages"
-    class="group cursor-pointer"
-    (click)="navigateToState(pkg.id)"
-  >
+        <div *ngFor="let pkg of visiblePackages" class="group cursor-pointer" (click)="navigateToState(pkg.id)">
 
-    <div
-      class="
+          <div class="
         relative overflow-hidden rounded-2xl p-6 text-white
         transition-transform transition-shadow duration-300 ease-out
         will-change-transform
         group-hover:-translate-y-2
         group-hover:scale-[1.02]
         group-hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.45)]
-      "
-      data-aos="zoom-in-right"
-      [ngClass]="pkg.gradient ? 'bg-gradient-to-br ' + pkg.gradient : ''"
-      [ngStyle]="
+      " data-aos="zoom-in-right" [ngClass]="pkg.gradient ? 'bg-gradient-to-br ' + pkg.gradient : ''" [ngStyle]="
         pkg.bgImage
           ? {
               'background-image': 'url(' + pkg.bgImage + ')',
@@ -64,99 +55,84 @@
               'background-position': 'center'
             }
           : {}
-      "
-    >
+      ">
 
-      <!-- background darken on hover -->
-      <div
-        *ngIf="pkg.bgImage"
-        class="
+            <!-- background darken on hover -->
+            <div *ngIf="pkg.bgImage" class="
           absolute inset-0 bg-black/40
           transition-colors duration-300
           group-hover:bg-black/30
         ">
-      </div>
+            </div>
 
-      <!-- soft glow overlay -->
-      <div
-        class="
+            <!-- soft glow overlay -->
+            <div class="
           pointer-events-none absolute inset-0
           opacity-0 group-hover:opacity-100
           transition-opacity duration-300
           bg-gradient-to-br from-white/15 via-transparent to-transparent
         ">
-      </div>
+            </div>
 
-      <!-- content -->
-      <div class="relative z-10">
+            <!-- content -->
+            <div class="relative z-10">
 
-        <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center justify-between mb-4">
 
-          <h3
-            class="
+                <h3 class="
               text-lg font-semibold
               transition-colors transition-transform duration-300
                group-hover:translate-x-0.5
             ">
-            {{ pkg.name | titlecase }}
-          </h3>
+                  {{ pkg.name | titlecase }}
+                </h3>
 
-          <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-3">
 
-            <a
-              href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transition-transform duration-300 hover:scale-125"
-              title="View PDF"
-            >
-              <i class="pi pi-file-pdf text-md"></i>
-            </a>
+                  <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" class="transition-transform duration-300 hover:scale-125"
+                    title="View PDF">
+                    <i class="pi pi-file-pdf text-md"></i>
+                  </a>
 
-            <button
-              (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
-              class="transition-transform duration-300 hover:scale-125"
-              title="Download PDF"
-            >
-              <i class="pi pi-download text-md"></i>
-            </button>
+                  <button (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
+                    class="transition-transform duration-300 hover:scale-125" title="Download PDF">
+                    <i class="pi pi-download text-md"></i>
+                  </button>
 
-            <i
-              class="
+                  <i class="
                 pi pi-arrow-right text-md
                 transition-transform duration-300
                 group-hover:translate-x-1.5
               ">
-            </i>
+                  </i>
 
-          </div>
-        </div>
+                </div>
+              </div>
 
-        <p
-          class="
+              <p class="
             mb-2 italic text-sm opacity-80
             transition-opacity duration-300
             group-hover:opacity-100
           ">
-          {{ pkg.tagline }}
-        </p>
+                {{ pkg.tagline }}
+              </p>
 
-        <p
-          class="
+              <p class="
             text-sm opacity-80
             transition-opacity duration-300
             group-hover:opacity-100
           ">
-          {{ pkg.description | titlecase }}
-        </p>
+                {{ pkg.description | titlecase }}
+              </p>
 
-      </div>
-    </div>
-  </div>
-</div>
-
+            </div>
+          </div>
         </div>
+      </div>
 
-        <app-inbound-map></app-inbound-map>
     </div>
+
+    <app-inbound-map></app-inbound-map>
+  </div>
 </div>

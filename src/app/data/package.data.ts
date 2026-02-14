@@ -178,8 +178,7 @@ export const travelPackages: Package[] = [
       },
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/b.jpg',
-
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [
             { name: 'West Wood Resort', image: 'assets/images/hotels/westwood.jpg', description: 'Cozy rooms with scenic river views and warm hospitality.' },
@@ -690,7 +689,7 @@ export const travelPackages: Package[] = [
     hotelPackages: [
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/hotels/tea-castle.jpg',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [
             { name: 'West Wood Resort', image: 'assets/images/hotels/westwood.jpg', description: 'Cozy rooms & warm hospitality' },
@@ -822,7 +821,7 @@ export const travelPackages: Package[] = [
     ],
 
     itineraryOverview: [
-      { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet the IDT representative.', 'Drive to Munnar (approx. 3–4 hours).', 'Visit Tea Museum and Tea Gardens en route; spice shopping.', 'Check in at hotel and relax. Overnight at the hotel.'], image: 'assets/images/hotels/munnar-overview.jpg' },
+      { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet the IDT representative.', 'Drive to Munnar (approx. 3–4 hours).', 'Visit Tea Museum and Tea Gardens en route; spice shopping.', 'Check in at hotel and relax. Overnight at the hotel.'], image: 'assets/images/munnar.jpg' },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Full-day sightseeing: Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station.', 'Leisure time and overnight at the hotel.'], image: 'assets/images/hotels/westwood.jpg' },
       { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast and depart for Thekkady (morning).', 'Check in around 11:30–12:00 at the private waiting lounge.', 'Evening boat ride on Periyar Lake and Kalarippayattu show (subject to schedule). Overnight at hotel.'], image: 'assets/images/hotels/thekkady-overview.jpg' },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Morning elephant ride and “elephant moments” (optional).', 'Jungle safari with guide in Periyar region.', 'Evening leisure and overnight at hotel.'], image: 'assets/images/hotels/poetree.jpg' },
@@ -861,7 +860,7 @@ export const travelPackages: Package[] = [
     hotelPackages: [
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [{ name: 'West Wood Resort', image: 'assets/images/hotels/westwood.jpg', description: '' }, { name: 'Eastend Hotel', image: 'assets/images/hotels/eastend.jpg', description: '' }, { name: 'Trivers Resort', image: 'assets/images/hotels/trivers.jpg', description: '' }, { name: 'Tea Castle', image: 'assets/images/hotels/tea-castle.jpg', description: '' }
           ],
@@ -1475,7 +1474,7 @@ export const travelPackages: Package[] = [
     hotelPackages: [
       {
         destination: 'Munnar (2N)',
-        image: '',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [
             { name: 'West Wood Resort', image: '', description: '' },
@@ -1704,7 +1703,7 @@ export const travelPackages: Package[] = [
       },
       {
         destination: 'Munnar (2N)',
-        image: '',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Trivers Resort', image: '', description: '' }, { name: 'Tea Castle', image: '', description: '' }],
           '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Fog Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
@@ -2045,7 +2044,7 @@ export const travelPackages: Package[] = [
       },
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [{ name: 'West Wood Resort', image: 'assets/images/hotels/westwood.jpg', description: '' }, { name: 'Eastend Hotel', image: 'assets/images/hotels/eastend.jpg', description: '' }, { name: 'Trivers Resort', image: 'assets/images/hotels/trivers.jpg', description: '' }, { name: 'Tea Castle', image: 'assets/images/hotels/tea-castle.jpg', description: '' }],
           '4-Star Deluxe': [{ name: 'Rivulet Resort', image: 'assets/images/hotels/rivulet.jpg', description: '' }, { name: 'Elephant Passage Resort', image: 'assets/images/hotels/elephant-passage.jpg', description: '' }, { name: 'Fog Resort', image: 'assets/images/hotels/fog.jpg', description: '' }, { name: 'Tall Trees Resort', image: 'assets/images/hotels/tall-trees.jpg', description: '' }],
@@ -2248,7 +2247,7 @@ export const travelPackages: Package[] = [
       },
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Tea Castle', image: '', description: '' }],
           '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
@@ -2426,7 +2425,7 @@ export const travelPackages: Package[] = [
 
       {
         destination: 'Munnar (2N)',
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/munnar.jpg',
         categories: {
           '3-Star Deluxe': [{ name: 'West Wood Resort', image: '', description: '' }, { name: 'Eastend Hotel', image: '', description: '' }, { name: 'Tea Castle Resort', image: '', description: '' }],
           '4-Star Deluxe': [{ name: 'Rivulet Resort', image: '', description: '' }, { name: 'Elephant Passage Resort', image: '', description: '' }, { name: 'Tall Trees Resort', image: '', description: '' }],
@@ -2608,7 +2607,7 @@ export const travelPackages: Package[] = [
       },
       {
         "destination": "Periyar (2N)",
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/periyar.jpg',
         "categories": {
           "3-Star Deluxe": [{ "name": "Abad Green Forest", image: '', description: '' }, { "name": "Pepper Vine Resort", image: '', description: '' }, { "name": "Hotel Lincoln Square", image: '', description: '' }],
           "4-Star Deluxe": [{ "name": "Mountain Courtyard Resort", image: '', description: '' }, { "name": "Forest Canopy Resort", image: '', description: '' }, { "name": "Reen Resorts", image: '', description: '' }],
@@ -3024,7 +3023,7 @@ export const travelPackages: Package[] = [
       },
       {
         "destination": "Periyar(2N",
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/hotels/periyars.jpg',
         "categories": {
           "3-Star Deluxe": [{ name: "Abad Green Forest", image: '', description: '' }, { name: "Pepper Vine Resort", image: '', description: '' }, { name: "Hotel Lincoln Square", image: '', description: '' }],
           "4-Star Deluxe": [{ name: "Mountain Courtyard Resort", image: '', description: '' }, { name: "Forest Canopy Resort", image: '', description: '' }, { name: "Reen Resorts", image: '', description: '' }],
@@ -3034,7 +3033,7 @@ export const travelPackages: Package[] = [
       },
       {
         "destination": "Munnar (1)",
-        image: 'assets/images/hotels/munnar.jpg',
+        image: 'assets/images/munnar.jpg',
         "categories": {
           "3-Star Deluxe": [{ name: "West Wood Resort", image: '', description: '' }, { name: "Eastend Hotel", image: '', description: '' }, { name: "Trivers Resort", image: '', description: '' }, { name: "Tea Castle", image: '', description: '' }],
           "4-Star Deluxe": [{ name: "Rivulet Resort", image: '', description: '' }, { name: "Elephant Passage Resort", image: '', description: '' }, { name: "Fog Resort", image: '', description: '' }, { name: "Tall Trees Resort", image: '', description: '' }],
@@ -5133,7 +5132,7 @@ export const inboundPackages = [
   { id: 'kerala-9', name: 'CHARM OF KERALA AND BORDER DESTINATIONS - 2', category: "kerala-border", gradient: 'from-green-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: 'MADURAI-RAMESWARAM-KANYAKUMARI-KOVALAM- KUMARAKOM HOUSEBOAT - COCHIN', bgImage: 'assets/images/kerala1.jpg' },
   { id: 'kerala-10', name: 'CHARM OF KERALA AND BORDER DESTINATIONS - 3', category: "kerala-border", gradient: 'from-green-400 to-green-600', tagline: '06 NIGHTS / 07 DAYS', description: 'COIMBATORE-OOTY-MUNNAR-THEKKADY-KUMARAKOM HOUSE BOAT-COCHIN', bgImage: '/assets/images/kerala11.jpg' },
   { id: 'kerala-colours-1', name: 'COLOURS OF KERALA TOUR - 1', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '05 NIGHTS / 06 DAYS', description: 'COCHIN - PERIYAR - MUNNAR - KUMARAKOM - COCHIN', bgImage: 'assets/images/kerala9.jpg' },
-  { id: 'kerala-colours-2', name: 'COLOURS OF KERALA TOUR - 2', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '06 NIGHTS / 07 DAYS', description: 'COCHIN - OOTY - VYTHIRI - CALICUT AIRPORT', bgImage: 'assets/images/kerala13.jpg' },
+  { id: 'kerala-colours-2', name: 'COLOURS OF KERALA TOUR - 2', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '06 NIGHTS / 07 DAYS', description: 'COCHIN - OOTY - VYTHIRI - CALICUT AIRPORT', bgImage: 'assets/images/munnar.jpg' },
   { id: 'kerala-colours-3', name: 'COLOURS OF KERALA TOUR - 3', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '07 NIGHTS / 08 DAYS', description: 'COCHIN - MUNNAR - PERIYAR - KUMARAKOM (HOUSEBOAT) - COCHIN', bgImage: 'assets/images/kerala14.jpg' },
   { id: 'kerala-colours-4', name: 'COLOURS OF KERALA TOUR - 4', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '12 NIGHTS / 13 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - MADURAI - PERIYAR - KUMARAKOM - ALLEPPEY - COCHIN', bgImage: 'assets/images/kerala12.jpg' },
   { id: 'kerala-colours-5', name: 'COLOURS OF KERALA TOUR - 5', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - KUMARAKOM - THEKKADY - MUNNAR - COCHIN', bgImage: 'assets/images/kerala15.jpg' },

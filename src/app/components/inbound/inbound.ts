@@ -68,12 +68,12 @@ export class Inbound {
   // Package filters
   filterTabs = [
     { id: 'all', label: 'All Packages' },
-    { id: 'kerala-domestic', label: 'KL: packages(Domestic Guests)' },
-    { id: 'kerala-foreign', label: 'KL: Packages (Foreign Guests)' },
-    { id: 'kerala-border', label: 'KL Packages with Border Destinations' },
-    { id: 'kerala-divinity', label: 'KL Divinity Tour Packages' },
-    { id: 'kerala-resort', label: 'KL Resort Packages' },
-    { id: 'kerala-wellness', label: 'KL Wellness Tours' },
+    { id: 'kerala-domestic', label: 'Kerala: packages(Domestic Guests)' },
+    { id: 'kerala-foreign', label: 'Kerala: Packages (Foreign Guests)' },
+    { id: 'kerala-border', label: 'Kerala Packages with Border Destinations' },
+    { id: 'kerala-divinity', label: 'Kerala Divinity Tour Packages' },
+    { id: 'kerala-resort', label: 'Kerala Resort Packages' },
+    { id: 'kerala-wellness', label: 'Kerala Wellness Tours' },
     { id: 'south-india', label: 'South India Tour Packages' },
   ];
 
