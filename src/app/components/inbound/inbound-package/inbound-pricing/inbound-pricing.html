@@ -4,7 +4,7 @@
     </h2>
 
     <section class="space-x-8 flex justify-between">
-        <div *ngFor="let season of pricing" class="rounded-xl shadow-lg p-6 border-2"
+        <div *ngFor="let season of pricing" class="rounded-xl shadow-lg p-3 border-2"
             [ngClass]="getSeasonClass(season.season) ? 'bg-white border-red-300' : 'bg-white border-red-300'">
             <h3 class="text-xl font-bold mb-6 text-center text-gray-900">{{ season.season }}</h3>
             <div class="overflow-x-auto">
