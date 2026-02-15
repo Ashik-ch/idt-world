@@ -1,0 +1,32 @@
+<div *ngIf="isVisible"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn">
+    <div
+        class="relative w-[90%] max-w-md p-8 rounded-3xl bg-gradient-to-br from-red-900/60 via-orange-900/70 to-pink/80 border border-red-400/20 shadow-[0_0_60px_rgba(168,85,247,0.35)] backdrop-blur-2xl animate-scaleIn">
+        <!-- Close Button -->
+        <!-- <button (click)="close()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center
+             rounded-full bg-white/10 text-white hover:bg-red-500/40
+             transition text-lg">
+            ✕
+        </button> -->
+
+        <!-- Glow Accent -->
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-red-600/30 blur-[80px] rounded-full"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center space-y-5">
+            <h2
+                class="text-3xl font-bold bg-gradient-to-r from-red-300 via-pink-300 to-fuchsia-400 bg-clip-text text-transparent">
+                Welcome to <span class="text-white">IDT</span>
+            </h2>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+                {{ randomMessage }}
+            </p>
+
+            <button (click)="close()"
+                class="mt-4 px-6 py-3 rounded-xl text-sm font-semibold tracking-wide bg-gradient-to-r from-red-600 to-fuchsia-600 text-white shadow-lg hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300">
+                Explore Now →
+            </button>
+        </div>
+    </div>
+</div>
