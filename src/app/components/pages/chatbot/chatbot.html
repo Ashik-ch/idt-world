@@ -37,7 +37,7 @@
         </button>
     </div>
     <div class="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50">
-        <div *ngIf="!userName" class="flex flex-col gap-3">
+        <div *ngIf="step === 1" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 Hi 👋 I'm <b>ZaraGo</b>, your travel assistant!
                 What’s your <b>name</b>?
@@ -49,7 +49,7 @@
         </div>
 
         <!-- Ask Contact -->
-        <div *ngIf="userName && !userContact" class="flex flex-col gap-3">
+        <div *ngIf="step === 2" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 Nice to meet you, {{ userName }} 😊
                 Can I have your <b>contact number</b> so our expert can reach out?

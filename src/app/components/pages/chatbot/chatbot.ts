@@ -10,11 +10,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './chatbot.html',
   styleUrl: './chatbot.scss'
 })
+
 export class Chatbot {
+
   isOpen = false;
   userName = '';
   userContact = '';
-  currentStep = chatFlow[0];
+  currentStep: any = null;   // IMPORTANT: start as null
+  step = 1;                  // 1 = name, 2 = contact, 3 = chat
 
   constructor(private chatbotService: ChatbotService) { }
 
@@ -24,17 +27,28 @@ export class Chatbot {
 
   openChat() {
     this.isOpen = !this.isOpen;
-    this.currentStep = chatFlow[0];
+
+    if (this.isOpen) {
+      this.resetChat();
+    }
+  }
+
+  resetChat() {
+    this.userName = '';
+    this.userContact = '';
+    this.step = 1;
+    this.currentStep = null;
   }
 
   askContact() {
     if (this.userName.trim()) {
-      this.userContact = '';
+      this.step = 2;
     }
   }
 
   startChatFlow() {
     if (this.userContact.trim()) {
+      this.step = 3;
       this.currentStep = chatFlow[0];
     }
   }

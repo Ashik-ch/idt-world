@@ -24,9 +24,9 @@ export const chatFlow: ChatStep[] = [
         id: 'inbound',
         question: '🇮🇳 Wonderful! Which region in India interests you the most?',
         options: [
-            { text: '🌴 South India', next: 'inbound_south' },
+            { text: '🌴 Kerala', next: 'inbound_kerala' },
+            { text: '🏜️ South India', next: 'inbound_south' },
             { text: '🏔️ North India', next: 'inbound_north' },
-            { text: '🏜️ West India', next: 'inbound_west' },
             { text: '⬅️ Back', next: 'welcome' },
         ],
     },
@@ -49,8 +49,8 @@ export const chatFlow: ChatStep[] = [
         ],
     },
     {
-        id: 'inbound_west',
-        question: '🌅 Rajasthan and Gujarat offer vibrant culture and royal stays. Want us to share the best deals?',
+        id: 'inbound_kerala',
+        question: '🌅 Kerala is known for its backwaters, beaches, and lush greenery. Want us to share the best deals?',
         options: [
             { text: 'Yes, please!', next: 'end' },
             { text: 'Back', next: 'inbound' },
