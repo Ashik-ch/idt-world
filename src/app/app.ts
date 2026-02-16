@@ -17,4 +17,10 @@ export class App {
 
   ngOnInit() {
   }
+  welcomeClosed = false;
+
+  onWelcomeClosed(value: boolean) {
+    this.welcomeClosed = value;
+  }
+
 }

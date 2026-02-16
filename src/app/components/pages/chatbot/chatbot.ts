@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { chatFlow } from '../../../data/chatbot.data';
 import { ChatbotService } from '../../../services/chatbot-service';
@@ -12,8 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class Chatbot {
-
-  isOpen = false;
+  @Input() isOpen = false;
   userName = '';
   userContact = '';
   currentStep: any = null;   // IMPORTANT: start as null

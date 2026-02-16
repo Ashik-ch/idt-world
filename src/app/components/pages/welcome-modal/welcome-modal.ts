@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, Output, EventEmitter } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,21 +9,25 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './welcome-modal.scss',
 })
 export class WelcomeModal implements OnInit {
-
   isVisible = false;
   randomMessage = '';
 
-  ngOnInit(): void {
-    const hasSeen = localStorage.getItem('welcomeShown');
+  @Output() closed = new EventEmitter<boolean>();
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
-    if (!hasSeen) {
-      setTimeout(() => {
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      const hasSeen = localStorage.getItem('welcomeSeen');
+
+      if (!hasSeen) {
         this.isVisible = true;
-      }, 1500);
+        this.setRandomMessage();
+        localStorage.setItem('welcomeSeen', 'true');
+      } else {
+        this.isVisible = false;
+      }
     }
-    this.setRandomMessage();
   }
-
 
   setRandomMessage() {
     const randomIndex = Math.floor(Math.random() * this.welcomeText.length);
@@ -55,8 +59,8 @@ export class WelcomeModal implements OnInit {
 
   close() {
     console.log('button clicked');
-
     this.isVisible = false;
     localStorage.setItem('welcomeShown', 'true');
+    this.closed.emit(true);
   }
 }
