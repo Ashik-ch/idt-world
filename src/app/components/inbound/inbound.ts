@@ -68,8 +68,8 @@ export class Inbound {
   // Package filters
   filterTabs = [
     { id: 'all', label: 'All Packages' },
-    { id: 'kerala-domestic', label: 'Kerala: packages(Domestic Guests)' },
-    { id: 'kerala-foreign', label: 'Kerala: Packages (Foreign Guests)' },
+    { id: 'kerala-domestic', label: 'Kerala Packages(Domestic Guests)' },
+    { id: 'kerala-foreign', label: 'Kerala Packages (Foreign Guests)' },
     { id: 'kerala-border', label: 'Kerala Packages with Border Destinations' },
     { id: 'kerala-divinity', label: 'Kerala Divinity Tour Packages' },
     { id: 'kerala-resort', label: 'Kerala Resort Packages' },

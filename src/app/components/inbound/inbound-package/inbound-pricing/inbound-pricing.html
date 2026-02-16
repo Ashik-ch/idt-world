@@ -3,12 +3,12 @@
         <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">💰</span> Package Pricing
     </h2>
 
-    <section class="space-x-8 flex justify-between">
+    <section class="flex flex-col lg:flex-row gap-8">
         <div *ngFor="let season of pricing" class="rounded-xl shadow-lg p-3 border-2"
             [ngClass]="getSeasonClass(season.season) ? 'bg-white border-red-300' : 'bg-white border-red-300'">
             <h3 class="text-xl font-bold mb-6 text-center text-gray-900">{{ season.season }}</h3>
-            <div class="overflow-x-auto">
-                <table class="min-w-full border-collapse text-gray-800">
+            <div class="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-red-400">
+                <table class="min-w-full border border-gray-200">
                     <thead>
                         <tr [ngClass]="getSeasonClass(season.season) ? 
                         'bg-red-500 text-white' :
