@@ -3,7 +3,7 @@
         <!-- Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Left Image -->
-            <div class="h-80 md:h-full" data-aos="fade-in">
+            <div class="h-80 md:h-full">
                 <div class="w-full h-full rounded-xl overflow-hidden shadow-xl">
                     <div class="w-full h-full bg-cover bg-center"
                         style="background-image: url('assets/images/service3.png');">
@@ -19,8 +19,7 @@
                 <div *ngFor="let service of services; let i = index" class="p-4 rounded-2xl bg-gradient-to-br from-red-500 to-red-600
                  shadow-lg text-white cursor-pointer
                  transform hover:scale-105 hover:shadow-2xl
-                 transition-transform duration-300 ease-out" (click)="openModal(service)" data-aos="zoom-in"
-                    [attr.data-aos-delay]="i * 150">
+                 transition-transform duration-300 ease-out" (click)="openModal(service)">
 
                     <h3 class="text-xl font-semibold mb-1">
                         <i [class]="service.icon + ' text-2xl mr-3'"></i>
