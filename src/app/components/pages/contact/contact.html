@@ -110,15 +110,18 @@
 
             <!-- Right: Contact Form -->
             <div class="bg-gray-50 rounded-2xl p-6 shadow-lg flex flex-col space-y-4">
-                <form class="space-y-3">
-                    <input type="text" placeholder="Full Name"
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-3">
+                    <input type="text" formControlName="name" placeholder="Full Name"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none">
-                    <input type="email" placeholder="Email"
+                    <input type="email" formControlName="email" placeholder="Email"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none">
-                    <textarea rows="4" placeholder="Comment or message"
+                    <textarea rows="4" formControlName="message" placeholder="Comment or message"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
-                    <button type="submit"
-                        class="w-full bg-red-600 text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition">Submit</button>
+                    <button type="submit" [disabled]="contactForm.invalid || isSubmitting"
+                        class="w-full font-semibold py-2 rounded-lg transition
+                             bg-red-600 text-white hover:bg-red-700 disabled:bg-red-800 disabled:text-gray-50 disabled:cursor-not-allowed disabled:hover:bg-gray-300">
+                        Submit
+                    </button>
                 </form>
             </div>
 
@@ -136,3 +139,28 @@
 
     </div>
 </section>
+
+<!-- Success Popup -->
+<div *ngIf="showSuccessPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+
+    <div class="bg-white rounded-2xl shadow-xl p-6 w-[90%] max-w-sm text-center animate-fadeIn">
+
+        <div class="text-green-600 text-4xl mb-3">
+            ✔
+        </div>
+
+        <h2 class="text-xl font-semibold mb-2">
+            Message Sent!
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+            Your message has been sent successfully.
+        </p>
+
+        <button (click)="showSuccessPopup = false"
+            class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
+            Close
+        </button>
+
+    </div>
+</div>
