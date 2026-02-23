@@ -1,9 +1,9 @@
-<section data-animate="pricing" class="bg-white rounded-2xl shadow-xl p-6">
+<section data-animate="pricing" class="bg-white shadow-xl p-6">
     <h2 class="text-xl md:text-2xl font-bold mb-2 text-red-500 pb-4">
         <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4">💰</span> Package Pricing
     </h2>
 
-    <section class="flex flex-col lg:flex-row gap-8">
+    <section class="flex flex-col lg:flex-row gap-4">
         <div *ngFor="let season of pricing" class="rounded-xl shadow-lg p-3 border-2"
             [ngClass]="getSeasonClass(season.season) ? 'bg-white border-red-300' : 'bg-white border-red-300'">
             <h3 class="text-xl font-bold mb-6 text-center text-gray-900">{{ season.season }}</h3>
@@ -21,10 +21,10 @@
                     <tbody>
                         <tr *ngFor="let category of season.categories"
                             class="border-b hover:bg-gray-100 transition-colors">
-                            <td class="py-3 px-5 font-medium">{{ category.category }}</td>
-                            <td class="py-3 px-5 text-center font-bold text-red-600">{{ formatPrice(category.twoPax)
+                            <td class="p-3 font-medium">{{ category.category }}</td>
+                            <td class="p-3 text-center font-bold text-red-600">{{ formatPrice(category.twoPax)
                                 }}</td>
-                            <td class="py-3 px-5 text-center font-bold text-red-600">{{
+                            <td class="p-3 text-center font-bold text-red-600">{{
                                 formatPrice(category.extraPerson) }}</td>
                         </tr>
                     </tbody>
