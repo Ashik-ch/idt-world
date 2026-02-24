@@ -1,139 +1,125 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
-import emailjs from 'emailjs-com';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import emailjs from '@emailjs/browser';
+
 
 @Component({
   selector: 'app-booking',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './booking.html',
   styleUrl: './booking.scss'
 })
 export class Booking {
-  showTourForm = true;
-  showSuccessModal = false;
-  formData = {
-    name: '',
-    number: '',
-    adults: 1,
-    children: 0,
-    arrival: '',
-    return: '',
-    rooms: 1,
-    extraBeds: 0,
-    packageType: '',
-    transportType: '',
-  };
+  TEMPLATE_ID = 'template_x2wtl4h';
+  SERVICE_ID = 'service_9s4kon6';
+  PUBLIC_KEY = 'pkuaYiUyVh4a8z7Pq';
 
-  submitTourForm(form: NgForm) {
-    if (!this.formData.name || !this.formData.number || !this.formData.adults) {
-      form.control.markAllAsTouched();
-      alert('⚠️ Please fill all mandatory fields (Name, Contact, Adults)');
+  bookingForm!: FormGroup;
+  activeForm: 'tour' | 'change' = 'tour';
+  isSubmitting = false;
+  showSuccessModal = false;
+  formSubmitted = false;
+
+  constructor(private fb: FormBuilder) {
+    this.initForm();
+  }
+
+  private initForm() {
+    this.bookingForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      adults: [1, Validators.required],
+      children: [0, Validators.required],
+      arrivalDate: ['',],
+      returnDate: ['',],
+      rooms: [1,],
+      extraBed: [0,],
+      packageType: ['',],
+      transportType: [''],
+      message: ['']
+    });
+  }
+
+  onSubmit() {
+    this.formSubmitted = true;
+    if (this.bookingForm.invalid) {
+      this.bookingForm.markAllAsTouched();
+
+      Object.keys(this.bookingForm.controls).forEach(key => {
+        const controlErrors = this.bookingForm.get(key)?.errors;
+        if (controlErrors) {
+          console.log('Control:', key);
+        }
+      });
+
       return;
     }
 
-    // WhatsApp message
+    this.isSubmitting = true;
+
+    const formType =
+      this.activeForm === 'tour'
+        ? 'Tour Request'
+        : 'Change Plan Request';
+
+    const templateParams = {
+      form_type: formType,
+      name: this.bookingForm.value.name,
+      email: this.bookingForm.value.email,
+      phone: this.bookingForm.value.phone,
+      adults: this.bookingForm.value.adults,
+      children: this.bookingForm.value.children,
+      arrival_date: this.bookingForm.value.arrivalDate,
+      return_date: this.bookingForm.value.returnDate,
+      rooms: this.bookingForm.value.rooms,
+      extra_bed: this.bookingForm.value.extraBed,
+      package_type: this.bookingForm.value.packageType,
+      transport_type: this.bookingForm.value.transportType,
+      message: this.bookingForm.value.message,
+      submitted_at: new Date().toLocaleString()
+    };
+
+    emailjs.send(
+      this.SERVICE_ID,
+      this.TEMPLATE_ID,
+      templateParams,
+      this.PUBLIC_KEY
+    )
+      .then(() => {
+        this.showSuccessModal = true;
+        this.bookingForm.reset();
+        this.activeForm = 'tour';
+        this.isSubmitting = false;
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        this.isSubmitting = false;
+      });
+  }
+
+  // WhatsApp message
+  sendWhatsAppMessage() {
     const message = `
 🧳 *Tour Confirmation Request*  
 -----------------------------------  
-👤 *Name:* ${this.formData.name}  
-📞 *Contact:* ${this.formData.number}  
-👨‍👩‍👧‍👦 *Adults:* ${this.formData.adults}  
-🧒 *Children:* ${this.formData.children || 0}  
-📅 *Arrival:* ${this.formData.arrival || 'Not specified'}  
-📅 *Return:* ${this.formData.return || 'Not specified'}  
-🏨 *Rooms:* ${this.formData.rooms}  
-🛏️ *Extra Beds:* ${this.formData.extraBeds}  
-💎 *Package:* ${this.formData.packageType || 'Not selected'}  
-🚗 *Transport:* ${this.formData.transportType || 'Not selected'}  
+👤 *Name:* ${this.bookingForm.value.name}  
+📞 *Contact:* ${this.bookingForm.value.phone}  
+👨‍👩‍👧‍👦 *Adults:* ${this.bookingForm.value.adults}  
+🧒 *Children:* ${this.bookingForm.value.children || 0}  
+📅 *Arrival:* ${this.bookingForm.value.arrivalDate || 'Not specified'}  
+📅 *Return:* ${this.bookingForm.value.returnDate || 'Not specified'}  
+🏨 *Rooms:* ${this.bookingForm.value.rooms}  
+🛏️ *Extra Beds:* ${this.bookingForm.value.extraBed}  
+💎 *Package:* ${this.bookingForm.value.packageType || 'Not selected'}  
+🚗 *Transport:* ${this.bookingForm.value.transportType || 'Not selected'}  
 -----------------------------------  
-Please confirm the booking without modifications.
-    `;
-
-    const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = '917561084625';
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-
-    // Send email
-    const templateParams = { ...this.formData };
-    emailjs
-      .send('service_4tw7ktw', 'template_y6g8cri', templateParams, '_kYaHnjxPJr6gwFdT')
-      .then(
-        () => {
-          this.showSuccessModal = true;
-          form.resetForm();
-        },
-        (error) => {
-          console.error('EmailJS Error:', error);
-          alert('⚠️ Something went wrong. Please try again.');
-        });
-  }
-
-  closeModal() {
-    this.showSuccessModal = false;
-  }
-
-  changeData = {
-    name: '',
-    email: '',
-    contact: '',
-    adults: 1,
-    children612: 0,
-    childrenBelow5: 0,
-    modifications: '',
-  };
-
-  submitChangeForm(form: any) {
-    if (!form.valid) {
-      alert('⚠️ Please fill all required fields correctly.');
-      return;
-    }
-
-    const { name, email, contact, adults, children612, childrenBelow5, modifications, } = this.changeData;
-
-    // WhatsApp Message
-    const message = `
-  📝 *Change in Tour Plan Request*  
-  ----------------------------------  
-  👤 *Name:* ${name}  
-  📧 *Email:* ${email}  
-  📞 *Contact:* ${contact}  
-  👨‍👩‍👧‍👦 *Adults:* ${adults}  
-  🧒 *Children (6–12 yrs):* ${children612}  
-  👶 *Children (Below 5 yrs):* ${childrenBelow5}  
-  ✏️ *Requested Modifications:* ${modifications}  
-  ----------------------------------  
-  Please send a customized plan.
-  `;
+Please confirm the booking without modifications.`;
 
     const encodedMessage = encodeURIComponent(message);
     const phoneNumber = '919847240456';
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-
-    // EmailJS Integration
-    const serviceId = 'service_4tw7ktw';
-    const templateId = 'template_y6g8cri'; // ✅ correct your ID spelling
-    const publicKey = '_kYaHnjxPJr6gwFdT';
-
-    const templateParams = {
-      name,
-      email,
-      contact,
-      adults,
-      children612,
-      childrenBelow5,
-      modifications,
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
-      () => {
-        this.showSuccessModal = true;
-        form.resetForm();
-      },
-      (error) => {
-        console.error('EmailJS Error:', error);
-        alert('⚠️ WhatsApp sent, but email failed.');
-      }
-    );
+    window.open(`https://wa.me/${phoneNumber}?text = ${encodedMessage} `, '_blank');
   }
+
 }
