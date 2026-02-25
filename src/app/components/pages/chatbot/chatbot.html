@@ -1,7 +1,7 @@
-<!-- Floating Chat Button with Tooltip -->
-<div class="fixed bottom-6 right-6 flex items-center z-50">
+<!-- Floating Chat Button -->
+<div class="fixed bottom-6 right-6 flex items-center z-50 group">
 
-    <!-- Tooltip / Bubble -->
+    <!-- Tooltip -->
     <div class="mr-3 px-4 py-2 rounded-full bg-red-600/90 text-white text-sm font-semibold
            opacity-0 translate-x-2 pointer-events-none
            group-hover:opacity-100 group-hover:translate-x-0
@@ -10,33 +10,34 @@
     </div>
 
     <!-- Chat Button -->
-    <button (click)="openChat()" class="group flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-500
+    <button (click)="openChat()" class="flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-500
            text-white font-semibold rounded-full px-5 py-3 shadow-xl
-           hover:scale-110 transition-all duration-300 animate-bounce">
-        <i class="pi pi-comments text-2xl relative">
-        </i>
-        <!-- <span class="text-sm md:text-base">Chat With Us</span> -->
+           hover:scale-110 transition-all duration-300 animate-bounce relative">
+        <i class="pi pi-comments text-2xl"></i>
         <span class="absolute -inset-1 rounded-full border-2 border-red-500 animate-ping"></span>
     </button>
-
-
 </div>
 
 
 <!-- Chat Window -->
 <div *ngIf="isOpen"
     class="fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp">
+
+    <!-- Header -->
     <div
         class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 font-semibold flex justify-between items-center">
         <div class="flex items-center gap-3">
             <img src="assets/images/logo.png" alt="ZaraGo" class="w-8 h-8 rounded-full border border-white">
             <span>ZaraGo - Virtual Assistant</span>
         </div>
-        <button (click)="openChat()" class="text-white hover:text-gray-200 transition">
+        <button (click)="openChat()" class="hover:text-gray-200 transition">
             <i class="pi pi-times text-lg"></i>
         </button>
     </div>
+    <!-- Chat Body -->
     <div class="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50">
+
+        <!-- STEP 1 - Ask Name -->
         <div *ngIf="step === 1" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 Hi 👋 I'm <b>ZaraGo</b>, your travel assistant!
@@ -44,38 +45,77 @@
             </div>
             <input [(ngModel)]="userName" type="text" placeholder="Enter your name"
                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+
             <button (click)="askContact()"
-                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">Next</button>
+                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
+                Next
+            </button>
         </div>
 
-        <!-- Ask Contact -->
+        <!-- STEP 2 - Ask Contact -->
         <div *ngIf="step === 2" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 Nice to meet you, {{ userName }} 😊
-                Can I have your <b>contact number</b> so our expert can reach out?
+                Can I have your <b>contact number</b>?
             </div>
+
             <input [(ngModel)]="userContact" type="tel" placeholder="+91 XXXXX XXXXX"
                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+
+            <button (click)="askEmail()"
+                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
+                Next
+            </button>
+        </div>
+        <div *ngIf="step === 3" class="flex flex-col gap-3">
+            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+                Thank you, {{ userName }} 😊
+                Can I have your <b>Email address</b>?
+            </div>
+
+            <input [(ngModel)]="userEmail" type="email" placeholder="you@example.com"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+
             <button (click)="startChatFlow()"
-                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">Start Chat</button>
+                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
+                Start Chat
+            </button>
         </div>
 
-        <!-- Regular Chat Flow -->
-        <div *ngIf="userContact && currentStep">
-            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+        <!-- STEP 3 - Chat Flow -->
+        <div *ngIf="step === 4 && currentStep">
+
+            <!-- Show Previous Answers -->
+            <div *ngFor="let answer of selectedAnswers" class="mb-3">
+                <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+                    {{ answer.question }}
+                </div>
+
+                <div class="bg-red-500 text-white rounded-xl p-2 mt-1 ml-auto w-fit max-w-[90%] text-right">
+                    {{ answer.answer }}
+                </div>
+            </div>
+
+            <!-- Current Question -->
+            <div *ngIf="currentStep.id !== 'end'" class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 {{ currentStep.question }}
             </div>
 
-            <div *ngFor="let opt of currentStep.options">
-                <button (click)="selectOption(opt.next)"
+            <!-- Options -->
+            <div *ngIf="currentStep.id !== 'end'">
+                <button *ngFor="let opt of currentStep.options" (click)="selectOption(opt.next, opt.text)"
                     class="w-full text-left px-4 py-2 my-1 bg-white border border-gray-200 rounded-lg hover:bg-red-50 hover:text-red-600 transition">
                     {{ opt.text }}
                 </button>
             </div>
 
-            <div *ngIf="currentStep.options.length === 0" class="text-sm text-gray-500">
-                Thank you, {{ userName }}! ZaraGo will get back to you soon 🌸
+            <!-- End Message -->
+            <div *ngIf="currentStep.id === 'end'" class="text-sm text-gray-500 mt-3">
+                🎉 Thank you, {{ userName }}! <br>
+                Our travel expert will contact you soon ✨
             </div>
+
         </div>
+
     </div>
 </div>

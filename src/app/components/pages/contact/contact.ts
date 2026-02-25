@@ -33,6 +33,7 @@ export class Contact {
     this.isSubmitting = true;
 
     const templateParams = {
+      form_type: "Contact Form",
       from_name: this.contactForm.value.name,
       from_email: this.contactForm.value.email,
       message: this.contactForm.value.message,
