@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-subscription',
@@ -9,6 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './subscription.scss'
 })
 export class Subscription {
+  TEMPLATE_ID = "template_410knbm";
+  SERVICE_ID = "service_9s4kon6";
+  PUBLIC_KEY = "pkuaYiUyVh4a8z7Pq";
+
   @ViewChild('sectionRef', { static: true }) sectionRef!: ElementRef<any>;
   @Input() modal: boolean = false;
   email: string = '';
@@ -58,10 +63,52 @@ export class Subscription {
     this.intersectionObserver?.disconnect();
   }
 
-  onSubmit(): void {
-    // placeholder submission handler
-    // In real app, call a service here
-    console.log('Subscribe:', { email: this.email, phone: this.phone });
+  isSubmitting = false;
+
+  onSubmit() {
+    const email = this.email?.trim();
+    const phone = this.phone?.trim();
+    if (!email || !phone) {
+      alert('Please enter both email and phone number.');
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (phone.length < 7) {
+      alert('Please enter a valid phone number.');
+      return;
+    }
+    this.isSubmitting = true;
+    const templateParams = {
+      form_type: "Subscription Form",
+      from_name: "Website Subscriber",
+      from_email: email,
+      from_number: phone,
+    };
+
+    emailjs.send(
+      this.SERVICE_ID,
+      this.TEMPLATE_ID,
+      templateParams,
+      this.PUBLIC_KEY
+    )
+      .then(() => {
+        alert('Subscription successful! Thank you.');
+        this.email = '';
+        this.phone = '';
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        alert('Failed to send message. Please try again.');
+      })
+      .finally(() => {
+        this.isSubmitting = false;
+      });
   }
 
   onCaptchaResolved(response: any) {

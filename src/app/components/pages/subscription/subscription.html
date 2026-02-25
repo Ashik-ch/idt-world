@@ -49,11 +49,11 @@
 
                     <!-- Subscribe button -->
                     <div class="md:w-auto">
-                        <button type="submit"
+                        <button type="submit" [disabled]="isSubmitting"
                             class="group relative inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-700 px-6 py-3 font-semibold text-white shadow-sm ring-1 ring-white/20 transition-transform duration-200 ease-out hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50">
                             <span
                                 class="absolute -inset-0.5 rounded-lg bg-white/10 opacity-0 blur group-hover:opacity-100 transition"></span>
-                            <span class="relative">Subscribe</span>
+                            <span class="relative"> {{ isSubmitting ? 'Submitting...' : 'Subscribe' }} </span>
                         </button>
                     </div>
                 </div>
