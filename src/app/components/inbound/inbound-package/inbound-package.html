@@ -52,7 +52,7 @@
                 <div *ngFor="let section of collapsibleSections"
                     class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
                     <button
-                        class="w-full flex justify-between items-center px-6 py-4 bg-gradient-to-r from-red-600 via-red-500 to-red-700 text-white font-semibold text-lg md:text-xl transition-all hover:opacity-95"
+                        class="w-full flex justify-between items-center px-6 py-4 bg-gradient-to-r from-red-600 via-red-500 to-red-700 text-white font-semibold text-md md:text-lg transition-all hover:opacity-95"
                         (click)="toggleSection(section.id)">
                         <span>{{ section.title }}</span>
                         <i class="pi" [ngClass]="{
@@ -69,15 +69,18 @@
                                 <app-inbound-itinerary *ngSwitchCase="'overview'"
                                     [detailedItinerary]="packageData?.detailedItinerary"></app-inbound-itinerary>
 
-                                <app-inbound-hotels *ngSwitchCase="'hotels'"
-                                    [hotelPackages]="packageData?.hotelPackages" [transport]="packageData?.transport"
-                                    [childPolicy]="packageData?.childPolicy" [meals]="packageData?.meals">
-                                </app-inbound-hotels>
+                                <ng-container *ngIf="packageData">
+                                    <app-inbound-hotels *ngSwitchCase="'hotels'"
+                                        [hotelPackages]="packageData.hotelPackages" [transport]="packageData.transport"
+                                        [childPolicy]="packageData.childPolicy" [meals]="packageData.meals"
+                                        [sightseeing]="packageData.sightseeing">
+                                    </app-inbound-hotels>
+                                </ng-container>
 
                                 <app-inbound-summary *ngSwitchCase="'details'"
                                     [details]="packageData?.supplementalAttractions"
                                     [specialOffers]="packageData?.specialOffers" [inclusions]="packageData?.inclusions"
-                                    [exclusions]="packageData?.exclusions" [sightseeing]="packageData?.sightseeing">
+                                    [exclusions]="packageData?.exclusions">
                                 </app-inbound-summary>
 
                                 <app-inbound-pricing *ngSwitchCase="'pricing'" [pricing]="packageData?.pricing">
@@ -123,7 +126,7 @@
                         Need Help Before Booking?
                     </h2>
                     <p class="mt-3 text-md text-red-500/90">
-                        Our virtual assistant is here 24/7 to answer your travel questions instantly.
+                        Our IDT Virtual Tour Advisor is here 24/7 to answer your travel questions instantly.
                     </p>
                 </div>
 
@@ -133,7 +136,7 @@
                bg-white text-red-600 font-semibold text-lg shadow-[0_0_15px_rgba(255,255,255,0.5)]
                transition-all duration-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)]">
                         <i class="pi pi-comments text-2xl text-red-600 animate-pulse"></i>
-                        <span>Chat with IDT Assistant</span>
+                        <span>Chat with IDT Virtual Tour Advisor</span>
 
                         <!-- inner glow -->
                         <span class="absolute inset-0 rounded-full bg-gradient-to-r from-red-200 via-pink-200 to-white

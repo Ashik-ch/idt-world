@@ -14,6 +14,7 @@ export class InboundHotels {
   @Input() transport: any
   @Input() childPolicy: any
   @Input() meals: any
+  @Input() sightseeing: any[] = [];
 
   getObjectKeys(obj: any): string[] {
     return Object.keys(obj);

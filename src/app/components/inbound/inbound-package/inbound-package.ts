@@ -38,11 +38,11 @@ export class InboundPackage {
   inboundKeralaPackage = inboundKeralaPackages;
 
   collapsibleSections = [
-    { id: 'overview', title: 'Explore daily programme', delay: '0' },
+    { id: 'overview', title: 'YOUR DAILY PROGRAMME', delay: '0' },
     // { id: 'itinerary', title: 'Itinerary', delay: '100' },
-    { id: 'hotels', title: 'Components of this Package', delay: '100' },
-    { id: 'details', title: 'Details & Policies', delay: '200' },
-    { id: 'pricing', title: 'Pricing', delay: '300' },
+    { id: 'hotels', title: 'YOUR HOTELS, TRANSPORT AND TOURS', delay: '100' },
+    { id: 'details', title: 'WHAT IS INCLUDED AND EXCLUDED', delay: '200' },
+    { id: 'pricing', title: 'TOUR COST, BOOKING & CANCELLATION', delay: '300' },
 
     // - Explore your itinerary
     // - Unwind in our partner hotels

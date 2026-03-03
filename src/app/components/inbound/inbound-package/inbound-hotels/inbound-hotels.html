@@ -99,4 +99,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Sightseeing -->
+    <section>
+        <h2 class="text-xl md:text-2xl font-bold text-red-500 border-b pb-3"> Sightseeing</h2>
+        <div class="space-y-3">
+            <div *ngFor="let sights of sightseeing || []"
+                class="flex items-center gap-3 bg-red-50/70 rounded-lg px-4 py-2 shadow-sm hover:shadow-md transition">
+                <span class="text-red-600 text-xl">🧳</span>
+                <span class="text-gray-800 font-medium">{{ sights }}</span>
+            </div>
+        </div>
+    </section>
 </section>

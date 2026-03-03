@@ -27,8 +27,9 @@
     <div
         class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 font-semibold flex justify-between items-center">
         <div class="flex items-center gap-3">
-            <img src="assets/images/logo.png" alt="ZaraGo" class="w-8 h-8 rounded-full border border-white">
-            <span>ZaraGo - Virtual Assistant</span>
+            <img src="assets/images/logo.png" alt="IDT Virtual Tour Advisor"
+                class="w-8 h-8 rounded-full border border-white">
+            <span>IDT Virtual Tour Advisor</span>
         </div>
         <button (click)="openChat()" class="hover:text-gray-200 transition">
             <i class="pi pi-times text-lg"></i>
@@ -40,7 +41,7 @@
         <!-- STEP 1 - Ask Name -->
         <div *ngIf="step === 1" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
-                Hi 👋 I'm <b>ZaraGo</b>, your travel assistant!
+                Hi 👋 I'm <b>IDT Virtual Tour Advisor</b>,
                 What’s your <b>name</b>?
             </div>
             <input [(ngModel)]="userName" type="text" placeholder="Enter your name"

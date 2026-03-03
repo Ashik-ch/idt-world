@@ -324,7 +324,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-1', title: 'Charm of Kerala', duration: '02 Nights / 03 Days', summary: 'Experience Kerala’s scenic beauty in Munnar with curated sightseeing and comfort stay.',
+    id: 'kerala-1', title: 'Charm of Kerala - 01', duration: '02 Nights / 03 Days', summary: 'Experience Kerala’s scenic beauty in Munnar with curated sightseeing and comfort stay.',
 
     tourHighlights: [
       'All-inclusive package without any hidden cost',
@@ -446,7 +446,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-2', title: 'Charm of Kerala', duration: '03 Nights / 04 Days', summary: 'A balanced Kerala tour covering Munnar and Thekkady with premium hospitality and curated attractions.',
+    id: 'kerala-2', title: 'Charm of Kerala - 02', duration: '03 Nights / 04 Days', summary: 'A balanced Kerala tour covering Munnar and Thekkady with premium hospitality and curated attractions.',
 
     tourHighlights: [
       'All-inclusive package without hidden charges',
@@ -622,7 +622,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-3', title: 'Charm of Kerala', duration: '04 Nights / 05 Days', summary: 'Explore Kerala covering Munnar, Thekkady & Kumarakom houseboat, offering ethnic charm, natural beauty, wildlife experiences and serene backwaters.',
+    id: 'kerala-3', title: 'Charm of Kerala - 03', duration: '04 Nights / 05 Days', summary: 'Explore Kerala covering Munnar, Thekkady & Kumarakom houseboat, offering ethnic charm, natural beauty, wildlife experiences and serene backwaters.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -798,7 +798,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-4', title: 'Charm of Kerala', duration: '05 Nights / 06 Days', summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
+    id: 'kerala-4', title: 'Charm of Kerala - 04', duration: '05 Nights / 06 Days', summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
     tourHighlights: [
       'All-inclusive package without any hidden costs',
       'Food on a Breakfast + Dinner basis and 03 meals in the houseboat',
@@ -959,7 +959,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-5', title: 'Charm of Kerala', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-5', title: 'Charm of Kerala - 05', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1182,7 +1182,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-6', title: 'Charm of Kerala', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-6', title: 'Charm of Kerala - 06', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1405,7 +1405,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-7', title: 'Charm of Kerala', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-7', title: 'Charm of Kerala - 07', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -5134,14 +5134,14 @@ export const inboundPackages = [
   { id: 'kerala-colours-3', name: 'COLOURS OF KERALA TOUR - 3', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '07 NIGHTS / 08 DAYS', description: 'COCHIN - MUNNAR - PERIYAR - KUMARAKOM (HOUSEBOAT) - COCHIN', bgImage: 'assets/images/kerala14.jpg' },
   { id: 'kerala-colours-4', name: 'COLOURS OF KERALA TOUR - 4', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '12 NIGHTS / 13 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - MADURAI - PERIYAR - KUMARAKOM - ALLEPPEY - COCHIN', bgImage: 'assets/images/kerala12.jpg' },
   { id: 'kerala-colours-5', name: 'COLOURS OF KERALA TOUR - 5', category: 'kerala-foreign', gradient: 'from-emerald-400 to-green-600', tagline: '08 NIGHTS / 09 DAYS', description: 'TRIVANDRUM - KOVALAM - KANYAKUMARI - KUMARAKOM - THEKKADY - MUNNAR - COCHIN', bgImage: 'assets/images/kerala15.jpg' },
-  { id: 'south-india-1', name: 'VISUALS OF SOUTH INDIA - 01', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/southindia1.jpg' },
-  { id: 'south-india-2', name: 'VISUALS OF SOUTH INDIA - 02', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.', bgImage: 'assets/images/southindia2.jpg' },
-  { id: 'south-india-3', name: 'VISUALS OF SOUTH INDIA - 03', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '13 NIGHTS / 14 DAYS', description: 'A journey through history and culture, featuring architectural wonders, temples, forts, beaches, and backwaters.', bgImage: 'assets/images/southindia3.jpg' },
-  { id: 'south-india-4', name: 'VISUALS OF SOUTH INDIA - 04', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'An all-encompassing tour of major destinations across Tamil Nadu, Kerala, and Karnataka, integrating heritage, nature, and culture.', bgImage: 'assets/images/southindia4.jpg' },
-  { id: 'south-india-5', name: 'VISUALS OF SOUTH INDIA - 05', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '17 NIGHTS / 18 DAYS', description: 'A historical tour from the beaches of Goa through the royal monuments of Karnataka and the mountains and backwaters of Kerala.', bgImage: 'assets/images/southindia5.jpg' },
-  { id: 'south-india-6', name: 'VISUALS OF SOUTH INDIA - 06', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'An ideal tour for wildlife and hill station enthusiasts, covering popular sanctuaries and cultural hubs like Mysore and Hassan.', bgImage: 'assets/images/southindia6.jpg' },
-  { id: 'south-india-7', name: 'VISUALS OF SOUTH INDIA - 07', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '17 NIGHTS / 18 DAYS', description: 'A comprehensive exploration starting from Bangalore, covering the royal city of Mysore and the scenic hill stations of the south', bgImage: 'assets/images/southindia7.jpg' },
-  { id: 'south-india-8', name: 'VISUALS OF SOUTH INDIA - 08', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'A cultural and heritage tour highlighting the Hoysala architecture of Belur and Halebid, alongside Mysore and the Nilgiri hills.', bgImage: 'assets/images/southindia8.jpg' },
+  { id: 'south-india-1', name: 'VISUALS OF SOUTH INDIA - 01', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'CHENNAI - MAHABALIPURAM - KANCHIPURAM - PONDICHERRY - TANJORE - THRICHY - MADURAI - THEKKADY - KUMARAKOM - COCHIN - ALLEPPEY - KOVALAM - KANYAKUMARI', bgImage: 'assets/images/southindia1.jpg' },
+  { id: 'south-india-2', name: 'VISUALS OF SOUTH INDIA - 02', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'CHENNAI - KANCHIPURAM - MAHABALIPURAM - BANGALORE - MYSORE - SRIRANGAPATTANAM - OOTY - COCHIN - PERIYAR - KUMARAKOM  - ALLEPPEY - KOVALAM - KANYAKUMARI - TRIVANDRUM', bgImage: 'assets/images/southindia2.jpg' },
+  { id: 'south-india-3', name: 'VISUALS OF SOUTH INDIA - 03', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '13 NIGHTS / 14 DAYS', description: 'CHENNAI - KANCHIPURAM - MAHABALIPURAM - PONDICHERRY - TANJORE - MADURAI -THRICHY - PERIYAR - KUMARAKOM - ALLEPPEY - COCHIN - KOVALAM - KANYAKUMARI - TRIVANDRUM', bgImage: 'assets/images/southindia3.jpg' },
+  { id: 'south-india-4', name: 'VISUALS OF SOUTH INDIA - 04', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '19 NIGHTS / 20 DAYS', description: 'CHENNAI - KANCHIPURAM - MAHABALIPURAM - PONDICHERRY - TANJORE - CHIDAMBARAM - KUMBAKONAM - MADURAI - PERIYAR - KUMARAKOM - ALLEPPEY - COCHIN - OOTY - MYSORE - HASSAN - BANGALORE - CHENNAI', bgImage: 'assets/images/southindia4.jpg' },
+  { id: 'south-india-5', name: 'VISUALS OF SOUTH INDIA - 05', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '17 NIGHTS / 18 DAYS', description: 'GOA - BADAMI - AIHOLE - PATTADAKAL - HOSPET - HAMPI -  HASSAN - BELUR - HALEBID - BANGALORE - SRIRANGAPATNAM - MYSORE - BANDIPUR - OOTY - THEKKADY - ALLEPPEY - KUMARAKOM - ALLEPPEY - COCHIN', bgImage: 'assets/images/southindia5.jpg' },
+  { id: 'south-india-6', name: 'VISUALS OF SOUTH INDIA - 06', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'COCHIN - KUMARAKOM - CALICUT - VYTHIRI - OOTY - KABINI - MYSORE - COORG - HASSAN - BANGALORE', bgImage: 'assets/images/southindia6.jpg' },
+  { id: 'south-india-7', name: 'VISUALS OF SOUTH INDIA - 07', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '17 NIGHTS / 18 DAYS', description: 'BANGALORE - MYSORE - OOTY - VYTHIRI - COCHIN - MUNNAR - PERIYAR - ALLEPPEY - KANYAKUMARI - KOVALAM', bgImage: 'assets/images/southindia6.jpg' },
+  { id: 'south-india-8', name: 'VISUALS OF SOUTH INDIA - 08', category: 'south-india', gradient: 'from-emerald-400 to-green-600', tagline: '15 NIGHTS / 16 DAYS', description: 'BANGALORE - HASSAN - MYSORE - OOTY - KODAIKANAL -MUNNAR - PERIYAR - MADUARI', bgImage: 'assets/images/southindia8.jpg' },
 ];
 
 export const inboundKeralaPackages = [

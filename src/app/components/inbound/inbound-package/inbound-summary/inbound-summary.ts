@@ -13,6 +13,5 @@ export class InboundSummary {
   @Input() specialOffers: any
   @Input() exclusions: any
   @Input() inclusions: any
-  @Input() sightseeing: any
 
 }
