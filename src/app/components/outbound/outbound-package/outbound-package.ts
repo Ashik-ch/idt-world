@@ -41,7 +41,7 @@ export class OutboundPackage {
     { id: 'overview', title: 'YOUR DAILY PROGRAMME', delay: '0' },
     // { id: 'itinerary', title: 'Itinerary', delay: '100' },
     { id: 'hotels', title: 'YOUR HOTELS, TRANSPORT AND TOURS', delay: '100' },
-    // { id: 'details', title: 'WHAT IS INCLUDED AND EXCLUDED', delay: '200' },
+    // { id: 'details', title: 'WHAT IS INCLUDED AND EXCLUDED?', delay: '200' },
     // { id: 'pricing', title: 'TOUR COST, BOOKING & CANCELLATION', delay: '300' },
 
     // - Explore your itinerary
