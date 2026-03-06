@@ -25,6 +25,7 @@ import { ChatbotService } from '../../../services/chatbot-service';
 export class InboundPackage {
 
   stateName = '';
+  stateId = '';
   stateDescription = '';
   stateHighlights: any[] = [];
   availablePackages: any[] = [];
@@ -61,6 +62,7 @@ export class InboundPackage {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const state = params['state'];
+      this.stateId = state;
       this.loadStateData(state);
       this.loadPackageData(state);
       setTimeout(() => this.viewportScroller.scrollToPosition([0, 0]), 0);
@@ -132,5 +134,27 @@ export class InboundPackage {
     this.router.navigate(['/inbound', state]);
   }
 
+  //Tour Deal Popup
+  showDealPopup = false;
+  openDealPopup() {
+    this.showDealPopup = true;
+  }
+  closeDealPopup() {
+    this.showDealPopup = false;
+    const phone = '919995888739';
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+    const packageName = this.stateId;
+    const message =
+      `Hello,
+I would like to book a package with today's deal.
+Package: ${packageName}
+Date: ${date}
+Time: ${time}
+I want to get the 10% discount offer.`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
 }
 

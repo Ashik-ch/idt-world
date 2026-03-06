@@ -63,12 +63,12 @@
             <input [(ngModel)]="userContact" type="tel" placeholder="+91 XXXXX XXXXX"
                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
 
-            <button (click)="askEmail()"
+            <button (click)="startChatFlow()"
                 class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
-                Next
+                Start Chat
             </button>
         </div>
-        <div *ngIf="step === 3" class="flex flex-col gap-3">
+        <!-- <div *ngIf="step === 3" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
                 Thank you, {{ userName }} 😊
                 Can I have your <b>Email address</b>?
@@ -81,7 +81,7 @@
                 class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
                 Start Chat
             </button>
-        </div>
+        </div> -->
 
         <!-- STEP 3 - Chat Flow -->
         <div *ngIf="step === 4 && currentStep">
@@ -104,14 +104,14 @@
 
             <!-- Options -->
             <div *ngIf="currentStep.id !== 'end'">
-                <button *ngFor="let opt of currentStep.options" (click)="selectOption(opt.next, opt.text)"
+                <button *ngFor="let option of currentStep.options" (click)="selectOption(option)"
                     class="w-full text-left px-4 py-2 my-1 bg-white border border-gray-200 rounded-lg hover:bg-red-50 hover:text-red-600 transition">
-                    {{ opt.text }}
+                    {{ option.text }}
                 </button>
             </div>
 
             <!-- End Message -->
-            <div *ngIf="currentStep.id === 'end'" class="text-sm text-gray-500 mt-3">
+            <div *ngIf="currentStep.id === 'end'" class="text-sm text-gray-50 mt-3 bg-red-800 p-3 rounded-lg">
                 🎉 Thank you, {{ userName }}! <br>
                 Our travel expert will contact you soon ✨
             </div>

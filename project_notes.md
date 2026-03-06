@@ -13,7 +13,7 @@
 **Hosting Platform:** GitHub Pages  
 **Domain Provider:** GoDaddy  
 **Custom Domain:** goidt.in  
-
+**Emailjs:go@indiadestinationtours.com:** V#496858270162uy
 ---
 
 ## 🔧 Build Command

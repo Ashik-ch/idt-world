@@ -1,7 +1,7 @@
 export interface ChatStep {
     id: string;
     question: string;
-    options: { text: string; next: string }[];
+    options: { text: string; next?: string; url?: string }[];
 }
 
 export interface ChatOption {
@@ -114,11 +114,11 @@ export const chatFlow: ChatStep[] = [
         id: 'contact',
         question: '📞 Sure! How would you prefer to reach us?',
         options: [
-            { text: '📧 Email: hello@idt.example', next: 'end' },
-            { text: '📱 Call: +91 98472 40456', next: 'end' },
-            { text: '💬 WhatsApp Chat', next: 'end' },
-            { text: '⬅️ Back', next: 'welcome' },
-        ],
+            { text: '📧 Email:', url: 'mailto:go@indiadestinationtours.com' },
+            { text: '📱 Call: +91 99958 88739', url: 'tel:+919995888739' },
+            { text: '💬 WhatsApp Chat', url: 'https://wa.me/919995888739' },
+            { text: '⬅️ Back', next: 'welcome' }
+        ]
     },
 
     // ✅ End

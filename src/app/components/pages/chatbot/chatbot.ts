@@ -21,7 +21,7 @@ export class Chatbot {
   @Input() isOpen = false;
   userName = '';
   userContact = '';
-  userEmail = '';
+  // userEmail = '';
   currentStep: any = null;
 
   step = 1; // 1 = name, 2 = contact, 3 = email, 4 = chat flow
@@ -44,7 +44,7 @@ export class Chatbot {
   resetChat() {
     this.userName = '';
     this.userContact = '';
-    this.userEmail = '';
+    // this.userEmail = '';
     this.step = 1;
     this.currentStep = null;
     this.selectedAnswers = [];
@@ -63,24 +63,30 @@ export class Chatbot {
   }
 
   startChatFlow() {
-    if (this.userEmail.trim()) {
+    if (this.userName.trim()) {
       this.step = 4;
       this.currentStep = chatFlow[0];
     }
   }
 
-  // ✅ UPDATED METHOD
-  selectOption(nextId: string, selectedText: string) {
+  selectOption(option: any) {
 
-    // Store current question + selected answer
+    // Store question + answer
     if (this.currentStep) {
       this.selectedAnswers.push({
         question: this.currentStep.question,
-        answer: selectedText
+        answer: option.text
       });
     }
 
-    const nextStep = chatFlow.find((s) => s.id === nextId);
+    // ✅ If URL exists → open it
+    if (option.url) {
+      window.open(option.url, '_blank');
+      return;
+    }
+
+    // ✅ Otherwise continue chatbot flow
+    const nextStep = chatFlow.find((s) => s.id === option.next);
 
     if (nextStep) {
       this.currentStep = nextStep;
@@ -104,13 +110,12 @@ export class Chatbot {
       form_type: 'Chat Bot',
       from_name: this.userName,
       from_number: this.userContact,
-      from_email: this.userEmail,
+      // from_email: this.userEmail,  
       message: `
 New Travel Enquiry from Chatbot
 
 Client Name: ${this.userName}
-Contact Number: ${this.userContact}
-Email: ${this.userEmail}
+Contact Number: ${this.userContact} 
 
 Selected Preferences:
 ${formattedConversation}
