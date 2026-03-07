@@ -20,6 +20,7 @@ export interface InboundState {
 export interface Package {
   id: string;
   title: string;
+  packageType: string;
   duration: string;
   summary: string;
   tourHighlights: string[];
@@ -77,7 +78,7 @@ export interface Package {
 
 export const travelPackages: Package[] = [
   {
-    id: 'kerala', title: 'Charm of Kerala and Border Destinations', duration: '06 Nights / 07 Days', summary: 'Experience Kerala’s scenic beauty with curated tours across Munnar, Thekkady, Kumarakom & Cochin.',
+    id: 'kerala', packageType: "Kerala", title: 'Charm of Kerala and Border Destinations', duration: '06 Nights / 07 Days', summary: 'Experience Kerala’s scenic beauty with curated tours across Munnar, Thekkady, Kumarakom & Cochin.',
     tourHighlights: [
       'All-inclusive package without any hidden cost',
       'Food on a Breakfast basis',
@@ -324,7 +325,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-1', title: 'Charm of Kerala - 01', duration: '02 Nights / 03 Days', summary: 'Experience Kerala’s scenic beauty in Munnar with curated sightseeing and comfort stay.',
+    id: 'kerala-1', packageType: 'Kerala', title: 'Charm of Kerala - 01', duration: '02 Nights / 03 Days', summary: 'Experience Kerala’s scenic beauty in Munnar with curated sightseeing and comfort stay.',
 
     tourHighlights: [
       'All-inclusive package without any hidden cost',
@@ -446,7 +447,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-2', title: 'Charm of Kerala - 02', duration: '03 Nights / 04 Days', summary: 'A balanced Kerala tour covering Munnar and Thekkady with premium hospitality and curated attractions.',
+    id: 'kerala-2', packageType: 'Kerala', title: 'Charm of Kerala - 02', duration: '03 Nights / 04 Days', summary: 'A balanced Kerala tour covering Munnar and Thekkady with premium hospitality and curated attractions.',
 
     tourHighlights: [
       'All-inclusive package without hidden charges',
@@ -622,7 +623,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-3', title: 'Charm of Kerala - 03', duration: '04 Nights / 05 Days', summary: 'Explore Kerala covering Munnar, Thekkady & Kumarakom houseboat, offering ethnic charm, natural beauty, wildlife experiences and serene backwaters.',
+    id: 'kerala-3', packageType: 'Kerala', title: 'Charm of Kerala - 03', duration: '04 Nights / 05 Days', summary: 'Explore Kerala covering Munnar, Thekkady & Kumarakom houseboat, offering ethnic charm, natural beauty, wildlife experiences and serene backwaters.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -798,7 +799,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-4', title: 'Charm of Kerala - 04', duration: '05 Nights / 06 Days', summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
+    id: 'kerala-4', packageType: 'Kerala', title: 'Charm of Kerala - 04', duration: '05 Nights / 06 Days', summary: 'A compact Kerala escape visiting Munnar, Thekkady and Kumarakom with tea gardens, wildlife, backwaters and relaxing houseboat stay.',
     tourHighlights: [
       'All-inclusive package without any hidden costs',
       'Food on a Breakfast + Dinner basis and 03 meals in the houseboat',
@@ -959,7 +960,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-5', title: 'Charm of Kerala - 05', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-5', packageType: 'Kerala', title: 'Charm of Kerala - 05', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1182,7 +1183,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-6', title: 'Charm of Kerala - 06', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-6', packageType: 'Kerala', title: 'Charm of Kerala - 06', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Kovalam & Kanyakumari with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1405,7 +1406,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-7', title: 'Charm of Kerala - 07', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
+    id: 'kerala-7', packageType: 'Kerala', title: 'Charm of Kerala - 07', duration: '07 Nights / 08 Days', summary: 'Explore Kerala covering Munnar, Thekkady, Kumarakom, Varkala, Poovar & Kovalam with scenic landscapes, wildlife experiences, serene backwaters, beaches, heritage sites and cultural legacy.',
 
     tourHighlights: [
       'All-inclusive package without any hidden costs',
@@ -1620,7 +1621,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-8', title: 'Charm of Kerala and Border Destinations - 1', duration: '08 Nights / 09 Days',
+    id: 'kerala-8', packageType: 'Kerala', title: 'Charm of Kerala and Border Destinations - 1', duration: '08 Nights / 09 Days',
     summary: 'Discover Madurai, Kodaikanal, Thekkady, Munnar, and Kumarakom with cultural heritage, misty hill stations, wildlife, serene backwaters, and premium handpicked stays.',
 
     tourHighlights: [
@@ -1804,7 +1805,7 @@ export const travelPackages: Package[] = [
 
 
   {
-    id: 'kerala-9', title: 'Charm of Kerala with border destinations - 2', duration: '8 Nights / 9 Days', summary: 'Experience the enchanting beauty of Kerala with misty hills, serene backwaters, wildlife, and pristine beaches. Includes meals, premium hotels, and private transportation.',
+    id: 'kerala-9', packageType: 'Kerala', title: 'Charm of Kerala with border destinations - 2', duration: '8 Nights / 9 Days', summary: 'Experience the enchanting beauty of Kerala with misty hills, serene backwaters, wildlife, and pristine beaches. Includes meals, premium hotels, and private transportation.',
 
     tourHighlights: [
       'All-inclusive package with no hidden costs',
@@ -1965,7 +1966,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-10',
+    id: 'kerala-10', packageType: 'Kerala',
     title: 'Charm of Kerala and Border Destiantions - 3',
     duration: '06 Nights / 07 Days',
     summary:
@@ -2159,7 +2160,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-colours-1',
+    id: 'kerala-colours-1', packageType: 'Kerala',
     title: 'Colours of Kerala - 1',
     duration: '05 NIGHTS / 06 DAYS',
     summary:
@@ -2335,7 +2336,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: 'kerala-colours-2',
+    id: 'kerala-colours-2', packageType: 'Kerala',
     title: 'Colours of Kerala Tour - 2',
     duration: '06 NIGHTS / 07 DAYS',
     summary:
@@ -2515,7 +2516,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "kerala-colours-3",
+    id: "kerala-colours-3", packageType: 'Kerala',
     "title": "Colours of Kerala Tour - 3",
     "duration": "07 Nights / 08 Days",
 
@@ -2695,7 +2696,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "kerala-colours-4",
+    id: "kerala-colours-4", packageType: 'Kerala',
     "title": "Colours of Kerala Tour - 4",
     "duration": "12 Nights / 13 Days",
     "summary": "You can explore the diversified flora & fauna of this heavenly land with lots of enjoyment everywhere. A complete tour covering cities, hill stations, and historical places with carefully selected hotels, backwaters, wildlife, and cultural experiences.",
@@ -2925,7 +2926,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "kerala-colours-5",
+    id: "kerala-colours-5", packageType: 'Kerala',
     "title": "Colours of Kerala Tour - 5",
     "duration": "08 Nights / 09 Days",
     "summary": "Explore the charm of Kerala with this 8-night, 9-day tour covering Trivandrum, Kovalam, Kanyakumari, Kumarakom, Thekkady, Munnar, and Cochin. Enjoy backwaters, hill stations, cultural experiences, wildlife, and heritage sites with carefully selected hotels and seamless transportation.",
@@ -3121,7 +3122,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "south-india-1",
+    id: "south-india-1", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 01",
     "duration": "15 Nights / 16 Days",
     "summary": "Discover the vibrant tapestry of South India’s Culture, Cuisine and Landscapes.",
@@ -3374,7 +3375,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "south-india-2",
+    id: "south-india-2", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 02",
     "duration": "15 Nights / 16 Days",
     "summary": "Taking you to explore the rich culture of Southern India spread in three south Indian States, viz.  Tamil Nadu, Karnataka & Kerala.  This tour covers the history of South India & the natural beauty of Coastal India at a glance….",
@@ -3619,7 +3620,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "south-india-3",
+    id: "south-india-3", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 03",
     "duration": "13 Nights / 14 Days",
     "summary": "It’s a journey through the History & culture of Southern India. The Guest can experience the Architectural wonders in the form of Temples & Forts, followed by the virginity of a Land-Kerala with Beaches, Backwaters, villages & more…Experience it",
@@ -3870,7 +3871,7 @@ export const travelPackages: Package[] = [
   },
 
   {
-    id: "south-india-4",
+    id: "south-india-4", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 04",
     "duration": "19 Nights / 20 Days",
     "summary": "This is an All-South Tour with all the major Tourist Destinations in South India, covering three states: Tamil Nadu, Kerala & Karnataka. The Heritage, Nature & Culture of South India are fully integrated into this Tour.",
@@ -4164,7 +4165,7 @@ export const travelPackages: Package[] = [
 
 
   {
-    id: "south-india-5",
+    id: "south-india-5", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 05",
     "duration": "17 Nights / 18 Days",
     "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",
@@ -4428,7 +4429,7 @@ export const travelPackages: Package[] = [
     ]
   },
   {
-    id: "south-india-6",
+    id: "south-india-6", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 06",
     "duration": "17 Nights / 18 Days",
     "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",
@@ -4663,7 +4664,7 @@ export const travelPackages: Package[] = [
 
 
   {
-    id: "south-india-7",
+    id: "south-india-7", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 07",
     "duration": "17 Nights / 18 Days",
     "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",
@@ -4893,7 +4894,7 @@ export const travelPackages: Package[] = [
 
 
   {
-    id: "south-india-8",
+    id: "south-india-8", packageType: "South India",
     "title": "VISUALS OF SOUTH INDIA - 08",
     "duration": "15 Nights / 16 Days",
     "summary": "If you are a Person searching for the remnants of the Historic past of Southern India, then this is the ideal choice. After enjoying the Freshness of the Sun & surf of the Goan beaches, you can start a historical Tour through the majestic land of Karnataka, where you can see the ancient Royal kingdoms as monuments of the past! Again, you can travel through the Mountain ranges and Backwaters to complete your historic mission.",

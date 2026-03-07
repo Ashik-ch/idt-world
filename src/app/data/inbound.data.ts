@@ -133,56 +133,6 @@ export const statesData: { [key: string]: any } = {
             { name: 'Autumn', months: 'Oct-Nov', description: 'Mild weather, great for outdoor activities', color: 'bg-white' }
         ]
     },
-    'rajasthan': {
-        id: 2,
-        name: 'Rajasthan',
-        description: 'Land of Kings - Discover royal palaces, desert adventures, and rich cultural heritage.',
-        highlights: [
-            { title: 'Royal Palaces', description: 'Magnificent forts and palaces of the Rajput era' },
-            { title: 'Desert Safari', description: 'Thrilling camel safaris in the Thar Desert' },
-            { title: 'Cultural Heritage', description: 'Rich traditions, folk music, and colorful festivals' }
-        ],
-        packages: [
-            {
-                name: 'Golden Triangle',
-                duration: '6D/5N',
-                description: 'Delhi - Agra - Jaipur classic tour',
-                price: '30,000',
-                originalPrice: '38,000',
-                discount: 21,
-                isTodaysDeal: true
-            },
-            {
-                name: 'Rajasthan Heritage',
-                duration: '8D/7N',
-                description: 'Complete Rajasthan experience',
-                price: '45,000',
-                originalPrice: '52,000',
-                discount: 13,
-                isTodaysDeal: false
-            },
-            {
-                name: 'Desert Adventure',
-                duration: '5D/4N',
-                description: 'Jaisalmer desert safari and forts',
-                price: '28,000',
-                originalPrice: '35,000',
-                discount: 20,
-                isTodaysDeal: true
-            }
-        ],
-        destinations: [
-            { name: 'Jaipur', description: 'Pink City with magnificent palaces and forts' },
-            { name: 'Udaipur', description: 'City of Lakes with romantic boat rides' },
-            { name: 'Jaisalmer', description: 'Golden City in the heart of Thar Desert' }
-        ],
-        bestTime: [
-            { name: 'Winter', months: 'Oct-Mar', description: 'Best time to visit, pleasant weather', color: 'bg-red-500' },
-            { name: 'Spring', months: 'Mar-May', description: 'Hot weather, good for early morning tours', color: 'bg-red-100' },
-            { name: 'Monsoon', months: 'Jul-Sep', description: 'Moderate rainfall, lush landscapes', color: 'bg-red-200' },
-            { name: 'Summer', months: 'May-Jun', description: 'Very hot, indoor activities recommended', color: 'bg-red-300' }
-        ]
-    }
 };
 
 export const highlightedStates = [

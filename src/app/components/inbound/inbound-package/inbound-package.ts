@@ -33,6 +33,7 @@ export class InboundPackage {
   bestTimeToVisit: any[] = [];
   stateData: any;
   packageData: Package | null = null;
+  packageType: string = '';
   activeTab: string = 'overview';
   activeAccordion: string = '';
   // openSection: string | null = 'overview'; // default open
@@ -63,7 +64,7 @@ export class InboundPackage {
     this.route.params.subscribe(params => {
       const state = params['state'];
       this.stateId = state;
-      this.loadStateData(state);
+      this.loadStateData(state);  // now only using for guest click gallery
       this.loadPackageData(state);
       setTimeout(() => this.viewportScroller.scrollToPosition([0, 0]), 0);
 
@@ -88,7 +89,7 @@ export class InboundPackage {
       this.packageData = travelPackages.find(pkg =>
         pkg.id.toLowerCase() === stateParam.toLowerCase()
       ) || null;
-
+      this.packageType = this.packageData?.packageType || 'this';
       if (!this.packageData) {
         this.router.navigate(['/inbound']);
       }
