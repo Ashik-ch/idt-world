@@ -29,7 +29,7 @@
         <div class="flex items-center gap-3">
             <img src="assets/images/logo.png" alt="IDT Virtual Tour Advisor"
                 class="w-8 h-8 rounded-full border border-white">
-            <span>IDT Virtual Tour Advisor</span>
+            <span>Lachmi, IDT Virtual Tour Advisor</span>
         </div>
         <button (click)="openChat()" class="hover:text-gray-200 transition">
             <i class="pi pi-times text-lg"></i>
@@ -41,8 +41,8 @@
         <!-- STEP 1 - Ask Name -->
         <div *ngIf="step === 1" class="flex flex-col gap-3">
             <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
-                Hi 👋 I'm <b>IDT Virtual Tour Advisor</b>,
-                What’s your <b>name</b>?
+                Hi <b> I'm Lachmi </b> your IDT Virtual Tour Advisor 😊 <br>
+                What's your <b>name</b>?
             </div>
             <input [(ngModel)]="userName" type="text" placeholder="Enter your name"
                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
@@ -60,9 +60,16 @@
                 Can I have your <b>contact number</b>?
             </div>
 
-            <input [(ngModel)]="userContact" type="tel" placeholder="+91 XXXXX XXXXX"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <div
+                class="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-red-400">
+                <span class="px-3 text-gray-600 border-r"> +91 </span>
+                <input [(ngModel)]="userContact" type="tel" maxlength="10" placeholder="XXXXX XXXXX"
+                    class="w-full px-3 py-2 text-sm focus:outline-none" />
+            </div>
 
+            <p *ngIf="contactError" class="text-red-500 text-sm">
+                Please enter a valid 10-digit mobile number
+            </p>
             <button (click)="startChatFlow()"
                 class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
                 Start Chat

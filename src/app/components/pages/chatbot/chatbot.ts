@@ -23,6 +23,7 @@ export class Chatbot {
   userContact = '';
   // userEmail = '';
   currentStep: any = null;
+  contactError = false;
 
   step = 1; // 1 = name, 2 = contact, 3 = email, 4 = chat flow
   selectedAnswers: { question: string; answer: string }[] = [];
@@ -42,6 +43,7 @@ export class Chatbot {
   }
 
   resetChat() {
+    this.contactError = false;
     this.userName = '';
     this.userContact = '';
     // this.userEmail = '';
@@ -63,6 +65,12 @@ export class Chatbot {
   }
 
   startChatFlow() {
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(this.userContact)) {
+      this.contactError = true;
+      return;
+    }
+    this.contactError = false;
     if (this.userName.trim()) {
       this.step = 4;
       this.currentStep = chatFlow[0];

@@ -1744,7 +1744,13 @@ export const travelPackages: Package[] = [
       'Full day cruise & overnight stay in A/C houseboat.',
       'Entry Fees, Service & other Taxes, Toll Charges, Bata & Night halting Charges, Local Guides at Selected locations.'
     ],
-    inclusions: [],
+    inclusions: [
+      'Local English-speaking driver',
+      'Twin/double accommodation with breakfast + dinner',
+      'Three meals in houseboat (Breakfast + Lunch + Dinner)',
+      'Entry fees, tolls, taxes, local guides at selected locations',
+      'Transport for the entire trip'
+    ],
 
     exclusions: [
       'International/domestic air tickets & airport taxes',

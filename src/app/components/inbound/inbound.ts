@@ -33,16 +33,16 @@ export class Inbound {
         this.activeFilter === 'all' ||
         pkg.category === this.activeFilter;
 
-      // 2️⃣ FILTER by search term
+      // 2️⃣ FILTER by search term (added description)
       const matchesSearch = !term ||
         pkg.name.toLowerCase().includes(term) ||
-        pkg.id.toLowerCase().includes(term);
+        pkg.id.toLowerCase().includes(term) ||
+        (pkg.description && pkg.description.toLowerCase().includes(term));
 
       // 3️⃣ RETURN ONLY MUTUAL DATA
       return matchesFilter && matchesSearch;
     });
   }
-
 
   navigateToState(state: string) {
     console.log("state", state);
