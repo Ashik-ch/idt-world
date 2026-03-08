@@ -1,18 +1,14 @@
-<!-- Floating Chat Button -->
 <div class="fixed bottom-6 right-6 flex items-center z-50 group">
-
-    <!-- Tooltip -->
     <div class="mr-3 px-4 py-2 rounded-full bg-red-600/90 text-white text-sm font-semibold
-           opacity-0 translate-x-2 pointer-events-none
-           group-hover:opacity-100 group-hover:translate-x-0
-           transition-all duration-300 shadow-lg">
+                opacity-0 translate-x-2 pointer-events-none
+                group-hover:opacity-100 group-hover:translate-x-0
+                transition-all duration-300 shadow-lg">
         We’re online! Chat now
     </div>
 
-    <!-- Chat Button -->
     <button (click)="openChat()" class="flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-500
-           text-white font-semibold rounded-full px-5 py-3 shadow-xl
-           hover:scale-110 transition-all duration-300 animate-bounce relative">
+                   text-white font-semibold rounded-full px-5 py-3 shadow-xl
+                   hover:scale-110 transition-all duration-300 animate-bounce relative">
         <i class="pi pi-comments text-2xl"></i>
         <span class="absolute -inset-1 rounded-full border-2 border-red-500 animate-ping"></span>
     </button>
@@ -21,109 +17,110 @@
 
 <!-- Chat Window -->
 <div *ngIf="isOpen"
-    class="fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp">
+    class="fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp z-50">
 
-    <!-- Header -->
     <div
-        class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 font-semibold flex justify-between items-center">
+        class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 font-semibold flex justify-between items-center shadow-md">
         <div class="flex items-center gap-3">
-            <img src="assets/images/logo.png" alt="IDT Virtual Tour Advisor"
-                class="w-8 h-8 rounded-full border border-white">
-            <span>Lachmi, IDT Virtual Tour Advisor</span>
+            <img src="assets/images/logo.png" alt="Advisor" class="w-8 h-8 rounded-full border-2 border-white/50">
+            <div class="flex flex-col leading-tight">
+                <span class="text-md">Lachmi</span>
+                <span class="text-sm font-light">IDT Virtual Tour Advisor</span>
+            </div>
         </div>
-        <button (click)="openChat()" class="hover:text-gray-200 transition">
+        <button (click)="openChat()" class="hover:rotate-90 transition-transform duration-200">
             <i class="pi pi-times text-lg"></i>
         </button>
     </div>
-    <!-- Chat Body -->
-    <div class="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50">
 
-        <!-- STEP 1 - Ask Name -->
-        <div *ngIf="step === 1" class="flex flex-col gap-3">
-            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
-                Hi <b> I'm Lachmi </b> your IDT Virtual Tour Advisor 😊 <br>
-                What's your <b>name</b>?
+    <div class="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50/50 scroll-smooth">
+
+        <div *ngIf="step === 1" class="flex flex-col gap-3 animate__animated animate__fadeIn">
+            <div class="bg-red-100 text-gray-800 rounded-2xl rounded-tl-none p-3 w-fit max-w-[90%] shadow-sm">
+                Hi <b>I'm Lachmi</b> 😊 <br> What's your <b>name</b>?
             </div>
-            <input [(ngModel)]="userName" type="text" placeholder="Enter your name"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <input [(ngModel)]="userName" (keyup.enter)="askContact()" type="text" placeholder="Enter your name"
+                class="w-full border border-gray-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 transition-all" />
 
-            <button (click)="askContact()"
-                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
+            <button (click)="askContact()" [disabled]="!userName.trim()"
+                class="bg-red-600 text-white rounded-xl px-4 py-2 font-medium hover:bg-red-700 disabled:opacity-50 transition-all shadow-md">
                 Next
             </button>
         </div>
 
-        <!-- STEP 2 - Ask Contact -->
-        <div *ngIf="step === 2" class="flex flex-col gap-3">
-            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
-                Nice to meet you, {{ userName }} 😊
-                Can I have your <b>contact number</b>?
+        <div *ngIf="step === 2" class="flex flex-col gap-3 animate__animated animate__fadeIn">
+            <div class="bg-red-100 text-gray-800 rounded-2xl rounded-tl-none p-3 w-fit max-w-[90%] shadow-sm">
+                Nice to meet you, {{ userName }} 😊 <br> Can I have your <b>contact number</b>?
             </div>
 
             <div
-                class="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-red-400">
-                <span class="px-3 text-gray-600 border-r"> +91 </span>
-                <input [(ngModel)]="userContact" type="tel" maxlength="10" placeholder="XXXXX XXXXX"
-                    class="w-full px-3 py-2 text-sm focus:outline-none" />
+                class="relative flex items-center border border-gray-300 rounded-xl bg-white shadow-sm overflow-visible focus-within:ring-2 focus-within:ring-red-500/50 transition-all">
+                <div class="relative">
+                    <button (click)="showDropdown = !showDropdown" type="button"
+                        class="flex items-center gap-1.5 px-3 py-2 bg-gray-50 border-r border-gray-200 hover:bg-gray-100 transition-colors rounded-l-xl">
+                        <img [src]="selectedCountry.flag" class="w-5 h-3 object-cover rounded-sm" alt="flag">
+                        <span class="text-sm font-semibold text-gray-700">{{ selectedCountry.code }}</span>
+                        <i class="pi pi-chevron-down text-[10px] text-gray-400"></i>
+                    </button>
+
+                    <div *ngIf="showDropdown"
+                        class="absolute bottom-full left-0 mb-2 z-[60] w-64 max-h-56 overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-2xl animate__animated animate__fadeInUp">
+                        <div *ngFor="let country of countries" (click)="selectCountry(country)"
+                            class="flex items-center gap-3 px-4 py-3 hover:bg-red-50 cursor-pointer text-sm border-b border-gray-50 last:border-none transition-colors">
+                            <img [src]="country.flag" class="w-6 h-4 object-cover rounded-sm shadow-sm" alt="">
+                            <span class="flex-1 truncate font-medium text-gray-700">{{ country.name }}</span>
+                            <span class="text-gray-400 text-xs font-mono">{{ country.code }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <input [(ngModel)]="userContact" (keyup.enter)="startChatFlow()" type="tel" placeholder="Mobile number"
+                    class="flex-1 px-4 py-2 text-sm focus:outline-none bg-transparent" />
             </div>
 
-            <p *ngIf="contactError" class="text-red-500 text-sm">
-                Please enter a valid 10-digit mobile number
+            <p *ngIf="contactError" class="text-red-500 text-[11px] font-medium px-1 flex items-center gap-1">
+                <i class="pi pi-exclamation-circle text-[10px]"></i>
+                Minimum {{ selectedCountry.minLength }} digits required for {{ selectedCountry.name }}
             </p>
+
             <button (click)="startChatFlow()"
-                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
+                class="bg-red-600 text-white rounded-xl px-4 py-2.5 font-medium hover:bg-red-700 transition-all shadow-md mt-1">
                 Start Chat
             </button>
         </div>
-        <!-- <div *ngIf="step === 3" class="flex flex-col gap-3">
-            <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
-                Thank you, {{ userName }} 😊
-                Can I have your <b>Email address</b>?
-            </div>
 
-            <input [(ngModel)]="userEmail" type="email" placeholder="you@example.com"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
-
-            <button (click)="startChatFlow()"
-                class="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600 transition-all">
-                Start Chat
-            </button>
-        </div> -->
-
-        <!-- STEP 3 - Chat Flow -->
-        <div *ngIf="step === 4 && currentStep">
-
-            <!-- Show Previous Answers -->
-            <div *ngFor="let answer of selectedAnswers" class="mb-3">
-                <div class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+        <div *ngIf="step === 4 && currentStep" class="space-y-4 animate__animated animate__fadeIn">
+            <div *ngFor="let answer of selectedAnswers" class="flex flex-col gap-2">
+                <div
+                    class="bg-red-100 text-gray-800 rounded-2xl rounded-tl-none p-3 w-fit max-w-[85%] shadow-sm text-sm">
                     {{ answer.question }}
                 </div>
-
-                <div class="bg-red-500 text-white rounded-xl p-2 mt-1 ml-auto w-fit max-w-[90%] text-right">
+                <div
+                    class="bg-red-600 text-white rounded-2xl rounded-tr-none p-3 ml-auto w-fit max-w-[85%] shadow-md text-sm">
                     {{ answer.answer }}
                 </div>
             </div>
 
-            <!-- Current Question -->
-            <div *ngIf="currentStep.id !== 'end'" class="bg-red-100 text-gray-800 rounded-xl p-3 w-fit max-w-[90%]">
+            <div *ngIf="currentStep.id !== 'end'"
+                class="bg-red-100 text-gray-800 rounded-2xl rounded-tl-none p-3 w-fit max-w-[85%] shadow-sm text-sm animate__animated animate__fadeInLeft">
                 {{ currentStep.question }}
             </div>
 
-            <!-- Options -->
-            <div *ngIf="currentStep.id !== 'end'">
+            <div *ngIf="currentStep.id !== 'end'" class="grid grid-cols-1 gap-2 pt-2">
                 <button *ngFor="let option of currentStep.options" (click)="selectOption(option)"
-                    class="w-full text-left px-4 py-2 my-1 bg-white border border-gray-200 rounded-lg hover:bg-red-50 hover:text-red-600 transition">
+                    class="w-full text-left px-4 py-3 bg-white border border-gray-200 rounded-xl hover:border-red-400 hover:bg-red-50 hover:text-red-600 transition-all text-sm shadow-sm active:scale-95">
                     {{ option.text }}
                 </button>
             </div>
 
-            <!-- End Message -->
-            <div *ngIf="currentStep.id === 'end'" class="text-sm text-gray-50 mt-3 bg-red-800 p-3 rounded-lg">
-                🎉 Thank you, {{ userName }}! <br>
-                Our travel expert will contact you soon ✨
+            <div *ngIf="currentStep.id === 'end'" class="text-center p-6 animate__animated animate__zoomIn">
+                <div class="text-4xl mb-3">🎉</div>
+                <h3 class="text-gray-800 font-bold">Awesome, {{ userName }}!</h3>
+                <p class="text-sm text-gray-500 mt-1">Our travel expert will contact you at <b>{{selectedCountry.code}}
+                        {{userContact}}</b> shortly.</p>
+                <button (click)="resetChat()" class="mt-4 text-red-600 text-xs font-semibold hover:underline">Start New
+                    Enquiry</button>
             </div>
-
         </div>
-
     </div>
 </div>
