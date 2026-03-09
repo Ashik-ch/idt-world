@@ -32,6 +32,9 @@ export class Booking implements OnInit {
   countries: Country[] = [];
   selectedCountry: Country = { name: 'India', flag: 'https://flagcdn.com/w320/in.png', code: '+91', minLength: 10 };
 
+  private _selectedAddOns: any[] = [];
+  addOnsTotal: number = 0;
+
   constructor(private fb: FormBuilder) {
     this.initForm();
   }
@@ -78,6 +81,23 @@ export class Booking implements OnInit {
     this.showDropdown = false;
   }
 
+  @Input() set supplementalAttractions(value: any[]) {
+    this._selectedAddOns = value || [];
+    this.calculateTotal();
+  }
+
+  get supplementalAttractions() {
+    return this._selectedAddOns;
+  }
+
+  calculateTotal() {
+    this.addOnsTotal = this._selectedAddOns.reduce((sum, item) => sum + (Number(item.cost) || 0), 0);
+  }
+
+  generateAddOnSummary(): string {
+    return this._selectedAddOns.map(a => `${a.name})`).join(', ') || 'None';
+  }
+
   onSubmit() {
     this.formSubmitted = true;
     const phoneValue = this.bookingForm.get('phone')?.value.replace(/\D/g, '');
@@ -108,6 +128,7 @@ export class Booking implements OnInit {
       package_type: this.bookingForm.value.packageType,
       transport_type: this.bookingForm.value.transportType,
       message: this.bookingForm.value.message,
+      supplementary_attractions: this.generateAddOnSummary(),
       submitted_at: new Date().toLocaleString()
     };
 
@@ -134,20 +155,21 @@ export class Booking implements OnInit {
   // WhatsApp message
   sendWhatsAppMessage() {
     const message = `
-🧳 *Tour Confirmation Request*  
------------------------------------  
-👤 *Name:* ${this.bookingForm.value.name}  
-📞 *Contact:* ${this.bookingForm.value.phone}  
-👨‍👩‍👧‍👦 *Adults:* ${this.bookingForm.value.adults}  
-🧒 *Children:* ${this.bookingForm.value.children || 0}  
-📅 *Arrival:* ${this.bookingForm.value.arrivalDate || 'Not specified'}  
-📅 *Return:* ${this.bookingForm.value.returnDate || 'Not specified'}  
-🏨 *Rooms:* ${this.bookingForm.value.rooms}  
-🛏️ *Extra Beds:* ${this.bookingForm.value.extraBed}  
-💎 *Package:* ${this.bookingForm.value.packageType || 'Not selected'}  
-🚗 *Transport:* ${this.bookingForm.value.transportType || 'Not selected'}  
------------------------------------  
-Please confirm the booking without modifications.`;
+🧳 * Tour Confirmation Request *
+      -----------------------------------  
+👤 * Name:* ${this.bookingForm.value.name}  
+📞 * Contact:* ${this.bookingForm.value.phone}  
+👨‍👩‍👧‍👦 * Adults:* ${this.bookingForm.value.adults}  
+🧒 * Children:* ${this.bookingForm.value.children || 0}  
+📅 * Arrival:* ${this.bookingForm.value.arrivalDate || 'Not specified'}  
+📅 * Return:* ${this.bookingForm.value.returnDate || 'Not specified'}  
+🏨 * Rooms:* ${this.bookingForm.value.rooms}  
+🛏️ * Extra Beds:* ${this.bookingForm.value.extraBed}  
+💎 * Package:* ${this.bookingForm.value.packageType || 'Not selected'} 
+➕ * Supplementary Attractions:* ${this.generateAddOnSummary()} 
+🚗 * Transport:* ${this.bookingForm.value.transportType || 'Not selected'}
+    -----------------------------------
+      Please confirm the booking without modifications.`;
 
     const encodedMessage = encodeURIComponent(message);
     const phoneNumber = '919847240456';

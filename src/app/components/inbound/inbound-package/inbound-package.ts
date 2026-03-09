@@ -34,6 +34,7 @@ export class InboundPackage implements OnInit {
   activeAccordion: string = '';
   inboundKeralaPackage = inboundKeralaPackages;
   openSection: string[] = ['overview'];
+  selectedAddOnsFromSummary: any[] = [];
 
   collapsibleSections = [
     { id: 'overview', title: 'YOUR DAILY PROGRAMME', delay: '0' },
@@ -111,6 +112,10 @@ export class InboundPackage implements OnInit {
 
   openChatbot() {
     this.chatbotService.triggerChat();
+  }
+
+  updateSelectedAddons(selectedItems: any[]) {
+    this.selectedAddOnsFromSummary = selectedItems;
   }
 
   // Gallery Modal
