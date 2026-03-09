@@ -312,7 +312,7 @@ export const travelPackages: Package[] = [
       { id: '10', name: 'Half-Day Elephant Safari', subtitle: 'Elephant ride and forest adventure', location: 'Munnar/Thekkady', people: "1", cost: '1000', rating: 4.5, featured: false, img: "assets/images/elephant-safari.jpg" },
       { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, feeding and interacting with elephants', location: 'Thekkady', people: "1", cost: '2000', rating: 4.8, featured: true, img: "assets/images/elephant-moments.jpg" },
       { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: 'Relaxing houseboat cruise on Kerala backwaters', location: 'Cochin', people: "1", cost: '1500', rating: 4.7, featured: true, img: "assets/images/backwater-canal.jpg" },
-      { id: '13', name: 'Backwater Historical Tour', subtitle: 'Guided tour of Cochin’s heritage sites', location: 'Cochin', people: "1", cost: '1500', rating: 4.6, featured: false, img: "assets/images/backwater-historical.jpg" },
+      { id: '13', name: 'Backwater Historical Tour', subtitle: 'Guided tour of Cochin’s heritage sites', location: 'Cochin', people: "1", cost: '1500', rating: 4.6, featured: false, img: "assets/images/historical-tour-cochin.jpg" },
       { id: '14', name: 'Extra Night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom - Alleppey', people: "2", cost: '7000', rating: 4.9, featured: true, img: "assets/images/houseboat-night.jpg" }
     ],
 
@@ -775,19 +775,19 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '3-01', name: 'Half-Day Cookery Demonstration Tour', subtitle: 'Traditional home visit with lunch or dinner (Non-Veg)', location: 'Cochin', people: '1', cost: '₹2000', rating: 4.5, featured: true, img: 'assets/images/cooking.jpg' },
+      { id: '3-01', name: 'Half-Day Cookery Demonstration Tour', subtitle: 'Traditional home visit with lunch or dinner (Non-Veg)', location: 'Cochin', people: '1', cost: '₹2000', rating: 4.5, featured: true, img: 'assets/images/cookery-demo.jpg' },
       { id: '3-02', name: 'Kalaripayattu Programme', subtitle: 'Traditional martial arts performance (Min 5 pax)', location: 'Cochin / Thekkady', people: '5 Min', cost: '₹1000', rating: 4.2, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3-03', name: 'Kolukumalai Tea Factory Visit', subtitle: 'World’s highest tea factory experience', location: 'Munnar', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'assets/images/kolukumalai.jpg' },
+      { id: '3-03', name: 'Kolukumalai Tea Factory Visit', subtitle: 'World’s highest tea factory experience', location: 'Munnar', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'assets/images/gallery79.jpg' },
       { id: '3-04', name: 'Half-Day Tea Trial Tour', subtitle: 'Tea tasting and plantation walk', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
       { id: '3-05', name: 'Full-Day Tea Trial Tour', subtitle: 'Complete tea plantation experience', location: 'Munnar', people: '1', cost: '₹2500', rating: 4.7, featured: false, img: 'assets/images/tea-full.jpg' },
       { id: '3-06', name: 'Mountain Trekking with Jeep Safari', subtitle: 'Guided trekking with off-road jeep safari', location: 'Munnar', people: '1', cost: '₹3000', rating: 4.7, featured: true, img: 'assets/images/jeepsafari.jpg' },
-      { id: '3-07', name: 'Bamboo River Rafting', subtitle: 'Bamboo rafting in Periyar River', location: 'Thekkady', people: '1', cost: '₹2500', rating: 4.6, featured: false, img: 'assets/images/bamboo.jpg' },
+      { id: '3-07', name: 'Bamboo River Rafting', subtitle: 'Bamboo rafting in Periyar River', location: 'Thekkady', people: '1', cost: '₹2500', rating: 4.6, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
       { id: '3-08', name: 'Full Day Trip to Gavi', subtitle: 'Eco tourism forest experience (On request)', location: 'Thekkady', people: '1', cost: 'On Request', rating: 4.7, featured: true, img: 'assets/images/gavi.jpg' },
       { id: '3-09', name: 'Jeep Safari in Periyar Forests', subtitle: 'Wildlife jeep safari through reserve forest', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.3, featured: false, img: 'assets/images/jeep-periyar.jpg' },
       { id: '3-10', name: 'Half-Day Elephant Safari', subtitle: 'Elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.2, featured: false, img: 'assets/images/gallery17.jpg' },
       { id: '3-11', name: 'Elephant Moments Experience', subtitle: 'Bathing, feeding and safari with elephants', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'assets/images/elephant-moments.jpg' },
-      { id: '3-12', name: 'Backwater Canal Cruise', subtitle: 'Country craft backwater cruise', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/canal.jpg' },
-      { id: '3-13', name: 'Backwater Historical Tour', subtitle: 'Guided heritage backwater tour', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.6, featured: true, img: 'assets/images/historical.jpg' },
+      { id: '3-12', name: 'Backwater Canal Cruise', subtitle: 'Country craft backwater cruise', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '3-14', name: 'Extra Night in A/C Houseboat', subtitle: 'Full-day cruise from Kumarakom to Alleppey', location: 'Kumarakom – Alleppey', people: '2', cost: '₹7000', rating: 4.9, featured: true, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
@@ -948,7 +948,7 @@ export const travelPackages: Package[] = [
       { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
       { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/historical-tour.jpg' },
+      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
@@ -1160,7 +1160,7 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demonstration.jpg' },
+      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demo.jpg' },
       { id: '2', name: 'Half day Kalarippayattu Programme', subtitle: 'Min 5 Pax', location: 'Cochin/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/kalarippayattu.jpg' },
       { id: '3', name: 'Kolukumalai Tea Factory Visit (the Highest hill station Tea Factory in the world)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/kolukumalai-tea-factory.jpg' },
       { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/tea-trial.jpg' },
@@ -1172,7 +1172,7 @@ export const travelPackages: Package[] = [
       { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/elephant-safari.jpg' },
       { id: '11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/backwater-historical.jpg' },
+      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: [
@@ -1395,7 +1395,7 @@ export const travelPackages: Package[] = [
       { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/gallery17.jpg' },
       { id: '11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/backwater-historical.jpg' },
+      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: [
@@ -1609,7 +1609,7 @@ export const travelPackages: Package[] = [
       { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
       { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/backwater-historical.jpg' },
+      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For 2 Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
@@ -1797,7 +1797,7 @@ export const travelPackages: Package[] = [
       { id: '8-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
       { id: '8-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '8-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '8-13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-historical.jpg' },
+      { id: '8-13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
       { id: '8-14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: []
