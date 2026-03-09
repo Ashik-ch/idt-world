@@ -1,15 +1,12 @@
 <div class="mx-auto px-4 py-6 border-2 border-white rounded-2xl mt-10 bg-[url('assets/images/banner3.png')] bg-cover">
 
-    <!-- Toggle Buttons -->
     <div class="flex justify-center mb-8 bg-gray-100 rounded-xl p-1 w-fit mx-auto">
-        <button type="button" (click)="activeForm = 'tour'" [ngClass]="activeForm === 'tour'
-            ? 'bg-red-600 text-white' : 'text-gray-600'" class="px-6 py-2 rounded-lg font-medium transition">
-            Tour Request
-        </button>
-        <button type="button" (click)="activeForm = 'change'" [ngClass]="activeForm === 'change'
-            ? 'bg-red-600 text-white' : 'text-gray-600'" class="px-6 py-2 rounded-lg font-medium transition">
-            Change Plan
-        </button>
+        <button type="button" (click)="activeForm = 'tour'"
+            [ngClass]="activeForm === 'tour' ? 'bg-red-600 text-white' : 'text-gray-600'"
+            class="px-6 py-2 rounded-lg font-medium transition">Tour Request</button>
+        <button type="button" (click)="activeForm = 'change'"
+            [ngClass]="activeForm === 'change' ? 'bg-red-600 text-white' : 'text-gray-600'"
+            class="px-6 py-2 rounded-lg font-medium transition">Change Plan</button>
     </div>
     <!--  Form -->
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="max-w-2xl mx-auto space-y-4 text-sm text-gray-700">
@@ -30,12 +27,25 @@
             }
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="relative">
-                <input type="tel" id="phone" name="phone" formControlName="phone" required
-                    class="peer w-full border border-gray-300 rounded-md px-3 pt-5 pb-1 focus:border-red-500 focus:ring-0 outline-none text-sm" />
-                <label for="phone"
-                    class="absolute left-3 top-1.5 text-xs text-gray-500 peer-focus:text-red-600 transition-all">Contact
-                    Number *</label>
+            <div class="relative flex items-center border border-gray-300 rounded-md bg-white">
+                <div class="relative">
+                    <button (click)="showDropdown = !showDropdown" type="button"
+                        class="flex items-center gap-1 px-2 py-2 border-r hover:bg-gray-100">
+                        <img [src]="selectedCountry.flag" class="w-5 h-3 object-cover" alt="flag">
+                        <span class="text-xs font-mono">{{ selectedCountry.code }}</span>
+                    </button>
+                    <div *ngIf="showDropdown"
+                        class="absolute left-0 mt-1 z-50 w-64 max-h-48 overflow-y-auto bg-white border rounded-md shadow-xl">
+                        <div *ngFor="let country of countries" (click)="selectCountry(country)"
+                            class="flex items-center gap-3 px-3 py-2 hover:bg-red-50 cursor-pointer text-xs border-b">
+                            <img [src]="country.flag" class="w-5 h-3 object-cover" alt="">
+                            <span class="flex-1">{{ country.name }}</span>
+                            <span class="text-gray-400">{{ country.code }}</span>
+                        </div>
+                    </div>
+                </div>
+                <input type="tel" id="phone" name="phone" formControlName="phone" required placeholder="Contact Number"
+                    class="flex-1 px-3 py-2 outline-none text-sm" />
                 @if (formSubmitted && !bookingForm.value.phone) {
                 <p class="text-red-500 text-xs mt-0.5">Contact number is required.</p>
                 }

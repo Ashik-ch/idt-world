@@ -1,5 +1,5 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { inboundKeralaPackages, Package, travelPackages } from '../../../data/package.data';
@@ -22,22 +22,18 @@ import { ChatbotService } from '../../../services/chatbot-service';
   templateUrl: './inbound-package.html',
   styleUrl: './inbound-package.scss'
 })
-export class InboundPackage {
-
-  stateName = '';
+export class InboundPackage implements OnInit {
+  @Output() packageTitle = new EventEmitter<string>();
+  currentTitle: string = '';
   stateId = '';
-  stateDescription = '';
   stateHighlights: any[] = [];
-  availablePackages: any[] = [];
-  popularDestinations: any[] = [];
-  bestTimeToVisit: any[] = [];
   stateData: any;
   packageData: Package | null = null;
   packageType: string = '';
   activeTab: string = 'overview';
   activeAccordion: string = '';
-  // openSection: string | null = 'overview'; // default open
   inboundKeralaPackage = inboundKeralaPackages;
+  openSection: string[] = ['overview'];
 
   collapsibleSections = [
     { id: 'overview', title: 'YOUR DAILY PROGRAMME', delay: '0' },
@@ -76,12 +72,7 @@ export class InboundPackage {
   loadStateData(state: string) {
     this.stateData = statesData
     const data = this.stateData[state] || this.stateData['kerala'];
-    this.stateName = data.name;
-    this.stateDescription = data.description;
     this.stateHighlights = data.highlights;
-    this.availablePackages = data.packages;
-    this.popularDestinations = data.destinations;
-    this.bestTimeToVisit = data.bestTime;
   }
 
   private loadPackageData(stateParam: string): void {
@@ -89,17 +80,18 @@ export class InboundPackage {
       this.packageData = travelPackages.find(pkg =>
         pkg.id.toLowerCase() === stateParam.toLowerCase()
       ) || null;
+      const title = this.packageData?.title || '';
+      this.currentTitle = title;
+      this.packageTitle.emit(title);
       this.packageType = this.packageData?.packageType || 'this';
       if (!this.packageData) {
         this.router.navigate(['/inbound']);
       }
     }
   }
-  openSection: string[] = ['overview'];
 
   toggleSection(id: string) {
-    console.log(id);
-
+    console.log("Opened", id);
     if (this.openSection.includes(id)) {
       // already open → close it
       this.openSection = this.openSection.filter(s => s !== id);
@@ -147,10 +139,11 @@ export class InboundPackage {
     const date = now.toLocaleDateString();
     const time = now.toLocaleTimeString();
     const packageName = this.stateId;
+    const packageTitle = this.packageTitle;
     const message =
       `Hello,
 I would like to book a package with today's deal.
-Package: ${packageName}
+Package: ${packageName} - ${packageTitle}
 Date: ${date}
 Time: ${time}
 I want to get the 10% discount offer.`;
