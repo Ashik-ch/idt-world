@@ -112,7 +112,7 @@ export const travelPackages: Package[] = [
       { day: '02', title: 'Explore Ooty (B + D)', details: ['After breakfast, enjoy a sightseeing tour in and around Ooty.', 'Capture the postcard-perfect views of this hill station.', 'Visit the Rose Garden, Avvamore Palace, and Government Museum.', 'Catch the Toy Train and enjoy the scenic journey to Coonoor.', 'Return to the hotel by evening and relax.', 'Overnight stay at the hotel.',], },
       { day: '03', title: 'Proceed to Munnar (B + D)', details: ['On to Munnar.', 'Upon your arrival, you will be driven straight to Munnar hill station.', 'On the way, you can enjoy the Tea gardens & the Tea Museum.', 'By afternoon, reach Munnar.', 'Check into the hotel and relax.', 'Spice shopping.', 'Overnight stay at the hotel.',], },
       { day: '04', title: 'Explore Munnar (B + D)', details: ['Breakfast at the hotel and Our driver will pick you up from the hotel for a sightseeing tour.', 'After breakfast, you are guided to Eravikulam National Park.', 'Enjoy a full day exploring Munnar sightseeing.', 'Later, visit Mattupetty Dam and Echo Point.', 'Move to Kundala Lake by noon.', 'Unwind, and you are taken to the Top station to experience the beauty of nature.', 'Free your time at leisure.', 'Overnight stay at your resort.',], },
-      { day: '05', title: 'Proceed to Thekkady (B + D)', details: ['In the morning, check out from the hotel & proceed to Thekkady.', 'Drive to Thekkady is 3 hours(150 km).', 'Reach Thekkady before noon.', 'Check into the hotel and relax.', 'Afternoon will take you for an Elephant Ride and a Jungle safari.', 'By evening, you can enjoy the ‘Kalarippayattu’, the Ancient martial arts of Kerala.', 'Overnight stay at the hotel.'], },
+      { day: '05', title: 'Proceed to Thekkady (B + D)', details: ['In the morning, check out from the hotel & proceed to Thekkady.', 'Drive to Thekkady is 3 hours(150 km).', 'Reach Thekkady before noon.', 'Check into the hotel and relax.', 'Afternoon will take you for an Elephant Ride and a Jungle safari.', 'By evening, you can enjoy the ‘Kalaripayattu’, the Ancient martial arts of Kerala.', 'Overnight stay at the hotel.'], },
       { day: '06', title: 'Enjoy Houseboat at Kumarakom (B + D)', details: ['Cruise through lush landscapes.', 'Enjoy a traditional lunch onboard.', 'The houseboat will be anchored from 5: 30 pm till the next day at 6 Am.', 'Dinner onboard.', 'Overnight stay in the houseboat.',], },
       { day: '07', title: 'Departure from Cochin (B)', details: ['After breakfast, check out of the houseboat.', 'And we will take you to the Cochin Airport to catch your return flight, carrying beautiful memories of Kerala.',], },
     ],
@@ -300,20 +300,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Cookery Demonstration Tour', subtitle: 'Traditional food experience with lunch/dinner', location: 'Cochin', people: "1", cost: '₹2000', rating: 4.5, featured: true, img: 'assets/images/cookery-demo.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Half-day martial arts demonstration', location: 'Cochin/Thekkady', people: "5 Min", cost: '1000 pp', rating: 4.2, featured: false, img: "assets/images/Kalaripayattu.jpg" },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Visit the highest hill station tea factory in the world', location: 'Munnar', people: "1", cost: '2000', rating: 4.6, featured: true, img: "assets/images/kolukumalai-tea.jpg" },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: 'Tea tasting and plantation walk', location: 'Munnar', people: "1", cost: '1500', rating: 4.3, featured: false, img: "assets/images/tea-trial.jpg" },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: 'Extended tea plantation exploration and tasting', location: 'Munnar', people: "1", cost: '2500.00', rating: 4.7, featured: true, img: "assets/images/tea-full.jpg" },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari', subtitle: 'Trek the mountains with a guide and jeep safari', location: 'Munnar', people: "1", cost: '3000', rating: 4.8, featured: true, img: "assets/images/jeepsafari.jpg" },
-      { id: '7', name: 'Bamboo River Drafting', subtitle: 'Enjoy rafting at Periyar River', location: 'Thekkady', people: "1", cost: '2500', rating: 4.4, featured: false, img: "assets/images/bamboo-rafting.jpg" },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: 'Explore wildlife with jeep safari', location: 'Thekkady', people: "1", cost: '2000', rating: 4.7, featured: true, img: "assets/images/jeep-periyar.jpg" },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: 'Elephant ride and forest adventure', location: 'Munnar/Thekkady', people: "1", cost: '1000', rating: 4.5, featured: false, img: "assets/images/elephant-safari.jpg" },
-      { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, feeding and interacting with elephants', location: 'Thekkady', people: "1", cost: '2000', rating: 4.8, featured: true, img: "assets/images/elephant-moments.jpg" },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: 'Relaxing houseboat cruise on Kerala backwaters', location: 'Cochin', people: "1", cost: '1500', rating: 4.7, featured: true, img: "assets/images/backwater-canal.jpg" },
-      { id: '13', name: 'Backwater Historical Tour', subtitle: 'Guided tour of Cochin’s heritage sites', location: 'Cochin', people: "1", cost: '1500', rating: 4.6, featured: false, img: "assets/images/historical-tour-cochin.jpg" },
-      { id: '14', name: 'Extra Night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom - Alleppey', people: "2", cost: '7000', rating: 4.9, featured: true, img: "assets/images/houseboat-night.jpg" }
+      { id: '0-1', name: 'Cookery Demonstration Tour', subtitle: 'Traditional food experience with lunch/dinner', location: 'Cochin', people: "1", cost: '₹2000', rating: 4.5, featured: true, img: 'assets/images/cookery-demo.jpg' },
+      { id: '0-2', name: 'Kalaripayattu Programme', subtitle: 'Half-day martial arts demonstration', location: 'Cochin/Thekkady', people: "5 Min", cost: '1000 pp', rating: 4.2, featured: false, img: "assets/images/Kalaripayattu.jpg" },
+      { id: '0-3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Visit the highest hill station tea factory in the world', location: 'Munnar', people: "1", cost: '2000', rating: 4.6, featured: true, img: "assets/images/kolukumalai-tea.jpg" },
+      { id: '0-4', name: 'Half-Day Tea Trial Tour', subtitle: 'Tea tasting and plantation walk', location: 'Munnar', people: "1", cost: '1500', rating: 4.3, featured: false, img: "assets/images/tea-trial.jpg" },
+      { id: '0-5', name: 'Full Day Tea Trial Tour', subtitle: 'Extended tea plantation exploration and tasting', location: 'Munnar', people: "1", cost: '2500.00', rating: 4.7, featured: true, img: "assets/images/tea-full.jpg" },
+      { id: '0-6', name: 'Mountain Trekking with Jeep Safari', subtitle: 'Trek the mountains with a guide and jeep safari', location: 'Munnar', people: "1", cost: '3000', rating: 4.8, featured: true, img: "assets/images/jeepsafari.jpg" },
+      { id: '0-7', name: 'Bamboo River Drafting', subtitle: 'Enjoy rafting at Periyar River', location: 'Thekkady', people: "1", cost: '2500', rating: 4.4, featured: false, img: "assets/images/bamboo-rafting.jpg" },
+      { id: '0-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '0-9', name: 'Jeep Safari in Periyar Forests', subtitle: 'Explore wildlife with jeep safari', location: 'Thekkady', people: "1", cost: '2000', rating: 4.7, featured: true, img: "assets/images/jeep-periyar.jpg" },
+      { id: '0-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '0-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, feeding and interacting with elephants', location: 'Thekkady', people: "1", cost: '2000', rating: 4.8, featured: true, img: "assets/images/elephant-moments.jpg" },
+      { id: '0-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: 'Relaxing houseboat cruise on Kerala backwaters', location: 'Cochin', people: "1", cost: '1500', rating: 4.7, featured: true, img: "assets/images/backwater-canal.jpg" },
+      { id: '0-13', name: 'Backwater Historical Tour', subtitle: 'Guided tour of Cochin’s heritage sites', location: 'Cochin', people: "1", cost: '1500', rating: 4.6, featured: false, img: "assets/images/historical-tour-cochin.jpg" },
+      { id: '0-14', name: 'Extra Night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom - Alleppey', people: "2", cost: '7000', rating: 4.9, featured: true, img: "assets/images/houseboat-night.jpg" }
     ],
 
     specialOffers: [
@@ -607,11 +607,11 @@ export const travelPackages: Package[] = [
       { id: '2-5', name: 'Mountain Trekking + Jeep Safari', subtitle: 'Adventure ride with scenic nature views', location: 'Munnar', people: "1", cost: '₹3000', rating: 4.7, featured: false, img: 'assets/images/jeepsafari.jpg' },
       { id: '2-6', name: 'Bamboo River Rafting', subtitle: 'Scenic bamboo rafting experience in Periyar River', location: 'Thekkady', people: '1', cost: '₹2500', rating: 4.6, featured: true, img: 'assets/images/bamboo-rafting.jpg' },
       { id: '2-7', name: 'Full Day Gavi Excursion', subtitle: 'Eco-tourism guided forest trip (subject to availability)', location: 'Thekkady', people: '1', cost: 'On Request', rating: 4.7, featured: true, img: 'assets/images/gavi.jpg' },
-      { id: '2-8', name: 'Periyar Forest Jeep Safari', subtitle: 'Wildlife jeep safari through Periyar reserve forests', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.5, featured: false, img: 'https://images.unsplash.com/photo-1592383913501-e4c8c78d1c7d' },
-      { id: '2-9', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'https://images.unsplash.com/photo-1578926287967-8b8b8c65c4aa' },
-      { id: '2-10', name: 'Elephant Moments Experience', subtitle: 'Bathing, feeding and safari with elephants (half day)', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'https://images.unsplash.com/photo-1600831941348-9f0c44b61c26' },
-      { id: '2-11', name: 'Backwater Canal Cruise', subtitle: 'Country craft cruise through scenic backwaters', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.4, featured: false, img: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2' },
-      { id: '2-12', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'https://images.unsplash.com/photo-1586864387784-6d5d79ca7a51' }
+      { id: '2-8', name: 'Periyar Forest Jeep Safari', subtitle: 'Wildlife jeep safari through Periyar reserve forests', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.5, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '2-9', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '2-10', name: 'Elephant Moments Experience', subtitle: 'Bathing, feeding and safari with elephants (half day)', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'assets/images/elephant-moments.jpg' },
+      { id: '2-11', name: 'Backwater Canal Cruise', subtitle: 'Country craft cruise through scenic backwaters', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.4, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '2-12', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' }
     ],
 
     specialOffers: [
@@ -680,7 +680,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Tea Museum & Gardens in Munnar',
       'Eravikulam National Park, Mattupetty Dam, Kundala Lake, Echo Point, Top Station',
-      'Kalarippayattu, Periyar Lake boating & Elephant ride',
+      'Kalaripayattu, Periyar Lake boating & Elephant ride',
       'Full day houseboat cruise & overnight stay',
       'Entry Fees, Taxes, Local Guides'
     ],
@@ -784,10 +784,10 @@ export const travelPackages: Package[] = [
       { id: '3-07', name: 'Bamboo River Rafting', subtitle: 'Bamboo rafting in Periyar River', location: 'Thekkady', people: '1', cost: '₹2500', rating: 4.6, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
       { id: '3-08', name: 'Full Day Trip to Gavi', subtitle: 'Eco tourism forest experience (On request)', location: 'Thekkady', people: '1', cost: 'On Request', rating: 4.7, featured: true, img: 'assets/images/gavi.jpg' },
       { id: '3-09', name: 'Jeep Safari in Periyar Forests', subtitle: 'Wildlife jeep safari through reserve forest', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.3, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '3-10', name: 'Half-Day Elephant Safari', subtitle: 'Elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.2, featured: false, img: 'assets/images/gallery17.jpg' },
+      { id: '3-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
       { id: '3-11', name: 'Elephant Moments Experience', subtitle: 'Bathing, feeding and safari with elephants', location: 'Thekkady', people: '1', cost: '₹2000', rating: 4.6, featured: true, img: 'assets/images/elephant-moments.jpg' },
       { id: '3-12', name: 'Backwater Canal Cruise', subtitle: 'Country craft backwater cruise', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
+      { id: '3-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
       { id: '3-14', name: 'Extra Night in A/C Houseboat', subtitle: 'Full-day cruise from Kumarakom to Alleppey', location: 'Kumarakom – Alleppey', people: '2', cost: '₹7000', rating: 4.9, featured: true, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
@@ -822,7 +822,7 @@ export const travelPackages: Package[] = [
     itineraryOverview: [
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet the IDT representative.', 'Drive to Munnar (approx. 3–4 hours).', 'Visit Tea Museum and Tea Gardens en route; spice shopping.', 'Check in at hotel and relax. Overnight at the hotel.'], image: 'assets/images/munnar.jpg' },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Full-day sightseeing: Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station.', 'Leisure time and overnight at the hotel.'], image: 'assets/images/hotels/westwood.jpg' },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast and depart for Thekkady (morning).', 'Check in around 11:30–12:00 at the private waiting lounge.', 'Evening boat ride on Periyar Lake and Kalarippayattu show (subject to schedule). Overnight at hotel.'], image: 'assets/images/hotels/thekkady-overview.jpg' },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast and depart for Thekkady (morning).', 'Check in around 11:30–12:00 at the private waiting lounge.', 'Evening boat ride on Periyar Lake and Kalaripayattu show (subject to schedule). Overnight at hotel.'], image: 'assets/images/hotels/thekkady-overview.jpg' },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Morning elephant ride and “elephant moments” (optional).', 'Jungle safari with guide in Periyar region.', 'Evening leisure and overnight at hotel.'], image: 'assets/images/hotels/poetree.jpg' },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Drive to Kumarakom (approx. 4 hours).', 'Check into A/C houseboat by noon and begin cruise.', 'Lunch and dinner onboard; anchored overnight on the houseboat.'], image: 'assets/images/hotels/houseboat.jpg' },
       { day: '06', title: 'End of Tour (B)', details: ['Disembark from houseboat after breakfast and transfer to Cochin Airport/railway station for onward journey.'], image: 'assets/images/hotels/cochin.jpg' }
@@ -831,7 +831,7 @@ export const travelPackages: Package[] = [
     detailedItinerary: [
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet our IDT representative.', 'Proceed to Munnar hill station (3–4 hours drive) with scenic views.', 'Visit Tea Museum and explore tea gardens en route.', 'Spice shopping along the way.', 'Check in to the resort and relax.', 'Overnight stay at the hotel in Munnar.'] },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Breakfast at the hotel.', 'Full-day sightseeing tour of Munnar.', 'Visit Mattupetty Dam, Eravikulam National Park (subject to timings), Kundala Dam, Echo Point and Top Station.', 'Free time at leisure.', 'Overnight stay at the hotel in Munnar.'] },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at the hotel.', 'Departure to Thekkady at 08:30 AM.', 'Arrive and check in between 11:30 AM and 12:00 PM at the private waiting lounge.', 'Enjoy the scenic drive through one of India’s most enchanting travel circuits.', 'Check in to the hotel and relax.', 'Evening boat ride in Periyar Lake.', 'Enjoy Kalarippayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at the hotel.', 'Departure to Thekkady at 08:30 AM.', 'Arrive and check in between 11:30 AM and 12:00 PM at the private waiting lounge.', 'Enjoy the scenic drive through one of India’s most enchanting travel circuits.', 'Check in to the hotel and relax.', 'Evening boat ride in Periyar Lake.', 'Enjoy Kalaripayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Morning elephant ride experience (optional).', 'Guided jungle safari in the Periyar region.', 'Return by evening for leisure and shopping.', 'Overnight stay at the hotel in Thekkady.'] },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Breakfast at the hotel at 08:30 AM.', 'Drive to Kumarakom backwaters (approximately 4 hours).', 'Board the traditional A/C houseboat by noon.', 'Cruise through lush backwater landscapes.', 'Enjoy traditional lunch onboard.', 'Houseboat anchored from 5:30 PM to 6:00 AM.', 'Dinner onboard.', 'Overnight stay on the houseboat.'] },
       { day: '06', title: 'Kumarakom to Cochin – End of Tour (B)', details: ['Disembark from the houseboat at 09:30 AM after breakfast.', 'Transfer to Cochin Airport or railway station for departure.', 'Return with unforgettable memories of Kerala.'] }
@@ -851,7 +851,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Tea Museum & Tea Gardens (Munnar)',
       'Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station',
-      'Periyar Lake boating, Kalarippayattu show',
+      'Periyar Lake boating, Kalaripayattu show',
       'Elephant ride & jungle safari (Thekkady)',
       'Houseboat cruise in Kumarakom'
     ],
@@ -936,20 +936,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: 'assets/images/cookery.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest hill tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: 'assets/images/gallery79.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-raft.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '4-1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: 'assets/images/cookery-demo.jpg' },
+      { id: '4-2', name: 'Kalaripayattu Programme', subtitle: 'Martial arts (Min 5 Pax)', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '4-3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest hill tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: 'assets/images/gallery79.jpg' },
+      { id: '4-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '4-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '4-6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '4-7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '4-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '4-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '4-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '4-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '4-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '4-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '4-14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
     specialOffers: [
@@ -987,7 +987,7 @@ export const travelPackages: Package[] = [
 
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin Airport.', 'Drive to Munnar (3–4-hour drive).', 'Visit Tea Museum & Tea Gardens en route.', 'Spice shopping.', 'Check in and relax.', 'Overnight stay at hotel.'], image: 'assets/images/hotels/tea-castle.jpg' },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Full-day sightseeing in Munnar.', 'Visit Mattupetty Dam, Eravikulam National Park, Kundala Dam, Echo Point & Top Station.', 'Leisure time.', 'Overnight stay.'], image: 'assets/images/hotels/westwood.jpg' },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalarippayattu Show.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalaripayattu Show.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Elephant ride.', 'Jungle safari with guide.', 'Evening shopping & leisure.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Drive to Kumarakom.', 'Check in by noon.', 'Cruise through lush backwaters.', 'Lunch & Dinner onboard.', 'Anchoring from 5:30 PM until next morning.', 'Overnight stay on houseboat.'], image: 'assets/images/hotels/houseboat.jpg' },
       { day: '06', title: 'Kumarakom to Kovalam (B+D)', details: ['Check out at 9:00 AM.', 'Drive to Kovalam Beach (5 hours).', 'Check in and relax.', 'Enjoy the beach.', 'Overnight stay.'], image: 'assets/images/hotels/kovalam.jpg' },
@@ -997,7 +997,7 @@ export const travelPackages: Package[] = [
     detailedItinerary: [
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet our IDT representative.', 'Drive to Munnar hill station (3–4 hours).', 'Check in at the hotel and freshen up.', 'Visit Tea Museum and tea gardens en route.', 'Spice shopping.', 'Overnight stay at the hotel in Munnar.'] },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Breakfast at the hotel.', 'Full-day sightseeing tour of Munnar.', 'Visit Mattupetty Dam, Eravikulam National Park (subject to park timings), Kundala Dam, Echo Point and Top Station.', 'Free time at leisure.', 'Overnight stay at the hotel in Munnar.'] },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at the hotel.', 'Departure to Thekkady at 08:30 AM.', 'Arrive and check in between 11:30 AM – 12:00 PM at the private waiting lounge.', 'Enjoy the scenic drive through one of India’s most enchanting travel circuits.', 'Check in to the hotel and relax.', 'Evening boat ride on Periyar Lake.', 'Enjoy Kalarippayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at the hotel.', 'Departure to Thekkady at 08:30 AM.', 'Arrive and check in between 11:30 AM – 12:00 PM at the private waiting lounge.', 'Enjoy the scenic drive through one of India’s most enchanting travel circuits.', 'Check in to the hotel and relax.', 'Evening boat ride on Periyar Lake.', 'Enjoy Kalaripayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Morning elephant ride experience (optional).', 'Guided jungle safari with a professional guide.', 'Return by evening for leisure and shopping.', 'Overnight stay at the hotel in Thekkady.'] },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Breakfast at the hotel.', 'Drive to Kumarakom backwaters (approximately 4 hours).', 'Board the traditional houseboat by noon.', 'Cruise through lush backwater landscapes.', 'Enjoy a traditional lunch onboard.', 'Houseboat anchored from 5:30 PM to 6:00 AM.', 'Dinner onboard.', 'Overnight stay on the houseboat.'] },
       { day: '06', title: 'Kumarakom to Kovalam (B+D)', details: ['Breakfast and check out from the houseboat at 09:00 AM.', 'Drive to Kovalam Beach (approximately 5 hours).', 'Check in to the beach resort and relax.', 'Spend the rest of the day enjoying the beach.', 'Overnight stay at the beach resort in Kovalam.'] },
@@ -1026,7 +1026,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Tea Museum & Gardens in Munnar',
       'Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station',
-      'Periyar Lake boating & Kalarippayattu show',
+      'Periyar Lake boating & Kalaripayattu show',
       'Elephant ride & Jungle safari',
       'Full-day houseboat cruise & overnight stay',
       'Kanyakumari sunset, Vivekananda Memorial & Thiruvalluvar statue',
@@ -1160,20 +1160,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demo.jpg' },
-      { id: '2', name: 'Half day Kalarippayattu Programme', subtitle: 'Min 5 Pax', location: 'Cochin/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/kalarippayattu.jpg' },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit (the Highest hill station Tea Factory in the world)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/kolukumalai-tea-factory.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari with a guide', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000.00', rating: 0, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Drafting at Periyar River', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/bamboo-river.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/elephant-safari.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '5-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demo.jpg' },
+      { id: '5-2', name: 'Half day Kalaripayattu Programme', subtitle: 'Min 5 Pax', location: 'Cochin/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '5-3', name: 'Kolukumalai Tea Factory Visit (the Highest hill station Tea Factory in the world)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '5-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '5-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '5-6', name: 'Mountain Trekking with Jeep Safari with a guide', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000.00', rating: 0, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '5-7', name: 'Bamboo River Drafting at Periyar River', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '5-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '5-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '5-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '5-11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '5-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '5-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '5-14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: [
       'Complimentary honeymoon cake',
@@ -1210,7 +1210,7 @@ export const travelPackages: Package[] = [
 
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin Airport.', 'Drive to Munnar (3–4-hour drive).', 'Visit Tea Museum & Tea Gardens en route.', 'Spice shopping.', 'Check in and relax.', 'Overnight stay at hotel.'], image: 'assets/images/hotels/tea-castle.jpg' },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Full-day sightseeing in Munnar.', 'Visit Mattupetty Dam, Eravikulam National Park, Kundala Dam, Echo Point & Top Station.', 'Leisure time.', 'Overnight stay.'], image: 'assets/images/hotels/westwood.jpg' },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalarippayattu Show.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalaripayattu Show.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Elephant ride.', 'Jungle safari with guide.', 'Evening shopping & leisure.', 'Overnight stay.'], image: 'assets/images/hotels/mountain-courtyard.jpg' },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Drive to Kumarakom.', 'Check in by noon.', 'Cruise through lush backwaters.', 'Lunch & Dinner onboard.', 'Anchoring from 5:30 PM until next morning.', 'Overnight stay on houseboat.'], image: 'assets/images/hotels/houseboat.jpg' },
       { day: '06', title: 'Kumarakom to Kovalam (B+D)', details: ['Check out at 9:00 AM.', 'Drive to Kovalam Beach (5 hours).', 'Check in and relax.', 'Enjoy the beach.', 'Overnight stay.'], image: 'assets/images/hotels/kovalam.jpg' },
@@ -1221,7 +1221,7 @@ export const travelPackages: Package[] = [
 
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin Airport.', 'Drive to Munnar (3–4-hour drive).', 'Visit Tea Museum & Tea Gardens en route.', 'Spice shopping.', 'Check in and relax.', 'Overnight stay at hotel.'] },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Full-day sightseeing in Munnar.', 'Visit Mattupetty Dam, Eravikulam National Park, Kundala Dam, Echo Point & Top Station.', 'Leisure time.', 'Overnight stay.'] },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalarippayattu Show.', 'Overnight stay.'] },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Drive to Thekkady.', 'Check in around 11:30 AM – 12:00 PM.', 'Boating at Periyar Lake.', 'Enjoy Kalaripayattu Show.', 'Overnight stay.'] },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Elephant ride.', 'Jungle safari with guide.', 'Evening shopping & leisure.', 'Overnight stay.'] },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Drive to Kumarakom.', 'Check in by noon.', 'Cruise through lush backwaters.', 'Lunch & Dinner onboard.', 'Anchoring from 5:30 PM until next morning.', 'Overnight stay on houseboat.'] },
       { day: '06', title: 'Kumarakom to Kovalam (B+D)', details: ['Check out at 9:00 AM.', 'Drive to Kovalam Beach (5 hours).', 'Check in and relax.', 'Enjoy the beach.', 'Overnight stay.'] },
@@ -1249,7 +1249,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Tea Museum & Gardens in Munnar',
       'Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station',
-      'Periyar Lake boating & Kalarippayattu show',
+      'Periyar Lake boating & Kalaripayattu show',
       'Elephant ride & Jungle safari',
       'Full-day houseboat cruise & overnight stay',
       'Kanyakumari sunset, Vivekananda Memorial & Thiruvalluvar statue',
@@ -1383,20 +1383,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demo.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Min 5 Pax', location: 'Cochin / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit (the Highest hill station Tea Factory in the world)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari with a guide', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000.00', rating: 0, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Drafting at Periyar River', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000.00', rating: 0, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '6-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or Dinner', subtitle: 'Non-Veg', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/cookery-demo.jpg' },
+      { id: '6-2', name: 'Kalaripayattu Programme', subtitle: 'Min 5 Pax', location: 'Cochin / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '6-3', name: 'Kolukumalai Tea Factory Visit (the Highest hill station Tea Factory in the world)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '6-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '6-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '6-6', name: 'Mountain Trekking with Jeep Safari with a guide', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000.00', rating: 0, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '6-7', name: 'Bamboo River Drafting at Periyar River', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500.00', rating: 0, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '6-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '6-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '6-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '6-11', name: 'Half Day Elephant Moments with Bathing, Feeding and Safari', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000.00', rating: 0, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '6-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 0, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '6-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '6-14', name: 'Extra night in A/C Houseboat with full day cruise from Kumarakom to Alleppey', subtitle: 'For Two Persons', location: 'Kumarakom - Alleppey', people: 'Two Persons', cost: 'Rs. 7000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: [
       'Complimentary honeymoon cake',
@@ -1432,7 +1432,7 @@ export const travelPackages: Package[] = [
     itineraryOverview: [
       { day: '01', title: 'Cochin to Munnar (B+D)', details: ['Arrive at Cochin International Airport and meet the IDT representative.', 'Drive to Munnar (3–4-hour drive).', 'Visit Tea Museum and Tea Gardens en route.', 'Spice shopping.', 'Check in and relax.', 'Overnight stay at hotel.'], image: '' },
       { day: '02', title: 'Explore Munnar (B+D)', details: ['Breakfast at the hotel.', 'Full-day sightseeing: Mattupetty Dam, Eravikulam National Park, Kundala Dam, Echo Point & Top Station.', 'Leisure time in the evening.', 'Overnight stay at hotel.'], image: '' },
-      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at hotel and depart for Thekkady at 08:30 AM.', 'Check in at private waiting lounge around 11:30–12:00.', 'Enjoy evening boat ride on Periyar Lake.', 'Watch Kalarippayattu Show.', 'Overnight stay at hotel.'], image: '' },
+      { day: '03', title: 'Munnar to Thekkady (B+D)', details: ['Breakfast at hotel and depart for Thekkady at 08:30 AM.', 'Check in at private waiting lounge around 11:30–12:00.', 'Enjoy evening boat ride on Periyar Lake.', 'Watch Kalaripayattu Show.', 'Overnight stay at hotel.'], image: '' },
       { day: '04', title: 'A Day in Thekkady (B+D)', details: ['Elephant ride in the morning.', 'Jungle safari with guide.', 'Evening leisure and shopping.', 'Overnight stay at hotel.'], image: '' },
       { day: '05', title: 'Thekkady to Kumarakom Houseboat (B+L+D)', details: ['Drive to Kumarakom at 08:30 AM (approx. 4-hour drive).', 'Check in to traditional houseboat by noon.', 'Cruise through backwaters.', 'Lunch & Dinner onboard.', 'Overnight stay on houseboat.'], image: '' },
       { day: '06', title: 'Kumarakom to Varkala (B+D)', details: ['Check out from houseboat at 09:00 AM and drive to Varkala (4 hours).', 'Check in at resort and relax.', 'Visit Papanasam Beach or optional Sivagiri tour.', 'Evening leisure and overnight stay.'], image: '' },
@@ -1463,7 +1463,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Munnar Tea Museum & Tea Gardens',
       'Eravikulam National Park, Mattupetty Dam, Kundala Dam, Echo Point & Top Station',
-      'Periyar Lake boating & Kalarippayattu show',
+      'Periyar Lake boating & Kalaripayattu show',
       'Elephant ride & Jungle safari',
       'Full-day houseboat cruise & overnight stay',
       'Papanasam Beach & Sivagiri tour',
@@ -1597,20 +1597,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: 'assets/images/cookery-demo.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest Hill Tea Factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-river.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin with a Guide service', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For 2 Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '7-1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: 'assets/images/cookery-demo.jpg' },
+      { id: '7-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '7-3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest Hill Tea Factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '7-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '7-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '7-6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '7-7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '7-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '7-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '7-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '7-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '7-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '7-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '7-14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For 2 Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
     specialOffers: [
@@ -1651,7 +1651,7 @@ export const travelPackages: Package[] = [
       { day: '02', title: 'Explore Madurai (B+D)', details: ['Breakfast at hotel.', 'Morning visit to Meenakshi Temple for Arathi.', 'Visit Thirumalai Nayakar Mahal.', 'Return to hotel and relax.', 'Overnight stay at the hotel.'], image: '' },
       { day: '03', title: 'Madurai to Kodaikanal (B+D)', details: ['Breakfast and check out.', 'Drive to Kodaikanal (approx. 3 hrs 10 mins, 120 km).', 'Check in at hotel and relax.', 'Afternoon visit: Kodaikanal Lake, Coaker’s Walk, Pillar Rocks, Bryant Park.', 'Overnight stay at hotel.'], image: '' },
       { day: '04', title: 'Explore Kodaikanal (B+D)', details: ['Breakfast at hotel.', 'Visit Dolphin’s Nose, Guna Cave, Pine Forest, Silver Cascade Falls.', 'Return to hotel for overnight stay.'], image: '' },
-      { day: '05', title: 'Proceed to Thekkady (B+D)', details: ['Check out from hotel and drive to Thekkady (4 hrs, 150 km).', 'Elephant ride and moments.', 'Jungle safari with guide.', 'Kalarippayattu martial arts experience.', 'Return to hotel for overnight stay.'], image: '' },
+      { day: '05', title: 'Proceed to Thekkady (B+D)', details: ['Check out from hotel and drive to Thekkady (4 hrs, 150 km).', 'Elephant ride and moments.', 'Jungle safari with guide.', 'Kalaripayattu martial arts experience.', 'Return to hotel for overnight stay.'], image: '' },
       { day: '06', title: 'On to Munnar (B+D)', details: ['Early morning Periyar Lake boating at 6:30 AM.', 'Return to hotel, have breakfast, check out.', 'Drive to Munnar (approx. 4 hrs 30 mins).', 'En route visit Tea Gardens & Tea Museum.', 'Check in at hotel and relax, overnight stay.'], image: '' },
       { day: '07', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake.', 'Proceed to Top Station for panoramic views.', 'Overnight stay at hotel.'], image: '' },
       { day: '08', title: 'Enjoy Kumarakom Houseboat (B+D)', details: ['Breakfast and check out from hotel.', 'Board A/C luxury houseboat by 11:30 AM.', 'Cruise along backwaters, enjoy traditional lunch and dinner onboard.', 'Overnight stay in houseboat.'], image: '' },
@@ -1662,7 +1662,7 @@ export const travelPackages: Package[] = [
       { day: '02', title: 'Explore Madurai', details: ['Morning Arathi at Meenakshi Temple', 'Visit Thirumalai Nayakar Mahal', 'Evening leisure'], },
       { day: '03', title: 'Madurai to Kodaikanal', details: ['Drive to Kodaikanal (120 km / 3h 10m)', 'Check-in and relaxation', 'Visit Kodaikanal Lake, Coaker’s Walk, Pillar Rocks, Bryant Park'], },
       { day: '04', title: 'Explore Kodaikanal', details: ['Visit Dolphin’s Nose', 'Explore Guna Cave & Pine Forest', 'Silver Cascade Falls visit'], },
-      { day: '05', title: 'Kodaikanal to Thekkady', details: ['Drive to Thekkady (150 km / 4 hrs)', 'Elephant ride & elephant moments', 'Jungle safari & Kalarippayattu show'], },
+      { day: '05', title: 'Kodaikanal to Thekkady', details: ['Drive to Thekkady (150 km / 4 hrs)', 'Elephant ride & elephant moments', 'Jungle safari & Kalaripayattu show'], },
       { day: '06', title: 'Thekkady to Munnar', details: ['Early morning Periyar Lake boating', 'Drive to Munnar', 'Tea gardens & Tea Museum visit'], },
       { day: '07', title: 'Explore Munnar', details: ['Eravikulam National Park', 'Mattupetty Dam & Echo Point', 'Kundala Lake & Top Station'], },
       { day: '08', title: 'Kumarakom Houseboat', details: ['Board luxury A/C houseboat', 'Backwater cruise with all meals', 'Overnight stay on houseboat'], },
@@ -1740,7 +1740,7 @@ export const travelPackages: Package[] = [
     sightseeing: [
       'Visit Madurai Meenakshi Temple, Arathi at the temple, Thirumalai Nayakar Mahal.',
       'Kodaikanal viewpoints: Guna Cave, Pine Forest, Coaker\'s Walk, Silver Cascade Falls, Pillar Rocks, Bryant Park, Dolphin\'s Nose.',
-      '1-hour boating at Periyar Lake, Elephant ride & moments, Kalarippayattu.',
+      '1-hour boating at Periyar Lake, Elephant ride & moments, Kalaripayattu.',
       'Eravikulam National Park, Mattupetty Dam, Echo Point, Kundala Lake, Tea Garden, Tea Museum, Top Station.',
       'Full day cruise & overnight stay in A/C houseboat.',
       'Entry Fees, Service & other Taxes, Toll Charges, Bata & Night halting Charges, Local Guides at Selected locations.'
@@ -1786,18 +1786,18 @@ export const travelPackages: Package[] = [
 
     supplementalAttractions: [
       { id: '8-1', name: 'Half-Day Cookery Demonstration', subtitle: 'Traditional Home with Lunch/Dinner', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: true, img: 'assets/images/cookery-demo.jpg' },
-      { id: '8-2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '8-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
       { id: '8-3', name: 'Kolukumalai Tea Factory Visit', subtitle: 'Highest hill tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2000', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
       { id: '8-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1500', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
       { id: '8-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2500', rating: 5, featured: false, img: 'assets/images/tea-full.jpg' },
       { id: '8-6', name: 'Mountain Trekking with Jeep Safari', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3000', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '8-7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-river.jpg' },
+      { id: '8-7', name: 'Bamboo River Drafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2500', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
       { id: '8-8', name: 'Full Day Trip to Gavi', subtitle: '', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
       { id: '8-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '8-10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar/Thekkady', people: 'Per Person', cost: 'Rs. 1000', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
+      { id: '8-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
       { id: '8-11', name: 'Half Day Elephant Moments', subtitle: 'Bathing, Feeding and Safari', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2000', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
       { id: '8-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '8-13', name: 'Backwater Historical Tour at Cochin', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1500', rating: 5, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
+      { id: '8-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
       { id: '8-14', name: 'Extra night in A/C Houseboat', subtitle: 'Full day cruise from Kumarakom to Alleppey', location: 'Kumarakom-Alleppey', people: 'For Two Persons', cost: 'Rs. 7000', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
     specialOffers: []
@@ -1958,8 +1958,8 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '9-1', name: 'Jeep Safari', subtitle: 'Munnar', location: 'Munnar', people: '2–6', cost: '₹2,000', rating: 4.6, featured: true, img: 'assets/images/activities/jeepsafari.jpg' },
-      { id: '9-2', name: 'Kathakali Show', subtitle: 'Cultural Show', location: 'Thekkady', people: '1–20', cost: '₹500', rating: 4.4, featured: false, img: 'assets/images/activities/kathakali.jpg' }
+      { id: '9-1', name: 'Jeep Safari', subtitle: 'Munnar', location: 'Munnar', people: '2–6', cost: '₹2,000', rating: 4.6, featured: true, img: 'assets/images/jeepsafari.jpg' },
+      { id: '9-2', name: 'Kathakali Show', subtitle: 'Cultural Show', location: 'Thekkady', people: '1–20', cost: '₹500', rating: 4.4, featured: false, img: 'assets/images/kathakali.jpg' }
     ],
 
     specialOffers: ['Early Bird Offer – Save 10%']
@@ -1996,7 +1996,7 @@ export const travelPackages: Package[] = [
       { day: '02', title: 'Explore Ooty (B+D)', details: ['Breakfast at hotel.', 'Full-day Ooty sightseeing tour.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Toy train journey to Coonoor (subject to availability).', 'Return to hotel; overnight stay at Ooty.'], image: 'assets/images/itinerary/ooty-sightseeing.jpg' },
       { day: '03', title: 'Ooty → Munnar (B+D)', details: ['Breakfast and check-out from hotel.', 'Drive to Munnar hill station.', 'En-route visit tea gardens and Tea Museum.', 'Reach Munnar by afternoon; check-in and relax.', 'Spice shopping and overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-drive.jpg' },
       { day: '04', title: 'Explore Munnar (B+D)', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park.', 'Explore Mattupetty Dam, Echo Point and Kundala Lake.', 'Proceed to Top Station to enjoy panoramic views.', 'Evening at leisure; overnight stay at Munnar.'], image: 'assets/images/itinerary/munnar-sightseeing.jpg' },
-      { day: '05', title: 'Munnar → Thekkady (B+D)', details: ['Check-out and drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon and check-in.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu – ancient martial art of Kerala.', 'Overnight stay at Thekkady.'], image: 'assets/images/itinerary/thekkady-arrival.jpg' },
+      { day: '05', title: 'Munnar → Thekkady (B+D)', details: ['Check-out and drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon and check-in.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalaripayattu – ancient martial art of Kerala.', 'Overnight stay at Thekkady.'], image: 'assets/images/itinerary/thekkady-arrival.jpg' },
       { day: '06', title: 'Thekkady → Kumarakom Houseboat (B+L+D)', details: ['Breakfast and drive to Kumarakom (approx. 4 hours).', 'Board traditional A/C houseboat by noon.', 'Cruise through lush backwaters and canals.', 'Lunch and dinner served onboard.', 'Houseboat anchored from 5:30 PM; overnight stay.'], image: 'assets/images/itinerary/houseboat-cruise.jpg' },
       { day: '07', title: 'Kumarakom → Cochin Departure (B)', details: ['Breakfast on houseboat.', 'Check-out and transfer to Cochin Airport.', 'Return journey with beautiful memories of Kerala.'], image: 'assets/images/itinerary/departure-cochin.jpg' }
     ],
@@ -2006,7 +2006,7 @@ export const travelPackages: Package[] = [
       { day: 'Day 02', title: 'Explore Ooty', details: ['Breakfast at hotel.', 'Ooty sightseeing tour.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Toy train ride to Coonoor (subject to availability).', 'Return to hotel; overnight stay.'] },
       { day: 'Day 03', title: 'Ooty to Munnar', details: ['Check-out after breakfast.', 'Drive to Munnar hill station.', 'Visit tea gardens and Tea Museum en route.', 'Arrive by afternoon; check-in and relax.', 'Spice shopping and overnight stay.'] },
       { day: 'Day 04', title: 'Full-day Munnar sightseeing', details: ['Breakfast at hotel.', 'Visit Eravikulam National Park.', 'Explore Mattupetty Dam, Echo Point and Kundala Lake.', 'Proceed to Top Station.', 'Evening at leisure; overnight stay.'] },
-      { day: 'Day 05', title: 'Munnar to Thekkady', details: ['Check-out and drive to Thekkady.', 'Reach before noon; check-in and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu performance.', 'Overnight stay at hotel.'] },
+      { day: 'Day 05', title: 'Munnar to Thekkady', details: ['Check-out and drive to Thekkady.', 'Reach before noon; check-in and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalaripayattu performance.', 'Overnight stay at hotel.'] },
       { day: 'Day 06', title: 'Enjoy House Boat at Kumarakom (B+D)', details: ['Breakfast and drive to Kumarakom.', 'Board traditional houseboat by noon.', 'Backwater cruise with lunch and dinner onboard.', 'Houseboat anchored in the evening.', 'Overnight stay on houseboat.'] },
       { day: 'Day 07', title: 'Departure from Cochin', details: ['Breakfast on houseboat.', 'Check-out and transfer to Cochin Airport.', 'Tour concludes with unforgettable memories.'] }
     ],
@@ -2136,20 +2136,20 @@ export const travelPackages: Package[] = [
 
     supplementalAttractions: [
 
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests ', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '10-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '10-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '10-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '10-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '10-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '10-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '10-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '10-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '10-9', name: 'Jeep Safari in Periyar Forests ', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '10-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '10-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '10-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '10-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '10-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
     specialOffers: [
@@ -2200,7 +2200,7 @@ export const travelPackages: Package[] = [
       { day: 'Day 02', title: 'Explore Ooty', details: ['Breakfast at the hotel.', 'Proceed for full-day sightseeing in and around Ooty.', 'Enjoy picture-postcard scenic views.', 'Visit Rose Garden, Avmamore Palace and Government Museum.', 'Enjoy the Toy Train journey to Coonoor (subject to availability).', 'Return to the hotel by evening and relax.', 'Overnight stay at the hotel in Ooty.'] },
       { day: 'Day 03', title: 'Proceed to Munnar', details: ['Breakfast at the hotel and check-out.', 'Proceed to Munnar hill station.', 'Enjoy scenic views of tea gardens en route.', 'Visit the Tea Museum on the way.', 'Reach Munnar by afternoon.', 'Check into the hotel and relax.', 'Spice shopping.', 'Overnight stay at the hotel in Munnar.'] },
       { day: 'Day 04', title: 'Explore Munnar', details: ['Breakfast at the hotel.', 'Our driver will pick you up for sightseeing.', 'Visit Eravikulam National Park.', 'Proceed to Mattupetty Dam and Echo Point.', 'Visit Kundala Lake by noon.', 'Proceed to Top Station to enjoy breathtaking views.', 'Free time at leisure.', 'Overnight stay at the resort in Munnar.'] },
-      { day: 'Day 05', title: 'Proceed to Thekkady', details: ['Breakfast at the hotel and check-out.', 'Drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon.', 'Check into the hotel and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalarippayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
+      { day: 'Day 05', title: 'Proceed to Thekkady', details: ['Breakfast at the hotel and check-out.', 'Drive to Thekkady (approx. 3 hours / 150 km).', 'Reach Thekkady before noon.', 'Check into the hotel and relax.', 'Afternoon elephant ride and jungle safari.', 'Evening Kalaripayattu – the ancient martial art of Kerala.', 'Overnight stay at the hotel in Thekkady.'] },
       { day: 'Day 06', title: 'Enjoy Houseboat at Kumarakom', details: ['Breakfast at the hotel.', 'Proceed to Kumarakom (approx. 4-hour drive).', 'Board the traditional houseboat by noon.', 'Cruise through the serene backwaters.', 'Enjoy traditional lunch onboard.', 'Houseboat anchored from 5:30 PM till 6:00 AM.', 'Dinner onboard.', 'Overnight stay in the houseboat.'] },
       { day: 'Day 07', title: 'Departure from Cochin', details: ['Breakfast on the houseboat.', 'Check-out from the houseboat.', 'Transfer to Cochin Airport for return flight.', 'Tour ends with beautiful memories of Kerala.'] }
     ],
@@ -2312,21 +2312,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '11-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '11-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '11-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '11-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '11-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '11-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '11-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '11-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '11-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '11-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '11-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '11-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '11-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '11-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
     specialOffers: [
@@ -2490,22 +2489,21 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
-      { id: '15', name: 'Toy Train', subtitle: ' Toy train', location: 'Ooty to Conoor', people: 'For Two Persons', cost: 'Rs. 150', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
+      { id: '12-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '12-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '12-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '12-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '12-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '12-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '12-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '12-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '12-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '12-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '12-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '12-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '12-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '12-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
+      { id: '12-15', name: 'Toy Train', subtitle: ' Toy train', location: 'Ooty to Conoor', people: 'For Two Persons', cost: 'Rs. 150', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' }
     ],
 
     specialOffers: [
@@ -2545,7 +2543,7 @@ export const travelPackages: Package[] = [
     ],
 
     itineraryOverview: [
-      { day: '01', title: 'Arrival at Cochin', details: ['Arrive at Cochin International Airport.', 'Meet our representative cum driver after immigration and customs.', 'Transfer to hotel in a private vehicle.', 'Evening witness the colourful Kathakali dance performance.', 'Photo session with Kathakali artists.', 'Overnight stay at hotel.'], image: '' },
+      { day: '01', title: 'Arrival at Cochin', details: ['Arrive at Cochin International Airport.', 'Meet our representative cum driver after immigration and customs.', 'Transfer to hotel in a private vehicle.', 'Evening witness the colourful Kathakali dance performance.', 'Photo session with Kathakali artists.', 'Overnight stay at hotel.'], image: 'assets/images/kathakali.jpg' },
       { day: '02', title: 'Explore Cochin', details: ['Breakfast at hotel.', 'Guided sightseeing tour of Cochin.', 'Visit Dutch Palace (Mattancherry Palace).', 'Visit the historic Jewish Synagogue at Mattancherry.', 'Return to mainland Cochin by noon.', 'Country craft canal cruise through suburban Cochin backwaters.', 'Experience rural Kerala life closely.', 'Return to hotel by evening.', 'Free time to explore downtown Cochin.', 'Overnight stay at hotel.'], image: '' },
       { day: '03', title: 'Cochin to Munnar', details: ['Breakfast at hotel and check-out.', 'Scenic drive to Munnar – Kerala’s tea garden hill station.', 'Travel time approximately 3.5 hours.', 'Reach Munnar by noon.', 'Check-in at resort.', 'Rest of the day for shopping and tea garden visit.', 'Dinner and overnight stay at resort.'], image: '' },
       { day: '04', title: 'In and Around Munnar', details: ['Breakfast at resort.', 'Proceed for full-day sightseeing of Munnar.', 'Visit Eravikulam National Park – home of the Nilgiri Tahr.', 'Enjoy panoramic valley views and photography.', 'Visit Top Station, the highest point in Munnar.', 'See Nilakurinji plant region (blooms once in 12 years).', 'Overnight stay at resort.'], image: '' },
@@ -2671,21 +2669,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
+      { id: '13-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '13-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '13-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '13-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '13-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '13-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '13-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '13-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '13-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '13-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '13-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '13-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '13-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '13-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
     ],
 
     specialOffers: [
@@ -2902,20 +2899,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
+      { id: '14-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '14-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '14-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '14-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '14-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '14-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '14-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '14-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '14-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '14-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '14-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '14-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '14-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '14-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
     ],
 
     specialOffers: [
@@ -2959,7 +2956,7 @@ export const travelPackages: Package[] = [
       { "day": "04", "title": "Off to Thekkady", "details": ["Awake to find your houseboat still anchored. Experience what is called a backwater morning.", "After having breakfast on board at 9 am, check out from the Houseboat and proceed to Thekkady, reaching by 04:00 hrs.", "Check in to the Thekkady resort by noon. There is time for relaxation.", "Overnight stay at the hotel."], "image": "" },
       { "day": "05", "title": "Exploring Thekkady", "details": ["Today we go on trekking trails that take us closer to the majestic Nature in this area – an exciting experience.", "Later, visit the Spice Garden plantation to get a feel of the spice industry based here.", "If time permits, enjoy an Elephant Safari.", "Overnight stay at your resort."], "image": "" },
       { "day": "06", "title": "Off to Munnar", "details": ["After breakfast, leave Thekkady early in the morning for a scenic drive to Munnar – Kerala’s tea garden hill station.", "Travel time approximately 3.5 hours. Reach Munnar by noon.", "Check into your resort.", "Later, visit the Eravikulam National Park – home to the endangered Nilgiri Tahr. Take photos and admire the valley.", "Enjoy dinner and an overnight stay at your resort."], "image": "" },
-      { "day": "07", "title": "Munnar excursion and off to Cochin", "details": ["After breakfast, check out from the resort and proceed directly to Cochin.", "Reach Cochin by noon and check in to the resort.", "In the evening, witness one of the most colourful and exquisite performing arts in the world – Kathakali. After two hours of glorious entertainment, get photographed with the Kathakali performer.", "Overnight stay at your hotel."], "image": "" },
+      { "day": "07", "title": "Munnar excursion and off to Cochin", "details": ["After breakfast, check out from the resort and proceed directly to Cochin.", "Reach Cochin by noon and check in to the resort.", "In the evening, witness one of the most colourful and exquisite performing arts in the world – Kathakali. After two hours of glorious entertainment, get photographed with the Kathakali performer.", "Overnight stay at your hotel."], "image": "assets/images/kathakali.jpg" },
       { "day": "08", "title": "In and around Cochin, Fort Kochi", "details": ["Breakfast at the hotel. Our driver will pick you up at the lobby of your hotel and proceed on a guided tour in and around Cochin.", "See the historic Dutch Palace – a tribute to the relationship between the two cultures during the previous centuries.", "Visit the only Jewish Synagogue in India at Mattancherry; only one direct descendant of the family that set up this shrine is now alive.", "Reach back mainland Cochin by noon.", "Enjoy a country craft canal cruise out of suburban Cochin to the interiors. Peek at rural Kerala life from close quarters.", "Return to your hotel by evening. Free time to explore streets downtown.", "Enjoy dinner and an overnight stay at your hotel."], "image": "" },
       { "day": "09", "title": "End of Tour", "details": ["After an early morning breakfast, check out from the resort and proceed directly to Cochin International Airport to catch your return flight or journey.", "Hope this exhilarating excursion thrilled you."], "image": "" }
     ],
@@ -3097,21 +3094,20 @@ export const travelPackages: Package[] = [
     ],
 
     supplementalAttractions: [
-
-      { id: '1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
-      { id: '2', name: 'Kalarippayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
-      { id: '3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
-      { id: '4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
-      { id: '5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
-      { id: '6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
-      { id: '7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
-      { id: '8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
-      { id: '9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
-      { id: '10', name: 'Half-Day Elephant Safari', subtitle: '', location: 'Munnar / Thekkady', people: 'Per Person', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/gallery17.jpg' },
-      { id: '11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
-      { id: '12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
-      { id: '13', name: 'Backwater Historical Tour at Cochin (with guide)', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/historical-tour-cochin.jpg' },
-      { id: '14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
+      { id: '15-1', name: 'Half-Day Cookery Demonstration Tour to a traditional home with lunch or dinner', subtitle: 'Non-Veg (Traditional Home)', location: 'Cochin', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: true, img: 'assets/images/gallery53.jpg' },
+      { id: '15-2', name: 'Kalaripayattu Programme', subtitle: 'Martial Arts Experience', location: 'Cochin / Thekkady', people: 'Per Person (Min 5 Pax)', cost: 'Rs. 1,000.00', rating: 4, featured: false, img: 'assets/images/Kalaripayattu.jpg' },
+      { id: '15-3', name: 'Kolukkumalai Tea Factory Visit', subtitle: 'Highest hill station tea factory', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 5, featured: false, img: 'assets/images/kolukumalai-tea.jpg' },
+      { id: '15-4', name: 'Half-Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 4, featured: false, img: 'assets/images/tea-trial.jpg' },
+      { id: '15-5', name: 'Full Day Tea Trial Tour', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/tea-full.jpg' },
+      { id: '15-6', name: 'Mountain Trekking with Jeep Safari (guide)', subtitle: '', location: 'Munnar', people: 'Per Person', cost: 'Rs. 3,000.00', rating: 5, featured: false, img: 'assets/images/jeepsafari.jpg' },
+      { id: '15-7', name: 'Bamboo River Rafting at Periyar', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,500.00', rating: 4, featured: false, img: 'assets/images/bamboo-rafting.jpg' },
+      { id: '15-8', name: 'Full Day Trip to Gavi', subtitle: 'On request', location: 'Thekkady', people: 'On request', cost: '', rating: 0, featured: false, img: 'assets/images/gavi.jpg' },
+      { id: '15-9', name: 'Jeep Safari in Periyar Forests', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/jeep-periyar.jpg' },
+      { id: '15-10', name: 'Half-Day Elephant Safari', subtitle: 'Traditional elephant ride experience', location: 'Munnar / Thekkady', people: '1', cost: '₹1000', rating: 4.3, featured: false, img: 'assets/images/elephant-safari.jpg' },
+      { id: '15-11', name: 'Half Day Elephant Moments (Bathing & Feeding)', subtitle: '', location: 'Thekkady', people: 'Per Person', cost: 'Rs. 2,000.00', rating: 4, featured: false, img: 'assets/images/elephant-moments.jpg' },
+      { id: '15-12', name: 'Backwater Canal Cruise in Country Crafts', subtitle: '', location: 'Cochin', people: 'Per Person', cost: 'Rs. 1,500.00', rating: 5, featured: false, img: 'assets/images/backwater-canal.jpg' },
+      { id: '15-13', name: 'Cochin Heritage Backwater Tour', subtitle: 'Historical backwater tour with professional guide', location: 'Cochin', people: '1', cost: '₹1500', rating: 4.5, featured: false, img: 'assets/images/Cochin-Heritage.jpg' },
+      { id: '15-14', name: 'Extra Night in A/C Houseboat (Kumarakom → Alleppey)', subtitle: 'Full-day cruise included', location: 'Kumarakom - Alleppey', people: 'For Two Persons', cost: 'Rs. 7,000.00', rating: 5, featured: false, img: 'assets/images/houseboat-extra.jpg' },
     ],
 
     specialOffers: [
@@ -3165,7 +3161,7 @@ export const travelPackages: Package[] = [
       { "day": "07", "title": "Into the Wild at Periyar", "details": ["Drive to Periyar Wildlife Sanctuary.", "Check in by noon.", "Afternoon boat ride on Periyar Lake to spot wild elephants and wildlife.", "Overnight stay in Thekkady."], "image": "" },
       { "day": "08", "title": "Periyar Spice & Safari", "details": ["Morning spice plantation tour.", "Afternoon guided Jungle Safari through thick forests.", "Relax in the evening at the resort.", "Overnight stay in Thekkady."], "image": "" },
       { "day": "09", "title": "Kumarakom Backwaters", "details": ["Drive to the dream backwater destination, Kumarakom.", "Reach the hotel by noon.", "Leisure time along the Vembanad backwaters.", "Overnight stay in Kumarakom."], "image": "" },
-      { "day": "10", "title": "Cochin Culture & Kathakali", "details": ["Proceed to the 'Queen of the Arabian Sea'.", "Afternoon free for shopping or leisure.", "Evening Kathakali show with makeup demonstration.", "Overnight stay in Cochin."], "image": "" },
+      { "day": "10", "title": "Cochin Culture & Kathakali", "details": ["Proceed to the 'Queen of the Arabian Sea'.", "Afternoon free for shopping or leisure.", "Evening Kathakali show with makeup demonstration.", "Overnight stay in Cochin."], "image": "assets/images/kathakali.jpg" },
       { "day": "11", "title": "Exploring Cochin & Villages", "details": ["Visit Kumbalagi village for a glimpse of virgin Kerala life.", "Tour St. Francis Church, Chinese Fishing Nets, and the Dutch Palace.", "Explore the history of Mattancherry.", "Overnight stay in Cochin."], "image": "" },
       { "day": "12", "title": "Alleppey Houseboat Cruise", "details": ["Transfer to Alleppey and check into your Houseboat by 11:30 AM.", "Cruise through lush landscapes with traditional lunch onboard.", "Anchor by 5:30 PM for a night on the water.", "Dinner and overnight stay on the houseboat."], "image": "" },
       { "day": "13", "title": "Beach Paradise Kovalam", "details": ["Breakfast onboard and drive to Kovalam.", "Check into your beach resort by afternoon.", "Enjoy the blue waters and sandy beaches.", "Overnight stay in Kovalam."], "image": "" },
@@ -3661,7 +3657,7 @@ export const travelPackages: Package[] = [
       { "day": "07", "title": "On to Periyar", "details": ["Drive to Periyar Wildlife Sanctuary.", "Evening boat safari on Periyar Lake to spot wildlife.", "Overnight stay at a Jungle Resort."], "image": "" },
       { "day": "08", "title": "On to Kumarakom", "details": ["Drive to Kumarakom backwaters.", "Visit the Kumarakom Bird Sanctuary.", "Overnight stay at a Backwater Resort."], "image": "" },
       { "day": "09", "title": "Houseboat Cruise", "details": ["Board a traditional Kettuvallom (houseboat) for a cruise to Alleppey.", "Full day of backwater scenery and village life.", "Overnight stay on board the houseboat."], "image": "" },
-      { "day": "10", "title": "On to Cochin", "details": ["Drive to Cochin and explore Dutch Palace and Jewish Synagogue.", "Visit St. Francis Church and see Chinese fishing nets.", "Evening Kathakali dance performance."], "image": "" },
+      { "day": "10", "title": "On to Cochin", "details": ["Drive to Cochin and explore Dutch Palace and Jewish Synagogue.", "Visit St. Francis Church and see Chinese fishing nets.", "Evening Kathakali dance performance."], "image": "assets/images/kathakali.jpg" },
       { "day": "11", "title": "On to Kovalam", "details": ["Drive to Kovalam International Beach.", "Relax at the white sand beach and coconut-tree-lined coast.", "Overnight stay at Kovalam resort."], "image": "" },
       { "day": "12", "title": "Kanyakumari Excursion", "details": ["Full-day trip to Kanyakumari, the southernmost tip of India.", "Visit Padmanabhapuram Palace and Vivekananda Rock Memorial.", "Watch the sunset at the seashore."], "image": "" },
       { "day": "13", "title": "Trivandrum City Tour", "details": ["Visit Sree Padmanabhaswamy Temple and Napier Museum in Trivandrum.", "Explore the Puthan Malika Palace Museum.", "Overnight stay at Kovalam."], "image": "" },
@@ -3919,7 +3915,7 @@ export const travelPackages: Package[] = [
       { "day": "08", "title": "Madurai Sightseeing", "details": ["Visit the iconic Meenakshi-Sundareswarar Temple.", "Explore the Hall of 1000 Pillars (Temple Museum).", "Experience the vibrant old town market.", "Overnight stay at Madurai."], "image": "" },
       { "day": "09", "title": "Madurai to Periyar", "details": ["Drive into the Western Ghats to Periyar (Thekkady).", "Guided trekking through the jungle to spot rare flora and fauna.", "Tour a Spice Plantation (Cardamom, Pepper, Coffee).", "Overnight stay at Periyar."], "image": "" },
       { "day": "10", "title": "Periyar to Kumarakom (Houseboat)", "details": ["Morning boat safari on Periyar Lake to see wild elephants.", "Board a traditional Houseboat (Kettuvallom) at Kumarakom.", "Cruise through the backwater snaking waterways.", "Overnight stay on the Houseboat."], "image": "" },
-      { "day": "11", "title": "Alleppey to Cochin", "details": ["Disembark at Alleppey and drive to Cochin.", "Free time for shopping or relaxation in the 'Queen of Arabian Sea'.", "Evening Kathakali dance performance.", "Overnight stay in Cochin."], "image": "" },
+      { "day": "11", "title": "Alleppey to Cochin", "details": ["Disembark at Alleppey and drive to Cochin.", "Free time for shopping or relaxation in the 'Queen of Arabian Sea'.", "Evening Kathakali dance performance.", "Overnight stay in Cochin."], "image": "assets/images/kathakali.jpg" },
       { "day": "12", "title": "Cochin City Tour & Canal Cruise", "details": ["Visit Dutch Palace, Jewish Synagogue, and St. Francis Church.", "See the Chinese fishing nets at Fort Cochin.", "Afternoon country craft canal cruise through rural Kerala.", "Overnight stay in Cochin."], "image": "" },
       { "day": "13", "title": "Cochin to Ooty", "details": ["Long drive to Ooty, the 'Queen of Hill Stations'.", "Ascent into the Nilgiri Blue Mountains.", "Overnight stay at Ooty."], "image": "" },
       { "day": "14", "title": "Ooty Sightseeing", "details": ["Visit the Botanical Gardens and the Rose Garden.", "Excursion to Doddabetta Peak (8,606 ft).", "Optional Mountain Railway (Toy Train) ride.", "Overnight stay at Ooty."], "image": "" },
@@ -4703,7 +4699,7 @@ export const travelPackages: Package[] = [
       { "day": "01-02", "title": "Garden City Exploration", "details": ["Welcome at Bangalore Airport and transfer to the resort.", "Full day sightseeing including Cubbon Park, Tipu's Palace, and Bull Temple.", "Evening at leisure for shopping."], image: "" },
       { "day": "03-04", "title": "Royal Heritage of Mysore", "details": ["Visit Srirangapatna, the historical seat of Tipu Sultan.", "Explore the Maharaja's Palace, Mysore Zoo, and Chamundi Hills.", "Enjoy the musical fountains at Brindavan Gardens."], image: "" },
       { "day": "05-07", "title": "Hills and Rainforests", "details": ["Drive to Ooty and enjoy the Toy Train journey to Coonoor.", "Visit the Botanical Garden and Doddabetta Peak.", "Experience the virgin environment of the Vythiri jungle resort in Wayanad."], image: "" },
-      { "day": "08-09", "title": "Culture and Backwaters of Cochin", "details": ["Witness a traditional Kathakali performance with a makeup demonstration.", "Experience a village tour in Kumbalangi to see authentic Kerala life.", "Visit the Jewish Synagogue, Dutch Palace, and Chinese Fishing Nets."], image: "" },
+      { "day": "08-09", "title": "Culture and Backwaters of Cochin", "details": ["Witness a traditional Kathakali performance with a makeup demonstration.", "Experience a village tour in Kumbalangi to see authentic Kerala life.", "Visit the Jewish Synagogue, Dutch Palace, and Chinese Fishing Nets."], image: "assets/images/kathakali.jpg" },
       { "day": "10-11", "title": "Munnar Tea Estates", "details": ["Tour the tea gardens and the Tea Museum.", "Visit Eravikulam National Park to spot the Nilgiri Tahr.", "See Mattupetty Dam and Top Station for panoramic views."], image: "" },
       { "day": "12-14", "title": "Wildlife and Houseboat", "details": ["Boat ride on Periyar Lake to view wild elephants and a guided jungle safari.", "Overnight stay on a traditional houseboat in Alleppey.", "Cruise through the backwater villages to see local life."], image: "" },
       { "day": "15-18", "title": "Beach Paradise and Lands End", "details": ["Relax at the golden beaches of Kovalam.", "Excursion to Kanyakumari to view the sunset and Vivekananda Memorial.", "Transfer to Trivandrum Airport for the return journey."], image: "" }
