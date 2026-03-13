@@ -66,16 +66,15 @@
                   {{ pkg.name | titlecase }}
                 </h3>
                 <div class="flex items-center space-x-3">
-                  <a href="https://drive.google.com/file/d/1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h/view?usp=sharing"
-                    target="_blank" rel="noopener noreferrer" class="transition-transform duration-300 hover:scale-125"
-                    title="View PDF">
+                  <a [href]="pkg.driveLink" target="_blank" rel="noopener noreferrer" (click)="$event.stopPropagation()"
+                    class="transition-transform duration-300 hover:scale-125" title="View PDF">
                     <i class="pi pi-file-pdf text-md"></i>
                   </a>
-                  <button (click)="downloadPDF('1lYR2QH5u5ZYLzRI9FmW_xirldU8_Nz8h')"
+                  <button (click)="handleDownload($event, pkg.driveLink)"
                     class="transition-transform duration-300 hover:scale-125" title="Download PDF">
                     <i class="pi pi-download text-md"></i>
                   </button>
-                  <i class=" pi pi-arrow-right text-md transition-transform duration-300 group-hover:translate-x-1.5 ">
+                  <i class="pi pi-arrow-right text-md transition-transform duration-300 group-hover:translate-x-1.5">
                   </i>
                 </div>
               </div>
@@ -86,12 +85,10 @@
 
                 {{ pkg.description | titlecase }}
               </p>
-
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <app-inbound-map></app-inbound-map>

@@ -81,5 +81,17 @@ export class Inbound {
   setFilter(filterId: string) {
     this.activeFilter = filterId;
   }
+
+  handleDownload(event: Event, driveLink: string): void {
+    event.stopPropagation();
+    const matches = driveLink.match(/\/d\/(.+?)\//);
+    const fileId = matches ? matches[1] : null;
+
+    if (fileId) {
+      this.downloadPDF(fileId);
+    } else {
+      console.error("Could not extract File ID from link");
+    }
+  }
 }
 
