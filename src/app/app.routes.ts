@@ -6,6 +6,7 @@ export const routes: Routes = [
     { path: 'inbound/:state', loadComponent: () => import('./components/inbound/inbound-package/inbound-package').then(m => m.InboundPackage), title: 'Inbound Package' },
     { path: 'outbound', loadComponent: () => import('./components/outbound/outbound').then(m => m.Outbound), title: 'Outbound Tours' },
     { path: 'outbound/:country', loadComponent: () => import('./components/outbound/outbound-package/outbound-package').then(m => m.OutboundPackage), title: 'Outbound Packages' },
+    { path: 'blog', loadComponent: () => import('./components/pages/blog/blog').then(m => m.Blog), title: 'News & Blog' },
     { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), title: 'Contact Us' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
