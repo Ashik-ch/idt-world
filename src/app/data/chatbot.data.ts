@@ -14,98 +14,137 @@ export const chatFlow: ChatStep[] = [
         id: 'welcome',
         question: '👋 Hi there!  What would you like help with today?',
         options: [
-            { text: '🏞️ Inbound Packages', next: 'inbound' },
-            { text: '✈️ Outbound Packages', next: 'outbound' },
-            { text: '💼 Our Services', next: 'services' },
-            { text: '📞 Contact Support', next: 'contact' },
+            { text: "🏞️ Inbound Tours (India)", next: "inbound_region" },
+            { text: "✈️ Outbound Tours", next: "outbound_region" },
+            { text: "💼 Other Services", next: "services" },
+            { text: "� Contact Support", next: "contact" },
         ],
     },
     {
-        id: 'inbound',
-        question: '🇮🇳 Wonderful! Which region in India interests you the most?',
+        id: "inbound_region",
+        question: "🇮🇳 Which region in India are you interested in?",
         options: [
-            { text: '🌴 Kerala', next: 'inbound_kerala' },
-            { text: '🏜️ South India', next: 'inbound_south' },
-            { text: '🏔️ North India', next: 'inbound_north' },
-            { text: '⬅️ Back', next: 'welcome' },
-        ],
-    },
-    {
-        id: 'inbound_south',
-        question: '🌅 Great choice! Kerala, Tamil Nadu, and Karnataka are top favourites. Would you like us to share sample itineraries?',
-        options: [
-            { text: 'Yes, show me Kerala tours', next: 'end' },
-            { text: 'Show all South India tours', next: 'end' },
-            { text: 'Back', next: 'inbound' },
-        ],
-    },
-    {
-        id: 'inbound_north',
-        question: '🏔️ North India is full of heritage and adventure! Which interests you more?',
-        options: [
-            { text: 'Golden Triangle (Delhi-Agra-Jaipur)', next: 'end' },
-            { text: 'Himalayan Tours', next: 'end' },
-            { text: 'Back', next: 'inbound' },
-        ],
-    },
-    {
-        id: 'inbound_kerala',
-        question: '🌅 Kerala is known for its backwaters, beaches, and lush greenery. Want us to share the best deals?',
-        options: [
-            { text: 'Yes, please!', next: 'end' },
-            { text: 'Back', next: 'inbound' },
-        ],
-    },
-    {
-        id: 'outbound',
-        question: '🌍 Amazing! Where would you like to explore?',
-        options: [
-            { text: '🕌 Asia (Singapore, Dubai, Thailand...)', next: 'outbound_asia' },
-            { text: '🏰 Europe (Switzerland, Italy, France...)', next: 'outbound_europe' },
-            { text: '🗽 Americas', next: 'outbound_america' },
-            { text: '⬅️ Back', next: 'welcome' },
-        ],
-    },
-    {
-        id: 'outbound_asia',
-        question: '🌏 Asia is full of wonder! Do you have a specific destination in mind?',
-        options: [
-            { text: 'Dubai / UAE', next: 'end' },
-            { text: 'Andaman Nicobar', next: 'end' },
-            { text: 'Singapore', next: 'end' },
-            { text: 'Thailand', next: 'end' },
-            { text: 'Back', next: 'outbound' },
-        ],
-    },
-    {
-        id: 'outbound_europe',
-        question: '🇪🇺 Europe awaits! Which type of tour are you interested in?',
-        options: [
-            { text: 'Honeymoon Packages', next: 'end' },
-            { text: 'Group / Family Trips', next: 'end' },
-            { text: 'Luxury Vacations', next: 'end' },
-            { text: 'Back', next: 'outbound' },
-        ],
-    },
-    {
-        id: 'outbound_america',
-        question: '🇺🇸 Dreaming of the Americas? We offer curated tours to the US, Canada & South America.',
-        options: [
-            { text: 'Show me options', next: 'end' },
-            { text: 'Back', next: 'outbound' },
+            { text: "🌴 Kerala", next: "travel_details" },
+            { text: "🏔️ North India", next: "travel_details" },
+            { text: "🌄 South India", next: "travel_details" },
+            { text: "⬅️ Back", next: "welcome" },
         ],
     },
 
-    // 💼 Services Flow
+    // 📅 Travel Details
     {
-        id: 'services',
-        question: '💼 We offer a range of travel services. What would you like to know about?',
+        id: "travel_details",
+        question: "📅 How many days are you planning for your trip?",
         options: [
-            { text: '🏨 Hotel & Resort Booking', next: 'end' },
-            { text: '🚗 Transport & Chauffeur Service', next: 'end' },
-            { text: '🧭 Custom Tour Planning', next: 'end' },
-            { text: '🛫 Visa & Flight Assistance', next: 'end' },
-            { text: 'Back', next: 'welcome' },
+            { text: "3–5 Days", next: "rooms" },
+            { text: "5–7 Days", next: "rooms" },
+            { text: "7+ Days", next: "rooms" },
+        ],
+    },
+
+    // 🏨 Rooms
+    {
+        id: "rooms",
+        question: "🏨 How many rooms do you need?",
+        options: [
+            { text: "1 Room", next: "persons" },
+            { text: "2 Rooms", next: "persons" },
+            { text: "3+ Rooms", next: "persons" },
+        ],
+    },
+
+    // 👨‍👩‍👧 Persons
+    {
+        id: "persons",
+        question: "👨‍👩‍👧 Who are traveling?",
+        options: [
+            { text: "2 Adults", next: "hotel_type" },
+            { text: "Family (Adults + Kids)", next: "hotel_type" },
+            { text: "Group Travel", next: "hotel_type" },
+        ],
+    },
+
+    // 🏩 Hotel Category
+    {
+        id: "hotel_type",
+        question: "🏨 What type of hotel do you prefer?",
+        options: [
+            { text: "⭐ 3 Star", next: "meal_plan" },
+            { text: "⭐⭐ 4 Star", next: "meal_plan" },
+            { text: "⭐⭐⭐ 5 Star", next: "meal_plan" },
+            { text: "💎 Luxury Stay", next: "meal_plan" },
+        ],
+    },
+
+    // 🍽️ Meal Plan
+    {
+        id: "meal_plan",
+        question: "🍽️ Choose your meal plan:",
+        options: [
+            { text: "Breakfast (CP)", next: "inbound_result" },
+            { text: "Breakfast + Dinner (MAP)", next: "inbound_result" },
+            { text: "All Meals (AP)", next: "inbound_result" },
+        ],
+    },
+
+    // 🎁 Inbound Result
+    {
+        id: "inbound_result",
+        question:
+            "✨ Great! We have some amazing packages for you. Would you like to receive full details?",
+        options: [
+            { text: "📄 Show Packages", next: "end" },
+            { text: "🛠️ Customize My Trip", next: "end" },
+            { text: "💬 WhatsApp Me Details", url: "https://wa.me/919995888739" },
+        ],
+    },
+
+    // =========================
+    // ✈️ OUTBOUND FLOW
+    // =========================
+    {
+        id: "outbound_region",
+        question: "🌍 Where would you like to travel?",
+        options: [
+            { text: "🌏 Asia", next: "outbound_details" },
+            { text: "🇪🇺 Europe", next: "outbound_details" },
+            { text: "🇺🇸 Americas", next: "outbound_details" },
+            { text: "⬅️ Back", next: "welcome" },
+        ],
+    },
+
+    {
+        id: "outbound_details",
+        question: "📅 How long is your planned trip?",
+        options: [
+            { text: "3–5 Days", next: "outbound_result" },
+            { text: "5–7 Days", next: "outbound_result" },
+            { text: "7+ Days", next: "outbound_result" },
+        ],
+    },
+
+    {
+        id: "outbound_result",
+        question:
+            "✈️ Awesome! We have curated international packages ready for you.",
+        options: [
+            { text: "📄 Show Packages", next: "end" },
+            { text: "💬 Get Details on WhatsApp", url: "https://wa.me/919995888739" },
+        ],
+    },
+
+    // =========================
+    // 💼 SERVICES FLOW
+    // =========================
+    {
+        id: "services",
+        question: "💼 What service are you looking for?",
+        options: [
+            { text: "🏨 Hotel Booking", next: "end" },
+            { text: "🚗 Transport Service", next: "end" },
+            { text: "🛫 Visa Assistance", next: "end" },
+            { text: "🧭 Custom Tour Planning", next: "end" },
+            { text: "⬅️ Back", next: "welcome" },
         ],
     },
 
@@ -121,12 +160,11 @@ export const chatFlow: ChatStep[] = [
         ]
     },
 
-    // ✅ End
+    // ✅ END
     {
-        id: 'end',
-        question: '🎉 Thank you! Our travel expert will reach out soon with personalized details. ✨',
-        options: [
-            { text: '🔁 Start Over', next: 'welcome' },
-        ],
+        id: "end",
+        question:
+            "🎉 Thank you! Our travel expert will contact you shortly with the best options.",
+        options: [{ text: "🔁 Start Over", next: "welcome" }],
     },
 ];
