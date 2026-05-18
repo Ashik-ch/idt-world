@@ -8,5 +8,6 @@ export const routes: Routes = [
     { path: 'outbound/:country', loadComponent: () => import('./components/outbound/outbound-package/outbound-package').then(m => m.OutboundPackage), title: 'Outbound Packages' },
     { path: 'blog', loadComponent: () => import('./components/pages/blog/blog').then(m => m.Blog), title: 'News & Blog' },
     { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), title: 'Contact Us' },
+    { path: 'admin-panel', loadComponent: () => import('./components/pages/admin-panel/admin-panel').then(m => m.AdminPanel), title: 'Admin Panel' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
