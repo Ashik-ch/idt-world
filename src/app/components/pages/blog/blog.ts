@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { db } from '../../../services/firebase.config';
 
 @Component({
   selector: 'app-blog',
@@ -8,17 +10,31 @@ import { Component } from '@angular/core';
   templateUrl: './blog.html',
   styleUrl: './blog.scss'
 })
-export class Blog {
-  blogPosts = [
-    {
-      title: 'Top 10 Hidden Gems in Europe for 2026',
-      excerpt: 'Discover the uncharted territories of Europe. From quaint villages in the Swiss Alps to the untouched beaches of the Mediterranean, experience the world like never before.',
-      description: 'Embrace the freedom of discovering newEmbrace the freedom of discovering newEmbrace the freedom of discovering new',
-      date: 'May 15, 2026',
-      author: 'Elena Rossi',
-      category: 'blog',
-      readTime: '5 min read',
-      image: 'assets/images/c.jpg'
+export class Blog implements OnInit {
+  blogPosts: any[] = [];
+  isLoading: boolean = true;
+
+  async ngOnInit() {
+    await this.fetchBlogs();
+  }
+
+  async fetchBlogs() {
+    this.isLoading = true;
+    try {
+      const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'));
+      const querySnapshot = await getDocs(q);
+
+      this.blogPosts = querySnapshot.docs.map(doc => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          ...data
+        };
+      });
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    } finally {
+      this.isLoading = false;
     }
-  ];
+  }
 }

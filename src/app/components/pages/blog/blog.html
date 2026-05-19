@@ -48,6 +48,12 @@
 
         </div> -->
 
+        <!-- Loading State -->
+        <div *ngIf="isLoading" class="flex flex-col items-center justify-center py-20">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mb-4"></div>
+            <p class="text-gray-500">Loading articles...</p>
+        </div>
+
         <!-- Featured Blog -->
         <div *ngIf="blogPosts.length > 0" class="mb-20" data-aos="fade-up">
 
@@ -152,7 +158,7 @@
         </div>
 
         <!-- Divider -->
-        <div class="flex items-center gap-6 mb-16">
+        <div *ngIf="!isLoading && blogPosts.length > 1" class="flex items-center gap-6 mb-16">
 
             <h3 class="text-2xl font-bold text-gray-900 shrink-0">
                 Latest Articles
@@ -165,7 +171,7 @@
         </div>
 
         <!-- Blog Grid -->
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div *ngIf="!isLoading && blogPosts.length > 1" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
             <ng-container *ngFor="let post of blogPosts; let i=index">
 
@@ -260,7 +266,7 @@
         </div>
 
         <!-- Load More -->
-        <div class="mt-20 text-center">
+        <div *ngIf="!isLoading && blogPosts.length > 0" class="mt-20 text-center">
 
             <button class="px-10 py-4 rounded-full
                  bg-red-500 text-white font-semibold
