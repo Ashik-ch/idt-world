@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '../../../services/firebase.config';
 
 @Component({
@@ -14,14 +14,18 @@ export class Blog implements OnInit {
   blogPosts: any[] = [];
   isLoading: boolean = true;
 
+
+  constructor(private cdr: ChangeDetectorRef) { }
+
   async ngOnInit() {
     await this.fetchBlogs();
   }
 
   async fetchBlogs() {
     this.isLoading = true;
+    this.cdr.detectChanges();
     try {
-      const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'));
+      const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'), limit(20));
       const querySnapshot = await getDocs(q);
 
       this.blogPosts = querySnapshot.docs.map(doc => {
@@ -35,6 +39,7 @@ export class Blog implements OnInit {
       console.error("Error fetching blogs:", error);
     } finally {
       this.isLoading = false;
+      this.cdr.detectChanges();
     }
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, doc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, doc, deleteDoc, limit } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../../../services/firebase.config';
 
@@ -40,7 +40,7 @@ export class BlogForm implements OnInit {
   async fetchBlogs() {
     this.isLoadingPosts = true;
     try {
-      const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'));
+      const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'), limit(20));
       const querySnapshot = await getDocs(q);
       
       this.blogPosts = querySnapshot.docs.map(document => {
