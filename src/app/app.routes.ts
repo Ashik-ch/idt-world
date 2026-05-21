@@ -9,5 +9,6 @@ export const routes: Routes = [
     { path: 'blog', loadComponent: () => import('./components/pages/blog/blog').then(m => m.Blog), title: 'News & Blog' },
     { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), title: 'Contact Us' },
     { path: 'admin-panel', loadComponent: () => import('./components/pages/admin-panel/admin-panel').then(m => m.AdminPanel), title: 'Admin Panel' },
+    { path: 'vlogs', loadComponent: () => import('./components/pages/vlogs/vlogs').then(m => m.Vlogs), title: 'Vlogs & Virtual Tours' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
