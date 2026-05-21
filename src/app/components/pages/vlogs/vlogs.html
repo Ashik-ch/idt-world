@@ -1,61 +1,51 @@
-<!-- Vlogs / Video Showcase - Red & White Theme -->
-<section class="relative bg-gradient-to-b from-white via-red-50/20 to-white min-h-screen overflow-hidden py-16 md:py-24">
+ <section class="vlogs-page relative min-h-screen overflow-hidden py-8 md:py-12" style="background-image: url('assets/images/redbg17.jpg'); ">
 
-    <!-- Soft Background Glows -->
-    <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-red-100 rounded-full blur-[140px] opacity-40"></div>
-        <div class="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-red-50 rounded-full blur-[160px] opacity-50"></div>
-    </div>
-
-    <div class="relative container mx-auto px-6 md:px-12 z-10">
-
-        <!-- Header -->
-        <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-50 border border-red-150 text-red-600 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+    <div class="relative container mx-auto px-6 md:px-12 z-10 bg-cover bg-center" >
+ 
+        <div class="text-center max-w-4xl mx-auto mb-4 md:mb-8">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
                 Virtual Tour & Vlogs
             </div>
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Watch Our 
-                <span class="bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
+                Watch Our
+                <span class="bg-gradient-to-r from-rose-100 via-white to-rose-100 bg-clip-text text-transparent">
                     Travel Diaries
                 </span>
             </h1>
-            <p class="text-gray-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            <p class="text-rose-100/90 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
                 Explore the magnificent landscapes, rich cultural experiences, and pristine beauty of India through our curated travel vlogs.
             </p>
         </div>
 
-        <!-- Categories / Filters -->
-        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-16">
-            <button *ngFor="let cat of categories" 
-                    (click)="setCategory(cat)"
-                    [class]="activeCategory === cat ? 
-                             'px-6 py-2.5 rounded-full bg-red-500 text-white font-semibold shadow-lg shadow-red-500/25 scale-105 transition-all duration-300' : 
-                             'px-6 py-2.5 rounded-full bg-white text-gray-600 hover:text-red-500 border border-gray-150 hover:border-red-500/30 shadow-sm hover:shadow transition-all duration-300'">
+         <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-8">
+            <button *ngFor="let cat of categories"
+                  (click)="setCategory(cat)" [class]="activeCategory === cat ?
+                             'px-6 py-2.5 rounded-full bg-white text-red-600 font-semibold shadow-lg shadow-rose-900/30 scale-105 transition-all duration-300' :
+                             'px-6 py-2.5 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/25 backdrop-blur-sm shadow-sm hover:shadow transition-all duration-300'">
                 {{ cat }}
             </button>
         </div>
 
         <!-- Video Grid -->
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div *ngFor="let video of filteredVideos" 
+            <div *ngFor="let video of filteredVideos"
                  (click)="openPlayer(video)"
-                 class="group bg-white border border-red-50 rounded-[2rem] p-5 shadow-md hover:shadow-[0_20px_50px_rgba(239,68,68,0.1)] hover:-translate-y-2 transition-all duration-500 cursor-pointer flex flex-col h-full">
-                
+                 class="group vlogs-glass-card rounded-[2rem] p-5 hover:-translate-y-2 transition-all duration-500 cursor-pointer flex flex-col h-full">
+
                 <!-- Thumbnail -->
-                <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-gray-150">
-                    <img [src]="video.thumbnail" [alt]="video.title" 
+                <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-red-500">
+                    <img [src]="video.thumbnail" [alt]="video.title"
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    
+
                     <!-- Duration Badge -->
-                    <div class="absolute bottom-3 right-3 bg-black/75 backdrop-blur-sm text-white text-[11px] font-medium px-2.5 py-1 rounded-md">
+                    <div class="absolute bottom-3 right-3 bg-rose-950/80 backdrop-blur-sm text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-white/15">
                         {{ video.duration }}
                     </div>
 
                     <!-- Overlay & Play Button -->
-                    <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="w-14 h-14 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg shadow-red-500/30 transform scale-90 group-hover:scale-100 transition-transform duration-300 play-btn-pulse">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-white text-red-600 flex items-center justify-center shadow-lg shadow-rose-900/40 transform scale-90 group-hover:scale-100 transition-transform duration-300 play-btn-pulse">
                             <i class="pi pi-play text-lg ml-0.5"></i>
                         </div>
                     </div>
@@ -64,21 +54,21 @@
                 <!-- Video Details -->
                 <div class="flex-1 flex flex-col">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="px-3 py-1 rounded-full bg-red-50 text-red-600 text-[10px] font-bold tracking-wider uppercase">
+                        <span class="px-3 py-1 rounded-full bg-white/15 text-white text-[10px] font-bold tracking-wider uppercase border border-white/20">
                             {{ video.category }}
                         </span>
                     </div>
 
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition-colors duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-rose-100 transition-colors duration-300">
                         {{ video.title }}
                     </h3>
 
-                    <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p class="text-rose-100/80 text-sm leading-relaxed mb-4 line-clamp-2">
                         {{ video.description }}
                     </p>
 
                     <!-- Watch Now link -->
-                    <div class="mt-auto pt-4 border-t border-red-50 flex items-center justify-between text-red-500 text-sm font-semibold hover:text-red-700">
+                    <div class="mt-auto pt-4 border-t border-white/15 flex items-center justify-between text-white text-sm font-semibold group-hover:text-rose-50">
                         <span>Watch Now</span>
                         <i class="pi pi-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </div>
@@ -87,50 +77,50 @@
         </div>
 
         <!-- No Videos State -->
-        <div *ngIf="filteredVideos.length === 0" class="text-center py-20 bg-white border border-red-50 rounded-[2.5rem] p-8 max-w-lg mx-auto">
-            <i class="pi pi-video text-4xl text-gray-300 mb-4"></i>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">No Videos Found</h3>
-            <p class="text-gray-500">We don't have any videos listed in this category right now. Check back soon!</p>
+        <div *ngIf="filteredVideos.length === 0" class="text-center py-20 vlogs-glass-card rounded-[2.5rem] p-8 max-w-lg mx-auto">
+            <i class="pi pi-video text-4xl text-white/40 mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">No Videos Found</h3>
+            <p class="text-rose-100/80">We don't have any videos listed in this category right now. Check back soon!</p>
         </div>
     </div>
 </section>
 
 <!-- Lightbox Modal Video Player -->
-<div *ngIf="selectedVideo && safeVideoUrl" 
-     class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8 animate-fade-in"
+<div *ngIf="selectedVideo && safeVideoUrl"
+     class="fixed inset-0 z-50 vlogs-modal-overlay flex items-center justify-center p-4 md:p-8 animate-fade-in"
      (click)="closePlayer()">
-    
+
     <!-- Close Button -->
-    <button (click)="closePlayer()" 
-            class="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition duration-300 hover:rotate-90">
+    <button (click)="closePlayer()"
+            class="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition duration-300 hover:rotate-90 border border-white/20">
         <i class="pi pi-times text-lg"></i>
     </button>
 
     <!-- Modal Content -->
-    <div class="w-full max-w-4xl bg-black rounded-3xl overflow-hidden shadow-2xl relative" 
+    <div class="w-full max-w-4xl vlogs-modal-panel rounded-3xl overflow-hidden shadow-2xl relative"
          (click)="$event.stopPropagation()"
          data-aos="zoom-in">
-        
+
         <!-- Video Container -->
-        <div class="relative aspect-video w-full bg-black">
-            <iframe [src]="safeVideoUrl" 
-                    class="absolute inset-0 w-full h-full border-0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        <div class="relative aspect-video w-full bg-rose-950">
+            <iframe [src]="safeVideoUrl"
+                    class="absolute inset-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
             </iframe>
         </div>
 
         <!-- Details Bar -->
-        <div class="bg-gray-900 p-6 md:p-8 border-t border-gray-800 text-white">
+        <div class="bg-rose-900/60 backdrop-blur-md p-6 md:p-8 border-t border-white/15 text-white">
             <div class="flex items-center gap-2 mb-3">
-                <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold uppercase tracking-wider">
+                <span class="px-3 py-1 rounded-full bg-white/15 text-white text-xs font-semibold uppercase tracking-wider border border-white/20">
                     {{ selectedVideo.category }}
                 </span>
-                <span class="text-gray-500 text-xs">•</span>
-                <span class="text-gray-400 text-xs">{{ selectedVideo.duration }}</span>
+                <span class="text-rose-200/70 text-xs">•</span>
+                <span class="text-rose-100/80 text-xs">{{ selectedVideo.duration }}</span>
             </div>
             <h2 class="text-xl md:text-2xl font-bold text-white mb-2">{{ selectedVideo.title }}</h2>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">{{ selectedVideo.description }}</p>
+            <p class="text-rose-100/85 text-sm md:text-base leading-relaxed">{{ selectedVideo.description }}</p>
         </div>
     </div>
 </div>

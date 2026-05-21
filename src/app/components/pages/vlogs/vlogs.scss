@@ -1,16 +1,86 @@
+// Futuristic red page background (no black)
+.vlogs-page {
+  background: linear-gradient(
+    160deg,
+    #ff1a3d 0%,
+    #e11d48 22%,
+    #be123c 48%,
+    #9f1239 72%,
+    #881337 100%
+  );
+}
+
+.vlogs-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%);
+}
+
+.vlogs-scanline {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.02) 3px,
+    rgba(255, 255, 255, 0.02) 4px
+  );
+  animation: vlogs-scan 8s linear infinite;
+}
+
+@keyframes vlogs-scan {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(48px);
+  }
+}
+
+.vlogs-glow-1 {
+  background: radial-gradient(circle, rgba(255, 80, 120, 0.55) 0%, transparent 70%);
+}
+
+.vlogs-glow-2 {
+  background: radial-gradient(circle, rgba(255, 40, 90, 0.4) 0%, transparent 70%);
+}
+
+.vlogs-glass-card { 
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(127, 0, 30, 0.35);
+}
+
+.vlogs-glass-card:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(190, 18, 60, 0.45);
+}
+
+.vlogs-modal-overlay {
+  background: rgba(159, 18, 57, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.vlogs-modal-panel {
+  background: linear-gradient(145deg, #be123c 0%, #9f1239 50%, #881337 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .play-btn-pulse {
   animation: pulse-border 2s infinite;
 }
 
 @keyframes pulse-border {
   0% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.45);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
