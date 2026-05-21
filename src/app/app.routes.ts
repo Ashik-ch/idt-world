@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: 'contact', loadComponent: () => import('./components/pages/contact/contact').then(m => m.Contact), title: 'Contact Us' },
     { path: 'admin-panel', loadComponent: () => import('./components/pages/admin-panel/admin-panel').then(m => m.AdminPanel), title: 'Admin Panel' },
     { path: 'vlogs', loadComponent: () => import('./components/pages/vlogs/vlogs').then(m => m.Vlogs), title: 'Vlogs & Virtual Tours' },
+    { path: 'voucher', loadComponent: () => import('./components/pages/voucher/voucher').then(m => m.Voucher), title: 'Voucher' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
