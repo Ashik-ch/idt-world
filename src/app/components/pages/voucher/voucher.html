@@ -8,19 +8,15 @@
     </div>
 
     <div class="relative container mx-auto px-6 md:px-12 z-10 max-w-6xl">
-
         <!-- Header -->
-        <div class="text-center mb-4 md:mb-8">
-            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 border border-amber-200/30 text-amber-100 text-xs font-bold uppercase tracking-[0.25em] mb-8 backdrop-blur-md">
+        <div class="text-center mb-4 md:mb-4">
+            <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 border border-amber-200/30 text-amber-100 text-xs font-bold uppercase tracking-[0.25em] mb-4 backdrop-blur-md">
                 <i class="pi pi-sparkles text-amber-200"></i>
                 Luxury Collection
             </div>
-            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-[1.15] tracking-tight">
-                Curated Vouchers for
-                <span class="block mt-1 bg-gradient-to-r from-amber-100 via-white to-rose-100 bg-clip-text text-transparent">
-                    Life’s Finest Moments
-                </span>
-            </h1>
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-[1.15] tracking-tight">
+                Curated Vouchers for                       Finest Moments
+             </h1>
             <p class="text-rose-100/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
                 Four exclusive Kerala experiences — honeymoon, family, birthday & anniversary.
                 Purchase or gift through WhatsApp with white-glove IDT coordination.
@@ -67,9 +63,9 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="flex-1 p-7 md:p-10 lg:p-12 flex flex-col justify-center">
+                    <div class="flex-1 p-4 md:p-7 lg:p-9 flex flex-col justify-center">
                         <p class="text-amber-200/80 text-xs font-semibold uppercase tracking-[0.2em] mb-2">{{ voucher.tagline }}</p>
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">{{ voucher.title }}</h2>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">{{ voucher.title }}</h2>
                         <p class="text-rose-100/85 text-sm md:text-base leading-relaxed mb-6 max-w-xl">{{ voucher.description }}</p>
 
                         <ul class="grid sm:grid-cols-2 gap-3 mb-8">
@@ -83,7 +79,7 @@
                         <div class="flex flex-wrap items-end gap-6 mb-8 pb-8 border-b border-white/15">
                             <div>
                                 <p class="text-amber-200/70 text-[10px] uppercase tracking-[0.2em] mb-1">Starting from</p>
-                                <p class="text-3xl md:text-4xl font-bold text-white voucher-price-glow">{{ voucher.value }}</p>
+                                <p class="text-2xl md:text-3xl font-bold text-white voucher-price-glow">{{ voucher.value }}</p>
                             </div>
                             <div class="flex flex-wrap gap-3 text-sm">
                                 <span class="px-4 py-2 rounded-xl bg-white/10 text-white border border-white/15">
