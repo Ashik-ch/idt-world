@@ -1,8 +1,18 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, doc, deleteDoc, limit } from 'firebase/firestore';
 import { db } from '../../../services/firebase.config';
+
+export interface BlogPostRow {
+  id: string;
+  title?: string;
+  author?: string;
+  date?: string;
+  category?: string;
+  image?: string;
+  [key: string]: unknown;
+}
 
 @Component({
   selector: 'app-blog-form',
@@ -14,16 +24,14 @@ import { db } from '../../../services/firebase.config';
 export class BlogForm implements OnInit {
   blogForm: FormGroup;
   selectedFile: File | null = null;
-  imagePreviewUrl: string | ArrayBuffer | null = null;
-  isSubmitting: boolean = false;
-  
-  blogPosts: any[] = [];
-  isLoadingPosts = true;
+  imagePreviewUrl = signal<string | ArrayBuffer | null>(null);
+  isSubmitting = signal(false);
 
-  constructor(
-    private fb: FormBuilder,
-    private cdr: ChangeDetectorRef
-  ) {
+  blogPosts = signal<BlogPostRow[]>([]);
+  isLoadingPosts = signal(true);
+  deletingPostId = signal<string | null>(null);
+
+  constructor(private fb: FormBuilder) {
     this.blogForm = this.fb.group({
       title: ['', Validators.required],
       excerpt: ['', Validators.required],
@@ -39,53 +47,74 @@ export class BlogForm implements OnInit {
     this.fetchBlogs();
   }
 
-  trackByPostId(_index: number, post: { id: string }) {
+  trackByPostId(_index: number, post: BlogPostRow) {
     return post.id;
   }
 
+  isDeleting(postId: string): boolean {
+    return this.deletingPostId() === postId;
+  }
+
+  isDeleteBusy(): boolean {
+    return this.deletingPostId() !== null;
+  }
+
+  clearImagePreview() {
+    this.selectedFile = null;
+    this.imagePreviewUrl.set(null);
+  }
+
   async fetchBlogs() {
-    this.isLoadingPosts = true;
-    this.cdr.detectChanges();
+    this.isLoadingPosts.set(true);
     try {
       const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'), limit(20));
       const querySnapshot = await getDocs(q);
-      this.blogPosts = querySnapshot.docs.map(document => ({
-        id: document.id,
-        ...document.data()
-      }));
+      this.blogPosts.set(
+        querySnapshot.docs.map(document => ({
+          id: document.id,
+          ...document.data()
+        })) as BlogPostRow[]
+      );
     } catch (error) {
       console.error('Error fetching blogs:', error);
     } finally {
-      this.isLoadingPosts = false;
-      this.cdr.detectChanges();
+      this.isLoadingPosts.set(false);
     }
   }
 
   async deleteBlog(id: string) {
-    const confirmDelete = window.confirm("Are you sure you want to delete this blog post? This action cannot be undone.");
-    if (confirmDelete) {
-      try {
-        await deleteDoc(doc(db, 'blogPosts', id));
-        this.blogPosts = this.blogPosts.filter(post => post.id !== id);
-        this.cdr.detectChanges();
-        alert('Blog post deleted successfully.');
-      } catch (error) {
-        console.error("Error deleting blog:", error);
-        alert("Failed to delete blog post.");
-      }
+    if (this.isDeleteBusy()) {
+      return;
+    }
+
+    const confirmDelete = window.confirm('Are you sure you want to delete this blog post? This action cannot be undone.');
+    if (!confirmDelete) {
+      return;
+    }
+
+    this.deletingPostId.set(id);
+    try {
+      await deleteDoc(doc(db, 'blogPosts', id));
+      this.blogPosts.update(posts => posts.filter(post => post.id !== id));
+      alert('Blog post deleted successfully.');
+    } catch (error) {
+      console.error('Error deleting blog:', error);
+      alert('Failed to delete blog post.');
+    } finally {
+      this.deletingPostId.set(null);
     }
   }
 
   onFileSelected(event: Event) {
     const file = (event.target as HTMLInputElement).files?.[0];
-    if (file) {
-      this.selectedFile = file;
-
-      // Create preview
-      const reader = new FileReader();
-      reader.onload = e => this.imagePreviewUrl = reader.result;
-      reader.readAsDataURL(file);
+    if (!file) {
+      return;
     }
+    this.selectedFile = file;
+
+    const reader = new FileReader();
+    reader.onload = () => this.imagePreviewUrl.set(reader.result);
+    reader.readAsDataURL(file);
   }
 
   compressAndConvertToBase64(file: File): Promise<string> {
@@ -97,8 +126,7 @@ export class BlogForm implements OnInit {
         img.src = event.target?.result as string;
         img.onload = () => {
           const canvas = document.createElement('canvas');
-          
-          // Max dimensions for compression
+
           const MAX_WIDTH = 800;
           const MAX_HEIGHT = 600;
           let width = img.width;
@@ -109,11 +137,9 @@ export class BlogForm implements OnInit {
               height = Math.round((height * MAX_WIDTH) / width);
               width = MAX_WIDTH;
             }
-          } else {
-            if (height > MAX_HEIGHT) {
-              width = Math.round((width * MAX_HEIGHT) / height);
-              height = MAX_HEIGHT;
-            }
+          } else if (height > MAX_HEIGHT) {
+            width = Math.round((width * MAX_HEIGHT) / height);
+            height = MAX_HEIGHT;
           }
 
           canvas.width = width;
@@ -121,15 +147,12 @@ export class BlogForm implements OnInit {
 
           const ctx = canvas.getContext('2d');
           if (!ctx) {
-            resolve(event.target?.result as string); // fallback to original base64
+            resolve(event.target?.result as string);
             return;
           }
-          
+
           ctx.drawImage(img, 0, 0, width, height);
-          
-          // Export as JPEG with 0.7 quality compression
-          const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
-          resolve(compressedBase64);
+          resolve(canvas.toDataURL('image/jpeg', 0.7));
         };
         img.onerror = (err) => reject(err);
       };
@@ -138,56 +161,46 @@ export class BlogForm implements OnInit {
   }
 
   async onSubmit() {
-    // We only validate the form here, the user commented out the file selection requirement previously but we put it back
-    if (this.blogForm.valid) {
-      this.isSubmitting = true;
-
-      try {
-        // Convert image to a compressed base64 string to store directly in Firestore,
-        // bypassing the Firebase Storage subscription/billing requirement.
-        let downloadURL = null;
-        if (this.selectedFile) {
-          downloadURL = await this.compressAndConvertToBase64(this.selectedFile);
-        }
-
-        // 2. Save form data to Firestore
-        const blogData = {
-          ...this.blogForm.value,
-          image: downloadURL,
-          createdAt: serverTimestamp()
-        };
-
-        await addDoc(collection(db, 'blogPosts'), blogData);
-
-        alert('Blog created successfully!');
-        
-        // Refresh the table
-        this.fetchBlogs();
-        
-        // Reset form
-        this.blogForm.reset();
-        this.selectedFile = null;
-        this.imagePreviewUrl = null;
-        this.blogForm.patchValue({
-          category: 'blog',
-          readTime: '5 min read',
-          date: new Date().toISOString().substring(0, 10)
-        });
-
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        alert('Failed to create blog post. Please try again.');
-      } finally {
-        this.isSubmitting = false;
-        this.cdr.detectChanges();
-      }
-
-    } else {
+    if (!this.blogForm.valid) {
       this.blogForm.markAllAsTouched();
       if (!this.selectedFile) {
-        // Just a warning, not blocking anymore since image might be optional based on user's manual edits
-        console.warn('No image selected.'); 
+        console.warn('No image selected.');
       }
+      return;
+    }
+
+    this.isSubmitting.set(true);
+
+    try {
+      let downloadURL: string | null = null;
+      if (this.selectedFile) {
+        downloadURL = await this.compressAndConvertToBase64(this.selectedFile);
+      }
+
+      const blogData = {
+        ...this.blogForm.value,
+        image: downloadURL,
+        createdAt: serverTimestamp()
+      };
+
+      await addDoc(collection(db, 'blogPosts'), blogData);
+
+      alert('Blog created successfully!');
+
+      await this.fetchBlogs();
+
+      this.blogForm.reset();
+      this.clearImagePreview();
+      this.blogForm.patchValue({
+        category: 'blog',
+        readTime: '5 min read',
+        date: new Date().toISOString().substring(0, 10)
+      });
+    } catch (error) {
+      console.error('Error adding document: ', error);
+      alert('Failed to create blog post. Please try again.');
+    } finally {
+      this.isSubmitting.set(false);
     }
   }
 }

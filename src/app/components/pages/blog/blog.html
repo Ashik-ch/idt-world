@@ -55,7 +55,7 @@
         </div> -->
 
         <!-- Featured Blog -->
-        <div *ngIf="blogPosts.length > 0" class="mb-20" data-aos="fade-up">
+        <div *ngIf="blogPosts().length > 0" class="mb-20" data-aos="fade-up">
 
             <div class="group relative 
 
@@ -74,7 +74,7 @@
                 <!-- Image -->
                 <div class="w-full lg:w-1/2 relative rounded-3xl overflow-hidden aspect-video lg:aspect-[4/3]">
 
-                    <img [src]="blogPosts[0].image" [alt]="blogPosts[0].title" class="w-full h-full object-cover
+                    <img [src]="blogPosts()[0].image" [alt]="blogPosts()[0].title" class="w-full h-full object-cover
                         group-hover:scale-105
                         transition duration-1000" />
 
@@ -84,7 +84,7 @@
                              bg-white/90 backdrop-blur-md
                              text-red-600 text-xs font-bold shadow-lg">
 
-                            {{ blogPosts[0].category }}
+                            {{ blogPosts()[0].category }}
                         </span>
 
                     </div>
@@ -98,14 +98,14 @@
 
                         <span>
                             <i class="pi pi-calendar text-red-500"></i>
-                            {{ blogPosts[0].date }}
+                            {{ blogPosts()[0].date }}
                         </span>
 
                         <span class="w-1 h-1 rounded-full bg-red-300"></span>
 
                         <span>
                             <i class="pi pi-clock text-red-500"></i>
-                            {{ blogPosts[0].readTime }}
+                            {{ blogPosts()[0].readTime }}
                         </span>
 
                     </div>
@@ -114,11 +114,11 @@
                          text-gray-900 mb-6
                          group-hover:text-red-600 transition">
 
-                        {{ blogPosts[0].title }}
+                        {{ blogPosts()[0].title }}
                     </h2>
 
                     <p class="text-gray-600 text-lg leading-relaxed mb-8 line-clamp-3">
-                        {{ blogPosts[0].excerpt }}
+                        {{ blogPosts()[0].excerpt }}
                     </p>
 
                     <div class="flex items-center justify-between">
@@ -130,27 +130,29 @@
                                  flex items-center justify-center
                                  font-bold">
 
-                                {{ blogPosts[0].author.charAt(0) }}
+                                {{ blogPosts()[0].author?.charAt(0) }}
                             </div>
 
                             <div>
                                 <h4 class="font-semibold text-gray-900">
-                                    {{ blogPosts[0].author }}
+                                    {{ blogPosts()[0].author }}
                                 </h4>
                                 <p class="text-xs text-gray-500">Author</p>
                             </div>
 
                         </div>
 
-                        <button class="w-12 h-12 rounded-full
+                        <a [routerLink]="['/blog', blogPosts()[0].id]"
+                            class="w-12 h-12 rounded-full
                              bg-red-500 text-white
                              hover:bg-red-600
                              hover:-rotate-45
                              flex items-center justify-center
-                             transition-all duration-500">
+                             transition-all duration-500"
+                            aria-label="Read full article">
 
                             <i class="pi pi-arrow-right"></i>
-                        </button>
+                        </a>
 
                     </div>
                 </div>
@@ -158,7 +160,7 @@
         </div>
 
         <!-- Divider -->
-        <div *ngIf="!isLoading && blogPosts.length > 1" class="flex items-center gap-6 mb-16">
+        <div *ngIf="!isLoading() && blogPosts().length > 1" class="flex items-center gap-6 mb-16">
 
             <h3 class="text-2xl font-bold text-gray-900 shrink-0">
                 Latest Articles
@@ -171,9 +173,9 @@
         </div>
 
         <!-- Blog Grid -->
-        <div *ngIf="!isLoading && blogPosts.length > 1" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div *ngIf="!isLoading() && blogPosts().length > 1" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-            <ng-container *ngFor="let post of blogPosts; let i=index">
+            <ng-container *ngFor="let post of blogPosts(); let i=index">
 
                 <div *ngIf="i > 0" data-aos="fade-up" [attr.data-aos-delay]="(i-1)*100" class="group relative bg-white
                     border border-red-100
@@ -244,7 +246,8 @@
                                 {{ post.author }}
                             </h4>
 
-                            <button class="text-red-500 text-sm font-bold
+                            <a [routerLink]="['/blog', post.id]"
+                                class="text-red-500 text-sm font-bold
                                  uppercase tracking-wider
                                  flex items-center gap-2
                                  hover:text-red-700">
@@ -256,7 +259,7 @@
                                      transition">
                                 </i>
 
-                            </button>
+                            </a>
                         </div>
 
                     </div>
@@ -266,7 +269,7 @@
         </div>
 
         <!-- Load More -->
-        <div *ngIf="!isLoading && blogPosts.length > 0" class="mt-20 text-center">
+        <div *ngIf="!isLoading() && blogPosts().length > 0" class="mt-20 text-center">
 
             <button class="px-10 py-4 rounded-full
                  bg-red-500 text-white font-semibold
