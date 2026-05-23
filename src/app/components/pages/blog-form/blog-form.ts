@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, doc, deleteDoc, limit } from 'firebase/firestore';
@@ -18,9 +18,12 @@ export class BlogForm implements OnInit {
   isSubmitting: boolean = false;
   
   blogPosts: any[] = [];
-  isLoadingPosts: boolean = false;
+  isLoadingPosts = true;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private cdr: ChangeDetectorRef
+  ) {
     this.blogForm = this.fb.group({
       title: ['', Validators.required],
       excerpt: ['', Validators.required],
@@ -36,22 +39,25 @@ export class BlogForm implements OnInit {
     this.fetchBlogs();
   }
 
+  trackByPostId(_index: number, post: { id: string }) {
+    return post.id;
+  }
+
   async fetchBlogs() {
     this.isLoadingPosts = true;
+    this.cdr.detectChanges();
     try {
       const q = query(collection(db, 'blogPosts'), orderBy('createdAt', 'desc'), limit(20));
       const querySnapshot = await getDocs(q);
-      
-      this.blogPosts = querySnapshot.docs.map(document => {
-        return {
-          id: document.id,
-          ...document.data()
-        };
-      });
+      this.blogPosts = querySnapshot.docs.map(document => ({
+        id: document.id,
+        ...document.data()
+      }));
     } catch (error) {
-      console.error("Error fetching blogs:", error);
+      console.error('Error fetching blogs:', error);
     } finally {
       this.isLoadingPosts = false;
+      this.cdr.detectChanges();
     }
   }
 
@@ -61,7 +67,8 @@ export class BlogForm implements OnInit {
       try {
         await deleteDoc(doc(db, 'blogPosts', id));
         this.blogPosts = this.blogPosts.filter(post => post.id !== id);
-        alert("Blog post deleted successfully.");
+        this.cdr.detectChanges();
+        alert('Blog post deleted successfully.');
       } catch (error) {
         console.error("Error deleting blog:", error);
         alert("Failed to delete blog post.");
@@ -172,6 +179,7 @@ export class BlogForm implements OnInit {
         alert('Failed to create blog post. Please try again.');
       } finally {
         this.isSubmitting = false;
+        this.cdr.detectChanges();
       }
 
     } else {

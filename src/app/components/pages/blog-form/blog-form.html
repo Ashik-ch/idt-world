@@ -1,94 +1,89 @@
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-2 md:p-4 max-w-7xl mx-auto items-start">
-  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-4">
-    <div class="mb-8">
-      <h2 class="text-2xl font-bold text-gray-900">Create New Blog Post</h2>
-      <p class="text-gray-500 text-sm mt-1">Fill in the details below to manually publish a new article.</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 px-3 py-4 sm:px-4 sm:py-5 md:p-6 max-w-7xl mx-auto items-start">
+  <div class="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-4 md:p-5">
+    <div class="mb-5 sm:mb-8">
+      <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Create New Blog Post</h2>
+      <p class="text-gray-500 text-xs sm:text-sm mt-1">Fill in the details below to manually publish a new article.</p>
     </div>
 
-    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" class="space-y-6">
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" class="space-y-4 sm:space-y-6">
 
       <!-- Title -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+        <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Title</label>
         <input type="text" formControlName="title"
-          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+          class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
           [ngClass]="{'border-red-300': blogForm.get('title')?.invalid && blogForm.get('title')?.touched, 'border-gray-200': !(blogForm.get('title')?.invalid && blogForm.get('title')?.touched)}"
           placeholder="e.g. Top 10 Hidden Gems in Europe">
         <div *ngIf="blogForm.get('title')?.invalid && blogForm.get('title')?.touched" class="text-red-500 text-xs mt-1">
           Title is required.</div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Author Name</label>
+          <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Author Name</label>
           <input type="text" formControlName="author"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+            class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
             [ngClass]="{'border-red-300': blogForm.get('author')?.invalid && blogForm.get('author')?.touched, 'border-gray-200': !(blogForm.get('author')?.invalid && blogForm.get('author')?.touched)}"
             placeholder="John Doe">
         </div>
 
-        <!-- Date -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Publish Date</label>
+          <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Publish Date</label>
           <input type="date" formControlName="date"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors border-gray-200">
+            class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors border-gray-200">
         </div>
 
-        <!-- Read Time -->
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Estimated Read Time</label>
+        <div class="sm:col-span-2 md:col-span-1">
+          <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Estimated Read Time</label>
           <input type="text" formControlName="readTime"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors border-gray-200"
+            class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors border-gray-200"
             placeholder="e.g. 5 min read">
         </div>
       </div>
 
-      <!-- Excerpt -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Short Excerpt (Summary)</label>
+        <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Short Excerpt (Summary)</label>
         <textarea formControlName="excerpt" rows="2"
-          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors resize-none"
+          class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors resize-none"
           [ngClass]="{'border-red-300': blogForm.get('excerpt')?.invalid && blogForm.get('excerpt')?.touched, 'border-gray-200': !(blogForm.get('excerpt')?.invalid && blogForm.get('excerpt')?.touched)}"
           placeholder="Brief summary of the article..."></textarea>
       </div>
 
-      <!-- Description (Main Content) -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Main Content (Description)</label>
-        <textarea formControlName="description" rows="6"
-          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors resize-y"
+        <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Main Content (Description)</label>
+        <textarea formControlName="description" rows="5"
+          class="w-full px-3 py-2 sm:px-4 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors resize-y min-h-[120px] sm:min-h-[160px]"
           [ngClass]="{'border-red-300': blogForm.get('description')?.invalid && blogForm.get('description')?.touched, 'border-gray-200': !(blogForm.get('description')?.invalid && blogForm.get('description')?.touched)}"
           placeholder="Write the full blog post content here..."></textarea>
       </div>
 
-      <!-- Featured Image Upload -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Featured Image</label>
+        <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Featured Image</label>
         <div
-          class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-red-500 transition-colors bg-gray-50">
-          <div class="space-y-1 text-center">
+          class="mt-1 flex justify-center px-4 py-4 sm:px-6 sm:pt-5 sm:pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-red-500 transition-colors bg-gray-50">
+          <div class="space-y-1 text-center w-full">
 
             <div *ngIf="!imagePreviewUrl" class="flex flex-col items-center">
-              <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
+              <svg class="mx-auto h-8 w-8 sm:h-12 sm:w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
                 aria-hidden="true">
                 <path
                   d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <div class="flex text-sm text-gray-600 mt-2">
+              <div class="flex flex-col sm:flex-row text-xs sm:text-sm text-gray-600 mt-2 items-center justify-center gap-1 sm:gap-0">
                 <label for="file-upload"
                   class="relative cursor-pointer bg-white rounded-md font-medium text-red-600 hover:text-red-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-500 px-2 py-1 shadow-sm border border-gray-200">
                   <span>Upload a file</span>
                   <input id="file-upload" name="file-upload" type="file" class="sr-only"
                     (change)="onFileSelected($event)" accept="image/*">
                 </label>
-                <p class="pl-2 py-1">or drag and drop</p>
+                <p class="sm:pl-2 py-1">or drag and drop</p>
               </div>
-              <p class="text-xs text-gray-500 mt-1">PNG, JPG, GIF up to 10MB</p>
+              <p class="text-[10px] sm:text-xs text-gray-500 mt-1">PNG, JPG, GIF up to 10MB</p>
             </div>
 
             <div *ngIf="imagePreviewUrl" class="relative">
-              <img [src]="imagePreviewUrl" class="max-h-48 rounded-lg mx-auto object-cover" alt="Image preview">
+              <img [src]="imagePreviewUrl" class="max-h-36 sm:max-h-48 rounded-lg mx-auto object-cover" alt="Image preview">
               <button type="button" (click)="selectedFile = null; imagePreviewUrl = null"
                 class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-md hover:bg-red-600 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
@@ -96,7 +91,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              <p class="text-sm text-gray-500 mt-2">{{ selectedFile?.name }}</p>
+              <p class="text-xs sm:text-sm text-gray-500 mt-2 truncate px-2">{{ selectedFile?.name }}</p>
             </div>
 
           </div>
@@ -104,14 +99,13 @@
         <div *ngIf="!selectedFile && blogForm.touched" class="text-red-500 text-xs mt-1">Image is required.</div>
       </div>
 
-      <!-- Submit Button -->
-      <div class="pt-4 flex justify-end">
+      <div class="pt-2 sm:pt-4 flex flex-col-reverse sm:flex-row sm:justify-end gap-2 sm:gap-0">
         <button type="button"
-          class="bg-white py-2 px-6 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 mr-3 transition-colors">
+          class="w-full sm:w-auto bg-white py-2 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mr-3 transition-colors">
           Cancel
         </button>
         <button type="submit" [disabled]="isSubmitting"
-          class="inline-flex justify-center py-2 px-8 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          class="w-full sm:w-auto inline-flex justify-center py-2 px-6 sm:px-8 border border-transparent shadow-sm text-xs sm:text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {{ isSubmitting ? 'Publishing...' : 'Publish Blog Post' }}
         </button>
       </div>
@@ -120,52 +114,67 @@
   </div>
 
   <!-- Manage Existing Posts -->
-  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-2 md:p-4">
-    <div class="mb-6 flex justify-between items-center">
-      <h2 class="text-xl font-bold text-gray-900">Blogs ({{blogPosts.length}})</h2>
+  <div class="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-4 md:p-5">
+    <div class="mb-4 sm:mb-6 flex justify-between items-center">
+      <h2 class="text-base sm:text-lg md:text-xl font-bold text-gray-900">Blogs ({{ blogPosts.length }})</h2>
     </div>
-
+ 
     <div *ngIf="!isLoadingPosts && blogPosts.length === 0"
-      class="text-center py-10 bg-gray-50 rounded-lg border border-dashed border-gray-300">
-      <p class="text-gray-500">No blog posts found.</p>
+      class="text-center py-8 sm:py-10 bg-gray-50 rounded-lg border border-dashed border-gray-300">
+      <p class="text-gray-500 text-xs sm:text-sm">No blog posts found.</p>
     </div>
 
-    <div *ngIf="blogPosts.length > 0" class="overflow-x-auto border border-gray-200 rounded-lg">
-      <table class="min-w-full divide-y divide-gray-200">
+    <!-- Mobile: card list -->
+    <div *ngIf="!isLoadingPosts && blogPosts.length > 0" class="md:hidden space-y-3">
+      <article *ngFor="let post of blogPosts; trackBy: trackByPostId"
+        class="flex gap-3 p-3 border border-gray-200 rounded-lg bg-gray-50/50">
+        <img [src]="post.image" loading="lazy" decoding="async"
+          class="h-14 w-14 shrink-0 rounded-lg object-cover bg-gray-200" alt="">
+        <div class="min-w-0 flex-1">
+          <h3 class="text-sm font-medium text-gray-900 truncate" [title]="post.title">{{ post.title }}</h3>
+          <p class="text-[11px] text-gray-500 truncate">{{ post.author }} · {{ post.date }}</p>
+          <button type="button" (click)="deleteBlog(post.id)"
+            class="mt-2 text-xs text-red-500 hover:text-red-700 inline-flex items-center gap-1">
+            <i class="pi pi-trash text-xs"></i> Delete
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Desktop: table -->
+    <div *ngIf="!isLoadingPosts && blogPosts.length > 0" class="hidden md:block overflow-x-auto border border-gray-200 rounded-lg">
+      <table class="min-w-full divide-y divide-gray-200 text-sm">
         <thead class="bg-gray-50">
           <tr>
-            <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title
-            </th>
-            <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image
-            </th>
-            <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Author</th>
-            <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date
-            </th>
-            <th scope="col" class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Actions</th>
+            <th scope="col" class="px-3 lg:px-4 py-2.5 text-left text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+            <th scope="col" class="px-3 lg:px-4 py-2.5 text-left text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+            <th scope="col" class="px-3 lg:px-4 py-2.5 text-left text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell">Author</th>
+            <th scope="col" class="px-3 lg:px-4 py-2.5 text-left text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+            <th scope="col" class="px-3 lg:px-4 py-2.5 text-right text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">
-          <tr *ngFor="let post of blogPosts" class="hover:bg-gray-50 transition-colors">
-            <td class="px-4 py-4">
-              <div class="text-sm font-medium text-gray-900 truncate max-w-[120px]" [title]="post.title">
+          <tr *ngFor="let post of blogPosts; trackBy: trackByPostId" class="hover:bg-gray-50 transition-colors">
+            <td class="px-3 lg:px-4 py-3">
+              <div class="text-sm font-medium text-gray-900 truncate max-w-[140px] lg:max-w-[180px]" [title]="post.title">
                 {{ post.title }}
               </div>
-              <div class="text-xs text-gray-500">{{ post.category }}</div>
+              <div class="text-xs text-gray-500 lg:hidden">{{ post.author }}</div>
             </td>
-            <td class="px-4 py-4 whitespace-nowrap">
-              <img [src]="post.image" class="h-12 w-12 rounded-lg object-cover" alt="Image preview">
+            <td class="px-3 lg:px-4 py-3 whitespace-nowrap">
+              <img [src]="post.image" loading="lazy" decoding="async"
+                class="h-10 w-10 lg:h-12 lg:w-12 rounded-lg object-cover bg-gray-200" alt="Blog thumbnail">
             </td>
-            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 truncate max-w-[100px]">
+            <td class="px-3 lg:px-4 py-3 whitespace-nowrap text-sm text-gray-500 truncate max-w-[100px] hidden lg:table-cell">
               {{ post.author }}
             </td>
-            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 text-xs">
+            <td class="px-3 lg:px-4 py-3 whitespace-nowrap text-xs text-gray-500">
               {{ post.date }}
             </td>
-            <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <button (click)="deleteBlog(post.id)"
-                class="text-red-500 hover:text-red-700 inline-flex items-center justify-end gap-2 transition-colors">
+            <td class="px-3 lg:px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+              <button type="button" (click)="deleteBlog(post.id)"
+                class="text-red-500 hover:text-red-700 inline-flex items-center justify-end gap-2 transition-colors"
+                aria-label="Delete blog post">
                 <i class="pi pi-trash"></i>
               </button>
             </td>
