@@ -1,3 +1,6 @@
+export const COMMON_VOUCHER_DESCRIPTION =
+  'Four exclusive Kerala experiences — honeymoon, family, birthday & anniversary. Purchase or gift through WhatsApp with white-glove IDT coordination.';
+
 export interface TourVoucher {
   id: string;
   title: string;

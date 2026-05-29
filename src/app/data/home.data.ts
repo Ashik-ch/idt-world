@@ -958,35 +958,72 @@ export const DESTINATIONS = [
 
 
 
-export const testimonialList = [
+export interface TestimonialFeedPost {
+    id: string;
+    name: string;
+    location: string;
+    avatar: string;
+    mediaType: 'image' | 'video';
+    mediaUrl: string;
+    posterUrl?: string;
+    description: string;
+    contact: string;
+    whatsapp: string;
+    postedAt: string;
+}
+
+export const testimonialList: TestimonialFeedPost[] = [
     {
+        id: 'anjali-houseboat',
         name: 'Anjali Nair',
-        location: 'Kerala, India',
-        whatsapp: "+919847240456",
-        contact: "+919847240456",
-        rating: 4,
-        message:
-            'The trip was perfectly organized, and the houseboat experience in Alleppey was unforgettable!',
-        avatar: 'assets/images/f.jpg',
+        location: 'Alleppey, Kerala',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+        mediaType: 'image',
+        mediaUrl: 'assets/images/trip.jpg',
+        description:
+            'The houseboat experience was magical! IDT handled every detail — from pickup to sunset dinner. Highly recommend for couples.',
+        contact: '+91 98472 40456',
+        whatsapp: '919847240456',
+        postedAt: '2 days ago',
     },
     {
+        id: 'rahul-munnar',
         name: 'Rahul Sharma',
-        location: 'Delhi, India',
-        whatsapp: "+919847240456",
-        contact: "+919847240456",
-        rating: 4,
-        message:
-            'A wonderful mix of culture and nature — Munnar’s tea gardens were the highlight for me.',
-        avatar: 'https://media.istockphoto.com/id/2006436002/video/happy-confident-and-portrait-of-indian-man-in-office-with-creative-professional-at-tech.jpg?s=640x640&k=20&c=vcKAWd0sGJpV3xR0AK1RCM7zTEpFUcBhQEXbNvN1M78=',
+        location: 'Munnar, Kerala',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+        mediaType: 'video',
+        mediaUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+        posterUrl: 'assets/images/family.jpg',
+        description:
+            'Tea gardens, cool weather, and a perfectly planned family itinerary. Our kids still talk about the elephant park visit!',
+        contact: '+91 98472 40456',
+        whatsapp: '919847240456',
+        postedAt: '1 week ago',
     },
     {
+        id: 'sophia-kerala',
         name: 'Sophia Williams',
-        location: 'London, UK',
-        whatsapp: "+919847240456",
-        contact: "+919847240456",
-        rating: 5,
-        message:
-            'Best travel experience ever! Kerala felt like paradise with such smooth arrangements.',
-        avatar: 'https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg',
+        location: 'Kochi, Kerala',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
+        mediaType: 'image',
+        mediaUrl: 'assets/images/solo.jpg',
+        description:
+            'First time in India and IDT made it feel effortless. Heritage walk in Fort Kochi was a highlight — safe, smooth, and unforgettable.',
+        contact: '+91 98472 40456',
+        whatsapp: '919847240456',
+        postedAt: '2 weeks ago',
+    },
+    {
+        id: 'priya-backwaters',
+        name: 'Priya Menon',
+        location: 'Kumarakom, Kerala',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop',
+        mediaType: 'image',
+        mediaUrl: 'assets/images/family.jpg',
+        description:
+            'Booked through WhatsApp and got a luxury package within our budget. Backwater cruise at sunrise — absolutely stunning.',
+        contact: '+91 98472 40456',
+        whatsapp: '919847240456',
+        postedAt: '3 weeks ago',
     },
 ];

@@ -1,5 +1,5 @@
 <!-- Luxury Occasion Vouchers -->
-<section class="voucher-page relative min-h-screen overflow-hidden py-6 md:py-8">
+<section class="voucher-page relative min-h-screen overflow-hidden py-6 md:py-10">
 
     <div class="absolute inset-0 pointer-events-none voucher-grid-overlay"></div>
     <div class="absolute inset-0 pointer-events-none">
@@ -7,106 +7,60 @@
         <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] voucher-glow-2 rounded-full blur-[120px]"></div>
     </div>
 
-    <div class="relative container mx-auto px-6 md:px-12 z-10 max-w-6xl">
-        <!-- Header -->
-        <div class="text-center mb-4 md:mb-4">
-            <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 border border-amber-200/30 text-amber-100 text-xs font-bold uppercase tracking-[0.25em] mb-4 backdrop-blur-md">
+    <div class="relative container mx-auto px-4 sm:px-6 md:px-12 z-10 max-w-2xl">
+
+        <!-- Page head -->
+        <header class="text-center mb-3 ">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-amber-200/30 text-amber-100 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] mb-3 backdrop-blur-md">
                 <i class="pi pi-sparkles text-amber-200"></i>
                 Luxury Collection
             </div>
-            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-[1.15] tracking-tight">
-                Curated Vouchers for                       Finest Moments
-             </h1>
-            <p class="text-rose-100/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
-                Four exclusive Kerala experiences — honeymoon, family, birthday & anniversary.
-                Purchase or gift through WhatsApp with white-glove IDT coordination.
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 leading-tight tracking-tight">
+                Curated Vouchers for Finest Moments
+            </h1>
+            <p class="text-rose-100/90 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light">
+                {{ commonDescription }}
             </p>
-        </div>
+        </header>
 
         <!-- Carousel -->
         <div class="voucher-carousel relative"
              (mouseenter)="pauseCarousel()"
              (mouseleave)="resumeCarousel()">
 
-            <div class="voucher-carousel-viewport overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
+            <div class="voucher-carousel-viewport overflow-hidden rounded-2xl md:rounded-3xl">
                 <div class="voucher-carousel-track flex"
                      [style.transform]="carouselTransform"
                      [class.is-paused]="isCarouselPaused">
+
                     <article *ngFor="let voucher of vouchers; let i = index"
-                             class="voucher-carousel-slide voucher-luxury-card relative shrink-0 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden"
+                             class="voucher-carousel-slide voucher-luxury-card relative shrink-0 w-full rounded-2xl md:rounded-3xl overflow-hidden"
                              [class.is-active]="activeIndex === i"
                              [attr.aria-hidden]="activeIndex !== i"
                              [attr.aria-current]="activeIndex === i ? 'true' : null">
 
-                <div class="flex flex-col lg:flex-row">
-
-                    <!-- Image -->
-                    <div class="relative lg:w-[42%] aspect-[16/11] lg:aspect-auto lg:min-h-[340px] overflow-hidden shrink-0">
-                        <img [src]="voucher.image" [alt]="voucher.title"
-                             class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-[1.2s] ease-out">
-                        <div class="absolute inset-0 bg-gradient-to-r from-rose-950/90 via-rose-900/40 to-transparent lg:bg-gradient-to-t lg:from-rose-950/90 lg:via-rose-900/30 lg:to-transparent"></div>
-
-                        <div class="absolute top-5 left-5 flex items-center gap-3">
-                            <div class="voucher-occasion-icon w-12 h-12 rounded-2xl flex items-center justify-center">
-                                <i [class]="voucher.icon + ' text-xl'"></i>
+                        <div class="flex flex-col">
+                            <!-- Photo -->
+                            <div class="relative aspect-[16/10] overflow-hidden">
+                                <img [src]="voucher.image" [alt]="voucher.title"
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-rose-950/80 via-rose-900/20 to-transparent"></div>
                             </div>
-                            <div>
-                                <p class="text-amber-200/90 text-[10px] font-bold uppercase tracking-[0.2em]">Occasion</p>
-                                <p class="text-white font-semibold text-sm">{{ voucher.occasion }}</p>
-                            </div>
-                        </div>
 
-                        <span *ngIf="voucher.badge"
-                              class="absolute top-5 right-5 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-200/95 to-amber-100/95 text-rose-900 text-[10px] font-bold uppercase tracking-wider shadow-lg">
-                            {{ voucher.badge }}
-                        </span>
-                    </div>
+                            <!-- Title + button -->
+                            <div class="p-3 sm:p-2 text-center">
+                                <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 leading-tight">
+                                    {{ voucher.title }}
+                                </h2>
 
-                    <!-- Content -->
-                    <div class="flex-1 p-4 md:p-7 lg:p-9 flex flex-col justify-center">
-                        <p class="text-amber-200/80 text-xs font-semibold uppercase tracking-[0.2em] mb-2">{{ voucher.tagline }}</p>
-                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">{{ voucher.title }}</h2>
-                        <p class="text-rose-100/85 text-sm md:text-base leading-relaxed mb-6 max-w-xl">{{ voucher.description }}</p>
-
-                        <ul class="grid sm:grid-cols-2 gap-3 mb-8">
-                            <li *ngFor="let item of voucher.highlights"
-                                class="flex items-start gap-2.5 text-rose-50/90 text-sm">
-                                <i class="pi pi-check text-amber-200 mt-0.5 shrink-0 text-xs"></i>
-                                <span>{{ item }}</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex flex-wrap items-end gap-6 mb-8 pb-8 border-b border-white/15">
-                            <div>
-                                <p class="text-amber-200/70 text-[10px] uppercase tracking-[0.2em] mb-1">Starting from</p>
-                                <p class="text-2xl md:text-3xl font-bold text-white voucher-price-glow">{{ voucher.value }}</p>
-                            </div>
-                            <div class="flex flex-wrap gap-3 text-sm">
-                                <span class="px-4 py-2 rounded-xl bg-white/10 text-white border border-white/15">
-                                    <i class="pi pi-clock mr-1.5 text-amber-200"></i>{{ voucher.duration }}
-                                </span>
-                                <span class="px-4 py-2 rounded-xl bg-white/10 text-white border border-white/15">
-                                    <i class="pi pi-users mr-1.5 text-amber-200"></i>{{ voucher.guests }}
-                                </span>
+                                <button type="button"
+                                        (click)="enquireVoucher(voucher)"
+                                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-2  rounded-2xl bg-gradient-to-r from-white to-rose-50 text-rose-800 font-bold text-sm hover:shadow-[0_12px_40px_rgba(255,255,255,0.25)] transition-all duration-300">
+                                    <i class="pi pi-whatsapp text-lg"></i>
+                                    Enquire via WhatsApp
+                                </button>
                             </div>
                         </div>
-
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button type="button"
-                                    (click)="purchaseVoucher(voucher)"
-                                    class="flex-1 flex items-center justify-center gap-2.5 py-4 rounded-2xl bg-gradient-to-r from-white to-rose-50 text-rose-800 font-bold text-sm md:text-base hover:shadow-[0_12px_40px_rgba(255,255,255,0.25)] transition-all duration-300">
-                                <i class="pi pi-shopping-bag"></i>
-                                Purchase via WhatsApp
-                            </button>
-                            <button type="button"
-                                    (click)="openGiftModal(voucher)"
-                                    class="flex-1 flex items-center justify-center gap-2.5 py-4 rounded-2xl bg-white/10 text-white font-bold text-sm md:text-base border border-amber-200/30 hover:bg-white/20 hover:border-amber-200/50 transition-all duration-300">
-                                <i class="pi pi-gift"></i>
-                                Gift via WhatsApp
-                            </button>
-                        </div>
-                    </div>
-                </div>
                     </article>
                 </div>
             </div>
@@ -126,7 +80,7 @@
             </button>
 
             <!-- Dots -->
-            <div class="flex items-center justify-center gap-3 mt-8" role="tablist" aria-label="Voucher slides">
+            <div class="flex items-center justify-center gap-3 mt-6" role="tablist" aria-label="Voucher slides">
                 <button *ngFor="let voucher of vouchers; let i = index"
                         type="button"
                         role="tab"
@@ -137,72 +91,6 @@
                         [class.is-active]="activeIndex === i">
                 </button>
             </div>
-         </div>
-    </div>
-      
-</section>
-
-<!-- Gift modal -->
-<div *ngIf="giftModalOpen && selectedVoucher"
-     class="fixed inset-0 z-50 voucher-modal-overlay flex items-center justify-center p-2 md:p-4 animate-fade-in"
-     (click)="closeGiftModal()">
-
-    <div class="w-full max-w-lg voucher-modal-panel rounded-3xl overflow-hidden shadow-2xl relative"
-         (click)="$event.stopPropagation()">
-
-        <button type="button"
-                (click)="closeGiftModal()"
-                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center border border-white/20 z-10">
-            <i class="pi pi-times"></i>
-        </button>
-
-        <div class="p-3 md:p-4 border-b border-white/15">
-            <div class="flex items-center gap-2 text-amber-200/90 text-xs uppercase tracking-wider mb-2">
-                <i class="pi pi-gift"></i>
-                Gift · {{ selectedVoucher.occasion }}
-            </div>
-            <h2 class="text-2xl font-bold text-white">{{ selectedVoucher.title }}</h2>
-            <p class="text-rose-100/80 text-sm mt-2">{{ selectedVoucher.duration }} · {{ selectedVoucher.value }}</p>
         </div>
-
-        <form class="p-3 md:p-4 space-y-3" (ngSubmit)="submitGift()">
-            <div>
-                <label class="block text-rose-100/90 text-xs font-semibold uppercase tracking-wider mb-1.5">Your name *</label>
-                <input type="text" [(ngModel)]="giftForm.senderName" name="senderName" required
-                       class="voucher-input w-full px-4 py-3 rounded-xl text-sm"
-                       placeholder="Who is sending this gift?">
-            </div>
-            <div>
-                <label class="block text-rose-100/90 text-xs font-semibold uppercase tracking-wider mb-1.5">Recipient name *</label>
-                <input type="text" [(ngModel)]="giftForm.recipientName" name="recipientName" required
-                       class="voucher-input w-full px-4 py-3 rounded-xl text-sm"
-                       placeholder="Who receives the voucher?">
-            </div>
-            <div>
-                <label class="block text-rose-100/90 text-xs font-semibold uppercase tracking-wider mb-1.5">Recipient phone</label>
-                <input type="tel" [(ngModel)]="giftForm.recipientPhone" name="recipientPhone"
-                       class="voucher-input w-full px-4 py-3 rounded-xl text-sm"
-                       placeholder="+91 XXXXX XXXXX">
-            </div>
-            <div>
-                <label class="block text-rose-100/90 text-xs font-semibold uppercase tracking-wider mb-1.5">Preferred travel date</label>
-                <input type="text" [(ngModel)]="giftForm.preferredDate" name="preferredDate"
-                       class="voucher-input w-full px-4 py-3 rounded-xl text-sm"
-                       placeholder="e.g. March 2027">
-            </div>
-            <div>
-                <label class="block text-rose-100/90 text-xs font-semibold uppercase tracking-wider mb-1.5">Personal message</label>
-                <textarea [(ngModel)]="giftForm.personalMessage" name="personalMessage" rows="3"
-                          class="voucher-input w-full px-4 py-3 rounded-xl text-sm resize-none"
-                          placeholder="A heartfelt note for their special day..."></textarea>
-            </div>
-
-            <button type="submit"
-                    [disabled]="!isGiftFormValid()"
-                    class="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-white text-rose-800 font-bold hover:bg-amber-50 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
-                <i class="pi pi-whatsapp text-lg"></i>
-                Send Gift Request on WhatsApp
-            </button>
-        </form>
     </div>
-</div>
+</section>

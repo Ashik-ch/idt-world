@@ -55,7 +55,7 @@
         </div> -->
 
         <!-- Featured Blog -->
-        <div *ngIf="blogPosts().length > 0" class="mb-20" data-aos="fade-up">
+        <div *ngIf="blogPosts().length > 0" class="mb-20" >
 
             <div class="group relative 
 
@@ -177,7 +177,7 @@
 
             <ng-container *ngFor="let post of blogPosts(); let i=index">
 
-                <div *ngIf="i > 0" data-aos="fade-up" [attr.data-aos-delay]="(i-1)*100" class="group relative bg-white
+                <div *ngIf="i > 0"  class="group relative bg-white
                     border border-red-100
                     rounded-3xl
                     p-6
