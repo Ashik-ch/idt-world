@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HotelsView } from "../../../pages/hotels-view/hotels-view";
+import { hotelsData } from "../../../../data/hotels.data";
 
 @Component({
   selector: 'app-inbound-hotels',
@@ -30,8 +31,44 @@ export class InboundHotels {
 
   selectedHotel: any = null;
 
+  slugify(text: string): string {
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  }
+
   openHotelModal(item: any) {
-    this.selectedHotel = item;
+    let matchedHotel = null;
+    if (item && item.name) {
+      const customId = this.slugify(item.name);
+      for (const dest of hotelsData) {
+        if (dest.hotels && Array.isArray(dest.hotels)) {
+          const match = dest.hotels.find((h: any) => h.id === customId);
+          if (match) {
+            matchedHotel = match;
+            break;
+          }
+        }
+      }
+    }
+
+    if (matchedHotel) {
+      // Merge with the clicked hotel item so we keep the correct image and override/add extra details
+      this.selectedHotel = {
+        ...matchedHotel,
+        image: item.image || matchedHotel.image || 'assets/images/default-hotel.jpg'
+      };
+    } else {
+      this.selectedHotel = {
+        ...item,
+        id: item.id || (item.name ? this.slugify(item.name) : null)
+      };
+    }
   }
 
   closeHotelModal() {

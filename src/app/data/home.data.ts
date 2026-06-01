@@ -881,21 +881,25 @@ export const DESTINATIONS = [
         categories: {
             '3★ Deluxe': [
                 {
+                    id: 'napier-heritage',
                     name: 'Napier Heritage',
                     image: 'assets/resorts/cochin/napier.jpg',
                     desc: 'Heritage-style hotel near Fort Kochi.'
                 },
                 {
+                    id: 'hotel-presidency',
                     name: 'The Presidency',
                     image: 'assets/resorts/cochin/presidency.jpg',
                     desc: 'City hotel with modern amenities.'
                 },
                 {
+                    id: 'cochin-palace',
                     name: 'Cochin Palace',
                     image: 'assets/resorts/cochin/palace.jpg',
                     desc: 'Comfortable city stay with traditional charm.'
                 },
                 {
+                    id: 'hotel-grand',
                     name: 'Hotel Grand',
                     image: 'assets/resorts/cochin/grand.jpg',
                     desc: 'Budget-friendly hotel in city center.'
@@ -903,11 +907,13 @@ export const DESTINATIONS = [
             ],
             '4★ Deluxe': [
                 {
+                    id: "abad-plaza",
                     name: 'Abad Plaza',
                     image: 'assets/resorts/cochin/abad-plaza.jpg',
                     desc: 'Premium business-class hotel.'
                 },
                 {
+                    id: 'abad-atrium',
                     name: 'Abad Atrium',
                     image: 'assets/resorts/cochin/abad-atrium.jpg',
                     desc: 'Upscale hotel with elegant interiors.'
@@ -915,38 +921,43 @@ export const DESTINATIONS = [
             ],
             '5★ Deluxe': [
                 {
+                    id: 'crowne-plaza',
                     name: 'Crowne Plaza',
                     image: 'assets/resorts/cochin/crowne.jpg',
                     desc: 'Luxury waterfront hotel with premium facilities.'
                 },
                 {
-                    name: 'Le Meridien',
+                    id: 'le-meridien',
                     image: 'assets/resorts/cochin/le-meridien.jpg',
                     desc: 'International luxury hotel with resort-style amenities.'
                 },
                 {
+                    id: 'fern-marriott',
                     name: 'The Fern by Marriott',
                     image: 'assets/resorts/cochin/fern.jpg',
                     desc: 'Eco-friendly luxury business hotel.'
                 },
                 {
-                    name: 'Radisson Blu',
+                    id: 'radisson-blu',
                     image: 'assets/resorts/cochin/radisson.jpg',
                     desc: 'Premium city hotel with modern luxury.'
                 }
             ],
             '5★ Luxury': [
                 {
+                    id: 'brunton-boatyard',
                     name: 'Brunton Boatyard',
                     image: 'assets/resorts/cochin/brunton.jpg',
                     desc: 'Luxury heritage waterfront hotel.'
                 },
                 {
+                    id: 'taj-malabar',
                     name: 'Taj Malabar',
                     image: 'assets/resorts/cochin/taj-malabar.jpg',
                     desc: 'Iconic luxury hotel overlooking the harbor.'
                 },
                 {
+                    id: 'old-harbour-hotel',
                     name: 'Old Harbour Hotel',
                     image: 'assets/resorts/cochin/old-harbour.jpg',
                     desc: 'Boutique heritage luxury hotel.'
