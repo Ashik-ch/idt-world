@@ -12,5 +12,6 @@ export const routes: Routes = [
     { path: 'admin-panel', loadComponent: () => import('./components/pages/admin-panel/admin-panel').then(m => m.AdminPanel), title: 'Admin Panel' },
     { path: 'vlogs', loadComponent: () => import('./components/pages/vlogs/vlogs').then(m => m.Vlogs), title: 'Vlogs & Virtual Tours' },
     { path: 'voucher', loadComponent: () => import('./components/pages/voucher/voucher').then(m => m.Voucher), title: 'Voucher' },
+    { path: 'hotel/:id', loadComponent: () => import('./components/pages/hotels-view/hotels-view').then(m => m.HotelsView), title: 'Hotel Details' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

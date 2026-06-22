@@ -1,92 +1,104 @@
 @if (hotel) {
-<div class="fixed inset-0 bg-black/80 backdrop-blur-xl flex items-center justify-center z-50 px-4"
-    (click)="handleClose()">
-    <div class="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.3)] animate-fade-in
-           bg-gradient-to-br from-gray-950 via-zinc-900 to-red-950/40 border border-white/10"
-        (click)="$event.stopPropagation()">
-        
-        <!-- Header -->
-        <div class="flex justify-between items-center px-8 py-5 
-             bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-wide"> {{ hotel.name }} </h2>
-            <button (click)="handleClose()" class="text-white text-3xl hover:scale-110 hover:text-gray-200 transition duration-300">
-                ×
-            </button>
-        </div>
 
-        <!-- Scrollable Content -->
-        <div class="p-6 md:p-8 space-y-6 text-white max-h-[75vh] overflow-y-auto custom-scrollbar">
-            
-            <!-- Image Section -->
-            <div class="relative rounded-2xl overflow-hidden shadow-xl border border-white/10">
-                <img [src]="hotel.image"
-                    class="w-full h-64 md:h-80 object-cover rounded-2xl transition-transform duration-700 hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            </div>
+<div class="fixed inset-0 bg-white overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-red-400 rounded-full blur-3xl opacity-60"></div>
+    <div class="absolute bottom-[-200px] -left-40 w-[500px] h-[500px] bg-red-50 rounded-full blur-3xl opacity-70"></div>
 
-            <!-- Tags for Location & Category -->
-            @if (hotel.location || hotel.category) {
-            <div class="flex flex-wrap gap-3">
-                @if (hotel.category) {
-                <span class="flex items-center gap-1.5 bg-red-500/10 text-red-400 border border-red-500/20 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                    ⭐ {{ hotel.category }}
-                </span>
-                }
-                @if (hotel.location) {
-                <span class="flex items-center gap-1.5 bg-zinc-800 text-zinc-300 border border-zinc-700 px-3 py-1.5 rounded-full text-xs font-medium">
-                    📍 {{ hotel.location }}
-                </span>
-                }
+    <div class="absolute top-24 left-10 w-80 h-80 border border-red-100 rounded-full"></div>
+    <div class="absolute bottom-24 right-20 w-[420px] h-[420px] border border-red-100 rounded-full"></div>
+</div>
+<div class="relative min-h-screen flex flex-col justify-center px-4 py-10">
+    <div class="max-w-6xl mx-auto w-full mb-4">
+        <button (click)="goBack()"
+            class="inline-flex items-center gap-2 text-red-500 hover:text-red-600 transition font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+        </button>
+    </div>
+
+    <div
+        class="relative z-10 max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-6 bg-white/70 backdrop-blur-xl border border-red-100 rounded-3xl shadow-xl overflow-hidden">
+
+        <div class="relative h-[260px] lg:h-full">
+            <img [src]="hotel.image" class="w-full h-full object-cover" />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+            @if (hotel.category) {
+            <div
+                class="absolute top-4 left-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-red-500">
+                {{ hotel.category }}
             </div>
             }
+        </div>
 
-            <!-- Description Card -->
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-xl">
-                <h3 class="text-lg font-semibold text-red-400 mb-2">About the Hotel</h3>
-                <p class="text-zinc-200 leading-relaxed text-sm md:text-base">
+        <!-- RIGHT SIDE (CONTENT) -->
+        <div class="p-5 lg:p-7 space-y-4">
+
+            <!-- Title -->
+            <div>
+                <h2 class="text-2xl lg:text-3xl font-extrabold text-gray-900 leading-tight">
+                    {{ hotel.name }}
+                </h2>
+
+                @if (hotel.location) {
+                <p class="text-sm text-gray-500 mt-1 flex items-center gap-1">
+                    📍 {{ hotel.location }}
+                </p>
+                }
+            </div>
+
+            <!-- Description -->
+            @if (hotel.description) {
+            <div class="bg-red-50/60 border border-red-100 rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-red-500 mb-1">About</h3>
+                <p class="text-sm text-gray-700 leading-relaxed">
                     {{ hotel.description }}
                 </p>
             </div>
-
-            <!-- Pros & Cons Section -->
-            @if ((hotel.pros && hotel.pros.length > 0) || (hotel.cons && hotel.cons.length > 0)) {
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Pros -->
-                @if (hotel.pros && hotel.pros.length > 0) {
-                <div class="bg-emerald-950/20 border border-emerald-500/20 p-5 rounded-2xl shadow-md">
-                    <h4 class="text-base font-bold text-emerald-400 mb-3 flex items-center gap-2">
-                        👍 What Guests Loved (Pros)
-                    </h4>
-                    <ul class="space-y-2.5 text-sm text-zinc-300">
-                        @for (pro of hotel.pros; track pro) {
-                        <li class="flex gap-2.5 items-start">
-                            <span class="text-emerald-400 mt-0.5 text-base">✓</span>
-                            <span>{{ pro }}</span>
-                        </li>
-                        }
-                    </ul>
-                </div>
-                }
-
-                <!-- Cons -->
-                @if (hotel.cons && hotel.cons.length > 0) {
-                <div class="bg-rose-950/20 border border-rose-500/20 p-5 rounded-2xl shadow-md">
-                    <h4 class="text-base font-bold text-rose-400 mb-3 flex items-center gap-2">
-                        👎 Things to Consider (Cons)
-                    </h4>
-                    <ul class="space-y-2.5 text-sm text-zinc-300">
-                        @for (con of hotel.cons; track con) {
-                        <li class="flex gap-2.5 items-start">
-                            <span class="text-rose-400 mt-0.5 text-base">✗</span>
-                            <span>{{ con }}</span>
-                        </li>
-                        }
-                    </ul>
-                </div>
-                }
-            </div>
             }
+
+            <!-- Pros / Cons -->
+            <div class="grid sm:grid-cols-2 gap-3">
+
+                @if (hotel.pros?.length) {
+                <div class="p-4 rounded-2xl border border-emerald-100 bg-emerald-50/40">
+                    <h4 class="text-sm font-bold text-emerald-600 mb-2">Pros</h4>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        @for (pro of hotel.pros; track pro) {
+                        <li class="flex gap-2">
+                            <span class="text-emerald-500">✓</span> {{ pro }}
+                        </li>
+                        }
+                    </ul>
+                </div>
+                }
+
+                @if (hotel.cons?.length) {
+                <div class="p-4 rounded-2xl border border-rose-100 bg-rose-50/40">
+                    <h4 class="text-sm font-bold text-rose-500 mb-2">Cons</h4>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        @for (con of hotel.cons; track con) {
+                        <li class="flex gap-2">
+                            <span class="text-rose-500">✗</span> {{ con }}
+                        </li>
+                        }
+                    </ul>
+                </div>
+                }
+
+            </div>
+
         </div>
     </div>
 </div>
+
+} @else {
+
+<div class="min-h-screen flex items-center justify-center bg-white">
+    <p class="text-gray-400">Hotel not found.</p>
+</div>
+
 }

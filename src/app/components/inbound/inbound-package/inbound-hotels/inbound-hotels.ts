@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HotelsView } from "../../../pages/hotels-view/hotels-view";
-import { hotelsData } from "../../../../data/hotels.data";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inbound-hotels',
-  imports: [CommonModule, FormsModule, HotelsView],
+  imports: [CommonModule, FormsModule],
   templateUrl: './inbound-hotels.html',
   styleUrl: './inbound-hotels.scss'
 })
@@ -16,6 +15,8 @@ export class InboundHotels {
   @Input() childPolicy: any
   @Input() meals: any
   @Input() sightseeing: any[] = [];
+
+  constructor(private readonly router: Router) {}
 
   getObjectKeys(obj: any): string[] {
     return Object.keys(obj);
@@ -29,50 +30,20 @@ export class InboundHotels {
     return 'bg-gray-50 border-gray-200';
   }
 
-  selectedHotel: any = null;
-
   slugify(text: string): string {
     return text
       .toString()
       .toLowerCase()
       .replace(/\s+/g, '-')
-      .replace(/[^\w\-]+/g, '')
-      .replace(/\-\-+/g, '-')
+      .replace(/[^\w-]+/g, '')
+      .replace(/--+/g, '-')
       .replace(/^-+/, '')
       .replace(/-+$/, '');
   }
 
   openHotelModal(item: any) {
-    let matchedHotel = null;
-    if (item && item.name) {
-      const customId = this.slugify(item.name);
-      for (const dest of hotelsData) {
-        if (dest.hotels && Array.isArray(dest.hotels)) {
-          const match = dest.hotels.find((h: any) => h.id === customId);
-          if (match) {
-            matchedHotel = match;
-            break;
-          }
-        }
-      }
-    }
-
-    if (matchedHotel) {
-      // Merge with the clicked hotel item so we keep the correct image and override/add extra details
-      this.selectedHotel = {
-        ...matchedHotel,
-        image: item.image || matchedHotel.image || 'assets/images/default-hotel.jpg'
-      };
-    } else {
-      this.selectedHotel = {
-        ...item,
-        id: item.id || (item.name ? this.slugify(item.name) : null)
-      };
-    }
+    const slug = item?.name ? this.slugify(item.name) : null;
+    if (!slug) return;
+    this.router.navigate(['/hotel', slug]);
   }
-
-  closeHotelModal() {
-    this.selectedHotel = null;
-  }
-
 }

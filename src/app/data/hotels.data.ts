@@ -387,6 +387,7 @@ export const hotelsData: any[] = [
             {
                 "id": "west-wood-resort",
                 "name": "West Wood Resort",
+                image: 'https://q-xx.bstatic.com/xdata/images/hotel/max500/11457970.jpg?k=8ad9d42336980ec97024aab5838a6c24160b91375fac24cd188912c0d91257c6&o=',
                 "category": "03 Star Deluxe Hotel",
                 "location": "Old Munnar, Munnar",
                 "description": "Munnar’s Westwood Riverside Garden Resort is a comfortable 3-star riverside property near Old Munnar, set amid hills and overlooking the Muthirappuzhayar river, with easy access to main town sights and tea plantations. It offers around 40 well-appointed rooms (including river-view, honeymoon rooms and a presidential suite), a restaurant, spa, and fitness facilities, plus activities like karaoke, campfire evenings, and games.",
