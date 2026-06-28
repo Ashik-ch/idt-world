@@ -1,0 +1,224 @@
+<!-- Not found -->
+@if (!category) {
+<div class="min-h-screen bg-gray-50 flex flex-col items-center justify-center gap-4 text-center px-4">
+  <div class="text-6xl">🚫</div>
+  <h2 class="text-2xl font-bold text-gray-800">Category Not Found</h2>
+  <p class="text-gray-500 text-sm">The transport category you're looking for doesn't exist.</p>
+  <button (click)="goBack()"
+    class="mt-4 px-6 py-3 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-colors">
+    ← Go Back
+  </button>
+</div>
+}
+
+@if (category) {
+<!-- Hero Banner -->
+<div class="relative bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0"
+      style="background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 30px);">
+    </div>
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-4">
+    <button (click)="goBack()"
+      class="mb-6 inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors group">
+      <span class="group-hover:-translate-x-1 transition-transform">←</span> Back to Services
+    </button>
+
+    <div class="flex flex-col md:flex-row md:items-end gap-6">
+      <div
+        class="w-full md:w-32 md:h-32 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
+        <img src="{{ category.icon }}" alt="{{ category.title }}" class="p-3" />
+      </div>
+
+      <div class="flex-1">
+        <span
+          class="inline-block px-3 py-1 text-xs font-semibold bg-white/20 rounded-full mb-1 tracking-wide uppercase">
+          Transportation
+        </span>
+        <h1 class="text-3xl md:text-3xl font-bold leading-tight mb-1">{{ category.title }}</h1>
+        <p class="text-white/80 text-lg">{{ category.subtitle }}</p>
+
+        <!-- Ideal For tags -->
+        <div class="flex flex-wrap gap-2 mt-2">
+          @for (tag of category.idealFor; track tag) {
+          <span class="px-3 py-1 text-xs bg-white/15 border border-white/20 rounded-full">{{ tag }}</span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="bg-gray-50 min-h-screen">
+  <div class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+
+    <!-- Description + Features row -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Description -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center text-red-600 text-sm font-bold">i</span>
+          Overview
+        </h2>
+        <p class="text-gray-600 leading-relaxed text-sm">{{ category.description }}</p>
+      </div>
+
+      <!-- Features list -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">✓</span>
+          What's Included
+        </h2>
+        <ul class="space-y-3">
+          @for (feat of category.features; track feat) {
+          <li class="flex items-start gap-3 text-sm text-gray-700">
+            <span
+              class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">✓</span>
+            {{ feat }}
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <!-- Vehicles carousel cards -->
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-9 h-9 rounded-xl bg-red-100 flex items-center justify-center text-red-600 text-lg">
+          <img [src]="category.icon" [alt]="category.title" />
+        </span>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">Available Vehicles & Rates</h2>
+          <p class="text-xs text-gray-400 mt-0.5">All rates are per vehicle per day unless otherwise specified</p>
+        </div>
+      </div>
+
+      <swiper-container slides-per-view="1.15" space-between="16"
+        breakpoints='{"640":{"slidesPerView":2,"spaceBetween":20},"1024":{"slidesPerView":3,"spaceBetween":24}}'
+        pagination="true" pagination-clickable="true" class="pb-10">
+
+        @for (vehicle of category.vehicles; track vehicle.name) {
+        <swiper-slide>
+          <div
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+
+            <!-- Vehicle image carousel -->
+            <div class="relative w-full h-44 overflow-hidden bg-gray-100">
+
+              @if (vehicle.img && vehicle.img.length > 0) {
+              @if (vehicle.img.length === 1) {
+              <img [src]="vehicle.img[0]" [alt]="vehicle.name" class="w-full h-full object-cover" />
+              } @else {
+              <swiper-container slides-per-view="1" loop="true" autoplay='{"delay":3000,"disableOnInteraction":false}'
+                pagination="true" class="vehicle-img-swiper w-full h-full">
+                @for (imgSrc of vehicle.img; track imgSrc) {
+                <swiper-slide>
+                  <img [src]="imgSrc" [alt]="vehicle.name" class="w-full h-full object-cover" />
+                </swiper-slide>
+                }
+              </swiper-container>
+              }
+              } @else {
+              <div
+                class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center gap-2 text-gray-400">
+                <img [src]="category.icon" [alt]="category.title" />
+                <span class="text-[10px] font-medium tracking-wider uppercase">Photo Coming Soon</span>
+              </div>
+              }
+
+              <!-- Seats badge always on top -->
+              <span class="absolute top-3 right-3 z-10 flex items-center gap-1 px-2.5 py-1
+                           bg-black/60 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                👤 {{ vehicle.seats }} Seats
+              </span>
+            </div>
+
+            <!-- Card body -->
+            <div class="flex flex-col flex-1 p-5 gap-4">
+              <div>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">{{ vehicle.name }}</h3>
+                @if (vehicle.note) {
+                <p class="text-xs text-red-500 mt-1 font-medium">★ {{ vehicle.note }}</p>
+                }
+              </div>
+
+              <!-- Rate highlight -->
+              <div class="flex-1 flex flex-col gap-3">
+                <div class="bg-red-50 border border-red-100 rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Rate</p>
+                    <p class="text-xl font-bold text-red-600 leading-tight">{{ vehicle.rate }}</p>
+                    <p class="text-[11px] text-gray-500">{{ vehicle.rateUnit }}</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2 px-3 py-2 bg-gray-50 rounded-xl text-sm text-gray-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  <span class="text-xs"><span class="font-semibold text-gray-800">{{ vehicle.extraRate }}</span></span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </swiper-slide>
+        }
+      </swiper-container>
+    </div>
+
+    <!-- Other categories -->
+    <div>
+      <h2 class="text-xl font-bold text-gray-800 mb-5">Explore Other Categories</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        @for (cat of allCategories; track cat.id) {
+        @if (cat.id !== category.id) {
+        <a [routerLink]="['/transport', cat.id]"
+          class="flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-gray-100
+                       hover:border-red-300 hover:bg-red-50 hover:shadow-md transition-all text-center group cursor-pointer">
+          <span class="text-2xl group-hover:scale-110 transition-transform">{{ cat.icon }}</span>
+          <span class="text-xs font-medium text-gray-700 leading-tight">{{ cat.title }}</span>
+        </a>
+        }
+        }
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-gradient-to-br from-red-600 to-red-500 rounded-2xl p-8 md:p-10 text-white text-center">
+      <h3 class="text-2xl font-bold mb-2">Need a Custom Quote?</h3>
+      <p class="text-white/80 text-sm mb-6 max-w-md mx-auto">
+        Contact our team for personalized pricing, multi-day bookings, or group arrangements.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="tel:+919995888739"
+          class="px-6 py-3 bg-white text-red-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-sm">
+          📞 Call Us
+        </a>
+        <a href="https://wa.me/919995888739" target="_blank"
+          class="px-6 py-3 bg-white/20 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/30 transition-colors text-sm">
+          💬 WhatsApp
+        </a>
+        <a routerLink="/contact"
+          class="px-6 py-3 bg-white/20 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/30 transition-colors text-sm">
+          📧 Enquire Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+}

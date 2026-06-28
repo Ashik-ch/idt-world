@@ -5,10 +5,11 @@ import * as AOS from 'aos';
 import { FormsModule } from '@angular/forms';
 import { register } from 'swiper/element/bundle';
 import { HomeHotels } from '../../home/home-hotels/home-hotels';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-service',
-  imports: [CommonModule, FormsModule, HomeHotels],
+  imports: [CommonModule, FormsModule, HomeHotels, RouterLink],
   templateUrl: './service.html',
   styleUrl: './service.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

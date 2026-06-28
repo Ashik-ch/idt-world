@@ -29,12 +29,27 @@
                     <p class="text-sm opacity-90">{{ service.subtitle }}</p>
 
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span *ngFor="let cat of service.categories" class="px-3 py-1 text-[11px] rounded-full
-                     bg-white/10 backdrop-blur-md
-                     border border-white/20
-                     hover:bg-white/20 transition-all duration-300">
-                            {{ cat }}
-                        </span>
+                        <!-- Transportation: clickable links to detail pages -->
+                        @if (service.id === 'transportation' && service.categoryRoutes) {
+                            <a *ngFor="let cat of service.categoryRoutes"
+                                [routerLink]="['/transport', cat.id]"
+                                (click)="$event.stopPropagation()"
+                                class="px-3 py-1 text-[11px] rounded-full
+                                bg-white/10 backdrop-blur-md border border-white/20
+                                hover:bg-white/30 hover:border-white/50
+                                transition-all duration-300 flex items-center gap-1 group">
+                                {{ cat.name }}
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[10px]">→</span>
+                            </a>
+                        }
+                        <!-- All other services: plain text labels -->
+                        @if (service.id !== 'transportation') {
+                            <span *ngFor="let cat of service.categories" class="px-3 py-1 text-[11px] rounded-full
+                             bg-white/10 backdrop-blur-md border border-white/20
+                             hover:bg-white/20 transition-all duration-300">
+                                {{ cat }}
+                            </span>
+                        }
                     </div>
                 </div>
             </div>
