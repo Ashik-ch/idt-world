@@ -13,5 +13,6 @@ export const routes: Routes = [
     { path: 'vlogs', loadComponent: () => import('./components/pages/vlogs/vlogs').then(m => m.Vlogs), title: 'Vlogs & Virtual Tours' },
     { path: 'voucher', loadComponent: () => import('./components/pages/voucher/voucher').then(m => m.Voucher), title: 'Voucher' },
     { path: 'hotel/:id', loadComponent: () => import('./components/pages/hotels-view/hotels-view').then(m => m.HotelsView), title: 'Hotel Details' },
+    { path: 'transport/:id', loadComponent: () => import('./components/pages/transport-detail/transport-detail').then(m => m.TransportDetail), title: 'Transport Details' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
