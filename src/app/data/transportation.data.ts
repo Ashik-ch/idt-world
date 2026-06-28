@@ -68,7 +68,7 @@ export const TRANSPORT_CATEGORIES: TransportCategory[] = [
     id: 'tempo-traveller',
     title: 'Tempo Traveller',
     subtitle: '12 & 17 Seater Force Traveller',
-    icon: '🚐',
+    icon: 'assets/images/transportation/tempo/van.png',
     description:
       'Designed for medium-sized groups, pilgrimages, and college outings. Force Travellers offer push-back seats, ample overhead storage, and a reliable group travel experience across varied terrains.',
     features: [

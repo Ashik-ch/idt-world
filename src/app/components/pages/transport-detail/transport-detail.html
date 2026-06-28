@@ -189,7 +189,7 @@
         <a [routerLink]="['/transport', cat.id]"
           class="flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-gray-100
                        hover:border-red-300 hover:bg-red-50 hover:shadow-md transition-all text-center group cursor-pointer">
-          <span class="text-2xl group-hover:scale-110 transition-transform">{{ cat.icon }}</span>
+          <img src="{{ cat.icon }}" alt="{{ cat.title }}" class="w-12 h-12 object-contain">
           <span class="text-xs font-medium text-gray-700 leading-tight">{{ cat.title }}</span>
         </a>
         }
