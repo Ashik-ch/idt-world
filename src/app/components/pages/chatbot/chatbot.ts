@@ -29,6 +29,7 @@ export class Chatbot implements OnInit {
 
   currentStep: any = null;
   selectedAnswers: { question: string; answer: string }[] = [];
+  selectedDropdownOption: any = null;
 
   constructor(private readonly chatbotService: ChatbotService) { }
 
@@ -55,6 +56,7 @@ export class Chatbot implements OnInit {
     this.selectedAnswers = [];
     this.currentStep = null;
     this.showDropdown = false;
+    this.selectedDropdownOption = null;
   }
 
   askContact() {
@@ -78,6 +80,12 @@ export class Chatbot implements OnInit {
     this.contactError = false;
     this.step = 4;
     this.currentStep = chatFlow[0];
+  }
+
+  confirmDropdown() {
+    if (!this.selectedDropdownOption) return;
+    this.selectOption(this.selectedDropdownOption);
+    this.selectedDropdownOption = null;
   }
 
   selectOption(option: any) {

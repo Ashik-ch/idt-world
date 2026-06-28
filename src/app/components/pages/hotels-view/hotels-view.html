@@ -1,11 +1,8 @@
 @if (hotel) {
 
-<div class="fixed inset-0 bg-white overflow-hidden">
-    <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-red-400 rounded-full blur-3xl opacity-60"></div>
-    <div class="absolute bottom-[-200px] -left-40 w-[500px] h-[500px] bg-red-50 rounded-full blur-3xl opacity-70"></div>
 
-    <div class="absolute top-24 left-10 w-80 h-80 border border-red-100 rounded-full"></div>
-    <div class="absolute bottom-24 right-20 w-[420px] h-[420px] border border-red-100 rounded-full"></div>
+<div class="fixed inset-0 bg-white overflow-hidden -z-10">
+    <img src="assets/images/banner3.jpg" alt="Background" class="w-full h-full object-cover" />
 </div>
 <div class="relative min-h-screen flex flex-col justify-center px-4 py-10">
     <div class="max-w-6xl mx-auto w-full mb-4">
@@ -19,7 +16,7 @@
     </div>
 
     <div
-        class="relative z-10 max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-6 bg-white/70 backdrop-blur-xl border border-red-100 rounded-3xl shadow-xl overflow-hidden">
+        class="relative z-10 max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-6 bg-white/50 backdrop-blur-xl border border-red-100 rounded-3xl shadow-xl overflow-hidden">
 
         <div class="relative h-[260px] lg:h-full">
             <img [src]="hotel.image" class="w-full h-full object-cover" />

@@ -1,6 +1,7 @@
 export interface ChatStep {
     id: string;
     question: string;
+    type?: 'dropdown';
     options: { text: string; next?: string; url?: string }[];
 }
 
@@ -35,6 +36,7 @@ export const chatFlow: ChatStep[] = [
     {
         id: "travel_details",
         question: "📅 How many days are you planning for your trip?",
+        type: 'dropdown',
         options: [
             { text: "2 Nights / 3 Days", next: "rooms" },
             { text: "3 Nights / 4 Days", next: "rooms" },
