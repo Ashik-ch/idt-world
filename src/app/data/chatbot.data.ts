@@ -36,10 +36,14 @@ export const chatFlow: ChatStep[] = [
         id: "travel_details",
         question: "📅 How many days are you planning for your trip?",
         options: [
-            { text: "3–5 Days", next: "rooms" },
-            { text: "5–7 Days", next: "rooms" },
-            { text: "7+ Days", next: "rooms" },
-        ],
+            { text: "2 Nights / 3 Days", next: "rooms" },
+            { text: "3 Nights / 4 Days", next: "rooms" },
+            { text: "4 Nights / 5 Days", next: "rooms" },
+            { text: "5 Nights / 6 Days", next: "rooms" },
+            { text: "6 Nights / 7 Days", next: "rooms" },
+            { text: "7 Nights / 8 Days", next: "rooms" },
+            { text: "8 Nights +", next: "rooms" }
+        ]
     },
 
     // 🏨 Rooms

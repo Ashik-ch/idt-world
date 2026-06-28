@@ -50,24 +50,13 @@
                 <h4 class=" font-semibold mb-2 text-white tracking-wide">{{ cat }}</h4>
 
                 <div class="space-y-1">
-                    <div *ngFor="let resort of activeDestination.categories[cat]">
-
-                        <div (click)="toggleResort(resort)" class="cursor-pointer px-3 py-2 rounded-lg
-                     bg-black/40 hover:bg-red-500/20 hover:border-white  hover:border-2 transition text-white
-                     flex justify-between items-center">
-                            <span class="text-sm">{{ resort.name }}</span>
-                            <span class="text-red-400 text-xs">
-                                {{ openResort === resort ? '−' : '+' }}
-                            </span>
-                        </div>
-
-                        <!-- Accordion -->
-                        <div *ngIf="openResort === resort"
-                            class="mt-2 p-3 rounded-lg bg-black/60 border border-red-500/20">
-                            <img [src]="resort.image" class="w-full h-40 object-cover rounded-lg mb-2">
-                            <p class="text-xs text-gray-300"> {{ resort.desc }} </p>
-                        </div>
-
+                    <div *ngFor="let resort of activeDestination.categories[cat]"
+                        (click)="goToHotel(resort)"
+                        class="cursor-pointer px-3 py-2 rounded-lg
+                               bg-black/40 hover:bg-red-500/20 hover:border-white hover:border-2
+                               transition text-white flex justify-between items-center">
+                        <span class="text-sm">{{ resort.name }}</span>
+                        <span class="text-red-400 text-xs">→</span>
                     </div>
                 </div>
             </div>

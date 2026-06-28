@@ -1,22 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DESTINATIONS, } from '../../../data/home.data';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { DESTINATIONS } from '../../../data/home.data';
 
 @Component({
   selector: 'app-home-hotels',
-  imports: [CommonModule, FormsModule,],
+  imports: [CommonModule],
   templateUrl: './home-hotels.html',
   styleUrl: './home-hotels.scss',
 })
 export class HomeHotels {
 
-
-  ngOnInit() { }
-
   destinations = DESTINATIONS;
   activeDestination: any = null;
-  openResort: any = null;
+
+  constructor(private readonly router: Router) { }
 
   categoryKeys(categories: any) {
     return Object.keys(categories);
@@ -24,16 +22,17 @@ export class HomeHotels {
 
   openDestination(dest: any) {
     this.activeDestination = dest;
-    this.openResort = null;
   }
 
   closeModal() {
     this.activeDestination = null;
-    this.openResort = null;
   }
 
-  toggleResort(resort: any) {
-    this.openResort = this.openResort === resort ? null : resort;
-  }
+  goToHotel(resort: any) {
+    console.log("resort", resort);
 
-} 
+    if (!resort?.id) return;
+    this.activeDestination = null;
+    this.router.navigate(['/hotel', resort.id]);
+  }
+}

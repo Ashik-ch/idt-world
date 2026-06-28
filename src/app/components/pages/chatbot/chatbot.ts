@@ -3,15 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { chatFlow } from '../../../data/chatbot.data';
 import { ChatbotService } from '../../../services/chatbot-service';
+import { COUNTRIES, Country } from '../../../data/countries.data';
 import emailjs from '@emailjs/browser';
-
-// Interfaces for better type safety
-interface Country {
-  name: string;
-  flag: string;
-  code: string;
-  minLength: number;
-}
 
 @Component({
   selector: 'app-chatbot',
@@ -30,13 +23,8 @@ export class Chatbot implements OnInit {
   userContact = '';
   contactError = false;
   step = 1; // 1: Name, 2: Contact, 4: Chat Flow
-  countries: Country[] = [];
-  selectedCountry: Country = {
-    name: 'India',
-    flag: 'https://flagcdn.com/w320/in.png',
-    code: '+91',
-    minLength: 10
-  };
+  countries: Country[] = COUNTRIES;
+  selectedCountry: Country = COUNTRIES.find(c => c.code === '+91')!;
   showDropdown = false;
 
   currentStep: any = null;
@@ -46,37 +34,6 @@ export class Chatbot implements OnInit {
 
   ngOnInit(): void {
     this.chatbotService.toggleChat$.subscribe(() => this.openChat());
-    this.loadCountries();
-  }
-
-  /**
-   * Fetches country data and assigns estimated phone lengths
-   */
-  async loadCountries() {
-    try {
-      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,idd');
-      const data = await response.json();
-
-      this.countries = data.map((c: any) => {
-        const root = c.idd?.root || '';
-        const suffix = c.idd?.suffixes ? c.idd.suffixes[0] : '';
-        const dialCode = root + suffix;
-
-        return {
-          name: c.name.common,
-          flag: c.flags.png,
-          code: dialCode,
-          minLength: this.getExpectedLength(dialCode)
-        };
-      }).sort((a: Country, b: Country) => a.name.localeCompare(b.name));
-    } catch (error) {
-      console.error("Failed to load countries", error);
-    }
-  }
-
-  private getExpectedLength(code: string): number {
-    const lengths: { [key: string]: number } = { '+1': 10, '+91': 10, '+44': 10, '+971': 9 };
-    return lengths[code] || 8; // Default to 8 if not specified
   }
 
   selectCountry(country: Country) {
