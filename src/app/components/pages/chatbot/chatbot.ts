@@ -112,14 +112,16 @@ export class Chatbot implements OnInit {
 
   sendToEmail() {
     const conversationSummary = this.selectedAnswers
-      .map((item, i) => `${i + 1}. ${item.question}: ${item.answer}`)
-      .join(' | ');
+      .map((item, index) =>
+        `${index + 1}. ${item.question}\n   ${item.answer}`
+      )
+      .join('\n\n');
 
     const templateParams = {
-      form_type: 'Chat Bot',
+      form_type: 'Travel Chatbot Enquiry',
       from_name: this.userName,
       from_number: `${this.selectedCountry.code} ${this.userContact}`,
-      message: `New Travel Enquiry\n\nName: ${this.userName}\nContact: ${this.selectedCountry.code}${this.userContact}\n\nDetails:\n${conversationSummary}`
+      message: conversationSummary
     };
 
     emailjs.send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams, this.PUBLIC_KEY)
