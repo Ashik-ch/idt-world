@@ -117,12 +117,11 @@ export const Services = [
             'Luxury Bus'
         ],
         categoryRoutes: [
-            { id: 'sedan-car', name: 'Sedan Car' },
-            { id: 'toyota-innova-crysta', name: 'Toyota Innova / Crysta' },
+            { id: 'sedan', name: 'Sedan' },
+            { id: 'suv', name: 'SUV' },
             { id: 'tempo-traveller', name: 'Tempo Traveller' },
-            { id: 'mini-luxury-bus', name: 'Mini Luxury Bus' },
-            { id: 'luxury-bus', name: 'Luxury Bus / Coach' },
-            { id: 'luxury-car', name: 'Luxury Cars' },
+            { id: 'bus', name: 'Luxury Bus / Coach' },
+            { id: 'luxury-car', name: 'Luxury car' },
         ],
         desc: 'Travel in modern, air-conditioned vehicles driven by experienced chauffeurs for a smooth and safe journey.',
         images: ['assets/images/bus.jpg', 'assets/images/crysta.jpg', 'assets/images/force.jpg']
