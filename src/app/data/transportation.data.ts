@@ -80,8 +80,8 @@ export const TRANSPORT_CATEGORIES: TransportCategory[] = [
       'Music system with Bluetooth connectivity',
     ],
     vehicles: [
-      { name: 'Tempo Traveller (12-Seater)', rate: 'Rs. 5,400', rateUnit: 'per day', extraRate: 'Rs. 25 / extra km', seats: 12, img: ['assets/images/tempo-traveller.png'] },
-      { name: 'Force Traveller (17-Seater)', rate: 'Rs. 5,400', rateUnit: 'per day', extraRate: 'Rs. 25 / extra km', seats: 17, img: ['assets/images/force-traveller.png'] },
+      { name: 'Tempo Traveller (12-Seater)', rate: 'Rs. 5,400', rateUnit: 'per day', extraRate: 'Rs. 25 / extra km', seats: 12, img: ['assets/images/transportation/tempo/tempo.png'] },
+      { name: 'Force Traveller (17-Seater)', rate: 'Rs. 5,400', rateUnit: 'per day', extraRate: 'Rs. 25 / extra km', seats: 17, img: ['assets/images/transportation/tempo/force-traveller.png'] },
     ],
     idealFor: ['Group Tours', 'Pilgrimage Trips', 'College Excursions', 'Corporate Outings'],
   },
