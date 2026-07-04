@@ -1,89 +1,106 @@
-<!-- Luxury Occasion Vouchers -->
-<section class="voucher-page relative min-h-screen overflow-hidden py-6 md:py-10 flex items-center justify-center">
+<section class="grid grid-cols-1 lg:grid-cols-2">
 
-    <div class="absolute inset-0 pointer-events-none voucher-grid-overlay"></div>
-    <div class="fixed inset-0 bg-slate-950 overflow-hidden -z-10">
-        <img src="assets/images/banner9.jpg" alt="Background"
-            class="w-full h-full object-cover opacity-80 brightness-[0.7]" />
-    </div>
+    <div class="relative flex flex-col justify-center px-8 md:px-12 py-12 text-white overflow-hidden
+                bg-[radial-gradient(ellipse_at_top_left,_#b91c1c_0%,_#dc2626_40%,_#9f1239_100%)]">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center p-4 sm:p-6 md:p-8" mx-auto px-4 sm:px-6 md:px-12 z-10
-        max-w-4xl>
+        <!-- subtle diagonal lines overlay -->
+        <div class="absolute inset-0 opacity-[0.06] pointer-events-none"
+            style="background-image:repeating-linear-gradient(135deg,#fff 0px,#fff 1px,transparent 1px,transparent 24px)">
+        </div>
+        <!-- soft glow top-right -->
+        <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-red-400/30 blur-3xl pointer-events-none"></div>
+        <!-- soft glow bottom-left -->
+        <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-red-900/40 blur-3xl pointer-events-none"></div>
 
-        <header class="text-center mb-8">
+        <div class="relative z-10">
+        <p class="text-red-200 text-xs font-bold uppercase tracking-widest mb-4">IDT Gold Collection</p>
+
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+            IDT Gift Vouchers
+        </h1>
+
+        <p class="text-red-100 text-sm leading-relaxed mb-6 max-w-md">
+            Express your sense of belongingness through <strong class="text-white">IDT Gold Gift Vouchers</strong>
+            for Hotel Stay &amp; Package Tours. The perfect new-generation gift for weddings, birthdays,
+            anniversaries &amp; special life moments.
+        </p>
+
+        <!-- occasions -->
+        <div class="grid grid-cols-4 gap-2 mb-6">
+            @for (occ of occasions; track occ.label) {
             <div
-                class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-amber-200 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] mb-4 backdrop-blur-md shadow-lg">
-                <i class="pi pi-sparkles text-amber-300"></i>
-                Luxury Collection
+                class="flex flex-col items-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-center">
+                <i [class]="occ.icon + ' text-xl'"></i>
+                <span class="text-[10px] text-red-100 leading-tight">{{ occ.label }}</span>
             </div>
-            <h1
-                class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight tracking-tight drop-shadow-sm">
-                Curated Vouchers for Finest Moments
-            </h1>
-            <p class="text-white/80 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light">
-                {{ commonDescription }}
-            </p>
-        </header>
+            }
+        </div>
 
-        <div class=" relative" (mouseenter)="pauseCarousel()" (mouseleave)="resumeCarousel()">
+        <!-- custom fields -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            @for (item of customFields; track item.label) {
+            <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-xs text-white border border-white/20">
+                <i [class]="item.icon"></i> {{ item.label }}
+            </span>
+            }
+        </div>
 
-            <div
-                class="voucher-carousel-viewport overflow-hidden rounded-2xl md:rounded-3xl bg-white/10 border border-white/20 backdrop-blur-xl shadow-[0_12px_40px_0_rgba(0,0,0,0.35)]">
-                <div class="voucher-carousel-track flex" [style.transform]="carouselTransform"
-                    [class.is-paused]="isCarouselPaused">
+        <div class="h-px bg-white/20 mb-5"></div>
 
-                    <article *ngFor="let voucher of vouchers; let i = index"
-                        class="voucher-carousel-slide voucher-luxury-card relative shrink-0 w-full"
-                        [class.is-active]="activeIndex === i" [attr.aria-hidden]="activeIndex !== i"
-                        [attr.aria-current]="activeIndex === i ? 'true' : null">
+        <div class="flex row gap-2 mb-6 text-center items-center">
+            <a href="https://wa.me/919567479777?text=Hi%20IDT%2C%20I%27m%20interested%20in%20Gift%20Vouchers."
+                target="_blank"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-red-600 font-bold text-sm hover:bg-red-50 transition-colors shadow">
+                <i class="pi pi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:+919567479777"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
+                <i class="pi pi-phone"></i> Call Us
+            </a>
+            <a href="tel:+919567479777"
+                class="inline-flex items-center gap-1.5 text-sm text-red-100 hover:text-white transition-colors">
+                <i class="pi pi-phone text-xs"></i> +91 95 67 47 97 77
+            </a>
+            <a href="tel:+919847240456"
+                class="inline-flex items-center gap-1.5 text-sm text-red-100 hover:text-white transition-colors">
+                <i class="pi pi-phone text-xs"></i> +91 98 47 24 04 56
+            </a>
+        </div>
 
-                        <div class="flex flex-col">
-                            <div
-                                class="relative aspect-[16/10] lg:aspect-[4/2] overflow-hidden rounded-xl md:rounded-2xl border border-white/10 w-full shadow-inner">
-                                <img [src]="voucher.image" [alt]="voucher.title" class="w-full h-full object-cover">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
-                                </div>
-                            </div>
+        </div><!-- /z-10 -->
+    </div><!-- /left column -->
 
-                            <div class="text-center lg:text-left lg:pl-4 flex flex-col justify-center h-full pb-5">
-                                <h2
-                                    class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 leading-tight drop-shadow-sm">
-                                    {{ voucher.title }}
-                                </h2>
-
-                                <button type="button" (click)="enquireVoucher(voucher)"
-                                    class="align-center w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/15 border border-white/20 text-white font-semibold text-sm backdrop-blur-md hover:bg-white/25 hover:border-white/40 shadow-md hover:shadow-[0_8px_25px_rgba(255,255,255,0.1)] transition-all duration-300 transform active:scale-[0.98] self-center lg:self-start">
-                                    <i class="pi pi-whatsapp text-lg text-emerald-400"></i>
-                                    Enquire via WhatsApp
-                                </button>
-                            </div>
-
-                        </div>
-                    </article>
-
+    <!-- RIGHT — white side with gallery + videos -->
+    <div class="flex items-center justify-center px-6 md:px-10 py-6">
+        <div class="bg-white rounded-xl p-4 w-full flex flex-col">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+                @for (img of galleryImgs; track img) {
+                <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+                    <img [src]="'assets/images/voucher/' + img + '.jpg'" alt="IDT Gift Voucher"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
+                }
             </div>
-
-            <button type="button" (click)="prevSlide()"
-                class="voucher-carousel-nav voucher-carousel-nav--prev flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all"
-                aria-label="Previous voucher">
-                <i class="pi pi-chevron-left"></i>
-            </button>
-            <button type="button" (click)="nextSlide()"
-                class="voucher-carousel-nav voucher-carousel-nav--next flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all"
-                aria-label="Next voucher">
-                <i class="pi pi-chevron-right"></i>
-            </button>
-
-            <div class="flex items-center justify-center gap-3 mt-6" role="tablist" aria-label="Voucher slides">
-                <button *ngFor="let voucher of vouchers; let i = index" type="button" role="tab"
-                    [attr.aria-selected]="activeIndex === i" [attr.aria-label]="voucher.title" (click)="goToSlide(i)"
-                    class="voucher-carousel-dot w-2.5 h-2.5 rounded-full transition-all duration-300"
-                    [ngClass]="activeIndex === i ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50'">
-                </button>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                @for (video of videos; track video.id) {
+                <div class="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                    <div class="relative w-full aspect-video bg-gray-100">
+                        <iframe [src]="video.embedUrl" [title]="video.title"
+                            class="absolute inset-0 w-full h-full border-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="px-3 py-2 bg-white">
+                        <p class="text-xs font-semibold text-gray-800 truncate">{{ video.title }}</p>
+                        <p class="text-[10px] text-gray-400 truncate">{{ video.caption }}</p>
+                    </div>
+                </div>
+                }
             </div>
 
         </div>
     </div>
+
 </section>

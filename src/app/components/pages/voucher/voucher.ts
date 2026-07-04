@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { COMMON_VOUCHER_DESCRIPTION, TOUR_VOUCHERS, TourVoucher } from '../../../data/voucher.data';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-voucher',
@@ -9,81 +9,47 @@ import { COMMON_VOUCHER_DESCRIPTION, TOUR_VOUCHERS, TourVoucher } from '../../..
   templateUrl: './voucher.html',
   styleUrl: './voucher.scss',
 })
-export class Voucher implements OnInit, OnDestroy {
-  readonly whatsappPhone = '919847240456';
-  readonly vouchers = TOUR_VOUCHERS;
-  readonly commonDescription = COMMON_VOUCHER_DESCRIPTION;
-  readonly autoPlayMs = 5000;
+export class Voucher {
 
-  activeIndex = 0;
-  isCarouselPaused = false;
+  private sanitizer = inject(DomSanitizer);
 
-  private autoPlayTimer: ReturnType<typeof setInterval> | null = null;
+  mobileImgs = ['2', '3', '4', '5'];
 
-  ngOnInit() {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced) {
-      this.startAutoPlay();
-    }
-  }
+  galleryImgs = ['1', '2', '3', '4'];
 
-  ngOnDestroy() {
-    this.stopAutoPlay();
-  }
+  customFields = [
+    { icon: 'pi pi-user', label: 'Your Name & Photo' },
+    { icon: 'pi pi-gift', label: 'Recipient Name & Photo' },
+    { icon: 'pi pi-building', label: 'Hotel Details' },
+    { icon: 'pi pi-envelope', label: 'Your Special Message' },
+  ];
 
-  get carouselTransform(): string {
-    return `translateX(-${this.activeIndex * 100}%)`;
-  }
+  occasions = [
+    { icon: 'pi pi-heart-fill', label: 'Wedding Gift' },
+    { icon: 'pi pi-gift',       label: 'Birthday' },
+    { icon: 'pi pi-star-fill',  label: 'Anniversary' },
+    { icon: 'pi pi-users',      label: 'Family Tour' },
+  ];
 
-  pauseCarousel() {
-    this.isCarouselPaused = true;
-  }
-
-  resumeCarousel() {
-    this.isCarouselPaused = false;
-  }
-
-  goToSlide(index: number) {
-    this.activeIndex = index;
-  }
-
-  nextSlide() {
-    this.activeIndex = (this.activeIndex + 1) % this.vouchers.length;
-  }
-
-  prevSlide() {
-    this.activeIndex =
-      (this.activeIndex - 1 + this.vouchers.length) % this.vouchers.length;
-  }
-
-  enquireVoucher(voucher: TourVoucher) {
-    const message = `✨ *Luxury Tour Voucher*
-IDT World | India Destination Tours
-
-*Package:* ${voucher.title}
-*Occasion:* ${voucher.occasion}
-
-${this.commonDescription}
-
-I would like to know more about this voucher. Please share details and booking assistance.`;
-
-    const url = `https://wa.me/${this.whatsappPhone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  }
-
-  private startAutoPlay() {
-    this.stopAutoPlay();
-    this.autoPlayTimer = setInterval(() => {
-      if (!this.isCarouselPaused) {
-        this.nextSlide();
-      }
-    }, this.autoPlayMs);
-  }
-
-  private stopAutoPlay() {
-    if (this.autoPlayTimer) {
-      clearInterval(this.autoPlayTimer);
-      this.autoPlayTimer = null;
-    }
-  }
+  // ── Replace VIDEO_ID_1 / 2 / 3 with actual YouTube video IDs ──
+  videos: { id: string; title: string; caption: string; embedUrl: SafeResourceUrl }[] = [
+    {
+      id: 'VIDEO_ID_1',
+      title: 'IDT Gift Voucher Experience',
+      caption: 'Honeymoon & Anniversary stays',
+      embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/VIDEO_ID_1'),
+    },
+    {
+      id: 'VIDEO_ID_2',
+      title: 'Kerala Tour Highlights',
+      caption: 'Explore God\'s Own Country',
+      embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/VIDEO_ID_2'),
+    },
+    {
+      id: 'VIDEO_ID_3',
+      title: 'Gift the Journey',
+      caption: 'Family & group tour packages',
+      embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/VIDEO_ID_3'),
+    },
+  ];
 }

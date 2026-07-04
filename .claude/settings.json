@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Sleep -Seconds 6; try { $r = Invoke-WebRequest -Uri \"http://localhost:4200/voucher\" -TimeoutSec 10 -UseBasicParsing; \"OK $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })"
+    ]
+  }
+}
