@@ -1,0 +1,27 @@
+.typing-cursor {
+  display: inline-block;
+  color: #dc2626;
+  font-weight: 700;
+  animation: blink 0.65s steps(1) infinite;
+  margin-left: 1px;
+  line-height: 1;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.answer-text strong {
+  color: #111827;
+}
+
+.answer-text em {
+  color: #4b5563;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

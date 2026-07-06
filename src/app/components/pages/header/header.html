@@ -19,77 +19,149 @@
                 <div class="text-[11px] md:text-xs text-gray-500 tracking-wide italic">
                     An India Destination Tours Concern
                 </div>
-
             </div>
-
         </a>
 
-        <!-- Desktop Nav + Socials -->
-        <div class="hidden md:flex items-center gap-8">
-            <nav class="flex items-center gap-8 text-[15px] font-medium" aria-label="nav">
-                <a routerLink="/" class="hover:text-red-600 transition-colors">Home</a>
-                <a routerLink="/inbound" class="hover:text-red-600 transition-colors">Inbound</a>
-                <a routerLink="/outbound" class="hover:text-red-600 transition-colors">Outbound</a>
-                <a routerLink="/blog" class="hover:text-red-600 transition-colors">Blog</a>
-                <a routerLink="/vlogs" class="hover:text-red-600 transition-colors">Vlogs</a>
-                <a routerLink="/voucher" class="hover:text-red-600 transition-colors">Voucher</a>
-                <a routerLink="/contact" class="hover:text-red-600 transition-colors">Contact</a>
-            </nav>
+        <!-- Desktop Nav + Search + Socials -->
+        <div class="hidden md:flex items-center gap-6">
 
-            <!-- Social Icons -->
-            <div class="flex items-center gap-3 pl-5 border-l border-gray-200">
+            @if (!isSearchOpen) {
+                <nav class="flex items-center gap-6 text-[15px] font-medium" aria-label="nav">
+                    <a routerLink="/" class="hover:text-red-600 transition-colors">Home</a>
+                    <a routerLink="/inbound" class="hover:text-red-600 transition-colors">Inbound</a>
+                    <a routerLink="/outbound" class="hover:text-red-600 transition-colors">Outbound</a>
+                    <a routerLink="/blog" class="hover:text-red-600 transition-colors">Blog</a>
+                    <a routerLink="/vlogs" class="hover:text-red-600 transition-colors">Vlogs</a>
+                    <a routerLink="/voucher" class="hover:text-red-600 transition-colors">Voucher</a>
+                    <a routerLink="/contact" class="hover:text-red-600 transition-colors">Contact</a>
+                </nav>
+            }
+
+            @if (isSearchOpen) {
+                <!-- Inline search bar (replaces nav when open) -->
+                <div class="flex items-center bg-gray-50 border border-gray-300 rounded-xl
+                            focus-within:border-red-500 focus-within:bg-white transition-all duration-200 w-72 lg:w-96">
+                    <i class="pi pi-search text-gray-400 ml-3 text-sm flex-shrink-0"></i>
+                    <input
+                        #searchInput
+                        type="text"
+                        [(ngModel)]="searchQuery"
+                        (keyup.enter)="submitSearch()"
+                        (keyup.escape)="closeSearch()"
+                        placeholder="Search tours, transport, destinations…"
+                        class="flex-1 bg-transparent px-3 py-2.5 text-sm text-gray-800
+                               placeholder-gray-400 outline-none"
+                        autocomplete="off"
+                    />
+                    <button (click)="submitSearch()" [disabled]="!searchQuery.trim()"
+                        class="mr-1.5 px-3 py-1.5 rounded-lg bg-red-600 text-white text-xs font-semibold
+                               hover:bg-red-700 disabled:opacity-40 transition-colors flex-shrink-0">
+                        Go
+                    </button>
+                </div>
+            }
+
+            <!-- Search icon toggle + Social icons -->
+            <div class="flex items-center gap-3 pl-4 border-l border-gray-200">
+                <!-- Search toggle -->
+                <button
+                    (click)="isSearchOpen ? closeSearch() : openSearch()"
+                    [title]="isSearchOpen ? 'Close search' : 'Search'"
+                    class="w-8 h-8 flex items-center justify-center rounded-full transition"
+                    [class.bg-red-100]="isSearchOpen"
+                    [class.text-red-600]="isSearchOpen"
+                    [class.bg-red-500]="!isSearchOpen"
+                    [class.text-white]="!isSearchOpen"
+                    [class.hover:bg-red-600]="!isSearchOpen">
+                    <i [class]="isSearchOpen ? 'pi pi-times text-sm' : 'pi pi-search text-sm'"></i>
+                </button>
+
                 <a href="https://whatsapp.com/channel/0029Va5qjO20wajt0Byewq40" target="_blank" rel="noopener"
-                    class="group"
-                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500 hover:bg-red-100 hover:text-gray-600 transition">
+                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500
+                           hover:bg-red-100 hover:text-gray-600 transition">
                     <i class="pi pi-whatsapp text-sm"></i>
                 </a>
                 <a href="https://www.facebook.com/idt.worldoftravel" target="_blank"
-                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500 hover:bg-red-100 hover:text-gray-600   transition">
+                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500
+                           hover:bg-red-100 hover:text-gray-600 transition">
                     <i class="pi pi-facebook text-sm"></i>
                 </a>
                 <a href="https://www.instagram.com/idtworldoftravel/?hl=en" target="_blank"
-                    class="w-8 h-8 flex items-center justify-center rounded-full  text-white bg-red-500 hover:bg-red-100 hover:text-gray-600   transition">
+                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500
+                           hover:bg-red-100 hover:text-gray-600 transition">
                     <i class="pi pi-instagram text-sm"></i>
                 </a>
                 <a href="https://www.youtube.com/@IDTINSIDEOUT/featured" target="_blank"
-                    class="w-8 h-8 flex items-center justify-center rounded-full  text-white bg-red-500 hover:bg-red-100 hover:text-gray-600   transition">
+                    class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500
+                           hover:bg-red-100 hover:text-gray-600 transition">
                     <i class="pi pi-youtube text-sm"></i>
                 </a>
             </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition"
-            (click)="isMenuOpen = !isMenuOpen">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+        <!-- Mobile right side: search icon + hamburger -->
+        <div class="md:hidden flex items-center gap-2">
+            <button (click)="isSearchOpen ? closeSearch() : openSearch()"
+                class="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
+                <i [class]="isSearchOpen ? 'pi pi-times h-5 w-5' : 'pi pi-search h-5 w-5'"
+                   style="font-size:18px; display:block"></i>
+            </button>
+            <button class="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition"
+                (click)="isMenuOpen = !isMenuOpen; isSearchOpen = false">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
     </div>
 
-    <!-- Mobile Navigation -->
-    <nav *ngIf="isMenuOpen" class="md:hidden bg-white border-t border-gray-200 px-5 py-3 space-y-2 text-sm shadow-inner"
-        aria-label="Mobile Navigation">
-        <a routerLink="/" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Home</a>
-        <a routerLink="/inbound" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Inbound</a>
-        <a routerLink="/outbound" (click)="isMenuOpen=false"
-            class="block py-2 hover:text-red-600 transition">Outbound</a>
-        <a routerLink="/blog" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Blog</a>
-        <a routerLink="/vlogs" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Vlogs</a>
-        <a routerLink="/voucher" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Voucher</a>
-        <a routerLink="/contact" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Contact</a>
-
-        <!-- Mobile Social Icons -->
-        <div class="flex justify-center gap-4 mt-3 pt-3 border-t border-gray-100">
-            <a href="https://www.facebook.com/idt.worldoftravel" target="_blank"
-                class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-facebook"></i></a>
-            <a href="https://www.instagram.com/idtworldoftravel/?hl=en" target="_blank"
-                class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-instagram"></i></a>
-            <a href="https://whatsapp.com/channel/0029Va5qjO20wajt0Byewq40" target="_blank"
-                class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-whatsapp"></i></a>
-            <a href="https://www.youtube.com/@IDTINSIDEOUT/featured" target="_blank"
-                class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-youtube"></i></a>
+    <!-- Mobile Search Bar -->
+    @if (isSearchOpen) {
+        <div class="md:hidden border-t border-gray-100 bg-white px-4 py-3 flex items-center gap-2">
+            <i class="pi pi-search text-red-500 text-sm flex-shrink-0"></i>
+            <input
+                #searchInput
+                type="text"
+                [(ngModel)]="searchQuery"
+                (keyup.enter)="submitSearch()"
+                (keyup.escape)="closeSearch()"
+                placeholder="Search tours, transport…"
+                class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-400"
+                autocomplete="off"
+            />
+            <button (click)="submitSearch()" [disabled]="!searchQuery.trim()"
+                class="px-3 py-1.5 rounded-lg bg-red-600 text-white text-xs font-semibold
+                       hover:bg-red-700 disabled:opacity-40 transition-colors flex-shrink-0">
+                Go
+            </button>
         </div>
-    </nav>
+    }
+
+    <!-- Mobile Navigation -->
+    @if (isMenuOpen) {
+        <nav class="md:hidden bg-white border-t border-gray-200 px-5 py-3 space-y-2 text-sm shadow-inner"
+            aria-label="Mobile Navigation">
+            <a routerLink="/" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Home</a>
+            <a routerLink="/inbound" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Inbound</a>
+            <a routerLink="/outbound" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Outbound</a>
+            <a routerLink="/blog" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Blog</a>
+            <a routerLink="/vlogs" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Vlogs</a>
+            <a routerLink="/voucher" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Voucher</a>
+            <a routerLink="/contact" (click)="isMenuOpen=false" class="block py-2 hover:text-red-600 transition">Contact</a>
+
+            <!-- Mobile Social Icons -->
+            <div class="flex justify-center gap-4 mt-3 pt-3 border-t border-gray-100">
+                <a href="https://www.facebook.com/idt.worldoftravel" target="_blank"
+                    class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-facebook"></i></a>
+                <a href="https://www.instagram.com/idtworldoftravel/?hl=en" target="_blank"
+                    class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-instagram"></i></a>
+                <a href="https://whatsapp.com/channel/0029Va5qjO20wajt0Byewq40" target="_blank"
+                    class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@IDTINSIDEOUT/featured" target="_blank"
+                    class="text-gray-600 hover:text-red-600 transition"><i class="pi pi-youtube"></i></a>
+            </div>
+        </nav>
+    }
 </header>

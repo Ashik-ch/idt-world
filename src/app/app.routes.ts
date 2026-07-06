@@ -14,5 +14,6 @@ export const routes: Routes = [
     { path: 'voucher', loadComponent: () => import('./components/pages/voucher/voucher').then(m => m.Voucher), title: 'Voucher' },
     { path: 'hotel/:id', loadComponent: () => import('./components/pages/hotels-view/hotels-view').then(m => m.HotelsView), title: 'Hotel Details' },
     { path: 'transport/:id', loadComponent: () => import('./components/pages/transport-detail/transport-detail').then(m => m.TransportDetail), title: 'Transport Details' },
+    { path: 'search', loadComponent: () => import('./components/pages/search/search').then(m => m.SearchPage), title: 'Search' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
