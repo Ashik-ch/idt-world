@@ -1,0 +1,79 @@
+:host { display: block; }
+
+.terms-page {
+  background: linear-gradient(180deg, #fff7f7 0%, #f9fafb 35%, #fff 100%);
+  scroll-margin-top: 1rem;
+}
+
+.terms-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(125deg, #dc2626, #b91c1c 65%, #991b1b);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 34rem;
+    height: 34rem;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 50%;
+    right: -10rem;
+    top: -16rem;
+    box-shadow: 0 0 0 5rem rgb(255 255 255 / 4%), 0 0 0 10rem rgb(255 255 255 / 3%);
+    pointer-events: none;
+  }
+}
+
+.terms-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.terms-sidebar { position: sticky; top: 1.5rem; }
+
+.contents-card, .terms-document {
+  background: #fff;
+  border: 1px solid #f3e8e8;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgb(17 24 39 / 4%);
+}
+
+.contents-card { padding: 1.5rem 1rem; }
+.terms-document { min-width: 0; overflow-wrap: anywhere; }
+.policy-intro, .policy-section { padding: 2rem 2.5rem; }
+.policy-section { border-top: 1px solid #f3f4f6; scroll-margin-top: 1.5rem; }
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.policy-paragraph { color: #4b5563; font-size: 1rem; line-height: 1.85; margin-bottom: 1rem; }
+.policy-paragraph:last-child { margin-bottom: 0; }
+.document-end { border-top: 1px solid #f3f4f6; padding: 1.5rem 2.5rem; }
+a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 4px; border-radius: 0.25rem; }
+
+@media (max-width: 1023px) {
+  .terms-layout { grid-template-columns: minmax(0, 1fr); }
+  .terms-sidebar { position: static; }
+  .contents-card { padding: 1.5rem; }
+  .contents-card ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.25rem; }
+}
+
+@media (max-width: 639px) {
+  .contents-card ol { grid-template-columns: minmax(0, 1fr); }
+  .policy-intro, .policy-section { padding: 1.5rem; }
+  .document-end { padding: 1.5rem; }
+}

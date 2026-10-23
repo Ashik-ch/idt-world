@@ -15,5 +15,6 @@ export const routes: Routes = [
     { path: 'hotel/:id', loadComponent: () => import('./components/pages/hotels-view/hotels-view').then(m => m.HotelsView), title: 'Hotel Details' },
     { path: 'transport/:id', loadComponent: () => import('./components/pages/transport-detail/transport-detail').then(m => m.TransportDetail), title: 'Transport Details' },
     { path: 'search', loadComponent: () => import('./components/pages/search/search').then(m => m.SearchPage), title: 'Search' },
+    { path: 'terms-and-conditions', loadComponent: () => import('./components/pages/terms/terms').then(m => m.Terms), title: 'Terms & Conditions | IDT World' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
