@@ -3,15 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { chatFlow } from '../../../data/chatbot.data';
 import { ChatbotService } from '../../../services/chatbot-service';
+import { COUNTRIES, Country } from '../../../data/countries.data';
 import emailjs from '@emailjs/browser';
-
-// Interfaces for better type safety
-interface Country {
-  name: string;
-  flag: string;
-  code: string;
-  minLength: number;
-}
 
 @Component({
   selector: 'app-chatbot',
@@ -30,53 +23,18 @@ export class Chatbot implements OnInit {
   userContact = '';
   contactError = false;
   step = 1; // 1: Name, 2: Contact, 4: Chat Flow
-  countries: Country[] = [];
-  selectedCountry: Country = {
-    name: 'India',
-    flag: 'https://flagcdn.com/w320/in.png',
-    code: '+91',
-    minLength: 10
-  };
+  countries: Country[] = COUNTRIES;
+  selectedCountry: Country = COUNTRIES.find(c => c.code === '+91')!;
   showDropdown = false;
 
   currentStep: any = null;
   selectedAnswers: { question: string; answer: string }[] = [];
+  selectedDropdownOption: any = null;
 
   constructor(private readonly chatbotService: ChatbotService) { }
 
   ngOnInit(): void {
     this.chatbotService.toggleChat$.subscribe(() => this.openChat());
-    this.loadCountries();
-  }
-
-  /**
-   * Fetches country data and assigns estimated phone lengths
-   */
-  async loadCountries() {
-    try {
-      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,idd');
-      const data = await response.json();
-
-      this.countries = data.map((c: any) => {
-        const root = c.idd?.root || '';
-        const suffix = c.idd?.suffixes ? c.idd.suffixes[0] : '';
-        const dialCode = root + suffix;
-
-        return {
-          name: c.name.common,
-          flag: c.flags.png,
-          code: dialCode,
-          minLength: this.getExpectedLength(dialCode)
-        };
-      }).sort((a: Country, b: Country) => a.name.localeCompare(b.name));
-    } catch (error) {
-      console.error("Failed to load countries", error);
-    }
-  }
-
-  private getExpectedLength(code: string): number {
-    const lengths: { [key: string]: number } = { '+1': 10, '+91': 10, '+44': 10, '+971': 9 };
-    return lengths[code] || 8; // Default to 8 if not specified
   }
 
   selectCountry(country: Country) {
@@ -98,6 +56,7 @@ export class Chatbot implements OnInit {
     this.selectedAnswers = [];
     this.currentStep = null;
     this.showDropdown = false;
+    this.selectedDropdownOption = null;
   }
 
   askContact() {
@@ -121,6 +80,12 @@ export class Chatbot implements OnInit {
     this.contactError = false;
     this.step = 4;
     this.currentStep = chatFlow[0];
+  }
+
+  confirmDropdown() {
+    if (!this.selectedDropdownOption) return;
+    this.selectOption(this.selectedDropdownOption);
+    this.selectedDropdownOption = null;
   }
 
   selectOption(option: any) {
@@ -147,14 +112,16 @@ export class Chatbot implements OnInit {
 
   sendToEmail() {
     const conversationSummary = this.selectedAnswers
-      .map((item, i) => `${i + 1}. ${item.question}: ${item.answer}`)
-      .join(' | ');
+      .map((item, index) =>
+        `${index + 1}. ${item.question}\n   ${item.answer}`
+      )
+      .join('\n\n');
 
     const templateParams = {
-      form_type: 'Chat Bot',
+      form_type: 'Travel Chatbot Enquiry',
       from_name: this.userName,
       from_number: `${this.selectedCountry.code} ${this.userContact}`,
-      message: `New Travel Enquiry\n\nName: ${this.userName}\nContact: ${this.selectedCountry.code}${this.userContact}\n\nDetails:\n${conversationSummary}`
+      message: conversationSummary
     };
 
     emailjs.send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams, this.PUBLIC_KEY)

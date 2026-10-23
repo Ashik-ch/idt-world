@@ -1,0 +1,272 @@
+<div class="min-h-screen bg-gray-50">
+
+  <!-- ── Search Bar Header ─────────────────────────────────────────────── -->
+  <div class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-3xl mx-auto px-5 py-8">
+
+      <div class="flex items-center gap-3 mb-1">
+        <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
+          <i class="pi pi-search text-white text-sm"></i>
+        </div>
+        <h1 class="text-xl font-bold text-gray-800">IDT Smart Search</h1>
+      </div>
+      <p class="text-sm text-gray-500 mb-6 ml-11">
+        Ask me anything about our tours, packages, vehicles, and destinations.
+      </p>
+
+      <!-- Input row -->
+      <div class="relative">
+        <div class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-2xl
+                    focus-within:border-red-500 focus-within:bg-white transition-all duration-200 shadow-sm">
+          <i class="pi pi-search text-gray-400 ml-4 text-lg flex-shrink-0"></i>
+          <input
+            #mainInput
+            type="text"
+            [(ngModel)]="inputQuery"
+            (ngModelChange)="onInputChange($event)"
+            (keyup.enter)="submit()"
+            (blur)="hideSuggestions()"
+            placeholder="e.g. 'Kerala honeymoon', 'bus for 45 people', 'Maldives tour'..."
+            class="flex-1 bg-transparent px-4 py-4 text-gray-800 placeholder-gray-400 text-[15px] outline-none"
+            autocomplete="off"
+          />
+          <button
+            (click)="submit()"
+            [disabled]="!inputQuery.trim()"
+            class="mr-2 px-5 py-2.5 rounded-xl bg-red-600 text-white text-sm font-semibold
+                   hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed
+                   transition-colors flex-shrink-0">
+            Search
+          </button>
+        </div>
+
+        <!-- Suggestions -->
+        @if (showSuggestions) {
+          <div class="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200
+                      rounded-xl shadow-lg z-20 overflow-hidden">
+            @for (s of suggestions; track s) {
+              <button
+                (mousedown)="selectSuggestion(s)"
+                class="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-red-50
+                       hover:text-red-600 flex items-center gap-3 transition-colors
+                       border-b border-gray-50 last:border-0">
+                <i class="pi pi-search text-gray-300 text-xs"></i>
+                {{ s }}
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Recent searches -->
+      @if (!isLoading && !response && recentSearches.length > 0) {
+        <div class="mt-4">
+          <p class="text-[11px] text-gray-400 mb-2 font-semibold uppercase tracking-widest">Recent</p>
+          <div class="flex flex-wrap gap-2">
+            @for (r of recentSearches; track r) {
+              <button (click)="searchRecent(r)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100
+                       text-gray-600 text-xs hover:bg-red-50 hover:text-red-600 transition-colors">
+                <i class="pi pi-clock text-[10px]"></i> {{ r }}
+              </button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-5 py-8">
+
+    <!-- ── Loading ──────────────────────────────────────────────────────── -->
+    @if (isLoading) {
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
+            <i class="pi pi-spin pi-spinner text-red-600 text-sm"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-600">
+            Searching IDT's complete catalogue…
+          </p>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          @for (step of loadingSteps; track step.label; let i = $index) {
+            <div class="flex items-center gap-3 transition-all duration-300"
+              [class.opacity-25]="!step.active && !step.done">
+
+              <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                [class.bg-green-100]="step.done"
+                [class.bg-red-50]="step.active && !step.done"
+                [class.bg-gray-100]="!step.active && !step.done">
+                @if (step.done) {
+                  <i class="pi pi-check text-green-600 text-xs"></i>
+                } @else if (step.active) {
+                  <i class="pi pi-spin pi-spinner text-red-600 text-xs"></i>
+                } @else {
+                  <span class="text-gray-400 text-xs">{{ i + 1 }}</span>
+                }
+              </div>
+
+              <span class="text-sm transition-colors duration-300"
+                [class.text-green-600]="step.done"
+                [class.text-gray-800]="step.active && !step.done"
+                [class.font-medium]="step.active"
+                [class.text-gray-400]="!step.active && !step.done">
+                {{ step.label }}
+              </span>
+            </div>
+          }
+        </div>
+
+        <!-- Skeleton cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          @for (i of [1, 2, 3, 4]; track i) {
+            <div class="rounded-xl bg-gray-50 p-4 animate-pulse">
+              <div class="h-2.5 bg-gray-200 rounded w-1/3 mb-3"></div>
+              <div class="h-4 bg-gray-200 rounded w-2/3 mb-2"></div>
+              <div class="h-2.5 bg-gray-200 rounded w-full mb-1.5"></div>
+              <div class="h-2.5 bg-gray-200 rounded w-4/5"></div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- ── Results ──────────────────────────────────────────────────────── -->
+    @if (!isLoading && response) {
+
+      <!-- AI answer bubble -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm mb-6">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-red-500 to-red-700
+                      flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+            <i class="pi pi-star text-white text-sm"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-[10px] font-bold text-red-600 uppercase tracking-widest mb-2">IDT Assistant</p>
+            <div class="text-gray-700 text-sm leading-relaxed answer-text"
+              [innerHTML]="parseMarkdown(displayedAnswer)">
+            </div>
+            @if (isTyping()) {
+              <span class="typing-cursor">|</span>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Result cards -->
+      @if (response.results.length > 0) {
+        <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-3">
+          {{ response.totalMatches }} result{{ response.totalMatches !== 1 ? 's' : '' }} found
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          @for (result of response.results; track trackByTitle($index, result)) {
+            <a [routerLink]="result.link"
+              class="group bg-white rounded-xl border border-gray-200 p-5
+                     hover:border-red-300 hover:shadow-md transition-all duration-200 block">
+
+              <!-- Type badge row -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-lg flex items-center justify-center"
+                    [class]="getTypeIconBg(result.type)">
+                    <i [class]="getTypeIcon(result.type) + ' text-xs'"></i>
+                  </div>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
+                    [class]="getTypeBadgeClass(result.type)">
+                    {{ getTypeLabel(result.type) }}
+                  </span>
+                </div>
+                @if (result.badge) {
+                  <span class="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full flex-shrink-0">
+                    {{ result.badge }}
+                  </span>
+                }
+              </div>
+
+              <h3 class="text-[15px] font-bold text-gray-900 mb-0.5
+                         group-hover:text-red-600 transition-colors leading-snug">
+                {{ result.title }}
+              </h3>
+              <p class="text-xs text-gray-400 mb-2">{{ result.subtitle }}</p>
+              <p class="text-sm text-gray-600 leading-relaxed line-clamp-2">{{ result.description }}</p>
+
+              <div class="flex items-center justify-between mt-4">
+                @if (result.price) {
+                  <span class="text-sm font-bold text-red-600">{{ result.price }}</span>
+                } @else {
+                  <span></span>
+                }
+                <span class="text-xs text-red-500 font-medium flex items-center gap-1
+                             group-hover:gap-2 transition-all duration-150">
+                  View details <i class="pi pi-arrow-right text-[10px]"></i>
+                </span>
+              </div>
+
+              @if (result.tags && result.tags.length > 0) {
+                <div class="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-50">
+                  @for (tag of result.tags; track tag) {
+                    <span class="text-[10px] px-2 py-0.5 bg-gray-50 text-gray-400 rounded-full">
+                      {{ tag }}
+                    </span>
+                  }
+                </div>
+              }
+            </a>
+          }
+        </div>
+      }
+
+      <!-- Zero results state -->
+      @if (response.results.length === 0) {
+        <div class="text-center py-12">
+          <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
+            <i class="pi pi-search text-gray-400 text-xl"></i>
+          </div>
+          <h3 class="text-base font-semibold text-gray-700 mb-1">No exact matches</h3>
+          <p class="text-sm text-gray-500 mb-6">Try a destination, vehicle type, or package name.</p>
+
+          <div class="flex flex-wrap justify-center gap-2">
+            @for (q of ['Kerala Tour', 'Munnar Package', 'Sedan Car', 'Family Tour', 'Maldives', 'SUV rental']; track q) {
+              <button (click)="searchRecent(q)"
+                class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm text-gray-600
+                       hover:border-red-300 hover:text-red-600 transition-colors">
+                {{ q }}
+              </button>
+            }
+          </div>
+        </div>
+      }
+    }
+
+    <!-- ── Empty state (no query yet) ──────────────────────────────────── -->
+    @if (!isLoading && !response) {
+      <div class="text-center py-14">
+        <div class="w-20 h-20 rounded-full bg-red-50 flex items-center justify-center mx-auto mb-5">
+          <i class="pi pi-search text-red-400 text-3xl"></i>
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-2">What are you looking for?</h2>
+        <p class="text-sm text-gray-500 mb-8">
+          Search tours, packages, vehicles, and international destinations.
+        </p>
+
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 max-w-xl mx-auto">
+          @for (q of quickSearches; track q.label) {
+            <button (click)="searchQuick(q.query)"
+              class="flex flex-col items-center gap-2 p-4 rounded-xl bg-white border border-gray-200
+                     hover:border-red-300 hover:bg-red-50 transition-all group">
+              <i [class]="'pi ' + q.icon + ' text-gray-400 group-hover:text-red-600 transition-colors'"></i>
+              <span class="text-[11px] font-medium text-gray-600 group-hover:text-red-600 transition-colors leading-tight text-center">
+                {{ q.label }}
+              </span>
+            </button>
+          }
+        </div>
+      </div>
+    }
+
+  </div>
+</div>

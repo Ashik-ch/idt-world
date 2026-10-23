@@ -1,0 +1,73 @@
+<div class="terms-page" id="terms-top">
+  <header class="terms-hero">
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-16 relative">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-3 text-sm text-red-100 mb-8">
+        <a routerLink="/" class="hover:text-white hover:underline">Home</a>
+        <i class="pi pi-angle-right text-xs" aria-hidden="true"></i>
+        <span aria-current="page">Terms &amp; Conditions</span>
+      </nav>
+      <h1 class="mt-5 text-4xl md:text-5xl font-bold tracking-tight leading-tight">Terms &amp; Conditions</h1>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-6 py-10 md:py-14 terms-layout">
+    <aside class="terms-sidebar">
+      <nav aria-label="Terms and conditions sections" class="contents-card">
+        <p class="text-xs font-bold uppercase tracking-widest text-red-600 mb-2">Guest policy</p>
+        <h2 class="text-lg font-bold text-gray-900 mb-5">On this page</h2>
+        <ol class="space-y-1">
+          @for (section of sections; track section.id) {
+          <li>
+            <a routerLink="/terms-and-conditions" [fragment]="section.id"
+              class="contents-link flex items-baseline gap-3 rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-red-50 hover:text-red-700 transition-colors">
+              <span class="text-xs font-semibold text-red-600 w-5 shrink-0">{{ section.number.toString().padStart(2,
+                '0') }}</span>
+              <span>{{ section.title }}</span>
+            </a>
+          </li>
+          }
+        </ol>
+        <div class="mt-6 pt-5 border-t border-gray-100">
+          <a routerLink="/privacy-policy" class="text-sm font-semibold text-red-600 hover:text-red-800">
+            Privacy Policy
+          </a>
+        </div>
+        <div class="mt-6 pt-5 border-t border-gray-100">
+          <p class="text-sm text-gray-500 mb-2">Questions about your booking?</p>
+          <a routerLink="/contact"
+            class="text-sm font-semibold text-red-600 hover:text-red-800 inline-flex items-center gap-2">
+            Contact us <i class="pi pi-arrow-right text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <article class="terms-document" aria-label="IDT detailed terms and conditions">
+      <div class="policy-intro">
+        <p class="text-xs font-bold uppercase tracking-widest text-red-600 mb-3">IDT detailed terms &amp; conditions</p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-5">Cancellation Policy</h2>
+        @for (paragraph of introduction; track $index) {
+        <p class="policy-paragraph">{{ paragraph }}</p>
+        }
+      </div>
+      @for (section of sections; track section.id) {
+      <section class="policy-section" [id]="section.id" [attr.aria-labelledby]="section.id + '-title'">
+        <div class="flex items-start gap-4 mb-5">
+          <span class="section-number" aria-hidden="true">{{ section.number.toString().padStart(2, '0') }}</span>
+          <h2 [id]="section.id + '-title'" class="text-xl md:text-2xl font-bold text-gray-900 pt-1">{{ section.title }}
+          </h2>
+        </div>
+        @for (paragraph of section.paragraphs; track $index) {
+        <p class="policy-paragraph">{{ paragraph }}</p>
+        }
+      </section>
+      }
+      <div class="document-end">
+        <a routerLink="/terms-and-conditions" fragment="terms-top"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-red-600 hover:text-red-800">
+          Back to top <i class="pi pi-arrow-up text-xs" aria-hidden="true"></i>
+        </a>
+      </div>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+/* Outer vehicle carousel */
+swiper-container {
+  --swiper-pagination-color: #dc2626;
+  --swiper-pagination-bullet-inactive-color: #d1d5db;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 8px;
+}
+
+swiper-slide {
+  height: auto;
+}
+
+/* Inner image carousel inside each card */
+.vehicle-img-swiper {
+  width: 100%;
+  height: 100%;
+
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bullet-inactive-color: rgba(255,255,255,0.5);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bottom: 6px;
+}

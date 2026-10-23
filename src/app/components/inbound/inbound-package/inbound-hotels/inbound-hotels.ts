@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HotelsView } from "../../../pages/hotels-view/hotels-view";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inbound-hotels',
-  imports: [CommonModule, FormsModule, HotelsView],
+  imports: [CommonModule, FormsModule],
   templateUrl: './inbound-hotels.html',
   styleUrl: './inbound-hotels.scss'
 })
@@ -15,6 +15,8 @@ export class InboundHotels {
   @Input() childPolicy: any
   @Input() meals: any
   @Input() sightseeing: any[] = [];
+
+  constructor(private readonly router: Router) {}
 
   getObjectKeys(obj: any): string[] {
     return Object.keys(obj);
@@ -28,14 +30,20 @@ export class InboundHotels {
     return 'bg-gray-50 border-gray-200';
   }
 
-  selectedHotel: any = null;
+  slugify(text: string): string {
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w-]+/g, '')
+      .replace(/--+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  }
 
   openHotelModal(item: any) {
-    this.selectedHotel = item;
+    const slug = item?.name ? this.slugify(item.name) : null;
+    if (!slug) return;
+    this.router.navigate(['/hotel', slug]);
   }
-
-  closeHotelModal() {
-    this.selectedHotel = null;
-  }
-
 }
