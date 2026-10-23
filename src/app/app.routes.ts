@@ -16,5 +16,6 @@ export const routes: Routes = [
     { path: 'transport/:id', loadComponent: () => import('./components/pages/transport-detail/transport-detail').then(m => m.TransportDetail), title: 'Transport Details' },
     { path: 'search', loadComponent: () => import('./components/pages/search/search').then(m => m.SearchPage), title: 'Search' },
     { path: 'terms-and-conditions', loadComponent: () => import('./components/pages/terms/terms').then(m => m.Terms), title: 'Terms & Conditions | IDT World' },
+    { path: 'privacy-policy', loadComponent: () => import('./components/pages/privacy/privacy').then(m => m.Privacy), title: 'Privacy Policy | IDT World' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

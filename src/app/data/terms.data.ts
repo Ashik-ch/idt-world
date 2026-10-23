@@ -112,16 +112,6 @@ export const TERMS_SECTIONS = [
     ]
   },
   {
-    "id": "section-10",
-    "number": 10,
-    "title": "Data Privacy",
-    "paragraphs": [
-      "10.1 The Company shall be entitled to collect personal data of its guests in the course of rendering its services.",
-      "10.2 The Company shall protect such personal data and take all precautionary steps to ensure that such data is contained safely.",
-      "10.3 The Company shall not be liable for any data leak or data theft that occurs despite its best efforts to protect such data. The guests shall have no legal right to claim damages against the Company in the event of such data leak or data theft."
-    ]
-  },
-  {
     "id": "section-11",
     "number": 11,
     "title": "Dispute Resolution & Exclusive Jurisdiction",
